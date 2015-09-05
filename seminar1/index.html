@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Seminar 1 - OOP Practice Docs</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">OOP Practice Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seminars <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Seminar 1</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#_1">Задача</a></li>
+        
+    
+        <li class="main "><a href="#grep">Программа grep</a></li>
+        
+    
+        <li class="main "><a href="#cat">Программа cat</a></li>
+        
+    
+        <li class="main "><a href="#unix-way">Консольные приложения и unix-way</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">Задача</h1>
+<p>Рассмотрим следующую задачу. Деканат каждый день присылает отчёт по прошедшим занятиям в текстовом файле, имеющим следующий формат:
+каждая строка содержит следующую информацию:
+<code>&lt;предмет&gt;:&lt;номер группы&gt;:&lt;фамилия&gt;:&lt;оценка&gt;:&lt;присутствие&gt;</code></p>
+<p>Например, файл <em>Report_2015_09_04.txt</em>:</p>
+<pre><code>OOP_seminar:12345:Ivanov:Good:attend
+OOP_seminar:12345:Petrov:None:absent
+OOP_seminar:54321:Smith:Exсellent:attend
+</code></pre>
+
+<p>Уже к середине семестра таких файлов накапливается достаточно много и анализировать их "вручную" становится затруднительно.
+Допустим, некоторый студент хочет извлечь информацию только о себе. Как он может это сделать?</p>
+<h1 id="grep">Программа grep</h1>
+<p>Напишем небольшую программу, которая называется grep. Программа делает следующее:</p>
+<ul>
+<li>
+<p>в качестве единственного аргумента grep принимает pattern.</p>
+</li>
+<li>
+<p>в процессе работа grep считывает строки со стандартного потока ввода (stdin) и печатает на стандартный поток вывода те, которые содержат pattern.</p>
+</li>
+</ul>
+<p>( <em>Дополнительное задание 1</em> : написать решение на языке C. )</p>
+<p>Ниже приведено решение на языке C++:</p>
+<pre><code class="C++">#include &lt;iostream&gt; // A
+#include &lt;string&gt; // B
+
+int main(int argc, char **argv) {
+    if (argc &lt; 2) {
+        return 2; // C
+    }
+    std::string line; // D
+    while (std::getline(std::cin, line)) { // E
+        if (line.find(argv[1]) != std::string::npos) { // F
+            std::cout &lt;&lt; line &lt;&lt; std::endl; // G
+        }
+    }
+    return 0;
+}
+</code></pre>
+
+<p>Рассмотрим подробнее:</p>
+<ul>
+<li>
+<p><em>Строка A</em>: подключение заголовочного файла (header'а) iostream из стандартной библиотеки C++.
+  iostream содержит определения классов и функций для работы с вводом/выводом. Замечание: header'ы стандартной
+  библиотеки С++ не имеют расширения ".h", в отличии от C.</p>
+</li>
+<li>
+<p><em>Строка B</em>: подключение header'а "string" для работы со строками. Документацию по работе со строками можно найти <a href="http://www.cplusplus.com/reference/string/string/">здесь</a>.</p>
+</li>
+<li>
+<p><em>Строка C</em>: ненулевой код возврата в случае неправильных входных данных (отсутствует аргумент pattern)</p>
+</li>
+<li>
+<p><em>Строка D</em>: объявление переменной "line" типа "std::string". "std" - название пространства имён (namespace). 
+  Все классы и методы стандартной библиотеки C++ лежат внутри пространства имён "std".</p>
+</li>
+<li>
+<p><em>Строка E</em>: здесь много всего и сразу :)</p>
+<ul>
+<li>
+<p>"std::getline" - это просто функция, объявленная в пространстве имён "std". Фактически, ничем не отличается
+от функций C, за исключением префикса "std::". Замечание: не всё в C++ есть классы и объекты, иногда встречаются и обычные функции.
+Документация к функции <a href="http://www.cplusplus.com/reference/string/string/getline/">std::getline</a>.</p>
+</li>
+<li>
+<p>std::cin и line - аргументы функции std::getline.</p>
+</li>
+<li>
+<p>std::cin - стандартный поток ввода в C++ (аналог "stdin" из C).</p>
+</li>
+<li>
+<p>Функция std::getline считывает строку, заканчивающуюся символом конца строки, из потока ввода, и записывает его в строку.
+Важное замечание: переменная line передаётся в функцию не по значению, а "по ссылке". Поэтому std::getline может модифицировать
+содержимое строки line.</p>
+</li>
+<li>
+<p>Можно заметить, что geline возвращает не булевое значение True или False, а поток ввода переданный первым аргументов.
+Каким же образом поток ввода может использоваться в качестве условия while? Если коротко, то у класса std::istream перегружен
+оператор приведения к типу bool, и этот оператор возвращает True в случае, если из потока ещё можно что-то считать.
+Документация: <a href="http://www.cplusplus.com/reference/istream/istream/">раз</a>, <a href="http://www.cplusplus.com/reference/ios/ios/operator_bool/">два</a>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Строка F</em>:</p>
+<ul>
+<li>
+<p>line.find(...) - вызов метода find объекта line. В целом, class'ы в С++ являются "продвинутыми" struct'ами из C.
+Вызов метода осуществляется аналогично доступу к полю структуры C: через "." для объектов и через "-&gt;" для указателей на объекты.
+Методы, в свою очередь, весьма похожи на обычные функции, но, в дополнение, они имеют доступ к содержимому объекта, для которого они вызваны.
+В C аналогичная запись могла бы выглядеть так: "find(str, pattern)".</p>
+</li>
+<li>
+<p>В случае, если подстрока "argv[1]" не найдена внутри строки "line", метод find вернёт специальное значение std::string::npos.
+Кстати, писать "line.find(argv[1]) &gt;= 0" нельзя. Почему?</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Строка G</em>:</p>
+<ul>
+<li>
+<p>"std::cout" - стандартный поток вывода (по аналогии с std::cin).</p>
+</li>
+<li>
+<p>"&lt;&lt;" - оператор "записи в поток" (перегруженный для потоков вывода оператор побитового сдвига). Записывает значение справа в поток слева.</p>
+</li>
+<li>
+<p>std::endl - символ конца строки ("\n").</p>
+</li>
+<li>
+<p>Важно понимать (и уметь объяснять :) ), почему можно писать "std::cout &lt;&lt; line &lt;&lt; std::endl". Подсказки:</p>
+<ul>
+<li>
+<p>Исходная запись аналогична следующей: "(std::cout &lt;&lt; line) &lt;&lt; std::endl"</p>
+</li>
+<li>
+<p>Оператор "&lt;&lt;" возвращает поток вывода</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><em>Самостоятельно</em> : скомпилировать, проверить, что программа работает правильно.</p>
+<p>( <em>Дополнительное задание 2</em> : сравнить исходные коды программ на C и C++ )</p>
+<h1 id="cat">Программа cat</h1>
+<p>Программа выводит на экран содержимое файлов, указанных в аргументах командной строки. (К котам не имеет никакого отношения:
+"cat" - это сокращение от "catenate".)
+Решение:</p>
+<pre><code class="C++">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;fstream&gt; // A
+
+void catFile(std::string filename) { // B
+    std::ifstream f(filename); // C
+    std::cout &lt;&lt; f.rdbuf(); // D
+}
+
+int main(int argc, char **argv) {
+    for (int i=1; i&lt;argc; i++) {
+        catFile(argv[i]); // E
+    }
+    return 0;
+}
+</code></pre>
+
+<p>Новое в программе cat:</p>
+<ul>
+<li>
+<p><em>Строка A</em>: подключение header'а fstream для работы с файловыми потоками ввода/вывода.</p>
+</li>
+<li>
+<p><em>Строка B</em>: определение функции catFile. В качестве аргумента функция принимает объект класса std::string</p>
+</li>
+<li>
+<p><em>Строка C</em>: объявление и "конструирование" объекта f класса std::ifstream (=input file stream - файловый поток ввода).
+  Конструкторы - это специальные "методы" для инициализации объектов (не совсем "методы", так как имеются некоторые важные отличия).
+  В классе может быть объявлено несколько конструкторов, различающихся набором аргументов. Документация по конструкторам <a href="http://www.cplusplus.com/reference/fstream/ifstream/ifstream/">std::ifstream</a>.</p>
+</li>
+<li>
+<p><em>Строка D</em>: запись содержимого входного потока f в выходной поток std::cout. Рекомендую посмотреть документацию, чтобы лучше понять, что произошло)</p>
+</li>
+<li>
+<p><em>Строка Е</em>: вызов функции catFile. Следует отметить, что аргумент типа <code>char*</code> неявно приводится к типу "std::string".</p>
+</li>
+</ul>
+<p>Самостоятельно: скомпилировать, проверить, что программа работает правильно.</p>
+<h1 id="unix-way">Консольные приложения и unix-way</h1>
+<p>Поскольку мы создаём консольные приложения, хотелось бы показать один трюк, связанный с консолью.
+Для простоты скопируйте файлы с исходным кодом и скомпилированные исполняемые файлы в одну директорию.
+Откройте консоль и перейдите в эту директорию. (В Windows я бы воспользовался файловым менеджером Far - в нём удобнее перемещаться по директориям,
+и можно запускать консольные программы с аргументами). Давайте посмотрим, как часто встречается слово "string" в исходных файлах наших программ.
+Для этого выполним в консоли команду:</p>
+<ul>
+<li>
+<p>для windows:
+<code>.\cat.exe cat.cpp grep.cpp | .\grep.exe string</code></p>
+</li>
+<li>
+<p>для unix:
+<code>./cat cat.cpp grep.cpp | ./grep string</code></p>
+</li>
+</ul>
+<p>В результате на экран должно быть выведено приблизительно следующее:</p>
+<pre><code>#include &lt;string&gt;
+void catFile(std::string filename) {
+#include &lt;string&gt; // B
+        std::string line; // D
+                if (line.find(argv[1]) != std::string::npos) { // F
+</code></pre>
+
+<p>Что произошло? Конструкция "|" в консоли называется pipe ("труба"). Pipe позволяет соединять две программы так,
+что stdout первой программы перенаправляется в stdin второй программы. Можно использовать несколько "труб" в одной команде:
+<code>command1 args1 | command2 args2 | command3 args3 | command4 args4</code></p>
+<p><em>Дополнительное задание 3</em> : написать программу count, которая считает количество строк, которое ей подаётся на стандартный поток ввода.
+Показать, как с помощью этой программы, а также программ cat и grep можно посчитать количество пропусков некоторого студента
+имея файлы с отчётами о студентах, описанные в начале документа.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
