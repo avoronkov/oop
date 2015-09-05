@@ -1,0 +1,7 @@
+site_name: OOP Practice Docs
+pages:
+    - Home: index.md
+    - Seminars:
+        - 'Seminar 1': seminar1.md
+    - Extras:
+        - 'Using namespaces': using-namespaces.md
