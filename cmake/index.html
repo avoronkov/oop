@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Using namespaces - OOP Practice Docs</title>
+	<title>CMake - OOP Practice Docs</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -79,14 +79,14 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Using namespaces</a>
+<li >
+    <a href="../using-namespaces/">Using namespaces</a>
 </li>
 
                         
                             
-<li >
-    <a href="../cmake/">CMake</a>
+<li class="active">
+    <a href="./">CMake</a>
 </li>
 
                         
@@ -105,12 +105,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../seminar1/">
+                        <a rel="next" href="../using-namespaces/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../cmake/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -126,116 +126,84 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Как правильно использовать пространства имён?</a></li>
+        <li class="main active"><a href="#cmake-c">Использование CMake для сборки C++ проектов</a></li>
         
-            <li><a href="#std">Как избавиться от "std::"</a></li>
+            <li><a href="#cmake">Установка CMake</a></li>
         
-            <li><a href="#_2">Алиасы для пространств имён</a></li>
+            <li><a href="#cmake-">CMake-файл для сборки проекта</a></li>
+        
+            <li><a href="#_1">Сборка проекта</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Как правильно использовать пространства имён?</h1>
-<h2 id="std">Как избавиться от "std::"</h2>
-<p>Вопрос, который часто задают те, кто начинает программировать на C++, звучит так:
-"как избежать постоянного написания в коде префикса std:: при использовании стандартной библиотеки?".
-То же самое касается и других пространств имён (namespaces).</p>
-<p>Рассмотрим пример:</p>
-<pre><code class="C++">#include &lt;iostream&gt;
-#include &lt;string&gt;
+<h1 id="cmake-c">Использование CMake для сборки C++ проектов</h1>
+<p>Очень часто оказывается удобным иметь кроссплатформенный способ сборки
+C++ проектов: например, когда часть студентов программирует под Windows,
+часть - под Linux, а семинарист проверяет задачи под Fedora Linux 22, g++-5.1.1 :)
+Хорошим решением в таком случае является использование <a href="http://www.cmake.org/">CMake</a>.</p>
+<h2 id="cmake">Установка CMake</h2>
+<h3 id="windows">Windows</h3>
+<p>1 Скачать <a href="http://www.cmake.org/download/">Win32 Installer для CMake</a></p>
+<p>2 Установить.</p>
+<p>3 Открыть консоль (<a href="http://farmanager.com/index.php?l=en">Far Manager</a> подойдёт),
+  убедиться, что <code>cmake</code> запускается и работает:</p>
+<pre><code>C:\&gt; cmake --version
+cmake version 3.2.2
 
-int main() {
-    std::string hello = &quot;hello world!&quot;;
-    std::cout &lt;&lt; hello &lt;&lt; std::endl;
-    return 0;
-}
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
 </code></pre>
 
-<p>Нетрудно заметить, что префикс <code>std::</code> встречается 3 раза внутри двух строчек кода.</p>
-<p>Самый простой (и самый нерекомендуемый) способ - это <code>using namespace</code>:</p>
-<pre><code class="C++">#include &lt;iostream&gt;
-#include &lt;string&gt;
+<p>4 Если на предыдущем пункте что-то пошло не так, необходимо добавить <code>C:\Program Files\CMake\bin</code> в переменную среды <code>%PATH%</code></p>
+<h3 id="linux">Linux</h3>
+<p><code>apt-get install cmake</code> или <code>yum install cmake</code> или <code>zypper install cmake</code>
+или я не знаю, какой у вас дистрибутив, значит вы лучше меня разбираетесь, как в нём ставить софт :)</p>
+<h2 id="cmake-">CMake-файл для сборки проекта</h2>
+<p>1 Найдите папку, в которой лежат исходные файлы вашего проекта</p>
+<p>2 Создайте в ней файл <code>CMakeLists.txt</code> со следующим содержанием:</p>
+<pre><code>cmake_minimum_required (VERSION 3.1.0)
+project (CoolProj)
+add_executable(auto main.cpp func.cpp)
 
-using namespace std;
-
-int main() {
-    string hello = &quot;hello world!&quot;;
-    cout &lt;&lt; hello &lt;&lt; endl;
-    return 0;
-}
+set_property(TARGET auto PROPERTY CXX_STANDARD 14)
+set_property(TARGET auto PROPERTY CXX_STANDARD_REQUIRED ON)
 </code></pre>
 
-<p>Чем плох этот способ? Тем, что импортировав все имена из <code>std</code> мы потеряли возможность понять,
-откуда взялось то или иное имя (для этого придётся воспользоваться помощью IDE, или просматривать используемые заголовочные файлы).</p>
-<p>Способ получше состоит в том, чтобы импортировать отдельные имена, а не весь namespace целиком:</p>
-<pre><code class="C++">#include &lt;iostream&gt;
-#include &lt;string&gt;
-
-using std::string;
-using std::cout;
-using std::endl;
-
-int main() {
-    string hello = &quot;hello world!&quot;;
-    cout &lt;&lt; hello &lt;&lt; endl;
-    return 0;
-}
+<p>Разберём подробнее:</p>
+<ul>
+<li>
+<p><code>cmake_minimum_required</code> - минимальная версия <code>CMake</code>, необходимая для сборки проекта.</p>
+</li>
+<li>
+<p><code>project</code> - имя проекта.</p>
+</li>
+<li>
+<p><code>add_executable</code> - объявляем, что мы хотим собрать исполняемый файл,
+<code>auto</code> - имя исполняемого файла, <code>main.cpp func.cpp</code> - список <code>.cpp</code> файлов,
+необходимых для сборки (".h" в список не входят).</p>
+</li>
+<li>
+<p><code>set_property(... CXX_STANDSRD 14)</code> и <code>set_property(... CXX_STANDARD_REQUIRED ON)</code> - директивы, которые говорят, что мы хотим использовать новые стандарты C++</p>
+</li>
+</ul>
+<p>Подробную информацию можно найти <a href="http://www.cmake.org/documentation/">здесь</a> (например, <a href="http://www.cmake.org/cmake-tutorial/">туториал</a>).</p>
+<h2 id="_1">Сборка проекта</h2>
+<p>1 Создать папку <code>build</code> в директории проекта и переместиться в неё.
+  Структура проекта должна получиться примерно следующей:</p>
+<pre><code>build/       &lt;-  мы здесь
+CMakeLists.txt
+func.cpp
+func.h
+main.cpp
 </code></pre>
 
-<p>Теперь видно, что <code>string</code> - это на самом деле <code>std::string</code>, то есть Строка из стандартной библиотеки C++.
-Анализировать и поддерживать такой гораздо проще.</p>
-<p>Должен заметить, что если какое-то имя встречается в файле достаточно редко,
-то нет никакой проблемы в том, чтобы использовать имя класса вместе с неймспейсом -
-это всего-лишь лишние 5 символов :)</p>
-<h2 id="_2">Алиасы для пространств имён</h2>
-<p>Не все имена пространств имён короткие и трёхсимвольные - иногда встречаются весьма длинные (в том числе и вложенные).
-Например:</p>
-<pre><code class="C++">#include &lt;iostream&gt;
-#include &lt;boost/program_options.hpp&gt;
-
-int main(int argc, char **argv) {
-    boost::program_options::options_description desc(&quot;Allowed options&quot;);
-    desc.add_options()
-        (&quot;help&quot;, &quot;produce help message&quot;)
-    ;
-
-    boost::program_options::variables_map vm;
-    boost::program_options::store(boost::program_options::parse_command_line(argc, argv, desc), vm);
-    boost::program_options::notify(vm);    
-
-    if (vm.count(&quot;help&quot;)) {
-        std::cout &lt;&lt; desc &lt;&lt; &quot;\n&quot;;
-    }   
-    return 0;
-}
-</code></pre>
-
-<p>В этом случае хорошим решением будет использование <em>алиасов</em> для пространств имён:</p>
-<pre><code class="C++">#include &lt;iostream&gt;
-#include &lt;boost/program_options.hpp&gt;
-
-namespace po = boost::program_options;
-
-int main(int argc, char **argv) {
-    po::options_description desc(&quot;Allowed options&quot;);
-    desc.add_options()
-        (&quot;help&quot;, &quot;produce help message&quot;)
-    ;
-
-    po::variables_map vm;
-    po::store(po::parse_command_line(argc, argv, desc), vm);
-    po::notify(vm);    
-
-    if (vm.count(&quot;help&quot;)) {
-        cout &lt;&lt; desc &lt;&lt; &quot;\n&quot;;
-    }   
-    return 0;
-}
-</code></pre>
-
-<p>Нетрудно заметить, что алиас - это просто другое имя пространства имён, которое можно использовать наравне с оригинальным.</p></div>
+<p>2 Выполнить <code>cmake ..</code> (подготовка сборочных файлов для конкретной платформы: Visual Studio, Makefiles etc)</p>
+<p>3 Выполнить <code>cmake --build .</code> (сборка проекта с использованием сборочных файлов)</p>
+<p>4 Если всё завершилось успешно, то в директории <code>build</code> появятся исполняемый файл проекта (в Windows он обычно лежит где-нибудь в <code>build\Debug</code>)</p>
+<p>5 Запустить исполняемый файл.. Profit!</p>
+<p>Если у вас всё получилось, то и на другой платформе всё (скорее всего) соберётся!</p></div>
             
         </div>
 
