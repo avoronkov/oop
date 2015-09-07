@@ -5,3 +5,4 @@ pages:
         - 'Seminar 1': seminar1.md
     - Extras:
         - 'Using namespaces': using-namespaces.md
+        - 'CMake': cmake.md
