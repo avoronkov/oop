@@ -21,3 +21,5 @@
 ## Ссылки
 
 [Список дополнительной литературы](https://sites.google.com/site/nguoop/spisok-dopolnitelnoj-literatury-1)
+
+[Developement tools bundle](https://goo.gl/NnriRj)
