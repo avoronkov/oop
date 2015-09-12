@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Seminar 2 - OOP Practice Docs</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">OOP Practice Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seminars <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../seminar1/">Seminar 1</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Seminar 2</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../using-namespaces/">Using namespaces</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../seminar1/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../using-namespaces/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#2-11092015">Семинар 2 (11.09.2015)</a></li>
+        
+            <li><a href="#_1">Классы и объекты</a></li>
+        
+            <li><a href="#_2">Класс для работы со строками</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="2-11092015">Семинар 2 (11.09.2015)</h1>
+<h2 id="_1">Классы и объекты</h2>
+<p>Важно понимать (и уметь объяснять) разницу между понятиями "класс" и "объект".
+Также важно понимать разницу между понятиями "метод класса" и "поле класса".</p>
+<h2 id="_2">Класс для работы со строками</h2>
+<p>Напишем свою собственную реализация класса "Строка".
+Для того, чтобы не путать наш класс со строкой из стандартной библиотекой,
+назовём наш класс <code>Str</code>.</p>
+<p>Исходный код программы будет включать в себя три файла:</p>
+<pre><code>- str.h
+- str.cpp
+- main.cpp
+</code></pre>
+
+<p>Начнём с заголовочного файла<code>str.h</code>, который содержит объявление класса <code>Str</code>:</p>
+<pre><code class="C++">#pragma once
+
+class Str { // A
+public: // B
+    Str(); // C
+    Str(const char * s); // D
+    ~Str(); // E
+
+private: // F
+    char * data; // G
+    int len;
+};
+</code></pre>
+
+<p>Пояснения:</p>
+<ul>
+<li>
+<p><em>Строка A</em>: объявление нового класса с именем <code>Str</code></p>
+</li>
+<li>
+<p><em>Строка B</em>: модификатор доступа <code>public</code>: все методы, поля и конструкторы объявленные после этой строки являются "публичными", то есть доступными "снаружи" относительно класса</p>
+</li>
+<li>
+<p><em>Строка C</em>: Объявление конструктора.
+  Конструктор - это специальный метод  для инициализации ("конструирования") объекта - код конструктора будет вызван при создании объекта данного класса.
+  Данный конструктор не принимает аргументов (и, как можно предположить, создаёт пустую строку).</p>
+</li>
+<li>
+<p><em>Строка D</em>: Класс может иметь несколько конструкторов, различающихся набором аргументов.
+  Данный конструктор создаёт строку на основе строки C (типа <code>const char *</code>)</p>
+</li>
+<li>
+<p><em>Строка E</em>: Деструктор, то есть специальный метод для уничтожения объекта.
+  Основная задача деструктора - "освободить" ресурсы, "захваченные" в процессе существования объекта (например, память, файловые дескрипторы и так далее).</p>
+</li>
+<li>
+<p><em>Строка F</em>: модификатор доступа <code>private</code>: все поля, методы и конструкторы,
+  объявленные после этой строки являются "приватными", то есть доступными только из других методов данного класса.</p>
+</li>
+<li>
+<p><em>Строка G</em>: объявление полей класса. В данном случае это поле <code>data</code> типа <code>char *</code> и поле <code>len</code> типа <code>int</code>.
+  <code>data</code> будет хранить содержимое строки, а <code>len</code> - её длину.</p>
+</li>
+</ul>
+<p>Далее, файл <code>str.cpp</code>, содержащий собственно код - <strong>определения</strong> методов класса <code>Str</code>:</p>
+<pre><code class="C++">#include &quot;str.h&quot; // A
+
+#include &lt;cstring&gt; // B
+#include &lt;cstdlib&gt;
+
+Str::Str() { // C
+    data = nullptr; // D
+    len = 0;
+}
+
+Str::Str(const char * s) { // E
+    data = strdup(s); // F
+    len = strlen(data);
+}
+
+Str::~Str() { // G
+    free(data);
+}
+</code></pre>
+
+<ul>
+<li>
+<p><em>Строка A</em>: подключение заголовочного файла <code>str.h</code>.
+  В C++ общепринятой практикой является создание для каждого класса в программе собственных заголовочного и исходного файла,
+  имена которых совпадают с именем класса (или именем класса в нижнем регистре).
+  Например, для класса <code>Str</code> мы создали два файла: <code>str.h</code> и <code>str.cpp</code>.
+  Далее в первой строке cpp-файла необходимо подключить соответствующий h-файл - это будет признаком хорошего стиля :)</p>
+</li>
+<li>
+<p><em>Строка B</em>: подключение библиотек языка C.
+  Заметьте, что в C++ имена заголовочных файлов библиотек называются <code>cstring</code> и <code>cstdlib</code>, а не <code>string.h</code> и <code>stdlib.h</code>
+  (хотя второй вариант тоже можно использовать)</p>
+</li>
+<li>
+<p><em>Строка C</em>: Определение конструктора <code>Str</code> без аргументов.
+  <code>Str</code> до знака <code>::</code> - это имя класса,
+  <code>Str</code> после знака <code>::</code> - это имя конструктора,
+  <code>()</code> - пустой список аргументов.</p>
+</li>
+<li>
+<p><em>Строка D</em>: тело конструктора, в котором мы инициализируем поля класса значениями по умолчанию.
+  <code>nullptr</code> - нулевой указатель, аналогичный <code>NULL</code> из C, но более безопасный (начиная с C++11).</p>
+</li>
+<li>
+<p><em>Строка E</em>: определение второго конструктора, принимающего аргумент <code>char*</code>.</p>
+</li>
+<li>
+<p><em>Строка F</em>: тело второго конструктора.
+  Мы используем библиотечную функцию C <code>strdup</code> для копирования строки C.
+  Важно отметить, что мы именно <strong>копируем</strong> строку, а не сохраняем указатель.</p>
+</li>
+<li>
+<p><em>Строка G</em>: определение деструктора.
+  В отличие от конструктора, деструктор никогда не принимает аргументы.
+  Внутри деструктора мы освобождаем память, выделенную в конструкторе, используя функцию <code>free</code>.</p>
+</li>
+</ul>
+<p>И наконец создадим файл <code>main.cpp</code>, в котором используем нашу новую строку:</p>
+<pre><code class="C++">#include &quot;str.h&quot;
+
+void work() {
+    Str x; // A
+    Str y(&quot;hello world!&quot;); // B
+}
+
+int main() {
+    work();
+    return 0;
+}
+</code></pre>
+
+<p>Здесь в строке <em>A</em> мы объявляем переменную <code>x</code> типа <code>Str</code>.
+При этом вызовется конструктор без аргументов, который сделает <code>x</code> пустой строкой.
+В строке <em>B</em> объявляется переменная <code>y</code> типа <code>Str</code>, при этом вызовется второй конструктор
+с аргументом <code>"hello world!"</code> и <code>y</code> будет содержать копию строки <code>"hello world!"</code>
+При выходе из функции переменные <code>x</code> и <code>y</code> перестанут существовать, и будут вызваны
+деструкторы <code>x</code> и <code>y</code>.</p>
+<p><em>Продолжение следует...</em></p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
