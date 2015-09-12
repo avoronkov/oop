@@ -3,6 +3,7 @@ pages:
     - Home: index.md
     - Seminars:
         - 'Seminar 1': seminar1.md
+        - 'Seminar 2': seminar2.md
     - Extras:
         - 'Using namespaces': using-namespaces.md
         - 'CMake': cmake.md

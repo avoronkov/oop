@@ -8,6 +8,8 @@
 
 [Семинар 1](seminar1/)
 
+[Семинар 2](seminar2/)
+
 ## Задачи
 
 [Задача 1](https://docs.google.com/document/d/1rzIQpWltIgfiHt8Tsdu3Sp32aOwXaQkLByTass7h_7M/)
