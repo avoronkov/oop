@@ -138,6 +138,10 @@
         
             <li><a href="#_2">Класс для работы со строками</a></li>
         
+            <li><a href="#_3">Методы класса</a></li>
+        
+            <li><a href="#_4">Оператор вывода в поток</a></li>
+        
     
     </ul>
 </div></div>
@@ -280,6 +284,170 @@ int main() {
 с аргументом <code>"hello world!"</code> и <code>y</code> будет содержать копию строки <code>"hello world!"</code>
 При выходе из функции переменные <code>x</code> и <code>y</code> перестанут существовать, и будут вызваны
 деструкторы <code>x</code> и <code>y</code>.</p>
+<h2 id="_3">Методы класса</h2>
+<p>Нетрудно заметить, что в текущем виде класс <code>Str</code> не позволяет сделать что-нибудь действительно полезное,
+потому чо в нём пока нет <em>методов</em>.
+Самое время добавить немного методов. В заголовочный файл добавим следующее:</p>
+<pre><code class="C++">#pragma once
+
+class Str {
+public:
+    Str();
+    Str(const char * s);
+    ~Str();
+
+    int size() const; // H
+    char get(int index) const; // I
+    void set(int index, char c); // J
+
+private:
+    char * data;
+    int len;
+};
+</code></pre>
+
+<p>Здесь мы объявили три метода: <code>size</code>, <code>get</code> и <code>set</code>.
+* <em>H</em>: декларация методов похожа на декларацию функций: возвращаемое значение (<code>int</code>),
+  имя метода (<code>size</code>), список аргументов (в данном случае пустой - <code>()</code>).
+  Стоит отметить наличие модификатора <code>const</code>, который говорит о том, что метод является <em>константным</em>,
+  то есть не изменяет состояние объекта (то есть состояние полей объекта), для которого он вызван.
+  Метод <code>size()</code> возвращает длину строки.</p>
+<ul>
+<li>
+<p><em>I</em>: метод <code>get(...)</code>, который возвращает символ строки в позиции <code>index</code>.</p>
+</li>
+<li>
+<p><em>J</em>: метод <code>set(...)</code>, который устанавливает символ <code>c</code> в позиции <code>index</code>.
+  Так как метод не является константным, модификатора <code>const</code> у него нет.</p>
+</li>
+</ul>
+<p>Теперь определим наши новые методы в <code>str.cpp</code>:</p>
+<pre><code class="C++">// ...
+
+int Str::size() const { // H
+    return len;
+}
+
+char Str::get(int index) const {
+    if (index &gt;= 0 &amp;&amp; index &lt; len) {
+        return data[index];
+    }
+    return '\0'; // J
+}
+
+void Str::set(int index, char c) {
+    if (index &gt;= 0 &amp;&amp; index &lt; len) {
+        data[index] = c;
+    }
+}
+
+</code></pre>
+
+<ul>
+<li>
+<p><em>H</em>: определения методов похожи на определения конструкторов (и на определения обычных функций):</p>
+<ul>
+<li><code>int</code> - возвращаемое значение,</li>
+<li><code>Str</code> - имя класса,</li>
+<li><code>size</code> - имя метода,</li>
+<li><code>()</code> - список аргументов</li>
+<li>модификатор <code>const</code> обязателен, если он присутствовал в <em>объявлении</em> метода (в h-файле).
+  Метод с <code>const</code> и метод без <code>const</code> - это два разных метода.</li>
+</ul>
+</li>
+<li>
+<p><em>J</em>: вообще попытка получить символ за границами строки в методе <code>get</code> является ошибкой,
+  но пока мы просто вернём нулевой символ (<code>'\0'</code>). С методом <code>set</code> - аналогично.</p>
+</li>
+</ul>
+<p>Стоит отметить, что так же, как и в случае с конктрукторами, класс может содержать несколько методов
+с одинаковыми именами, но разными наборами аргументов.</p>
+<p>Воспользуемся нашими новыми методами. В <code>main.cpp</code>:</p>
+<pre><code class="C++">#include &lt;iostream&gt;
+#include &quot;str.h&quot;
+
+int main() {
+    Str x(&quot;hello world!&quot;);
+    x.set(0, 'H');
+    for (int i = 0; i &lt; x.size(); i++) {
+        std::cout &lt;&lt; x.get(i);
+    }
+    std::cout &lt;&lt; std::endl;
+}
+</code></pre>
+
+<p>Рекомендую ознакомиться с методами класса <code>str::string</code> из стандартной библиотеки,
+документацию можно посмотреть <a href="http://www.cplusplus.com/reference/string/string/">здесь</a>.</p>
+<h2 id="_4">Оператор вывода в поток</h2>
+<p>Одной из особенностей C++ при работе с вводом/выводом является использование потоков.
+Определим оператор вывода в поток для класса <code>Str</code>. 
+Для этого нам понадобится вспомогательный метод <code>put</code>,
+который будет записывать объект в поток.</p>
+<pre><code class="C++">#pragma once
+
+#include &lt;iostream&gt; // K
+
+class Str {
+public:
+    Str();
+    Str(const char * s);
+    ~Str();
+
+    int size() const;
+    char get(int index) const;
+    void set(int index, char c);
+
+    void put(std::ostream &amp; out) const; // L
+
+private:
+    char * data;
+    int len;
+};
+
+std::ostream &amp; operator&lt;&lt;(std::ostream &amp; out, const Str &amp; str); // M
+</code></pre>
+
+<ul>
+<li>
+<p><em>K</em>: подключаем <code>iostream</code> для работы с потоками.</p>
+</li>
+<li>
+<p><em>L</em>: вспомогательный метод <code>put</code></p>
+</li>
+<li>
+<p><em>K</em>: объявление оператора записи в поток.
+  Следует отметить, что поток <code>out</code> передаётся по ссылке,
+  а строка <code>str</code> по <em>константной</em> ссылке. (Почему?)
+  Также следует отметить, что <code>operator&lt;&lt;</code> является в данном случае
+  обычной функцией, а не методом класса <code>Str</code>.</p>
+</li>
+</ul>
+<p>Добавим определения в <code>str.cpp</code>:</p>
+<pre><code class="C++">// ...
+void Str::put(std::ostream &amp; out) const {
+    out &lt;&lt; '&quot;' &lt;&lt; data &lt;&lt; '&quot;';
+}
+
+
+std::ostream &amp; operator&lt;&lt;(std::ostream &amp; out, const Str &amp; str) {
+    str.put(out);
+    return out;
+}
+</code></pre>
+
+<p>Здесь всё достаточно просто.
+Хотя можно задать вопрос: зачем понадобился дополнительный метод <code>put</code>?</p>
+<p><em>Примечание</em>: можно обойтись без вспомогательного метода,
+если воспользоваться помощью <em>друзей</em> (<a href="http://www.cplusplus.com/doc/tutorial/inheritance/">friendship</a>),
+но этот метод имеет свои недостатки, поэтому (пока) имеет смысл от него воздержаться.</p>
+<p>Собственно, теперь мы можем использовать потоки вывода вместе с нашим классом <code>Str</code>:</p>
+<pre><code class="C++">int main() {
+    Str x(&quot;hello world!&quot;);
+    std::cout &lt;&lt; x &lt;&lt; std::endl;
+}
+
+</code></pre>
+
 <p><em>Продолжение следует...</em></p></div>
             
         </div>
