@@ -142,6 +142,8 @@
         
             <li><a href="#_4">Оператор вывода в поток</a></li>
         
+            <li><a href="#_5">Итераторы</a></li>
+        
     
     </ul>
 </div></div>
@@ -448,6 +450,146 @@ std::ostream &amp; operator&lt;&lt;(std::ostream &amp; out, const Str &amp; str)
 
 </code></pre>
 
+<h2 id="_5">Итераторы</h2>
+<p>Если посмотреть на методы <a href="http://www.cplusplus.com/reference/string/string/">std::string</a>, то можно обнаружить
+методы <a href="http://www.cplusplus.com/reference/string/string/begin/">begin</a> и <a href="http://www.cplusplus.com/reference/string/string/end/">end</a>,
+которые возвращают объекты класса <code>std::string::iterator</code>.
+Вообще, концепция <em>итераторов</em> - специальных объектов, позволяющих получить доступ к некоторому элементу коллекции
+(а также к соседних элементам) - широко распространена в стандартной библиотеке C++.
+В документации можно найти пример типичного использования итераторов:</p>
+<pre><code class="C++">std::string str (&quot;Test string&quot;);
+for ( std::string::iterator it=str.begin(); it!=str.end(); ++it)
+    std::cout &lt;&lt; *it;
+std::cout &lt;&lt; '\n';
+</code></pre>
+
+<p>Как нетрудно догадаться, здесь последовательно распечатываются символы строки.</p>
+<p>Попробуем реализовать простейший итератор для класса <code>Str</code>. В заголовочный файл добавим:</p>
+<pre><code class="C++">class Str {
+public:
+    // ...
+    class iterator {
+    public:
+        iterator(char * _data, int _len, int _pos);
+        iterator(const iterator &amp; it) = default;
+        ~iterator() = default;
+
+        iterator &amp; operator+=(int i); 
+        iterator operator+(int i) const;
+        iterator &amp; operator++();
+        iterator operator++(int);
+
+        char &amp; operator*();
+        char * operator-&gt;();
+    private:
+        char * str_data;
+        int str_len;
+        int position;
+    };  
+
+    iterator begin();
+    iterator end();
+private:
+    char * data;
+    int len;
+};
+</code></pre>
+
+<p>Как видно, итератор будет указывать на некоторую позицию в строке. Реализация:</p>
+<pre><code class="C++">Str::iterator::iterator(char * _data, int _len, int _pos) :
+    str_data(_data),
+    str_len(_len),
+    position(_pos)
+{
+
+}
+
+Str::iterator &amp; Str::iterator::operator+=(int i) {
+    this-&gt;position += i;
+    return *this;
+}
+
+Str::iterator &amp; Str::iterator::operator++() {
+    (*this) += 1;
+    return *this;
+}
+
+Str::iterator Str::iterator::operator++(int) {
+    Str::iterator it(*this);
+    (*this) += 1;
+    return it; 
+}
+
+char &amp; Str::iterator::operator*() {
+    return str_data[position];
+}
+
+char * Str::iterator::operator-&gt;() {
+    return str_data + position;
+}
+
+Str::iterator Str::begin() {
+    return Str::iterator(data, len, 0);
+}
+
+Str::iterator Str::end() {
+    return Str::iterator(data, len, len);
+}
+</code></pre>
+
+<p>Комментарии:
+* В конструкторе <code>Str::iterator::iterator</code> показана форма инициализации полей до исполнения тела конструктора
+  (выглядит более лаконично и может использоваться для инициализации константных полей)</p>
+<ul>
+<li>
+<p><code>this</code> - это указатель на самого себя. Как можно догадаться, имеет тип <code>Str*</code>.
+  Операторы <code>+=</code> и префиксный оператор <code>++</code> возвращают ссылку на самого себя.</p>
+</li>
+<li>
+<p><code>operator++(int)</code> - это постфиксный оператор <code>++</code>. Вспомните разницу между <code>++i</code> и <code>i++</code>.
+  Постфиксный итератор делает инкремент внутри себя, но возвращает копию старого итератора.</p>
+</li>
+<li>
+<p>оператор <code>*</code> возвращает ссылку на элемент строки. В данном случае синтаксис аналогичен разыменованию указателей в C.</p>
+</li>
+</ul>
+<p>Теперь воспользуемся нашим итератором:</p>
+<pre><code class="C++">int main() {
+    Str str(&quot;hello world!&quot;);
+    for (Str::iterator it = str.begin(); it != str.end(); ++it) {
+        std::cout &lt;&lt; *it;
+    }   
+    std::cout &lt;&lt; std::endl;
+}
+</code></pre>
+
+<p>Компилируем и ...</p>
+<pre><code>error: no match for ‘operator!=’ (operand types are ‘Str::iterator’ and ‘Str::iterator’)
+  for (Str::iterator it = str.begin(); it != str.end(); ++it) {
+                                          ^
+</code></pre>
+
+<p>Мы забыли про операторы <code>==</code> и <code>!=</code> для итераторов. Эти операторы должны иметь следующую сигнатуру:</p>
+<pre><code class="C++">class iterator {
+    // ...
+    bool operator==(const iterator &amp; it) const;
+    bool operator!=(const iterator &amp; it) const;
+};
+</code></pre>
+
+<p>Как правило, в таких случаях реализуют один оператор, а второй реализуют через отрицание первого.
+Если сделать всё правильно, то наш код скомпилируется и выведет <code>hello world!</code>.</p>
+<p>А теперь - бонус! Для класса, имеющего итераторы начиная с C++11 можно написать следующий код:</p>
+<pre><code class="C++">int main() {
+    Str str(&quot;hello world!&quot;);
+    for (char c : str) {
+        std::cout &lt;&lt; c;
+    }   
+    std::cout &lt;&lt; std::endl;
+}
+</code></pre>
+
+<p>Этот код аналогичен приведенному выше "итерированию" коллекций через итераторы, только намного проще :)</p>
 <p><em>Продолжение следует...</em></p></div>
             
         </div>
