@@ -289,4 +289,148 @@ int main() {
 }
 
 ```
+
+## Итераторы
+
+Если посмотреть на методы [std::string](http://www.cplusplus.com/reference/string/string/), то можно обнаружить
+методы [begin](http://www.cplusplus.com/reference/string/string/begin/) и [end](http://www.cplusplus.com/reference/string/string/end/),
+которые возвращают объекты класса `std::string::iterator`.
+Вообще, концепция _итераторов_ - специальных объектов, позволяющих получить доступ к некоторому элементу коллекции
+(а также к соседних элементам) - широко распространена в стандартной библиотеке C++.
+В документации можно найти пример типичного использования итераторов:
+```C++
+std::string str ("Test string");
+for ( std::string::iterator it=str.begin(); it!=str.end(); ++it)
+	std::cout << *it;
+std::cout << '\n';
+```
+Как нетрудно догадаться, здесь последовательно распечатываются символы строки.
+
+Попробуем реализовать простейший итератор для класса `Str`. В заголовочный файл добавим:
+```C++
+class Str {
+public:
+	// ...
+    class iterator {
+    public:
+        iterator(char * _data, int _len, int _pos);
+		iterator(const iterator & it) = default;
+        ~iterator() = default;
+
+        iterator & operator+=(int i); 
+		iterator operator+(int i) const;
+        iterator & operator++();
+        iterator operator++(int);
+
+        char & operator*();
+        char * operator->();
+    private:
+        char * str_data;
+        int str_len;
+        int position;
+    };  
+
+    iterator begin();
+    iterator end();
+private:
+    char * data;
+    int len;
+};
+```
+
+Как видно, итератор будет указывать на некоторую позицию в строке. Реализация:
+```C++
+Str::iterator::iterator(char * _data, int _len, int _pos) :
+    str_data(_data),
+    str_len(_len),
+    position(_pos)
+{
+        
+}
+
+Str::iterator & Str::iterator::operator+=(int i) {
+    this->position += i;
+    return *this;
+}
+
+Str::iterator & Str::iterator::operator++() {
+    (*this) += 1;
+    return *this;
+}
+
+Str::iterator Str::iterator::operator++(int) {
+    Str::iterator it(*this);
+    (*this) += 1;
+    return it; 
+}
+
+char & Str::iterator::operator*() {
+    return str_data[position];
+}
+
+char * Str::iterator::operator->() {
+    return str_data + position;
+}
+
+Str::iterator Str::begin() {
+    return Str::iterator(data, len, 0);
+}
+
+Str::iterator Str::end() {
+    return Str::iterator(data, len, len);
+}
+```
+
+Комментарии:
+* В конструкторе `Str::iterator::iterator` показана форма инициализации полей до исполнения тела конструктора
+  (выглядит более лаконично и может использоваться для инициализации константных полей)
+
+* `this` - это указатель на самого себя. Как можно догадаться, имеет тип `Str*`.
+  Операторы `+=` и префиксный оператор `++` возвращают ссылку на самого себя.
+
+* `operator++(int)` - это постфиксный оператор `++`. Вспомните разницу между `++i` и `i++`.
+  Постфиксный итератор делает инкремент внутри себя, но возвращает копию старого итератора.
+
+* оператор `*` возвращает ссылку на элемент строки. В данном случае синтаксис аналогичен разыменованию указателей в C.
+
+Теперь воспользуемся нашим итератором:
+```C++
+int main() {
+	Str str("hello world!");
+    for (Str::iterator it = str.begin(); it != str.end(); ++it) {
+        std::cout << *it;
+    }   
+    std::cout << std::endl;
+}
+```
+Компилируем и ...
+```
+error: no match for ‘operator!=’ (operand types are ‘Str::iterator’ and ‘Str::iterator’)
+  for (Str::iterator it = str.begin(); it != str.end(); ++it) {
+                                          ^
+```
+
+Мы забыли про операторы `==` и `!=` для итераторов. Эти операторы должны иметь следующую сигнатуру:
+```C++
+class iterator {
+	// ...
+	bool operator==(const iterator & it) const;
+	bool operator!=(const iterator & it) const;
+};
+```
+Как правило, в таких случаях реализуют один оператор, а второй реализуют через отрицание первого.
+Если сделать всё правильно, то наш код скомпилируется и выведет `hello world!`.
+
+А теперь - бонус! Для класса, имеющего итераторы начиная с C++11 можно написать следующий код:
+```C++
+int main() {
+	Str str("hello world!");
+    for (char c : str) {
+        std::cout << c;
+    }   
+    std::cout << std::endl;
+}
+```
+Этот код аналогичен приведенному выше "итерированию" коллекций через итераторы, только намного проще :)
+
 *Продолжение следует...*
