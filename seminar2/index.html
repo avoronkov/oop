@@ -144,6 +144,8 @@
         
             <li><a href="#_5">Итераторы</a></li>
         
+            <li><a href="#_6">Создание объектов</a></li>
+        
     
     </ul>
 </div></div>
@@ -589,8 +591,110 @@ Str::iterator Str::end() {
 }
 </code></pre>
 
-<p>Этот код аналогичен приведенному выше "итерированию" коллекций через итераторы, только намного проще :)</p>
-<p><em>Продолжение следует...</em></p></div>
+<p>Этот код аналогичен приведённому выше "итерированию" коллекций через итераторы, только намного проще :)</p>
+<h2 id="_6">Создание объектов</h2>
+<p>Допустим, у нас есть класс <code>A</code>, у которого есть метод <code>std::string getData() const</code>.
+Как мы можем создать объект класса <code>A</code>?
+Начнём с простого:</p>
+<pre><code class="C++">int main() {
+    {
+        A a; // A
+        std::cout &lt;&lt; a.getData() &lt;&lt; std::endl;
+    } // B
+}
+</code></pre>
+
+<p>В строке <em>A</em> вызовется конструктор класса <code>A</code> без аргументов,
+в строке <em>B</em> вызовется деструктор - объект <code>a</code> перестанет существовать.</p>
+<pre><code class="C++">    A b(&quot;hello&quot;);
+    std::cout &lt;&lt; b.getData() &lt;&lt; std::endl;
+</code></pre>
+
+<p>Здесь будет вызван конструктор с одним аргументом типа <code>const char *</code>
+(или типа <code>std::string</code>, или <code>const std::string &amp;</code> или <code>std::initializer_list&lt;std::string&gt;</code> - в общем, тут возможны варианты :) ).
+Объект <code>b</code> будет также автоматически уничтожен при выходе из текущей области видимости.</p>
+<pre><code class="C++">    A * c = new A(); // A
+    std::cout &lt;&lt; c-&gt;getData() &lt;&lt; std::endl;
+    delete c; // B
+</code></pre>
+
+<p>Инициализация <em>указателя</em> на объект класса <code>A</code>. 
+В строке <em>A</em> будет вызван конструктор (без аргументов).
+Важно помнить, что объекты созданные оператором <code>new</code> должны быть
+явно удалены оператором <code>delete</code> (строка <em>B</em>), иначе - утечка памяти.</p>
+<pre><code class="C++">    A * d = new A(&quot;world&quot;);
+    std::cout &lt;&lt; d-&gt;getData() &lt;&lt; std::endl;
+    delete d;
+</code></pre>
+
+<p>Всё то же самое, за исключением вызова конструктора с аргументами.</p>
+<p>Теперь к самому интересному. C++11 предлагает <em>унифицированную форму инициализации</em> (а также <em>списки инициализации</em>).
+Выглядит следующим образом:</p>
+<pre><code class="C++">    A e{};
+    std::cout &lt;&lt; e.getData() &lt;&lt; std::endl;
+
+    A f{&quot;hello&quot;, &quot;world&quot;};
+    std::cout &lt;&lt; f.getData() &lt;&lt; std::endl;
+
+    A * g = new A{&quot;foo&quot;, &quot;bar&quot;};
+    std::cout &lt;&lt; g-&gt;getData() &lt;&lt; std::endl;
+    delete g;
+</code></pre>
+
+<p>Вроде бы ничего существенного, просто <code>(...)</code> поменялись на <code>{...}</code>.
+С одной стороны, подобный синтаксис был ещё в C - там он применялся для инициализации массивов:</p>
+<pre><code class="C++">    int arr[] = {1, 2, 3};
+</code></pre>
+
+<p>С другой стороны, в C++11 возможности фигурных скобочек существенно расширились - унифицированная форма инициализации может применяться не только для объектов, но и для примитивных типов:</p>
+<pre><code class="C++">    int x{13};
+    std::cout &lt;&lt; x &lt;&lt; std::endl;
+</code></pre>
+
+<p>и для коллекций, таких как вектор:</p>
+<pre><code class="C++">    std::vector&lt;std::string&gt; vs{&quot;one&quot;, &quot;two&quot;, &quot;three&quot;};
+    for (auto s : vs) {
+        std::cout &lt;&lt; s &lt;&lt; std::endl;
+    }
+</code></pre>
+
+<p>или ассоциативный массив:</p>
+<pre><code class="C++">    std::map&lt;std::string, int&gt; mp = {
+        {&quot;one&quot;, 1},
+        {&quot;two&quot;, 2},
+        {&quot;three&quot;, 3}
+    };
+
+    for (auto pair : mp) {
+        std::cout &lt;&lt; pair.first &lt;&lt; &quot; =&gt; &quot; &lt;&lt; pair.second &lt;&lt; std::endl;
+    }
+</code></pre>
+
+<p>И напоследок, приведу код класса <em>A</em>, чтобы можно было запустить приведённые примеры:</p>
+<pre><code class="C++">class A {
+public:
+    A() : A{&quot;&quot;} { 
+        std::cout &lt;&lt; &quot;A1\n&quot;;
+    }
+    A(const std::string &amp; s) : data{s} {
+        std::cout &lt;&lt; &quot;A2\n&quot;;
+    }
+    A(const std::initializer_list&lt;std::string&gt; &amp; list) {
+        std::cout &lt;&lt; &quot;A3\n&quot;;
+        for (auto i: list) {
+            data += i + &quot; &quot;;
+        }
+    }
+    ~A() {
+        std::cout &lt;&lt; &quot;~A()\n&quot;;
+    }
+    std::string getData() const {
+        return data;
+    }
+private:
+    std::string data;
+};
+</code></pre></div>
             
         </div>
 
