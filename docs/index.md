@@ -10,6 +10,10 @@
 
 [Семинар 2](seminar2/)
 
+## Важное!
+
+[Процесс сдачи задач](assembla/)
+
 ## Задачи
 
 [Задача 1](https://docs.google.com/document/d/1rzIQpWltIgfiHt8Tsdu3Sp32aOwXaQkLByTass7h_7M/)
