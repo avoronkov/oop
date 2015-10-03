@@ -1,0 +1,20 @@
+# Семинар 5 (02.10.2015)
+
+## Использование svn (subversion)
+
+## Типичные ошибки
+
+## Типичные недочёты
+
+**Структуры с стиле C**. Вместо
+```C++
+typedef struct _MyStruct {
+	int some_field;
+} MyStruct;
+```
+можно писать просто
+```
+struct MyStruct {
+	int some_field;
+};
+```
