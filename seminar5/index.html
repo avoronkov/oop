@@ -277,6 +277,102 @@ bool operator!=(const iterator &amp; other) const {
 }
 </code></pre>
 
+<p>Как узнать, что <code>iterator++</code> дошел до конца списка?
+Если внутри итератора хранить длину списка и позицию, как в классе <a href="../seminar2/">Str</a>,
+но для связного списка это не будет работать.
+Например:</p>
+<pre><code class="C++">struct iterator {
+    Node * node;
+    int len;
+    int pos;
+};
+
+int main() {
+    List l{1, 2};
+    List::iterator it = l.begin();
+    l.push_back(3);
+    cout &lt;&lt; *it &lt;&lt; endl; // 1
+    ++it;
+    cout &lt;&lt; *it &lt;&lt; endl; // 2
+    ++it;
+    cout &lt;&lt; *it &lt;&lt; endl; // Должно быть 3, но it не знает, что длина списка изменилась
+}
+</code></pre>
+
+<p>Можно сказать "но я же могу использовать ссылку на длину, следующим образом:"</p>
+<pre><code class="C++">class List {
+    // ...
+    int len
+    // ...
+};
+
+struct iterator {
+    Node * node;
+    int &amp; len; // len указывает на List::len
+    int pos;
+};
+</code></pre>
+
+<p>но тогда я предложу следующий вариант, который всё испортит:</p>
+<pre><code class="C++">int main() {
+    List l{1, 2};
+    List::iterator it = l.begin();
+    l.push_front(0);
+    l.pop_back();
+    // Длина списка не изменилась, но изменилась относительная позиция
+}
+</code></pre>
+
+<p>Вообще, самым лучшим решением будет не хранить длину списка (?!).
+Как понять, что итератор дошёл до конца списка?
+Очень просто: если у текущего узла нет следующего, значит это конец:</p>
+<pre><code class="C++">struct iterator {
+    Node * node;
+};
+
+iterator &amp; operator++() {
+    if (this-&gt;node-&gt;next) {
+        this-&gt;node = this-&gt;node-&gt;next;
+    }
+    return *this;
+}
+</code></pre>
+
+<p><strong>Что возвращает метод end()?</strong>
+Метод <code>end()</code> возвращает итератор, указывающий на фиктивный элемент (узел), являющийся <em>первый после последнего реального элемента в списке</em>.
+Покажу на примере. Допустим, список содержит элементы 1, 2 и 3.
+Тогда список будет выглядеть примерно следующим образом:</p>
+<pre><code>        begin()                            end()
+           |                                |
+           V                                V
+        iterator                          iterator
+           |                                |
+           V                                V
+NULL  &lt;-  node  &lt;-&gt;  node  &lt;-&gt;  node  &lt;-&gt;  node -&gt; NULL
+           |          |          |
+           V          V          V
+           1          2          3
+</code></pre>
+
+<p>В самом классе <code>List</code> достаточно иметь два поля: <code>Node * _begin</code> и <code>Node * _end</code>,
+при этом <code>_end</code> всегда будет указывать на узел с "первым после последнего элементом",
+а <code>_begin</code> - на узел с первым элементом.</p>
+<p><strong>Как тогда должен выглядеть пустой список?</strong>
+<code>_end</code> должен указывать на "фиктивный" узел, а <code>_begin</code> должен указывать на <code>_end</code>:</p>
+<pre><code class="C++">class List {
+    // ...
+private:
+    Node * _begin;
+    Node * _end;
+};
+
+List::List() {
+    _end = new Node();
+    _begin = _end;
+}
+</code></pre>
+
+<p>Не забывайте при добавлении и удалении узлов <strong>перестраивать указатели соседних узлов</strong>.</p>
 <p><em>Продолжение следует</em></p>
 <h2 id="_2">Пожелания</h2>
 <p><strong>Структуры с стиле C</strong>. Вместо</p>
