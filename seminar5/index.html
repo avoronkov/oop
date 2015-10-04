@@ -373,6 +373,92 @@ List::List() {
 </code></pre>
 
 <p>Не забывайте при добавлении и удалении узлов <strong>перестраивать указатели соседних узлов</strong>.</p>
+<p><strong>Нельзя возвращать ссылки</strong> (точно так же, как и указатели) <strong>на локальные переменные</strong>
+из методов, функций.
+Например, следующий код будет неправильным:</p>
+<pre><code>int &amp; getReference() {
+    int x = 13;
+    return x;
+}
+</code></pre>
+
+<p>Компилятор будет (должен) выдавать предупреждение для такого кода:</p>
+<pre><code>В функции-члене «int&amp; getReference()»:
+предупреждение: возвращена ссылка на локальную переменную «x» [-Wreturn-local-addr]
+   int x = 13;
+       ^
+</code></pre>
+
+<p>В следующем коде та же самая ошибка:</p>
+<pre><code>class Node {
+    // ...
+public:
+    value_type &amp; getValue();
+    // ...
+};
+
+class List {
+    // ...
+public:
+    value_type &amp; front() {
+        value_type result = this-&gt;_begin-&gt;getValue(); // создаётся локальная переменная
+        return result; // ошибка: возвращается ссылка на локальную переменную
+    }
+private:
+    Node * _begin;
+};
+</code></pre>
+
+<p>Использовать <em>статические переменные</em> для решения этой проблемы <strong>не нужно</strong>.
+В данном случае можно написать просто:</p>
+<pre><code>    value_type &amp; front() {
+        return this-&gt;_begin-&gt;getValue();
+    }
+</code></pre>
+
+<p>Или, если нужно использовать локальную переменную, то объявить её как ссылку:</p>
+<pre><code>    value_type &amp; front() {
+        value_type &amp; result = this-&gt;_begin-&gt;getValue();
+        return result;
+    }
+</code></pre>
+
+<p><strong>Из константного метода нельзя вызвать неконстантный метод.</strong>
+Также нельзя вызвать неконстантный метод <em>поля</em> класса.
+Объяснение простое: const-методы не должны изменять состояние объекта.
+Поэтому следующий код работать не будет:</p>
+<pre><code>class Node {
+    // ...
+public:
+    value_type &amp; getValue();
+    // ...
+};
+
+class List {
+    // ...
+public:
+    const value_type &amp; front() const {
+        return this-&gt;_begin-&gt;getVanue(); // ошибка: вывзов non-const метода из const
+    }
+private:
+    Node * _begin;
+};
+</code></pre>
+
+<p>В таком случае можно объявить два метода <code>getValue</code> - const и не-const:</p>
+<pre><code>class Node {
+    // ...
+public:
+    value_type &amp; getValue();
+    const value_type &amp; getValue() const;
+    // ...
+};
+</code></pre>
+
+<p>Тогда из const-метода <code>front</code> будет вызвать const-метод <code>getValue</code>.
+Этот подход используют коллекции из стандартной библиотеки, например метод
+<a href="http://www.cplusplus.com/reference/vector/vector/operator%5B%5D/">operator[]</a> класса <em>std::vector</em>.
+В случае, если от метода <code>getValue</code> требуется только доступ "на чтение", можно оставить только const-версию метода.</p>
 <p><em>Продолжение следует</em></p>
 <h2 id="_2">Пожелания</h2>
 <p><strong>Структуры с стиле C</strong>. Вместо</p>
