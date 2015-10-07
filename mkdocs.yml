@@ -10,3 +10,11 @@ pages:
         - 'Acceptance': assembla.md
         - 'Using namespaces': using-namespaces.md
         - 'CMake': cmake.md
+    - Acceptance:
+        - "Overall": tasks-acceptance.md
+        - Task1:
+            - "Amikishieva": task1_test_results/amikishieva_task1_test_results.md
+            - "Demidov": task1_test_results/demidov_task1_test_results.md
+            - "Dudaev": task1_test_results/dudaev_task1_test_results.md
+            - "Kambalina": task1_test_results/kambalina_task1_test_results.md
+            - "Shachenko": task1_test_results/shachenko_task1_test_results.md

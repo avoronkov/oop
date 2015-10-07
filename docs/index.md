@@ -22,6 +22,8 @@
 
 [Задача 1](https://docs.google.com/document/d/1rzIQpWltIgfiHt8Tsdu3Sp32aOwXaQkLByTass7h_7M/)
 
+[Результаты](tasks-acceptance/) (!)
+
 ## Дополнительная информация
 
 [Использование пространств имён](using-namespaces)
