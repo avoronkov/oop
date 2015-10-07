@@ -517,7 +517,13 @@ public:
 Этот подход используют коллекции из стандартной библиотеки, например метод
 <a href="http://www.cplusplus.com/reference/vector/vector/operator%5B%5D/">operator[]</a> класса <em>std::vector</em>.
 В случае, если от метода <code>getValue</code> требуется только доступ "на чтение", можно оставить только const-версию метода.</p>
-<p><em>Продолжение следует</em></p>
+<p><strong>Обн. 07.10.2015</strong>
+Важно, чтобы <strong>код соответствовал спецификации</strong>.
+В частности, <em>публичные</em> методы должны называться так, как указано в задании
+и иметь точно такую же сигнатуру (если метод обозначен как <code>const</code>, то <code>const</code> убирать нельзя).
+Самый простой способ этого добиться - полностью скопировать объявление класса <code>LinkedList</code>
+из текста задания в заголовочный файл.
+Константные итераторы традиционно называются <code>const_iterator</code>.</p>
 <h2 id="_2">Пожелания</h2>
 <p><strong>Структуры с стиле C</strong>. Вместо</p>
 <pre><code class="C++">typedef struct _MyStruct {
@@ -536,7 +542,18 @@ public:
 public:
     int some_field;
 };
-</code></pre></div>
+</code></pre>
+
+<p><strong>Имена файлов</strong>.
+Старайтесь придерживаться следующей схемы разбиения кода на модули (файлы).
+Каждому классу с именем <code>SomeClass</code> должна соответствовать пара файлов
+<code>SomeClass.h</code> и <code>SomeClass.cpp</code>.
+Вложенные классы (например <code>SomeClass::iterator</code>) можно определять в тех же файлах.
+функцию <code>main()</code> лучше всего располагать в отдельном файле <code>main.cpp</code>.
+Тесты располагаются в отдельном файле (файлах), например: <code>SomeClass_test.cpp</code> - функции для тестирования класса <code>SomeClass</code>.</p>
+<p>Таким образом, код первой задачи можно разбить на 4 файла:
+<code>LinkedList.h</code>, <code>LinkedList.cpp</code>, <code>LinkedList_test.cpp</code> и <code>main.cpp</code>.</p>
+<p><em>Продолжение следует</em></p></div>
             
         </div>
 
