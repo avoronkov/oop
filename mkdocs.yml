@@ -10,6 +10,7 @@ pages:
         - 'Acceptance': assembla.md
         - 'Using namespaces': using-namespaces.md
         - 'CMake': cmake.md
+        - 'Svn': using-subversion.md
     - Acceptance:
         - "Overall": tasks-acceptance.md
         - Task1:

@@ -30,6 +30,8 @@
 
 [CMake для сборки C++ проектов](cmake)
 
+[Использование Svn для управления изменениями в коде](using-subversion/)
+
 ## Ссылки
 
 [Список дополнительной литературы](https://sites.google.com/site/nguoop/spisok-dopolnitelnoj-literatury-1)
