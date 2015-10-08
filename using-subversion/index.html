@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Acceptance - OOP Practice Docs</title>
+	<title>Svn - OOP Practice Docs</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -97,8 +97,8 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Acceptance</a>
+<li >
+    <a href="../assembla/">Acceptance</a>
 </li>
 
                         
@@ -115,8 +115,8 @@
 
                         
                             
-<li >
-    <a href="../using-subversion/">Svn</a>
+<li class="active">
+    <a href="./">Svn</a>
 </li>
 
                         
@@ -189,12 +189,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../seminar5/">
+                        <a rel="next" href="../cmake/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../using-namespaces/">
+                        <a rel="prev" href="../tasks-acceptance/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -210,24 +210,115 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Процесс сдачи задач</a></li>
+        <li class="main active"><a href="#svn-subversion">Использование svn (subversion)</a></li>
+        
+            <li><a href="#_1">Общая информация</a></li>
+        
+            <li><a href="#_2">Понятие ревизий</a></li>
+        
+            <li><a href="#svn">Процесс работы с Svn</a></li>
+        
+            <li><a href="#trunk-branches-tags">trunk, branches, tags</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Процесс сдачи задач</h1>
-<p>Для того, чтобы сдавать задачи по практической части курса ООП,
-необходимо зарегистрироваться в системе <a href="https://www.assembla.com/">Assembla</a>:</p>
-<p>1 Зайти на страницу <a href="https://www.assembla.com/plans">Pricing</a></p>
-<p>2 Прокрутить до "Compare Plans", найти план "Repo Only", нажать "SIGN UP NOW"</p>
-<p>3 Заполнить, нажать "Create account" (можно использовать аккаунт Google, но говорят, с ним есть какие-то проблемы)</p>
-<p>4 Создать рабочее пространство (space) с именем <code>fit-14207-ivanov</code>, где <em>ivanov</em> надо заметить своей фамилией :)</p>
-<p>5 Добавить в space пользователя <code>avoronkov</code> (Alexander Voronkov)</p>
-<p>6 Создать репозиторий с названием задачи, например <code>Task1</code>. Можно использовать svn или git.</p>
-<p>7 Написать код!</p>
-<p>8 ... Profit!</p></div>
+<h1 id="svn-subversion">Использование svn (subversion)</h1>
+<h2 id="_1">Общая информация</h2>
+<p>Система контроля версий (Version control system, VCS) - основной инструмент,
+который помогает разработчикам управлять изменениями в исходном коде некоторого программного продукта.
+Svn (subversion) - одна из популярных централизованных систем контроля версий.</p>
+<p>"Централизованность" svn подразумевает наличие главного центрального сервера (репозитория),
+на котором хранится вся история изменений.
+Разработчики как клиенты подключаются к репозиторию, скачивают целиком или частично
+исходные коды с историей их изменения (делают <em>checkout</em>), вносят изменения в код,
+и заливают изменения обратно на сервер (делают <em>commit</em>).</p>
+<p>Основные задачи, которые решают системы контроля версий:</p>
+<ul>
+<li>
+<p>Хранение истории изменений исходного кода, возможность вернуться к одному из предыдущих состояний.</p>
+</li>
+<li>
+<p>Управление совместной работы нескольких человек над общим исходным кодом.</p>
+</li>
+</ul>
+<h2 id="_2">Понятие ревизий</h2>
+<p><strong>Ревизия</strong> является одним из ключевых понятий для VCS.
+Ревизия представляет собой <em>зафиксированное состояние</em> набора файлов исходного кода.</p>
+<p>В тот момент, когда программист желает зафиксировать текущее состояние кода, он делает <strong>commit</strong>,
+при этом на сервере создаётся новая ревизия, в которой фиксируется состояние кода в данный момент.
+В svn ревизии нумеруются порядковыми числами: 1, 2, 3 ...</p>
+<h2 id="svn">Процесс работы с Svn</h2>
+<p>В данном разделе указаны <em>консольные</em> команды svn, которые используются при работе с этой VCS.
+Вместо консоли можно использовать графический клиент, например TortoiseSVN - команды будут теми же самыми,
+несмотря на то, что способ их вызова несколько различается (через контекстное меню).</p>
+<ul>
+<li>
+<p>создать svn репозиторий на сервере. Скопировать url репозитория.</p>
+</li>
+<li>
+<p>в консоли: перейти в директорию с проектами, выполнить <em>checkout</em> (скачать файлы проекта на локальную машину):</p>
+</li>
+</ul>
+<pre><code>svn co https://subversion.assembla.com/svn/nsu-fit-14207-oop/ oop-task1/
+</code></pre>
+
+<p>при этом будет создана папка <code>oop-task1</code> с файлами репозитория.</p>
+<ul>
+<li>
+<p>Создать несколько файлов внутри папки <code>oop-task1</code>, например <code>LinkedList.h</code>, <code>LinkedList.cpp</code>, <code>main.cpp</code>.</p>
+</li>
+<li>
+<p>Добавить файлы в систему контроля версий:</p>
+</li>
+</ul>
+<pre><code>svn add LinkedList.h LinkedList.cpp main.cpp
+</code></pre>
+
+<ul>
+<li>Сделать <em>commit</em> - зафиксировать текущее состояние добавленных файлов и отправить существующие изменения на сервер:</li>
+</ul>
+<pre><code>svn commit -m 'This is the first commit'
+</code></pre>
+
+<p>Аргумент после <code>-m</code> - комментарий, который описывает ревизию, которая будет создана на сервере.</p>
+<p><em>Как вносить изменения в код?</em></p>
+<ul>
+<li>При начале работы над очередной задачей сначала необходимо сделать <em>update</em> в директории с кодом:</li>
+</ul>
+<pre><code>svn update
+</code></pre>
+
+<p>Команда <em>update</em> скачивает последние изменения с сервера. Кажется, что этот шаг можно опустить,
+но когда вы работаете над проектов <em>в команде</em> - этот шаг становится очень важным.
+Как и в том случае, когда вы редактируете код с разных компьютеров.</p>
+<ul>
+<li>
+<p>Далее вносятся изменения в код, новые файлы добавляются с помощью <code>svn add</code>.</p>
+</li>
+<li>
+<p>Затем снова делается <code>svn commit</code>.</p>
+</li>
+</ul>
+<p><em>Полезные команды при работе с svn</em>:</p>
+<ul>
+<li>
+<p><code>svn log</code> - просмотр лога изменений исходного кода</p>
+</li>
+<li>
+<p><code>svn diff</code> - просмотр "разницы" между последней зафиксированной ревизией и текущим состоянием файлов</p>
+</li>
+<li>
+<p><code>svn cp file1 file2</code> - копирование файла в svn с сохранением истории изменений файла</p>
+</li>
+<li>
+<p><code>svn mv oldfile newfile</code> - переименование файла с сохранением истории изменений</p>
+</li>
+</ul>
+<h2 id="trunk-branches-tags">trunk, branches, tags</h2>
+<p>Кто знает, для чего нужны папки <code>trunk</code>, <code>branches</code> и <code>tags</code>?</p></div>
             
         </div>
 
