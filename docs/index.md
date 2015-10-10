@@ -14,13 +14,17 @@
 
 [Семинар 5](seminar5/)
 
+[Семинар 6](seminar6/)
+
 ## Важное!
 
 [Процесс сдачи задач](assembla/)
 
 ## Задачи
 
-[Задача 1](https://docs.google.com/document/d/1rzIQpWltIgfiHt8Tsdu3Sp32aOwXaQkLByTass7h_7M/)
+[Задача 1](https://docs.google.com/document/d/1rzIQpWltIgfiHt8Tsdu3Sp32aOwXaQkLByTass7h_7M/) ([базовые тесты](tests/task1_test.cpp))
+
+[Задача 2](https://docs.google.com/document/d/1JiCAY8zS348n0RRcOQmdQyyP1jjhfm3jyYGaE-SclWI/)
 
 [Результаты](tasks-acceptance/) (!)
 

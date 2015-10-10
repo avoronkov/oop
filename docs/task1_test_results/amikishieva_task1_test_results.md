@@ -1,14 +1,35 @@
 # Compile
 ```
-g++ -Wall -std=c++14 -o a.out list2.cpp main.cpp
-list2.cpp: In copy constructor «List::iterator::iterator(const List::iterator&)»:
-list2.cpp:47:47: ошибка: нет декларации «memcpy» в этой области видимости
-  memcpy(list_node, it.list_node, sizeof(Node*));
-                                               ^
-list2.cpp: В функции-члене «List& List::operator+=(const List&)»:
-list2.cpp:511:18: ошибка: invalid initialization of non-const reference of type «List&» from an rvalue of type «List»
-  return ((*this) + (other));
-                  ^
-Makefile:10: ошибка выполнения рецепта для цели «a.out»
-make: *** [a.out] Ошибка 1
+g++ -Wall -std=c++14 -lgtest -lgtest_main -o a.out list2.cpp alxr_test.cpp
 ```
+
+# Run tests
+```
+Running main() from gtest_main.cc
+[==========] Running 5 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 5 tests from AlxrTest
+[ RUN      ] AlxrTest.CheckSize
+[       OK ] AlxrTest.CheckSize (0 ms)
+[ RUN      ] AlxrTest.ForIteratorLoop
+[       OK ] AlxrTest.ForIteratorLoop (0 ms)
+[ RUN      ] AlxrTest.ForeachLoop
+[       OK ] AlxrTest.ForeachLoop (0 ms)
+[ RUN      ] AlxrTest.InsertInTheMiddle
+[       OK ] AlxrTest.InsertInTheMiddle (0 ms)
+[ RUN      ] AlxrTest.RemoveFromTheMiddle
+[       OK ] AlxrTest.RemoveFromTheMiddle (0 ms)
+[----------] 5 tests from AlxrTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 5 tests.
+```
+
+# Замечания
+
+* Формальные требования важны: класс должен называться `LinkedList`, а не `List`
+
+* Не нужно создавать новую папку на каждый коммит - исходные файлы должны лежать в одном месте - [ссылка](using-subversion/)
+
+* Нужно написать свои тесты.

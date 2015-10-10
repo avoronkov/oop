@@ -1,30 +1,10 @@
 # Compile
 ```
-g++ -Wall -fpermissive -std=c++14 -lgtest -o a.out LinkedList.cpp Source.cpp alxr_test.cpp Test.cpp
-In file included from LinkedList.cpp:1:0:
-Header.h:204:7: предупреждение: избыточная квалификация «LinkedList::» элемента «empty» [-fpermissive]
-  bool LinkedList::empty() const; //return 1, if list is emty
-       ^
-LinkedList.cpp: В функции-члене «LinkedList::iterator LinkedList::insert(LinkedList::iterator, const value_type&)»:
-LinkedList.cpp:123:12: предупреждение: неиспользуемая переменная «NewNode» [-Wunused-variable]
-  NodeBase *NewNode = new NodeBase(before.node, value);
-            ^
-In file included from Source.cpp:1:0:
-Header.h:204:7: предупреждение: избыточная квалификация «LinkedList::» элемента «empty» [-fpermissive]
-  bool LinkedList::empty() const; //return 1, if list is emty
-       ^
+g++ -Wall -std=c++14 -lgtest -o a.out LinkedList.cpp Source.cpp alxr_test.cpp Test.cpp
 Source.cpp: В функции «int main(int, char**)»:
 Source.cpp:5:17: предупреждение: ignoring return value of «int RUN_ALL_TESTS()», declared with attribute warn_unused_result [-Wunused-result]
   RUN_ALL_TESTS();
                  ^
-In file included from alxr_test.cpp:2:0:
-Header.h:204:7: предупреждение: избыточная квалификация «LinkedList::» элемента «empty» [-fpermissive]
-  bool LinkedList::empty() const; //return 1, if list is emty
-       ^
-In file included from Test.cpp:1:0:
-Header.h:204:7: предупреждение: избыточная квалификация «LinkedList::» элемента «empty» [-fpermissive]
-  bool LinkedList::empty() const; //return 1, if list is emty
-       ^
 ```
 # Run tests
 ```
@@ -44,10 +24,8 @@ Header.h:204:7: предупреждение: избыточная квалиф�
 [----------] 5 tests from AlxrTest (0 ms total)
 
 [----------] 7 tests from ListTest
-[ RUN      ] ListTest.Front_and_Back
-[       OK ] ListTest.Front_and_Back (0 ms)
 [ RUN      ] ListTest.CreateList
-[       OK ] ListTest.CreateList (1 ms)
+[       OK ] ListTest.CreateList (0 ms)
 [ RUN      ] ListTest.FrontandBack
 [       OK ] ListTest.FrontandBack (0 ms)
 [ RUN      ] ListTest.BeginandEnditPlusitMin
@@ -58,9 +36,14 @@ Header.h:204:7: предупреждение: избыточная квалиф�
 [       OK ] ListTest.push_pop (0 ms)
 [ RUN      ] ListTest.boolev
 [       OK ] ListTest.boolev (0 ms)
-[----------] 7 tests from ListTest (1 ms total)
+[ RUN      ] ListTest.erase
+[       OK ] ListTest.erase (0 ms)
+[----------] 7 tests from ListTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 12 tests from 2 test cases ran. (1 ms total)
+[==========] 12 tests from 2 test cases ran. (3 ms total)
 [  PASSED  ] 12 tests.
 ```
+
+# Resolution
+Принято!
