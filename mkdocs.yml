@@ -12,6 +12,7 @@ pages:
         - 'Using namespaces': using-namespaces.md
         - 'CMake': cmake.md
         - 'Svn': using-subversion.md
+        - 'GoogleTest': using-googletest.md
     - Acceptance:
         - "Overall": tasks-acceptance.md
         - Task1:

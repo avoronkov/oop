@@ -36,6 +36,8 @@
 
 [Использование Svn для управления изменениями в коде](using-subversion/)
 
+[Запуск unit-тестов с использованием GoogleTest](using-googletest/)
+
 ## Ссылки
 
 [Список дополнительной литературы](https://sites.google.com/site/nguoop/spisok-dopolnitelnoj-literatury-1)
