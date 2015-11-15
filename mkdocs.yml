@@ -7,6 +7,7 @@ pages:
         - 'Seminar 3': seminar3.md
         - 'Seminar 5': seminar5.md
         - 'Seminar 6': seminar6.md
+        - 'Seminar 11': seminar11.md
     - Extras:
         - 'Acceptance': assembla.md
         - 'Using namespaces': using-namespaces.md
