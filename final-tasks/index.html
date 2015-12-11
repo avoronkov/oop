@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>Overall - OOP Practice Docs</title>
+	<title>Final tasks - OOP Practice Docs</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -154,8 +154,8 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Overall</a>
+<li >
+    <a href="../tasks-acceptance/">Overall</a>
 </li>
 
                         
@@ -199,8 +199,8 @@
 
                         
                             
-<li >
-    <a href="../final-tasks/">Final tasks</a>
+<li class="active">
+    <a href="./">Final tasks</a>
 </li>
 
                         
@@ -219,12 +219,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../using-googletest/">
+                        <a rel="next" href="../task1_test_results/shachenko_task1_test_results/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
-                    <li >
-                        <a rel="prev" href="../task1_test_results/amikishieva_task1_test_results/">
+                    <li class="disabled">
+                        <a rel="prev" >
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -240,19 +240,272 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#1">Сдача задачи 1 ("Связный список")</a></li>
+        <li class="main active"><a href="#_1">Маленькие задачи</a></li>
+        
+            <li><a href="#_2">Аргументы командной строки</a></li>
+        
+            <li><a href="#_3">Неявный конструктор</a></li>
+        
+            <li><a href="#_4">Коллекции</a></li>
+        
+            <li><a href="#_5">Счётчик количества вызовов</a></li>
+        
+            <li><a href="#_6">Список чисел Фибоначи без хранения в памяти</a></li>
+        
+            <li><a href="#_7">Запоминание результата вычислений</a></li>
+        
+            <li><a href="#_8">Освобождение памяти</a></li>
+        
+            <li><a href="#_9">Захват вывода функции</a></li>
+        
+            <li><a href="#_10">Деструкторы</a></li>
+        
+            <li><a href="#_11">Константные ссылки</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="1">Сдача задачи 1 ("Связный список")</h1>
-<p>Амикишиева Руслана : <a href="../task1_test_results/amikishieva_task1_test_results">Задача 1</a></p>
-<p>Демидов Сергей : <a href="../task1_test_results/demidov_task1_test_results">Задача 1</a></p>
-<p>Дудаев Александр : <a href="../task1_test_results/dudaev_task1_test_results">Задача 1 - принято</a></p>
-<p>Камбалина Алена : <a href="../task1_test_results/kambalina_task1_test_results">Задача 1</a></p>
-<p>Шаченко Никита : <a href="../task1_test_results/shachenko_task1_test_results">Задача 1</a></p></div>
+<h1 id="_1">Маленькие задачи</h1>
+<h2 id="_2">Аргументы командной строки</h2>
+<p>Используя <code>boost::program_options</code> (или другую библиотеку)
+написать программу, которая разбирает аргументы командной строки.
+Должны поддерживаться следующие вызовы:</p>
+<pre><code>Run:
+prog.exe hello world
+
+Output:
+other parameters: &quot;hello&quot; &quot;world&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --str &quot;some string&quot;
+
+Output:
+string parameter: &quot;some string&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --int 14
+
+Output:
+int parameter: 14
+</code></pre>
+
+<pre><code>Run:
+prog.exe --vec foo --vec bar --vec baz
+
+Output:
+vector: &quot;foo&quot; &quot;bar&quot; &quot;baz&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --count --count --count
+
+Output:
+count: 3
+</code></pre>
+
+<pre><code>Run:
+prog.exe one --int 11 --str hello --count --vec foo --vec bar two --count three
+
+Output:
+string parameter: &quot;hello&quot;
+int parameter: 11
+vector: &quot;foo&quot; &quot;bar&quot;
+count: 2
+other parameters: &quot;one&quot; &quot;two&quot; &quot;three&quot;
+</code></pre>
+
+<h2 id="_3">Неявный конструктор</h2>
+<p>Следующий код компилируется и работает:</p>
+<pre><code>#include &lt;iostream&gt;
+
+class Int {
+    int value;
+public:
+    Int(int i): value{i} {}
+
+    int operator*()const {
+        return value;
+    }   
+};
+
+void useInt(const Int &amp; i) {
+    std::cout &lt;&lt; *i &lt;&lt; std::endl;
+}
+
+int main() {
+    int x{10};
+    useInt(x); // output: 10
+}
+</code></pre>
+
+<p>Почему? Как заставить компилятор принимать только явное использование класса <code>Int</code>:</p>
+<pre><code>    useInt(Int{x}); // output: 10
+</code></pre>
+
+<h2 id="_4">Коллекции</h2>
+<p>Дана следуюшая функция:</p>
+<pre><code>void printCollection(const std::vector&lt;int&gt; &amp; v) {
+    int count = 0;
+    std::cout &lt;&lt; &quot;{ &quot;
+    for (int i=0; i&lt;v.size(); i++) {
+        std::cout &lt;&lt; v[i] &lt;&lt; &quot; &quot;;
+        count++;
+    }
+    std::cout &lt;&lt; &quot;}[&quot; &lt;&lt; count &lt;&lt; &quot;]&quot;;
+
+}
+</code></pre>
+
+<p>Как сделать так, чтобы она могла рвботать с произвольными коллекциями?</p>
+<h2 id="_5">Счётчик количества вызовов</h2>
+<p>Дан следующий код:</p>
+<pre><code>int count = 0;
+
+void fn() {
+    count++;
+}
+
+template &lt;typename F&gt;
+void call_few_times(F f) {
+    for (int i=0; i &lt; 10; i++) {
+        f();
+    }   
+}
+
+int main() {
+    call_few_times(fn);
+    std::cout &lt;&lt; &quot;fn() was called &quot; &lt;&lt; count &lt;&lt; &quot; times\n&quot;;
+}
+
+</code></pre>
+
+<p>Как посчитать, сколько вызовов делает <code>call_few_times</code> не используя глобальную переменную?</p>
+<h2 id="_6">Список чисел Фибоначи без хранения в памяти</h2>
+<p>Реализовать <code>Fibonacci</code> так, чтобы следующий код показывал правильный результат:</p>
+<pre><code>for (auto n: Fibonacci(10)) {
+    std::cout &lt;&lt; n &lt;&lt; std::endl;
+}
+// output: 1 2 3 5 8 13 21 34 55 89
+</code></pre>
+
+<p>При этом запрещается хранить всю последовательность чисел в памяти.</p>
+<h2 id="_7">Запоминание результата вычислений</h2>
+<pre><code>class Calc {
+    int limit;
+public:
+    Calc(int l): limit{l} {}
+
+    int result() const {
+        return calculate();
+    }   
+private:
+    int calculate() const {
+        std::cout &lt;&lt; &quot;calculate\n&quot;;
+        int res = 0;
+        for (int i=0; i&lt;=limit; i++) {
+            res += i;
+        }   
+        return res;
+    }   
+};
+
+void call(const Calc &amp; c) {
+    for (int i=0; i&lt;5; i++) {
+        std::cout &lt;&lt; c.result() &lt;&lt; std::endl;
+    }   
+}
+
+int main() {
+    Calc c{10};
+    call(c);
+}
+</code></pre>
+
+<p>Как нужно изменить метод <code>result</code>, чтобы <code>calculate</code> вызывался только один раз,
+а затем возвращался уже посчитанный ранее результат?</p>
+<h2 id="_8">Освобождение памяти</h2>
+<p>Исправьте следующий код так, чтобы объект <code>x</code> был удалён.</p>
+<pre><code>class X { 
+public:
+    X() { std::cout &lt;&lt; &quot;X()\n&quot;; }
+    ~X() { std::cout &lt;&lt; &quot;~X()\n&quot;; }
+};
+
+X * makeX() {
+    return new X();
+}
+
+void fn(const X *) {
+    throw std::string(&quot;suddenly&quot;);
+}
+
+int main() {
+    try {
+        X * x = makeX();
+        fn(x);
+        delete x;
+    } catch (std::string &amp; s) {
+        //  
+    }   
+}
+</code></pre>
+
+<h2 id="_9">Захват вывода функции</h2>
+<pre><code>void printSmth(std::ostream &amp; out) {
+    out &lt;&lt; 13 &lt;&lt; std::endl;
+    out &lt;&lt; &quot;hello world&quot; &lt;&lt; std::endl;
+    out &lt;&lt; 2.5 &lt;&lt; std::endl;
+}
+</code></pre>
+
+<p>Как полуличить то, что выводит функция <code>printSmth</code> в виде строки?</p>
+<h2 id="_10">Деструкторы</h2>
+<pre><code>class A { 
+public:
+    A() { std::cout &lt;&lt; &quot;A()\n&quot;; }
+    ~A() { std::cout &lt;&lt; &quot;~A()\n&quot;; }
+};
+
+class B : public A { 
+public:
+    B(): A{} { std::cout &lt;&lt; &quot;B()\n&quot;; }
+    ~B() { std::cout &lt;&lt; &quot;~B()\n&quot;; }
+};
+
+int main() {
+    A * b = new B{};
+    delete b;
+}
+</code></pre>
+
+<p>Необходимо сделать так, чтобы объект класса <code>B</code> правильно удалялся.</p>
+<h2 id="_11">Константные ссылки</h2>
+<pre><code>class IntHolder {
+    int data;
+public:
+    IntHolder(int i): data{i} {}
+    int &amp; operator*() {
+        return data;
+    }   
+};
+
+void printHolderData(const IntHolder &amp; h) {
+    std::cout &lt;&lt; *h &lt;&lt; std::endl;
+}
+
+int main() {
+    IntHolder h{10};
+    *h += 3;
+    std::cout &lt;&lt; *h &lt;&lt; std::endl;
+    printHolderData(h);
+}
+</code></pre>
+
+<p>Модифицировать класс <code>IntHolder</code> так, чтобы код с использованием функции <code>printHolderData</code> скомпилировался.</p></div>
             
         </div>
 
