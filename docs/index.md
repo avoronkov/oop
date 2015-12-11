@@ -30,6 +30,10 @@
 
 [Задача 2](https://docs.google.com/document/d/1JiCAY8zS348n0RRcOQmdQyyP1jjhfm3jyYGaE-SclWI/)
 
+[Задача 3](https://docs.google.com/document/d/1FXmDYtpTG6WsjFtm9lysJbni3InftOnkLLeVQ8VwDVY/)
+
+[Проверочные задачи](final-tasks)
+
 [Результаты](tasks-acceptance/) (!)
 
 ## Дополнительная информация
