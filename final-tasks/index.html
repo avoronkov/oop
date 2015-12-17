@@ -264,6 +264,8 @@
         
             <li><a href="#print">Странный Print</a></li>
         
+            <li><a href="#print_1">Продвинутый "Странный Print"</a></li>
+        
     
     </ul>
 </div></div>
@@ -514,6 +516,17 @@ int main() {
 <pre><code class="C++">int main() {
     Print()(1)(2)(&quot;hello&quot;)(&quot;world&quot;);
     Print()(&quot;foo&quot;)(1.5)(&quot;bar&quot;);
+}
+// output:
+// 1 2 hello world '\n'
+// foo 1.5 bar '\n'
+</code></pre>
+
+<h2 id="print_1">Продвинутый "Странный Print"</h2>
+<p>Аналогично предыдущему заданию, но способ вызова должен быть такой:</p>
+<pre><code class="C++">int main() {
+    Print(1)(2)(&quot;hello&quot;)(&quot;world&quot;);
+    Print(&quot;foo&quot;)(1.5)(&quot;bar&quot;);
 }
 // output:
 // 1 2 hello world '\n'
