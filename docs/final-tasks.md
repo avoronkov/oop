@@ -257,6 +257,37 @@ int main() {
 ```
 Модифицировать класс `IntHolder` так, чтобы код с использованием функции `printHolderData` скомпилировался.
 
+## Обработка исключений
+
+```C++
+struct AbstractException {
+    AbstractException() = default;
+    ~AbstractException() = default;
+    virtual std::string message() const {
+        return "abstract exception";
+    }   
+};
+
+struct ConcreteException : public AbstractException {
+    ConcreteException(const std::string & m): msg{m} {}
+    virtual std::string message() {
+        return std::string("actual exception: ") + msg;
+    }   
+private:
+    std::string msg;
+};
+
+int main() {
+    try {
+        throw ConcreteException("catch me!");
+    }   
+    catch (AbstractException e) {
+        std::cout << "got: " << e.message();
+    }   
+}
+```
+Как получить действительное сообщение об исключении ("catch me")?
+
 ## Странный Print
 Реализовать `Print` так, чтобы иметь возможность печатать несколько значений, разделенных пробелами.
 После вывода списка пишется символ конца строки (`std::endl`)
