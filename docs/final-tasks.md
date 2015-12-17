@@ -269,3 +269,15 @@ int main() {
 // 1 2 hello world '\n'
 // foo 1.5 bar '\n'
 ```
+
+## Продвинутый "Странный Print"
+Аналогично предыдущему заданию, но способ вызова должен быть такой:
+```C++
+int main() {
+	Print(1)(2)("hello")("world");
+	Print("foo")(1.5)("bar");
+}
+// output:
+// 1 2 hello world '\n'
+// foo 1.5 bar '\n'
+```
