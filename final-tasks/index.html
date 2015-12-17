@@ -262,6 +262,8 @@
         
             <li><a href="#_11">Константные ссылки</a></li>
         
+            <li><a href="#_12">Обработка исключений</a></li>
+        
             <li><a href="#print">Странный Print</a></li>
         
             <li><a href="#print_1">Продвинутый "Странный Print"</a></li>
@@ -510,6 +512,35 @@ int main() {
 </code></pre>
 
 <p>Модифицировать класс <code>IntHolder</code> так, чтобы код с использованием функции <code>printHolderData</code> скомпилировался.</p>
+<h2 id="_12">Обработка исключений</h2>
+<pre><code class="C++">struct AbstractException {
+    AbstractException() = default;
+    ~AbstractException() = default;
+    virtual std::string message() const {
+        return &quot;abstract exception&quot;;
+    }   
+};
+
+struct ConcreteException : public AbstractException {
+    ConcreteException(const std::string &amp; m): msg{m} {}
+    virtual std::string message() {
+        return std::string(&quot;actual exception: &quot;) + msg;
+    }   
+private:
+    std::string msg;
+};
+
+int main() {
+    try {
+        throw ConcreteException(&quot;catch me!&quot;);
+    }   
+    catch (AbstractException e) {
+        std::cout &lt;&lt; &quot;got: &quot; &lt;&lt; e.message();
+    }   
+}
+</code></pre>
+
+<p>Как получить действительное сообщение об исключении ("catch me")?</p>
 <h2 id="print">Странный Print</h2>
 <p>Реализовать <code>Print</code> так, чтобы иметь возможность печатать несколько значений, разделенных пробелами.
 После вывода списка пишется символ конца строки (<code>std::endl</code>)</p>
