@@ -262,6 +262,8 @@
         
             <li><a href="#_11">Константные ссылки</a></li>
         
+            <li><a href="#print">Странный Print</a></li>
+        
     
     </ul>
 </div></div>
@@ -505,7 +507,18 @@ int main() {
 }
 </code></pre>
 
-<p>Модифицировать класс <code>IntHolder</code> так, чтобы код с использованием функции <code>printHolderData</code> скомпилировался.</p></div>
+<p>Модифицировать класс <code>IntHolder</code> так, чтобы код с использованием функции <code>printHolderData</code> скомпилировался.</p>
+<h2 id="print">Странный Print</h2>
+<p>Реализовать <code>Print</code> так, чтобы иметь возможность печатать несколько значений, разделенных пробелами.
+После вывода списка пишется символ конца строки (<code>std::endl</code>)</p>
+<pre><code class="C++">int main() {
+    Print()(1)(2)(&quot;hello&quot;)(&quot;world&quot;);
+    Print()(&quot;foo&quot;)(1.5)(&quot;bar&quot;);
+}
+// output:
+// 1 2 hello world '\n'
+// foo 1.5 bar '\n'
+</code></pre></div>
             
         </div>
 
