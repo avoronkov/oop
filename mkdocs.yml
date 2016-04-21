@@ -1,7 +1,7 @@
 site_name: OOP Practice Docs
 pages:
     - Home: index.md
-    - Seminars:
+    - Seminars C++:
         - 'Seminar 1': seminar1.md
         - 'Seminar 2': seminar2.md
         - 'Seminar 3': seminar3.md
@@ -16,11 +16,15 @@ pages:
         - 'Svn': using-subversion.md
         - 'GoogleTest': using-googletest.md
     - Acceptance:
-        - "Overall": tasks-acceptance.md
-        - Task1:
+        - "Java": java-acceptance.md
+        - Java Task2:
+            - "Matveev": java_task2_results/matveev_task2.md
+            - "Shachenko": java_task2_results/shachenko_task2.md
+        - "C++": tasks-acceptance.md
+        - C++ Task1:
             - "Amikishieva": task1_test_results/amikishieva_task1_test_results.md
             - "Demidov": task1_test_results/demidov_task1_test_results.md
             - "Dudaev": task1_test_results/dudaev_task1_test_results.md
             - "Kambalina": task1_test_results/kambalina_task1_test_results.md
             - "Shachenko": task1_test_results/shachenko_task1_test_results.md
-        - 'Final tasks': final-tasks.md
+        - 'Final C++ tasks': final-tasks.md
