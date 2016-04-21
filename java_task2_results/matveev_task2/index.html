@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Demidov - OOP Practice Docs</title>
+	<title>Matveev - OOP Practice Docs</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -165,14 +165,14 @@
     <ul class="dropdown-menu">
         
             
-<li >
-    <a href="../../java_task2_results/matveev_task2/">Matveev</a>
+<li class="active">
+    <a href="./">Matveev</a>
 </li>
 
         
             
 <li >
-    <a href="../../java_task2_results/shachenko_task2/">Shachenko</a>
+    <a href="../shachenko_task2/">Shachenko</a>
 </li>
 
         
@@ -193,31 +193,31 @@
         
             
 <li >
-    <a href="../amikishieva_task1_test_results/">Amikishieva</a>
-</li>
-
-        
-            
-<li class="active">
-    <a href="./">Demidov</a>
+    <a href="../../task1_test_results/amikishieva_task1_test_results/">Amikishieva</a>
 </li>
 
         
             
 <li >
-    <a href="../dudaev_task1_test_results/">Dudaev</a>
+    <a href="../../task1_test_results/demidov_task1_test_results/">Demidov</a>
 </li>
 
         
             
 <li >
-    <a href="../kambalina_task1_test_results/">Kambalina</a>
+    <a href="../../task1_test_results/dudaev_task1_test_results/">Dudaev</a>
 </li>
 
         
             
 <li >
-    <a href="../shachenko_task1_test_results/">Shachenko</a>
+    <a href="../../task1_test_results/kambalina_task1_test_results/">Kambalina</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../task1_test_results/shachenko_task1_test_results/">Shachenko</a>
 </li>
 
         
@@ -246,12 +246,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../amikishieva_task1_test_results/">
+                        <a rel="next" href="../../java-acceptance/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../dudaev_task1_test_results/">
+                        <a rel="prev" href="../shachenko_task2/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -267,35 +267,17 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#compile">Compile</a></li>
-        
-    
-        <li class="main "><a href="#_1">Замечания</a></li>
+        <li class="main active"><a href="#_1">Матвеев. Калькулятор.</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="compile">Compile</h1>
-<pre><code>g++ -Wall -std=c++14 -lgtest -lgtest_main -o gtest alxr_test.cpp link.cpp
-link.cpp: В функции-члене «LinkedList::iterator LinkedList::erase(LinkedList::iterator, LinkedList::iterator)»:
-link.cpp:151:22: ошибка: invalid initialization of non-const reference of type «LinkedList::iterator&amp;» from an rvalue of type «LinkedList::iterator»
-   begin = this-&gt;erase(begin);
-                      ^
-link.cpp:12:24: замечание:   initializing argument 1 of «LinkedList::iterator&amp; LinkedList::iterator::operator=(LinkedList::iterator&amp;)»
- LinkedList::iterator &amp; LinkedList::iterator::operator=(LinkedList::iterator &amp; other)
-                        ^
-link.cpp: В функции-члене «LinkedList LinkedList::operator+(const LinkedList&amp;) const»:
-link.cpp:277:14: предупреждение: неиспользуемая переменная «tmp» [-Wunused-variable]
-  LinkedList* tmp = new LinkedList;
-              ^
-Makefile:10: ошибка выполнения рецепта для цели «gtest»
-</code></pre>
-
-<h1 id="_1">Замечания</h1>
-<p><code>LinkedList::iterator::operator=</code> реализован неправильно, его аргументом должен быть <code>const iterator &amp;</code>,
-а не <code>iterator &amp;</code>; возвращаться должна ссылка на <code>*this</code>, а не <code>other</code>.</p></div>
+<h1 id="_1">Матвеев. Калькулятор.</h1>
+<p>Калькулятор - ОК</p>
+<p>Тесты - ОК</p>
+<p>Логгирование - поправить</p></div>
             
         </div>
 
