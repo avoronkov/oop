@@ -18,9 +18,15 @@ pages:
     - Acceptance:
         - "Java": java-acceptance.md
         - Java Task2:
+            - "Amikishieva": java_task2_results/amikishieva_task2.md
+            - "Kambalina": java_task2_results/kambalina_task2.md
             - "Matveev": java_task2_results/matveev_task2.md
             - "Shachenko": java_task2_results/shachenko_task2.md
             - "Dudaev": java_task2_results/dudaev_task2.md
+        - Java Task3:
+            - "Katchik": java_task3/katchik.md
+        - Java Task4:
+            - "Matveev": java_task4/matveev.md
         - "C++": tasks-acceptance.md
         - C++ Task1:
             - "Amikishieva": task1_test_results/amikishieva_task1_test_results.md
