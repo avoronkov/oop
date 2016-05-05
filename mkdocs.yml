@@ -17,6 +17,8 @@ pages:
         - 'GoogleTest': using-googletest.md
     - Acceptance:
         - "Java": java-acceptance.md
+        - Java Task1:
+            - "Ospanov": java_task1/ospanov.md
         - Java Task2:
             - "Amikishieva": java_task2_results/amikishieva_task2.md
             - "Kambalina": java_task2_results/kambalina_task2.md
