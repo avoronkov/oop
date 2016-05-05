@@ -116,6 +116,12 @@
     </url>
         
     <url>
+     <loc>None</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/tasks-acceptance/</loc>
      <lastmod>2016-05-05</lastmod>
      <changefreq>daily</changefreq>
