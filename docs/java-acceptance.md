@@ -12,7 +12,7 @@
 
 Малафеев Виталий :
 
-Матвеев Андрей : "Подсчёт слов" - OK, "Калкулятор" - [ОК](java_task2_results/matveev_task2), "Тетрис" - ОК, "Фабрика" - [ОК](java_task4/matveev)
+Матвеев Андрей : "Подсчёт слов" - OK, "Калкулятор" - [ОК](java_task2_results/matveev_task2), "Тетрис" - ОК, "Фабрика" - [ОК](java_task4/matveev), "Чат" - [в процессе](java_task5/matveev)
 
 Оспанов Даулет : "Подсчёт слов" - [ОК](java_task1/ospanov)
 

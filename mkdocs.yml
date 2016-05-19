@@ -29,6 +29,8 @@ pages:
             - "Katchik": java_task3/katchik.md
         - Java Task4:
             - "Matveev": java_task4/matveev.md
+        - Java Task5:
+            - "Matveev": java_task5/matveev.md
         - "C++": tasks-acceptance.md
         - C++ Task1:
             - "Amikishieva": task1_test_results/amikishieva_task1_test_results.md
