@@ -35,7 +35,10 @@
 [Проверочные задачи](final-tasks)
 
 [Результаты (C++)](tasks-acceptance/) (!)
+
 [Результаты (Java)](java-acceptance/) (!)
+
+[Коллоквиум (Java)](java-test1/)
 
 ## Дополнительная информация
 

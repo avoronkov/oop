@@ -17,6 +17,7 @@ pages:
         - 'GoogleTest': using-googletest.md
     - Acceptance:
         - "Java": java-acceptance.md
+        - "Java Test 1": java-test1.md
         - Java Task1:
             - "Ospanov": java_task1/ospanov.md
         - Java Task2:
