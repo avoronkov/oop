@@ -14,7 +14,7 @@
 
 Матвеев Андрей `OK`: "Подсчёт слов" - OK, "Калкулятор" - [ОК](java_task2_results/matveev_task2), "Тетрис" - ОК, "Фабрика" - [ОК](java_task4/matveev), "Чат" - [ОК](java_task5/matveev)
 
-Оспанов Даулет : "Подсчёт слов" - [ОК](java_task1/ospanov), "Калькулятор" [В процессе](java_task2_results/ospanov)
+Оспанов Даулет : "Подсчёт слов" - [ОК](java_task1/ospanov), "Калькулятор" [ОК](java_task2_results/ospanov)
 
 Свищев Алексей : "Подсчёт слов" - ОК, "Калькулятор" - ОК, "Сапёр" - [в процессе](java_task3/svischev)
 
