@@ -29,10 +29,12 @@ pages:
             - "Ospanov": java_task2_results/ospanov.md
             - "Malafeev": java_task2_results/malafeev_task2.md
         - Java Task3:
+            - "Amikishieva": java_task3/amikishieva.md
             - "Katchik": java_task3/katchik.md
             - "Svischev": java_task3/svischev.md
             - "Shachenko": java_task3/shachenko.md
             - "Dudaev": java_task3/dudaev.md
+            - "Malafeev": java_task3/malafeev.md
         - Java Task4:
             - "Matveev": java_task4/matveev.md
             - "Shachenko": java_task4/shachenko.md
