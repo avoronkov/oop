@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>AcceptanceTasks - OOP Practice Docs</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">OOP Practice Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Seminars C++ <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../seminar1/">Seminar 1</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar2/">Seminar 2</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar3/">Seminar 3</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar5/">Seminar 5</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar6/">Seminar 6</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar11/">Seminar 11</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../seminar14/">Seminar 14</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../bitbucket/">Acceptance</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../using-namespaces/">Using namespaces</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../cmake/">CMake</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../using-subversion/">Svn</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../using-googletest/">GoogleTest</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">AcceptanceTasks</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../using-googletest/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#_1">Маленькие задачи</a></li>
+        
+            <li><a href="#_2">Аргументы командной строки</a></li>
+        
+            <li><a href="#_3">Неявный конструктор</a></li>
+        
+            <li><a href="#_4">Коллекции</a></li>
+        
+            <li><a href="#_5">Счётчик количества вызовов</a></li>
+        
+            <li><a href="#_6">Список чисел Фибоначи без хранения в памяти</a></li>
+        
+            <li><a href="#_7">Запоминание результата вычислений</a></li>
+        
+            <li><a href="#_8">Освобождение памяти</a></li>
+        
+            <li><a href="#_9">Захват вывода функции</a></li>
+        
+            <li><a href="#_10">Деструкторы</a></li>
+        
+            <li><a href="#_11">Константные ссылки</a></li>
+        
+            <li><a href="#_12">Обработка исключений</a></li>
+        
+            <li><a href="#print">Странный Print</a></li>
+        
+            <li><a href="#print_1">Продвинутый "Странный Print"</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">Маленькие задачи</h1>
+<h2 id="_2">Аргументы командной строки</h2>
+<p>Используя <code>boost::program_options</code> (или другую библиотеку)
+написать программу, которая разбирает аргументы командной строки.
+Должны поддерживаться следующие вызовы:</p>
+<pre><code>Run:
+prog.exe hello world
+
+Output:
+other parameters: &quot;hello&quot; &quot;world&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --str &quot;some string&quot;
+
+Output:
+string parameter: &quot;some string&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --int 14
+
+Output:
+int parameter: 14
+</code></pre>
+
+<pre><code>Run:
+prog.exe --vec foo --vec bar --vec baz
+
+Output:
+vector: &quot;foo&quot; &quot;bar&quot; &quot;baz&quot;
+</code></pre>
+
+<pre><code>Run:
+prog.exe --count --count --count
+
+Output:
+count: 3
+</code></pre>
+
+<pre><code>Run:
+prog.exe one --int 11 --str hello --count --vec foo --vec bar two --count three
+
+Output:
+string parameter: &quot;hello&quot;
+int parameter: 11
+vector: &quot;foo&quot; &quot;bar&quot;
+count: 2
+other parameters: &quot;one&quot; &quot;two&quot; &quot;three&quot;
+</code></pre>
+
+<h2 id="_3">Неявный конструктор</h2>
+<p>Следующий код компилируется и работает:</p>
+<pre><code>#include &lt;iostream&gt;
+
+class Int {
+    int value;
+public:
+    Int(int i): value{i} {}
+
+    int operator*()const {
+        return value;
+    }   
+};
+
+void useInt(const Int &amp; i) {
+    std::cout &lt;&lt; *i &lt;&lt; std::endl;
+}
+
+int main() {
+    int x{10};
+    useInt(x); // output: 10
+}
+</code></pre>
+
+<p>Почему? Как заставить компилятор принимать только явное использование класса <code>Int</code>:</p>
+<pre><code>    useInt(Int{x}); // output: 10
+</code></pre>
+
+<h2 id="_4">Коллекции</h2>
+<p>Дана следуюшая функция:</p>
+<pre><code>void printCollection(const std::vector&lt;int&gt; &amp; v) {
+    int count = 0;
+    std::cout &lt;&lt; &quot;{ &quot;
+    for (int i=0; i&lt;v.size(); i++) {
+        std::cout &lt;&lt; v[i] &lt;&lt; &quot; &quot;;
+        count++;
+    }
+    std::cout &lt;&lt; &quot;}[&quot; &lt;&lt; count &lt;&lt; &quot;]&quot;;
+
+}
+</code></pre>
+
+<p>Как сделать так, чтобы она могла рвботать с произвольными коллекциями?</p>
+<h2 id="_5">Счётчик количества вызовов</h2>
+<p>Дан следующий код:</p>
+<pre><code>int count = 0;
+
+void fn() {
+    count++;
+}
+
+template &lt;typename F&gt;
+void call_few_times(F f) {
+    for (int i=0; i &lt; 10; i++) {
+        f();
+    }   
+}
+
+int main() {
+    call_few_times(fn);
+    std::cout &lt;&lt; &quot;fn() was called &quot; &lt;&lt; count &lt;&lt; &quot; times\n&quot;;
+}
+
+</code></pre>
+
+<p>Как посчитать, сколько вызовов делает <code>call_few_times</code> не используя глобальную переменную?</p>
+<h2 id="_6">Список чисел Фибоначи без хранения в памяти</h2>
+<p>Реализовать <code>Fibonacci</code> так, чтобы следующий код показывал правильный результат:</p>
+<pre><code>for (auto n: Fibonacci(10)) {
+    std::cout &lt;&lt; n &lt;&lt; std::endl;
+}
+// output: 1 2 3 5 8 13 21 34 55 89
+</code></pre>
+
+<p>При этом запрещается хранить всю последовательность чисел в памяти.</p>
+<h2 id="_7">Запоминание результата вычислений</h2>
+<pre><code>class Calc {
+    int limit;
+public:
+    Calc(int l): limit{l} {}
+
+    int result() const {
+        return calculate();
+    }   
+private:
+    int calculate() const {
+        std::cout &lt;&lt; &quot;calculate\n&quot;;
+        int res = 0;
+        for (int i=0; i&lt;=limit; i++) {
+            res += i;
+        }   
+        return res;
+    }   
+};
+
+void call(const Calc &amp; c) {
+    for (int i=0; i&lt;5; i++) {
+        std::cout &lt;&lt; c.result() &lt;&lt; std::endl;
+    }   
+}
+
+int main() {
+    Calc c{10};
+    call(c);
+}
+</code></pre>
+
+<p>Как нужно изменить метод <code>result</code>, чтобы <code>calculate</code> вызывался только один раз,
+а затем возвращался уже посчитанный ранее результат?</p>
+<h2 id="_8">Освобождение памяти</h2>
+<p>Исправьте следующий код так, чтобы объект <code>x</code> был удалён.</p>
+<pre><code>class X { 
+public:
+    X() { std::cout &lt;&lt; &quot;X()\n&quot;; }
+    ~X() { std::cout &lt;&lt; &quot;~X()\n&quot;; }
+};
+
+X * makeX() {
+    return new X();
+}
+
+void fn(const X *) {
+    throw std::string(&quot;suddenly&quot;);
+}
+
+int main() {
+    try {
+        X * x = makeX();
+        fn(x);
+        delete x;
+    } catch (std::string &amp; s) {
+        //  
+    }   
+}
+</code></pre>
+
+<h2 id="_9">Захват вывода функции</h2>
+<pre><code>void printSmth(std::ostream &amp; out) {
+    out &lt;&lt; 13 &lt;&lt; std::endl;
+    out &lt;&lt; &quot;hello world&quot; &lt;&lt; std::endl;
+    out &lt;&lt; 2.5 &lt;&lt; std::endl;
+}
+</code></pre>
+
+<p>Как полуличить то, что выводит функция <code>printSmth</code> в виде строки?</p>
+<h2 id="_10">Деструкторы</h2>
+<pre><code>class A { 
+public:
+    A() { std::cout &lt;&lt; &quot;A()\n&quot;; }
+    ~A() { std::cout &lt;&lt; &quot;~A()\n&quot;; }
+};
+
+class B : public A { 
+public:
+    B(): A{} { std::cout &lt;&lt; &quot;B()\n&quot;; }
+    ~B() { std::cout &lt;&lt; &quot;~B()\n&quot;; }
+};
+
+int main() {
+    A * b = new B{};
+    delete b;
+}
+</code></pre>
+
+<p>Необходимо сделать так, чтобы объект класса <code>B</code> правильно удалялся.</p>
+<h2 id="_11">Константные ссылки</h2>
+<pre><code>class IntHolder {
+    int data;
+public:
+    IntHolder(int i): data{i} {}
+    int &amp; operator*() {
+        return data;
+    }   
+};
+
+void printHolderData(const IntHolder &amp; h) {
+    std::cout &lt;&lt; *h &lt;&lt; std::endl;
+}
+
+int main() {
+    IntHolder h{10};
+    *h += 3;
+    std::cout &lt;&lt; *h &lt;&lt; std::endl;
+    printHolderData(h);
+}
+</code></pre>
+
+<p>Модифицировать класс <code>IntHolder</code> так, чтобы код с использованием функции <code>printHolderData</code> скомпилировался.</p>
+<h2 id="_12">Обработка исключений</h2>
+<pre><code class="C++">struct AbstractException {
+    AbstractException() = default;
+    ~AbstractException() = default;
+    virtual std::string message() const {
+        return &quot;abstract exception&quot;;
+    }   
+};
+
+struct ConcreteException : public AbstractException {
+    ConcreteException(const std::string &amp; m): msg{m} {}
+    virtual std::string message() {
+        return std::string(&quot;actual exception: &quot;) + msg;
+    }   
+private:
+    std::string msg;
+};
+
+int main() {
+    try {
+        throw ConcreteException(&quot;catch me!&quot;);
+    }   
+    catch (AbstractException e) {
+        std::cout &lt;&lt; &quot;got: &quot; &lt;&lt; e.message();
+    }   
+}
+</code></pre>
+
+<p>Как получить действительное сообщение об исключении ("catch me")?</p>
+<h2 id="print">Странный Print</h2>
+<p>Реализовать <code>Print</code> так, чтобы иметь возможность печатать несколько значений, разделенных пробелами.
+После вывода списка пишется символ конца строки (<code>std::endl</code>)</p>
+<pre><code class="C++">int main() {
+    Print()(1)(2)(&quot;hello&quot;)(&quot;world&quot;);
+    Print()(&quot;foo&quot;)(1.5)(&quot;bar&quot;);
+}
+// output:
+// 1 2 hello world '\n'
+// foo 1.5 bar '\n'
+</code></pre>
+
+<h2 id="print_1">Продвинутый "Странный Print"</h2>
+<p>Аналогично предыдущему заданию, но способ вызова должен быть такой:</p>
+<pre><code class="C++">int main() {
+    Print(1)(2)(&quot;hello&quot;)(&quot;world&quot;);
+    Print(&quot;foo&quot;)(1.5)(&quot;bar&quot;);
+}
+// output:
+// 1 2 hello world '\n'
+// foo 1.5 bar '\n'
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

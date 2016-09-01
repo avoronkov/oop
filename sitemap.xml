@@ -87,6 +87,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>None/final-tasks/</loc>
+     <lastmod>2016-09-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
