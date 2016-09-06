@@ -2,13 +2,15 @@ site_name: OOP Practice Docs
 pages:
     - Home: index.md
     - Seminars C++:
-        - 'Seminar 1': seminar1.md
-        - 'Seminar 2': seminar2.md
-        - 'Seminar 3': seminar3.md
-        - 'Seminar 5': seminar5.md
-        - 'Seminar 6': seminar6.md
-        - 'Seminar 11': seminar11.md
-        - 'Seminar 14': seminar14.md
+        - 'Seminar 1': cpp/seminar1.md
+        - 'Archive 2015':
+            - 'Seminar 1': cpp/seminar1.2015.md
+            - 'Seminar 2': cpp/seminar2.2015.md
+            - 'Seminar 3': cpp/seminar3.2015.md
+            - 'Seminar 5': cpp/seminar5.2015.md
+            - 'Seminar 6': cpp/seminar6.2015.md
+            - 'Seminar 11': cpp/seminar11.2015.md
+            - 'Seminar 14': cpp/seminar14.2015.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md

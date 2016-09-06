@@ -6,7 +6,7 @@
 
 ## Семинары C++
 
-[Семинар 1](seminar1/)
+[Семинар 1: задача 1](cpp/seminar1/) (обновлено 6 сент 2016)
 
 ## Важное!
 
@@ -16,7 +16,7 @@
 
 [Использование namespaces](using-namespaces/)
 
-## Задачи
+[Использование googletest](using-googletest/)
 
 [Проверочные задачи](final-tasks)
 
