@@ -12,6 +12,12 @@ pages:
             - 'Seminar 6': cpp/seminar6.2015.md
             - 'Seminar 11': cpp/seminar11.2015.md
             - 'Seminar 14': cpp/seminar14.2015.md
+    - Results C++:
+        - 'Results': 2016.cpp/results.md
+        - 'Task 0':
+            - 'Baranov': 2016.cpp/task0/baranov.md
+            - 'Milyaev': 2016.cpp/task0/milyaev.md
+            - 'Turchinovich': 2016.cpp/task0/turchinovich.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
