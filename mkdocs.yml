@@ -16,8 +16,12 @@ pages:
         - 'Results': 2016.cpp/results.md
         - 'Task 0':
             - 'Baranov': 2016.cpp/task0/baranov.md
+            - 'Boldyrev': 2016.cpp/task0/boldyrev.md
+            - 'Kharisov': 2016.cpp/task0/kharisov.md
+            - 'Kostyleva': 2016.cpp/task0/kostyleva.md
             - 'Milyaev': 2016.cpp/task0/milyaev.md
             - 'Turchinovich': 2016.cpp/task0/turchinovich.md
+            - 'Zhuk': 2016.cpp/task0/zhuk.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
