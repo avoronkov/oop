@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Seminar 1 - OOP Practice Docs</title>
+	<title>Seminar 4 - OOP Practice Docs</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -64,8 +64,8 @@
                         <ul class="dropdown-menu">
                         
                             
-<li class="active">
-    <a href="./">Seminar 1</a>
+<li >
+    <a href="../seminar1/">Seminar 1</a>
 </li>
 
                         
@@ -76,8 +76,8 @@
 
                         
                             
-<li >
-    <a href="../seminar4/">Seminar 4</a>
+<li class="active">
+    <a href="./">Seminar 4</a>
 </li>
 
                         
@@ -258,12 +258,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../..">
+                        <a rel="next" href="../seminar3/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../seminar3/">
+                        <a rel="prev" href="../../cpp/seminar1.2015/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -279,90 +279,97 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#1-02092016">Семинар 1 (02.09.2016)</a></li>
+        <li class="main active"><a href="#4-23092016">Семинар 4 (23.09.2016)</a></li>
         
-            <li><a href="#_1">Введение</a></li>
-        
-            <li><a href="#_2">Задача</a></li>
-        
-            <li><a href="#_3">Требования к реализации</a></li>
-        
-            <li><a href="#_4">Дополнительная информация</a></li>
-        
-            <li><a href="#_5">Ссылки</a></li>
+            <li><a href="#_1">Комментарии к задача "Тритсет"</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="1-02092016">Семинар 1 (02.09.2016)</h1>
-<h2 id="_1">Введение</h2>
-<p>Рассмотрим следующую задачу. Деканат каждый день присылает отчёт по прошедшим занятиям в текстовом файле, имеющим следующий формат:
-каждая строка содержит следующую информацию:
-<code>&lt;предмет&gt;:&lt;номер группы&gt;:&lt;фамилия&gt;:&lt;оценка&gt;:&lt;присутствие&gt;</code></p>
-<p>Например, файл <em>Report_2015_09_04.txt</em>:</p>
-<pre><code>OOP_seminar:12345:Ivanov:Good:attend
-OOP_seminar:12345:Petrov:None:absent
-OOP_seminar:54321:Smith:Exсellent:attend
+<h1 id="4-23092016">Семинар 4 (23.09.2016)</h1>
+<h2 id="_1">Комментарии к задача "Тритсет"</h2>
+<h3 id="_2">Триты</h3>
+<p>Для реализации значений тритов разумно использовать <strong>перечисления</strong> , которые в новых стандартах C++ можно реализовать через <a href="http://en.cppreference.com/w/cpp/language/enum">enum classes</a>.</p>
+<p>Например:</p>
+<pre><code class="C++">    Trit t = Trit::T;
+    std::cout &lt;&lt; t; // output: &quot;T&quot;
 </code></pre>
 
-<p>Уже к середине семестра таких файлов накапливается достаточно много и анализировать их "вручную" становится затруднительно.
-Допустим, некоторый студент хочет извлечь информацию только о себе. Как он может это сделать?</p>
-<h2 id="_2">Задача</h2>
-<p>Необходимо написать программу, которая делает следующее:</p>
+<h3 id="_3">Базовые операции.</h3>
 <ul>
-<li>
-<p>Фильтрует строки текста, оставляя только те, которые содержат заданный шаблон.</p>
-</li>
-<li>
-<p>Выбирает и оставляет из каждой строки поле с заданным порядковым номером.</p>
-</li>
+<li>Создание, модификация, информация о контейнере.</li>
 </ul>
-<p>При этом:</p>
-<ul>
-<li>
-<p>Шаблон задается первым аргументом командной строки.</p>
-</li>
-<li>
-<p>Порядковый номер задается вторым аргументом.</p>
-</li>
-<li>
-<p>Разделитель полей в рамках программы фиксированный - <code>:</code></p>
-</li>
-<li>
-<p>Если задан третий аргумент, то чтение строк осуществляется из файла, заданного третьим аргументом (иначе - чтение с консоли).</p>
-</li>
-<li>
-<p>Необязательный четвертый аргумент - выходный файл (если не задан - вывод на консоль).</p>
-</li>
-</ul>
-<h2 id="_3">Требования к реализации</h2>
-<ul>
-<li>
-<p>Должны быть реализованы отдельные функции <code>filter</code> для фильтрации строк и <code>extractField</code> для выбора поля</p>
-</li>
-<li>
-<p>Функции должны располагаться в отдельном файле (раздельная компиляция)</p>
-</li>
-<li>
-<p>Функции должны быть протестированы при помощи юнит-тестов. Можно использовать библиотеку <a href="../../using-googletest/">googletest</a></p>
-</li>
-<li>
-<p>Код проекта должен быть залит в <a href="../../bitbucket/">репозиторий</a></p>
-</li>
-</ul>
-<h2 id="_4">Дополнительная информация</h2>
-<p>Сигнатура функций <code>filter</code> и <code>extractField</code> может быть следующей:</p>
-<pre><code>void filter(std::string pattern, std::istream &amp; in, std::ostream &amp; out);
-void extractField(int field, std::string sep, std::istream &amp; in, std::ostream &amp; out);
+<pre><code class="C++">    TritSet ts; // Пустой контейнер: []
+    ts.set(3, Trit::T); // ts = [U, U, U, T]
+    cout &lt;&lt; ts.length(); // 4
+    ts.set(5, Trit::F); // ts = [U, U, U, T, U, F]
+    cout &lt;&lt; ts; // output: ...T.F
+    cout &lt;&lt; ts.get(5); // F
 </code></pre>
 
-<p>Для реализации промежуточного буфера при работе с потоками можно использовать класс <a href="http://www.cplusplus.com/reference/sstream/stringstream/">std::stringstream</a>.</p>
-<h2 id="_5">Ссылки</h2>
-<p>При выполнении задания может оказаться полезным почитать материал <a href="../../cpp/seminar1.2015/">первого семинара прошлого года</a></p>
-<p><a href="https://sites.google.com/site/nguoop/">Материалы курса ООП</a></p>
-<p>Документация по языку <a href="http://www.cplusplus.com/">C++</a></p></div>
+<ul>
+<li>Сравнение, присваивание.</li>
+</ul>
+<pre><code class="C++">    TritSet a;
+    TritSet b;
+    TritSet c;
+    a.set(2, Trit::T);
+    b = a;
+    cout &lt;&lt; (a == b); // true
+    cout &lt;&lt; (a != c); // true
+</code></pre>
+
+<ul>
+<li>Инициализация (списки инициализации).</li>
+</ul>
+<pre><code class="C++">    TritSet a = {Trit::T, Trit::F, Trit::U, TritT};
+    cout &lt;&lt; a; // TF.T
+    cout &lt;&lt; a.length(); // 4
+</code></pre>
+
+<h3 id="_4">Покомпонентные операции.</h3>
+<pre><code class="C++">    TritSet a = {Trit::T, Trit::U, Trit::F};
+    TritSet b = {Trit::T, Trit::T, Trit::U};
+    TritSet c = (a &amp; b);
+    cout &lt;&lt; c; // T.F
+    c |= TritSet{Trit::F, Trit::F, Trit::T};
+    cout &lt;&lt; c; // T.T
+</code></pre>
+
+<h3 id="_5">"Продвинутые" операции.</h3>
+<ul>
+<li>Индексация элементов</li>
+</ul>
+<pre><code class="C++">    TritSet a;
+    a[3] = Trit::T;
+    cout &lt;&lt; a[2];
+</code></pre>
+
+<h3 id="_6">Сигнатура некоторых методов.</h3>
+<pre><code class="C++">class TritSet {
+public:
+    TritSet();
+    TritSet(int size);
+    TritSet(const TritSet &amp;); // конструктор копирования
+    ~TritSet();
+
+    int length() const;
+
+    Trit get(int index) const;
+    void set(int index, const Trit &amp; t) const;
+
+    TritSet &amp; operator=(const TritSet &amp;); // оператор присваивания
+
+    // покомпонентные операции
+    TritSet operator&amp;(const TritSet &amp;) const;
+    TritSet &amp; operator&amp;=(const TritSet &amp;);
+
+    // Индексация
+    ??? operator[](int i);
+};
+</code></pre></div>
             
         </div>
 
