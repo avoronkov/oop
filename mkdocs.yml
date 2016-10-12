@@ -18,6 +18,7 @@ pages:
         - 'Task 0':
             - 'Baranov': 2016.cpp/task0/baranov.md
             - 'Boldyrev': 2016.cpp/task0/boldyrev.md
+            - 'Gusev': 2016.cpp/task0/gusev.md
             - 'Kharisov': 2016.cpp/task0/kharisov.md
             - 'Kostyleva': 2016.cpp/task0/kostyleva.md
             - 'Milyaev': 2016.cpp/task0/milyaev.md
