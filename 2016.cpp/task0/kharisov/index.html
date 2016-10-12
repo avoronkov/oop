@@ -165,6 +165,12 @@
 
         
             
+<li >
+    <a href="../gusev/">Gusev</a>
+</li>
+
+        
+            
 <li class="active">
     <a href="./">Kharisov</a>
 </li>
@@ -258,7 +264,7 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../boldyrev/">
+                        <a rel="next" href="../gusev/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -279,21 +285,54 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#0">Харисов Дамир. Начало (Задача 0). ОК.</a></li>
+        <li class="main active"><a href="#_1">Харисов Дамир.</a></li>
+        
+            <li><a href="#0">Начало (Задача 0). ОК.</a></li>
+        
+            <li><a href="#1">Тритсет (Задача 1).</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="0">Харисов Дамир. Начало (Задача 0). ОК.</h1>
+<h1 id="_1">Харисов Дамир.</h1>
+<h2 id="0">Начало (Задача 0). ОК.</h2>
+<p><strong>Код</strong> - ОК</p>
+<p><strong>Тесты</strong> - ОК</p>
+<h2 id="1">Тритсет (Задача 1).</h2>
+<p><strong>Код</strong> - в целом правильно, но есть замечания:</p>
 <ul>
 <li>
-<p>Код - ОК</p>
+<p>Непримитивные типы (объекты) лучше передавать по (константной) ссылке, чем по значнию.
+Особенно в случае оператора присваивания: <code>TritCell_t&amp; operator =(TritCell_t);</code></p>
 </li>
 <li>
-<p>Тесты - ОК</p>
+<p>Немодифицируемые объекты лучше передавать в метод/фуккцию через константную ссылку (напр. <code>operator&lt;&lt;</code>)</p>
 </li>
+</ul>
+<p><strong>Тесты</strong> - ОК</p>
+<h3 id="_2">Пожелания.</h3>
+<ul>
+<li>Вместо </li>
+</ul>
+<pre><code class="C++">if (left.getTrit() == right) {
+    return true;
+}   
+return false;
+</code></pre>
+
+<p>можно написать проще: <code>return left.getTrit() == right;</code></p>
+<ul>
+<li>Запись</li>
+</ul>
+<pre><code class="C++">return buf;
+buf.Triset::~Triset();
+</code></pre>
+
+<p>не имеет особого смысла.</p>
+<ul>
+<li>Один из операторов <code>==</code>, <code>!=</code> можно реализовать через другой.</li>
 </ul></div>
             
         </div>

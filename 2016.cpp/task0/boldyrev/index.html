@@ -166,6 +166,12 @@
         
             
 <li >
+    <a href="../gusev/">Gusev</a>
+</li>
+
+        
+            
+<li >
     <a href="../kharisov/">Kharisov</a>
 </li>
 
@@ -263,7 +269,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../kharisov/">
+                        <a rel="prev" href="../gusev/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -279,22 +285,30 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#0">Болдырев Егор. Начало (Задача 0). В процессе.</a></li>
+        <li class="main active"><a href="#_1">Болдырев Егор.</a></li>
+        
+            <li><a href="#0">Начало (Задача 0). В процессе.</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="0">Болдырев Егор. Начало (Задача 0). В процессе.</h1>
+<h1 id="_1">Болдырев Егор.</h1>
+<h2 id="0">Начало (Задача 0). В процессе.</h2>
 <ul>
 <li>
-<p>Код - функции <code>filter()</code> и <code>extractField()</code> должны работать с потоками ввода-вывода (streams), а не с именами файлов. Программа в процессе работы не должна создавать временных файлов.</p>
+<p>Код - функции <code>filter()</code> и <code>extractField()</code> работают с потоками ввода-вывода (streams), а не с именами файлов - ОК.
+Программа в процессе работы не создает временные файлы - ОК.
+Не работает <code>filter</code> по неполной подстроке (ошибка в <code>task1/task1/lib_patternwork.cpp</code>)</p>
 </li>
 <li>
-<p>Тесты - в качестве источника входных данных вместо файлов лучше использовать <code>stringstream</code>, инициализорованный тестовыми данными.</p>
+<p>Тесты - в качестве источника входных данных вместо файлов лучше использовать <code>stringstream</code>, инициализированный тестовыми данными - ОК.
+Падают тесты <code>filter_test.test2</code>, <code>filter_test.test3</code>.</p>
 </li>
-</ul></div>
+</ul>
+<h3 id="_2">Пожелания.</h3>
+<p>Вместо специальной строки, символизирующей конец потока ввода (<code>0</code>), лучше посылать в терминал символ конца файла <code>EOF</code> (<code>ctrl-d</code> на linux, <code>ctrl-z</code> на windows).</p></div>
             
         </div>
 
