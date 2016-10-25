@@ -289,7 +289,7 @@
         
             <li><a href="#0">Начало (Задача 0). ОК.</a></li>
         
-            <li><a href="#1">Тритсет (Задача 1). В процессе.</a></li>
+            <li><a href="#1">Тритсет (Задача 1). ОК.</a></li>
         
     
     </ul>
@@ -300,20 +300,40 @@
 <h2 id="0">Начало (Задача 0). ОК.</h2>
 <p><strong>Код</strong> - ОК</p>
 <p><strong>Тесты</strong> - ОК</p>
-<h2 id="1">Тритсет (Задача 1). В процессе.</h2>
+<h2 id="1">Тритсет (Задача 1). ОК.</h2>
 <p><strong>Код</strong> - в целом правильно, но есть замечания:</p>
 <ul>
 <li>
-<p><code>operator=</code> должен возврящять ссылку на "себя".</p>
+<p><code>operator=</code> должен возврящять ссылку на "себя" - ОК.</p>
 </li>
 <li>
-<p><code>#define SIZE</code> может различаться на разных платформах (должно быть что-то вроде <code>sizeof(unsigned int) * 8 / 4</code>).</p>
+<p><code>#define SIZE</code> может различаться на разных платформах (должно быть что-то вроде <code>sizeof(unsigned int) * 8 / 4</code>) - ОК.</p>
 </li>
 <li>
-<p>Не определен <code>operator!=</code> для TritSet.</p>
+<p>Не определен <code>operator!=</code> для TritSet - ОК.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - ОК.</p></div>
+<p><strong>Тесты</strong> - ОК.</p>
+<h3 id="_2">Пожелания</h3>
+<ul>
+<li>
+<p>Вместо 1 и 0 для булевых констант лучше использовать <code>true</code> и <code>false</code>.</p>
+</li>
+<li>
+<p>Вместо</p>
+</li>
+</ul>
+<pre><code class="C++">   if (*this == B)
+    {   
+        return 0;
+    }   
+    else
+    {   
+        return 1;
+    }   
+</code></pre>
+
+<p>можно написать просто <code>return !(*this == B);</code></p></div>
             
         </div>
 
