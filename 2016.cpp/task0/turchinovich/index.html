@@ -291,6 +291,8 @@
         
             <li><a href="#1">Тритсет (Задача 1). ОК.</a></li>
         
+            <li><a href="#2">Робот (Задача 2). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -333,7 +335,69 @@
     }   
 </code></pre>
 
-<p>можно написать просто <code>return !(*this == B);</code></p></div>
+<p>можно написать просто <code>return !(*this == B);</code></p>
+<h2 id="2">Робот (Задача 2). В процессе.</h2>
+<p><strong>Код</strong> - идея в целом понята правильно.</p>
+<ul>
+<li>Немного неправильное использование исключений в методе <code>move</code>: исключение должно выбрасываться за пределы метода так, чтобы вызывающий этот метод мог обработать исключительную ситуацию. Примерно так:</li>
+</ul>
+<pre><code class="C++">unsigned int Cylinder::move(Point point)
+{
+    if ((point.x &gt;= rows) || (point.y &gt;= cols))
+    {   
+        throw BadMove();
+    }   
+    current_point = point;
+    return calc_lenght_for_cylinder(point);
+}
+
+while (!finished) {
+    try {
+        cylinder-&gt;move(Point(x, y));
+    }
+    catch (BadMove e) {
+        cerr &lt;&lt; &quot;Bad move... Let's try something else\n&quot;;
+    }
+}
+</code></pre>
+
+<ul>
+<li>
+<p>Больше к логике программы: BadMove это не только выход за пределы поля, но и переход в "несоседнюю" клетку.</p>
+</li>
+<li>
+<p>Пожелание по поводу исключений: удобно иметь возможность задавать сообщение об исключении. Например вида: <code>Bad move from point(1, 2) to Point(5,6)</code>.
+В коде это могло бы выглядеть так (синтетический пример):</p>
+</li>
+</ul>
+<pre><code class="C++">try {
+    Point from(1, 2), to(5, 6);
+    throw BadMove(from, to);
+} catch (BadMove e) {
+    cerr &lt;&lt; e.what(); // shows message
+}
+</code></pre>
+
+<ul>
+<li>
+<p>По организации кода: хорошим стилем считается иметь для каждого класса пару <code>.h + .cpp</code> файлов с именами, соответствующими имени класса, например, для класса <code>Cylinder</code> файлы <code>Cylinder.h</code> и <code>Cylinder.cpp</code> соответственно. Это позволяет быстрее ориентироваться в больших проектах.</p>
+</li>
+<li>
+<p>Подозрительный код: <code>fin &gt;&gt; (fin, *(current_surface));</code></p>
+</li>
+<li>
+<p>В шаблонном роботе: немного неверно понята идея. На мой взгляд, робот должен иметь примерно следующую сигнатуру:</p>
+</li>
+</ul>
+<pre><code class="C++">template&lt;typename T, typename P&gt;
+class Robot {
+public:
+    Robot();
+    vector&lt;P&gt; get_path(const T &amp; topologie);
+};
+</code></pre>
+
+<p>Далее в методе <code>get_path</code> робот оперирует с методами <code>move</code>, <code>lookup</code>.</p></div>
             
         </div>
 
