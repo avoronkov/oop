@@ -10,8 +10,8 @@
 
 - Костылева Виктория: [начало - ОК](/2016.cpp/task0/kostyleva/)
 
-- Миляев Иван: [начало - ОК](/2016.cpp/task0/milyaev/)
+- Миляев Иван: [начало - ОК](/2016.cpp/task0/milyaev/), [тритсет - в процессе](/2016.cpp/task0/milyaev/)
 
-- Турчинович Михаил: [начало - ОК](/2016.cpp/task0/turchinovich/), [тритсет - ОК](/2016.cpp/task0/turchinovich/#1)
+- Турчинович Михаил: [начало - ОК](/2016.cpp/task0/turchinovich/), [тритсет - ОК](/2016.cpp/task0/turchinovich/#1), [робот - в процессе](/2016.cpp/task0/turchinovich/#2)
 
 - Харисов Дамир [начало - ОК](/2016.cpp/task0/kharisov/), [тритсет - ОК](/2016.cpp/task0/kharisov/#1)
