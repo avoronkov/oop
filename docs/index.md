@@ -24,7 +24,7 @@
 
 [2. Робот](https://docs.google.com/document/d/1_PjvZ_UHaw0FHQeu6AfQwuk-N9lafJ3ge_sBtURKihw/edit)
 
-[Результаты](2016.cpp/results/) (обновлено 10/11/2016)
+[Результаты](2016.cpp/results/) (обновлено 18/11/2016)
 
 ## Дополнительная информация
 
