@@ -309,16 +309,16 @@
 <h3 id="_2">Пожелания</h3>
 <p>Писать <code>using namespace</code> внутри заголовочных файлов не очень хорошо (почему?).</p>
 <h2 id="1">Тритсет (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в целом ОК. Замечания:</p>
+<p><strong>Код</strong> - Ок.</p>
 <ul>
 <li>
-<p>нужно добавить <code>operator&amp;=</code> и <code>operator|=</code> в <code>TritSet</code> (нужно чтобы показать как реализовать <code>operator|</code> и <code>operator|=</code> друг через друга)</p>
+<p>[ок] нужно добавить <code>operator&amp;=</code> и <code>operator|=</code> в <code>TritSet</code> (нужно чтобы показать как реализовать <code>operator|</code> и <code>operator|=</code> друг через друга)</p>
 </li>
 <li>
 <p>обратить внимание на модификатор const  у методов и аргументов - в некоторых местах он есть, но не во всех (например, <code>cardinality</code>, <code>capacity</code>, <code>get_size</code>, <code>operator&amp;</code> ).</p>
 </li>
 <li>
-<p>почему в <code>TritSet::operator=</code> размер выделяемой памяти равен <code>other.size+1</code>? (похоже на утечку памяти)</p>
+<p>[исправлено] почему в <code>TritSet::operator=</code> размер выделяемой памяти равен <code>other.size+1</code>? (похоже на утечку памяти)</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - ОК.</p>
