@@ -12,6 +12,8 @@
 
 [Семинар 4](2016.cpp/seminar4/)
 
+[Семинар 14](2016.cpp/seminar14/)
+
 ## Важное!
 
 [Процесс сдачи задач](bitbucket/)
@@ -23,8 +25,9 @@
 [1. Тритсет](https://docs.google.com/document/d/1NM_qbZ3wJUjY_5fa807d3zlcjxzt6d0dX6MIh6Ma5eg/edit)
 
 [2. Робот](https://docs.google.com/document/d/1_PjvZ_UHaw0FHQeu6AfQwuk-N9lafJ3ge_sBtURKihw/edit)
+([словарь английских слов](https://raw.githubusercontent.com/dwyl/english-words/master/words.txt))
 
-[Результаты](2016.cpp/results/) (обновлено 18/11/2016)
+[Результаты](2016.cpp/results/) (обновлено 06/12/2016)
 
 ## Дополнительная информация
 

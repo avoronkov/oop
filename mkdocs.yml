@@ -5,6 +5,7 @@ pages:
         - 'Seminar 1': 2016.cpp/seminar1.md
         - 'Seminar 3': 2016.cpp/seminar3.md
         - 'Seminar 4': 2016.cpp/seminar4.md
+        - 'Seminar 14': 2016.cpp/seminar14.md
         - 'Archive 2015':
             - 'Seminar 1': cpp/seminar1.2015.md
             - 'Seminar 2': cpp/seminar2.2015.md
