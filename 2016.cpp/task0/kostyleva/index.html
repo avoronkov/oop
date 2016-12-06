@@ -82,6 +82,12 @@
 
                         
                             
+<li >
+    <a href="../../seminar14/">Seminar 14</a>
+</li>
+
+                        
+                            
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Archive 2015</a>
     <ul class="dropdown-menu">
@@ -305,12 +311,42 @@
 <li>Функция <code>extractField</code> работает со строками, содержащими 5 полей, строки в тестах содержат 3 поля. Оптимальное решение - работать с произвольным количеством полей, определяя их число по количеству разделителей.</li>
 </ul>
 <h2 id="1">Тритсет (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе. Замечания:</p>
+<p><strong>Код</strong> - хорошо, но есть замечания:</p>
 <ul>
-<li><code>TritSet::operator&amp;</code> возвращает ссылку на локальный объект (т.е. на объект, который будет удалён после выхода из метода).
-Поскольку <code>operator&amp;</code> возвращает новый объект, то типом возвращаемого значения должен быть просто <code>Tritset</code>. Аналогично - <code>operator|</code>.</li>
+<li>
+<p>[исправлено] <code>TritSet::operator&amp;</code> возвращает ссылку на локальный объект (т.е. на объект, который будет удалён после выхода из метода).
+Поскольку <code>operator&amp;</code> возвращает новый объект, то типом возвращаемого значения должен быть просто <code>Tritset</code>. Аналогично - <code>operator|</code>.</p>
+</li>
+<li>
+<p>Неправильная реализация <code>operator&amp;=</code> и <code>operator|=</code>.
+По логике, <code>&amp;=</code> модифицирует левый аргумент (<code>this</code>), "конъюнктируя" с правым аргументом. По аналогии с:</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<pre><code class="C++">int x = 5;
+x += 3;
+cout &lt;&lt; x &lt;&lt; endl; // 8
+</code></pre>
+
+<p>В принципе, <code>operator&amp;=</code> (и аналоги) может быть реализован следующим образом:</p>
+<pre><code class="C++">// return *this &amp; a; /* неправильно */
+return *this = (*this &amp; a);
+
+</code></pre>
+
+<ul>
+<li>Обратить внимание на константность методов, передачу аргументов по ссылкам и типы возвращаемых значений, например:</li>
+</ul>
+<pre><code class="C++">TritSet operator&amp;(TritSet b); // копирование b при передаче в метод
+TritSet operator&amp;=(const TritSet&amp; a); // возврат нового объекта вместо ссылки на текущий
+const TritSet&amp; operator=(const TritSet&amp; a); // возврат константной ссылки вместо неконстантной
+int capacity(); // неконстантный метод
+</code></pre>
+
+<p>Подробнее про это можно посмотреть <a href="../../../2016.cpp/seminar14/">здесь</a>.</p>
+<p><strong>Тесты</strong> - почти отлично, но:</p>
+<ul>
+<li>добавить тесты на <code>operator&amp;</code>, <code>operator&amp;=</code></li>
+</ul></div>
             
         </div>
 
