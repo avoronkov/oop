@@ -10,10 +10,10 @@
 
 - Жук Юлия: [начало - ОК](/2016.cpp/task0/zhuk/), [тритсет - ОК](/2016.cpp/task0/zhuk/#1)
 
-- Костылева Виктория: [начало - ОК](/2016.cpp/task0/kostyleva/), [тритсет - в процессе](/2016.cpp/task0/kostyleva/#1)
+- Костылева Виктория: [начало - ОК](/2016.cpp/task0/kostyleva/), [тритсет - ОК](/2016.cpp/task0/kostyleva/#1)
 
 - Миляев Иван: [начало - ОК](/2016.cpp/task0/milyaev/), [тритсет - ОК](/2016.cpp/task0/milyaev/#1)
 
-- Турчинович Михаил: [начало - ОК](/2016.cpp/task0/turchinovich/), [тритсет - ОК](/2016.cpp/task0/turchinovich/#1), [робот - в процессе](/2016.cpp/task0/turchinovich/#2)
+- Турчинович Михаил: [начало - ОК](/2016.cpp/task0/turchinovich/), [тритсет - ОК](/2016.cpp/task0/turchinovich/#1), [робот - ОК](/2016.cpp/task0/turchinovich/#2)
 
-- Харисов Дамир [начало - ОК](/2016.cpp/task0/kharisov/), [тритсет - ОК](/2016.cpp/task0/kharisov/#1), робот - в процессе.
+- Харисов Дамир [начало - ОК](/2016.cpp/task0/kharisov/), [тритсет - ОК](/2016.cpp/task0/kharisov/#1), робот - ОК.
