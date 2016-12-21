@@ -37,6 +37,8 @@
 
 [Проверочные задачи](final-tasks)
 
+[Примеры кода на C++](https://github.com/avoronkov/cpp-examples)
+
 ## Ссылки
 
 [Список дополнительной литературы](https://sites.google.com/site/nguoop/spisok-dopolnitelnoj-literatury-1)
