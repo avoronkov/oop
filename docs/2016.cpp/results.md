@@ -12,7 +12,7 @@
 
 - Костылева Виктория: [начало - ОК](/2016.cpp/task0/kostyleva/), [тритсет - ОК](/2016.cpp/task0/kostyleva/#1)
 
-- Миляев Иван: [начало - ОК](/2016.cpp/task0/milyaev/), [тритсет - ОК](/2016.cpp/task0/milyaev/#1)
+- Миляев Иван: [начало - ОК](/2016.cpp/task0/milyaev/), [тритсет - ОК](/2016.cpp/task0/milyaev/#1), [робот - ок](/2016.cpp/task0/milyaev/#1)
 
 - Турчинович Михаил: [начало - ОК](/2016.cpp/task0/turchinovich/), [тритсет - ОК](/2016.cpp/task0/turchinovich/#1), [робот - ОК](/2016.cpp/task0/turchinovich/#2)
 
