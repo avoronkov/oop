@@ -12,7 +12,7 @@
 	<title>Gusev - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -297,6 +297,8 @@
         
             <li><a href="#1">Тритсет (Задача 1). Хорошо.</a></li>
         
+            <li><a href="#2">Робот (Задача 2). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -343,7 +345,18 @@
 <ul>
 <li>Вместо <code>enum</code> безопаснее (с точки зрения вероятности ошибиться в коде) использовать <code>enum class</code> (почему?)</li>
 </ul>
-<p><strong>Тесты</strong> - ОК</p></div>
+<p><strong>Тесты</strong> - ОК</p>
+<h2 id="2">Робот (Задача 2). В процессе.</h2>
+<p><strong>Код</strong> - идея реализована правильно (в общем).</p>
+<ul>
+<li>
+<p>В некоторых местах используется <code>catch(char const *str)</code>, что судя по всему являтся ошибкой.</p>
+</li>
+<li>
+<p>Алгоритм робота можно сделать шаблонным, если заменить <code>Surface</code> и <code>Point</code> на шаблоны.</p>
+</li>
+</ul>
+<p><strong>Тесты</strong> - пока отсутствуют.</p></div>
             
         </div>
 
