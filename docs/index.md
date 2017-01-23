@@ -27,7 +27,7 @@
 [2. Робот](https://docs.google.com/document/d/1_PjvZ_UHaw0FHQeu6AfQwuk-N9lafJ3ge_sBtURKihw/edit)
 ([словарь английских слов](https://raw.githubusercontent.com/dwyl/english-words/master/words.txt))
 
-[Результаты](2016.cpp/results/) (обновлено 26/12/2016)
+[Результаты](2016.cpp/results/) (обновлено 23/01/2017)
 
 ## Дополнительная информация
 
