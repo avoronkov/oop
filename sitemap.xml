@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>None/</loc>
+     <loc>/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,31 +12,31 @@
     
         
     <url>
-     <loc>None/2016.cpp/seminar1/</loc>
+     <loc>/2016.cpp/seminar1/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/2016.cpp/seminar3/</loc>
+     <loc>/2016.cpp/seminar3/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/2016.cpp/seminar4/</loc>
+     <loc>/2016.cpp/seminar4/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/2016.cpp/seminar14/</loc>
+     <loc>/2016.cpp/seminar14/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None</loc>
+     <loc></loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -46,13 +46,13 @@
     
         
     <url>
-     <loc>None/2016.cpp/results/</loc>
+     <loc>/2016.cpp/results/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None</loc>
+     <loc></loc>
      <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -62,37 +62,37 @@
     
         
     <url>
-     <loc>None/bitbucket/</loc>
+     <loc>/bitbucket/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/using-namespaces/</loc>
+     <loc>/using-namespaces/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/cmake/</loc>
+     <loc>/cmake/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/using-subversion/</loc>
+     <loc>/using-subversion/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/using-googletest/</loc>
+     <loc>/using-googletest/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/final-tasks/</loc>
+     <loc>/final-tasks/</loc>
      <lastmod>2017-01-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
