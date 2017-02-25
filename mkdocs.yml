@@ -1,6 +1,10 @@
 site_name: OOP Practice Docs
 pages:
     - Home: index.md
+    - Tasks Java:
+        - 'Task 0': 2017.java/task1.md
+    - Seminars Java:
+        - 'Seminar 2': 2017.java/seminar2.md
     - Seminars C++:
         - 'Seminar 1': 2016.cpp/seminar1.md
         - 'Seminar 3': 2016.cpp/seminar3.md
