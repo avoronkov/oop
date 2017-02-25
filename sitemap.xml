@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,26 +12,46 @@
     
         
     <url>
+     <loc>/2017.java/task1/</loc>
+     <lastmod>2017-02-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/2017.java/seminar2/</loc>
+     <lastmod>2017-02-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
      <loc>/2016.cpp/seminar1/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/2016.cpp/seminar3/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/2016.cpp/seminar4/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/2016.cpp/seminar14/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -47,7 +67,7 @@
         
     <url>
      <loc>/2016.cpp/results/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -63,37 +83,37 @@
         
     <url>
      <loc>/bitbucket/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/using-namespaces/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/cmake/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/using-subversion/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/using-googletest/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/final-tasks/</loc>
-     <lastmod>2017-01-23</lastmod>
+     <lastmod>2017-02-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
