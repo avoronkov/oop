@@ -259,17 +259,17 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#_1">Харисов Дамир.</a></li>
-            <li><a href="#0">Подсчёт слов (Задача 0). В процессе.</a></li>
+            <li><a href="#0">Подсчёт слов (Задача 0). ОК.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Харисов Дамир.</h1>
-<h2 id="0">Подсчёт слов (Задача 0). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="0">Подсчёт слов (Задача 0). ОК.</h2>
+<p><strong>Код</strong> - ОК.</p>
 <ul>
 <li>
-<p>Вместо <code>int[3]</code> для хранения результатов лучше использовать отдельный класс с тремя именованными полями, getter'ами и setter'ами.</p>
+<p>[ОК] Вместо <code>int[3]</code> для хранения результатов лучше использовать отдельный класс с тремя именованными полями, getter'ами и setter'ами.</p>
 </li>
 <li>
 <p>Для итерации по коллекциям можно использовать "foreach":</p>
@@ -282,19 +282,30 @@
 
 <ul>
 <li>
-<p>"Архитектурная" ошибка: класс <code>CommandLineParser</code> зависит от класса <code>Counter</code>, хотя ответственность CommandLineParser'а - только работа в аргументами командной строки.</p>
+<p>[хорошо:)] "Архитектурная" ошибка: класс <code>CommandLineParser</code> зависит от класса <code>Counter</code>, хотя ответственность CommandLineParser'а - только работа в аргументами командной строки.</p>
 </li>
 <li>
-<p>Вместо int для булевых флагов (<code>foundFlag</code>) лучше использовать boolean.</p>
+<p>[ОК] Вместо int для булевых флагов (<code>foundFlag</code>) лучше использовать boolean.</p>
 </li>
 <li>
-<p>Вместо <code>String currWord</code> следует использовать <code>StringBuilder</code> или <code>StringBuffer</code>.</p>
+<p>[ОК] Вместо <code>String currWord</code> следует использовать <code>StringBuilder</code> или <code>StringBuffer</code>.</p>
 </li>
 <li>
-<p>По условию задачи, в выводе программы должно присутствовать имя файла, а не его порядковый номер.</p>
+<p>[ОК] По условию задачи, в выводе программы должно присутствовать имя файла, а не его порядковый номер.</p>
+</li>
+<li>
+<p>[Пожелание] Переменные примитивных типов инициализируются значениями по умолчанию, поэтому явная инициализация в конструкторе лишняя:</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<pre><code class="Java">public resultData() {
+    fileName = &quot;&quot;; 
+    stringsCount = 0;
+    wordsCount = 0;
+    charsCount = 0;
+}   
+</code></pre>
+
+<p><strong>Тесты</strong> - ОК.</p></div>
         </div>
 
         <footer class="col-md-12">
