@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Boldyrev - OOP Practice Docs</title>
+        <title>Gusev - OOP Practice Docs</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -82,12 +82,12 @@
     <a href="#">Results</a>
     <ul class="dropdown-menu">
             
-<li class="active">
-    <a href="./">Boldyrev</a>
+<li >
+    <a href="../boldyrev/">Boldyrev</a>
 </li>
             
-<li >
-    <a href="../gusev/">Gusev</a>
+<li class="active">
+    <a href="./">Gusev</a>
 </li>
             
 <li >
@@ -253,12 +253,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../">
+                        <a rel="next" href="../boldyrev/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../gusev/">
+                        <a rel="prev" href="../kharisov/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -270,30 +270,22 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">Болдырев Егор</a></li>
+        <li class="main active"><a href="#_1">Гусев Александр</a></li>
             <li><a href="#0">Подсчёт слов (Задача 0). В процессе.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Болдырев Егор</h1>
+<h1 id="_1">Гусев Александр</h1>
 <h2 id="0">Подсчёт слов (Задача 0). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>public class file</code> - в java общепринято именовать классы с большой буквы (<code>File</code>). (пакеты - с маленькой).</p>
+<p>Для флагов (line, word, character) лучше использовать тип boolean, а не int.</p>
 </li>
 <li>
-<p><code>fileBuffer</code> не закрывается - утечка ресурсов.</p>
-</li>
-<li>
-<p>Импортировать <code>java.lang.String</code> не обязательно - <code>java.lang.*</code> доступно в программе по-умолчанию.</p>
-</li>
-<li>
-<p>Сообщения об ошибках следует писать в <code>System.err</code>, а не в <code>System.out</code>.</p>
-</li>
-<li>
-<p>В классе <code>Data</code> поля следует объявлять приватными, и определять getter'ы и setter'ы для каждого поля.</p>
+<p>Методы <code>File_Read</code> и <code>Console_Read</code> делают практически одно и то же, но имеют две разные реализации.
+Необходимо сделать общую реализацию для этих методов.</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - пока нет.</p></div>

@@ -87,6 +87,10 @@
 </li>
             
 <li >
+    <a href="../gusev/">Gusev</a>
+</li>
+            
+<li >
     <a href="../kharisov/">Kharisov</a>
 </li>
             
@@ -277,7 +281,7 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>Scanner</code> созданный в <code>main()</code> не закрывается (утечка ресурсов)</p>
+<p><code>Scanner</code> созданный в <code>main()</code> закрывается явно, но лучше использовать try-with-resource.</p>
 </li>
 <li>
 <p>Для итерации по коллекциям можно использовать "foreach":</p>
@@ -290,7 +294,8 @@
 
 <p><strong>Тесты</strong> - Ок, но:</p>
 <ul>
-<li><code>Scanner</code>ы созданные в тестах не закрываются.</li>
+<li><code>Scanner</code>ы созданные в тестах закрываются, но лучше использовать try-with-resources
+(исключается утечка ресурсов в случае исключения).</li>
 </ul></div>
         </div>
 
