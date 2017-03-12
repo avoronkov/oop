@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Turchinovich - OOP Practice Docs</title>
+        <title>Zhuk - OOP Practice Docs</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -90,12 +90,12 @@
     <a href="../kharisov/">Kharisov</a>
 </li>
             
-<li class="active">
-    <a href="./">Turchinovich</a>
+<li >
+    <a href="../turchinovich/">Turchinovich</a>
 </li>
             
-<li >
-    <a href="../zhuk/">Zhuk</a>
+<li class="active">
+    <a href="./">Zhuk</a>
 </li>
     </ul>
   </li>
@@ -249,12 +249,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../kharisov/">
+                        <a rel="next" href="../turchinovich/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../zhuk/">
+                        <a rel="prev" href="../../../2016.cpp/seminar1/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -266,31 +266,53 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#_1">Турчинович Михаил</a></li>
+        <li class="main active"><a href="#_1">Жук Юлия</a></li>
             <li><a href="#0">Подсчёт слов (Задача 0). В процессе.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Турчинович Михаил</h1>
+<h1 id="_1">Жук Юлия</h1>
 <h2 id="0">Подсчёт слов (Задача 0). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>Scanner</code> созданный в <code>main()</code> не закрывается (утечка ресурсов)</p>
+<p><strong>Код</strong> - в процессе.</p>
 </li>
 <li>
-<p>Для итерации по коллекциям можно использовать "foreach":</p>
+<p>Примитивные типы инициализируются значениями по умолчанию, поэтому следующий код лишний:</p>
 </li>
 </ul>
-<pre><code class="Java">for (String f: files) {
-    ...
-}
+<pre><code class="Java">    words = 0;
+    chars = 0;
+    lines = 0;
 </code></pre>
 
-<p><strong>Тесты</strong> - Ок, но:</p>
 <ul>
-<li><code>Scanner</code>ы созданные в тестах не закрываются.</li>
+<li>
+<p><code>Scanner in = new Scanner(System.in);</code> - при чтении каждого файла создается лишний Scanner от System.in.</p>
+</li>
+<li>
+<p>Лишний временный массив, можно просто <code>results = act.result();</code></p>
+</li>
+</ul>
+<pre><code class="Java">    int[] temp_arr = new int[3];
+    temp_arr = act.results();
+    for (int j = 0; j &lt; 3; j++) {
+        results[j] = temp_arr[j];
+    }   
+</code></pre>
+
+<ul>
+<li>
+<p>В <code>public int[] results()</code> вместо массива было бы лучше использовать объект с тремя именоваными полями.
+Еще можно разбить этот метод на три, для получения каждого значения по-отдельности.</p>
+</li>
+<li>
+<p>Публичные поля в классе <code>Frequence</code></p>
+</li>
+<li>
+<p><strong>Тесты</strong> - ОК.</p>
+</li>
 </ul></div>
         </div>
 
