@@ -12,6 +12,7 @@ pages:
             - 'Boldyrev': 2017.java/results/boldyrev.md
             - 'Kharisov': 2017.java/results/kharisov.md
             - 'Turchinovich': 2017.java/results/turchinovich.md
+            - 'Zhuk': 2017.java/results/zhuk.md
     - C++:
         - 'Seminars C++':
             - 'Seminar 1': 2016.cpp/seminar1.md
