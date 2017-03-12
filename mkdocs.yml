@@ -10,6 +10,7 @@ pages:
         - 'Overall': 2017.java/results.md
         - 'Results':
             - 'Boldyrev': 2017.java/results/boldyrev.md
+            - 'Gusev': 2017.java/results/gusev.md
             - 'Kharisov': 2017.java/results/kharisov.md
             - 'Turchinovich': 2017.java/results/turchinovich.md
             - 'Zhuk': 2017.java/results/zhuk.md
