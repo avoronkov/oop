@@ -2,7 +2,10 @@ site_name: OOP Practice Docs
 pages:
     - Home: index.md
     - Tasks Java:
-        - 'Task 0': 2017.java/task1.md
+        - 'Task 1': 2017.java/task1.md
+        - 'Task 2': 2017.java/task2.md
+        - 'Task 3': 2017.java/task3.md
+        - 'Task 4': 2017.java/task4.md
     - Seminars Java:
         - 'Seminar 2': 2017.java/seminar2.md
         - 'Seminar 3': 2017.java/seminar3.md
