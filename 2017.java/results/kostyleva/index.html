@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Kharisov - OOP Practice Docs</title>
+	<title>Kostyleva - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -141,14 +141,14 @@
 
         
             
-<li class="active">
-    <a href="./">Kharisov</a>
+<li >
+    <a href="../kharisov/">Kharisov</a>
 </li>
 
         
             
-<li >
-    <a href="../kostyleva/">Kostyleva</a>
+<li class="active">
+    <a href="./">Kostyleva</a>
 </li>
 
         
@@ -393,12 +393,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../gusev/">
+                        <a rel="next" href="../kharisov/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../kostyleva/">
+                        <a rel="prev" href="../turchinovich/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -414,57 +414,27 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Харисов Дамир.</a></li>
+        <li class="main active"><a href="#_1">Костылева Виктория</a></li>
         
-            <li><a href="#1">Подсчёт слов (Задача 1). ОК.</a></li>
+            <li><a href="#1">Подсчёт слов (Задача 1). В процессе.</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Харисов Дамир.</h1>
-<h2 id="1">Подсчёт слов (Задача 1). ОК.</h2>
-<p><strong>Код</strong> - ОК.</p>
+<h1 id="_1">Костылева Виктория</h1>
+<h2 id="1">Подсчёт слов (Задача 1). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>[ОК] Вместо <code>int[3]</code> для хранения результатов лучше использовать отдельный класс с тремя именованными полями, getter'ами и setter'ами.</p>
+<p><code>Scanner scn</code> не закрывается - утечка ресурсов.</p>
 </li>
 <li>
-<p>Для итерации по коллекциям можно использовать "foreach":</p>
+<p>[Пожелание] <code>void CountAll(...)</code> - в java принято именовать методы в camelCase с маленькой буквы (классы - в CamelCase с большой).</p>
 </li>
 </ul>
-<pre><code class="Java">for (String f: files) {
-    ...
-}
-</code></pre>
-
-<ul>
-<li>
-<p>[хорошо:)] "Архитектурная" ошибка: класс <code>CommandLineParser</code> зависит от класса <code>Counter</code>, хотя ответственность CommandLineParser'а - только работа в аргументами командной строки.</p>
-</li>
-<li>
-<p>[ОК] Вместо int для булевых флагов (<code>foundFlag</code>) лучше использовать boolean.</p>
-</li>
-<li>
-<p>[ОК] Вместо <code>String currWord</code> следует использовать <code>StringBuilder</code> или <code>StringBuffer</code>.</p>
-</li>
-<li>
-<p>[ОК] По условию задачи, в выводе программы должно присутствовать имя файла, а не его порядковый номер.</p>
-</li>
-<li>
-<p>[Пожелание] Переменные примитивных типов инициализируются значениями по умолчанию, поэтому явная инициализация в конструкторе лишняя:</p>
-</li>
-</ul>
-<pre><code class="Java">public resultData() {
-    fileName = &quot;&quot;; 
-    stringsCount = 0;
-    wordsCount = 0;
-    charsCount = 0;
-}   
-</code></pre>
-
-<p><strong>Тесты</strong> - ОК.</p></div>
+<p><strong>Тесты</strong> - пока нет.</p></div>
             
         </div>
 
