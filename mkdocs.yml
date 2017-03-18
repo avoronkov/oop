@@ -12,10 +12,12 @@ pages:
     - Results Java:
         - 'Overall': 2017.java/results.md
         - 'Results':
+            - 'Baranov': 2017.java/results/baranov.md
             - 'Boldyrev': 2017.java/results/boldyrev.md
             - 'Gusev': 2017.java/results/gusev.md
             - 'Kharisov': 2017.java/results/kharisov.md
             - 'Kostyleva': 2017.java/results/kostyleva.md
+            - 'Milyaev': 2017.java/results/milyaev.md
             - 'Turchinovich': 2017.java/results/turchinovich.md
             - 'Zhuk': 2017.java/results/zhuk.md
     - C++:
