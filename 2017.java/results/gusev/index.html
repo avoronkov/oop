@@ -305,14 +305,17 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Для флагов (line, word, character) лучше использовать тип boolean, а не int.</p>
+<p>[ОК] Для флагов (line, word, character) лучше использовать тип boolean, а не int.</p>
 </li>
 <li>
 <p>Методы <code>File_Read</code> и <code>Console_Read</code> делают практически одно и то же, но имеют две разные реализации.
 Необходимо сделать общую реализацию для этих методов.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<p><strong>Тесты</strong> - ОК, но:</p>
+<ul>
+<li>Лучше разбить <code>void file_Read()</code> на 3 метода, потому что фактически он содержит 3 разных независимых теста.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

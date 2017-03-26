@@ -311,13 +311,13 @@
 <p>Для закрытия <code>Scanner in = = new Scanner(System.in);</code> лучше использовать try-with-resources.</p>
 </li>
 <li>
-<p>В случае <code>try(Scanner in = new Scanner(new File(args[i]))){ ... }</code> <code>in.close();</code> внутри блока не нужен.</p>
+<p>[ОК] В случае <code>try(Scanner in = new Scanner(new File(args[i]))){ ... }</code> <code>in.close();</code> внутри блока не нужен.</p>
 </li>
 <li>
-<p><code>FileCount</code> - в java методы принято именовать с маленькой буквы используя <code>camelCase</code>.</p>
+<p>[ОК] <code>FileCount</code> - в java методы принято именовать с маленькой буквы используя <code>camelCase</code>.</p>
 </li>
 <li>
-<p>Метод <code>Comparator.compare</code> должен возвращать 0 в случае, если 2 элемента равны.
+<p>[ОК] Метод <code>Comparator.compare</code> должен возвращать 0 в случае, если 2 элемента равны.
 В случае <code>return o1.getValue()&gt;o2.getValue() ? -1:1;</code> нарушается свойство <code>a &lt; b =&gt; !(b &lt; a)</code></p>
 </li>
 </ul>
