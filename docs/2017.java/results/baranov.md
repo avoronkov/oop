@@ -8,11 +8,11 @@
 
 - Для закрытия `Scanner in = = new Scanner(System.in);` лучше использовать try-with-resources.
 
-- В случае `try(Scanner in = new Scanner(new File(args[i]))){ ... }` `in.close();` внутри блока не нужен.
+- [ОК] В случае `try(Scanner in = new Scanner(new File(args[i]))){ ... }` `in.close();` внутри блока не нужен.
 
-- `FileCount` - в java методы принято именовать с маленькой буквы используя `camelCase`.
+- [ОК] `FileCount` - в java методы принято именовать с маленькой буквы используя `camelCase`.
 
-- Метод `Comparator.compare` должен возвращать 0 в случае, если 2 элемента равны.
+- [ОК] Метод `Comparator.compare` должен возвращать 0 в случае, если 2 элемента равны.
 В случае `return o1.getValue()>o2.getValue() ? -1:1;` нарушается свойство `a < b => !(b < a)`
 
 **Тесты** - пока нет.
