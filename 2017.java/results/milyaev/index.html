@@ -295,27 +295,31 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#_1">Миляев Иван.</a></li>
-            <li><a href="#1">Подсчёт слов (Задача 1). В процессе.</a></li>
+            <li><a href="#1">Подсчёт слов (Задача 1). Хорошо.</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Миляев Иван.</h1>
-<h2 id="1">Подсчёт слов (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1">Подсчёт слов (Задача 1). Хорошо.</h2>
+<p><strong>Код</strong> - Хорошо.</p>
 <ul>
 <li>
-<p><code>new Scanner(System.in)</code> не закрывается через try-with-resources или внутри блока finally.</p>
+<p>[ОК] <code>new Scanner(System.in)</code> не закрывается через try-with-resources или внутри блока finally.</p>
 </li>
 <li>
-<p>Не сохраняется порядок вывода результатов, если аргументы указаны как <code>file1.txt - file2.txt</code> -
+<p>[ОК] Не сохраняется порядок вывода результатов, если аргументы указаны как <code>file1.txt - file2.txt</code> -
 поток вывода будет всегда последним.</p>
 </li>
 <li>
-<p>В методе <code>printResult(...)</code> аргумент <code>StringBuffer line</code> не нужен, переменную можно объявить локально.</p>
+<p>[ОК] В методе <code>printResult(...)</code> аргумент <code>StringBuffer line</code> не нужен, переменную можно объявить локально.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<p><strong>Тесты</strong> - Ок.</p>
+<p><strong>Пожеление</strong>: лучше использовать статические методы и поля как можно реже и там, гже они необходимы.
+(например, статические константы или "чистые" функции).
+В текущей реализции получается, что в каждом тесте необходимо позвать метод <code>clear</code>,
+более того тесты нельзя исполнять параллельно.</p></div>
         </div>
 
         <footer class="col-md-12">
