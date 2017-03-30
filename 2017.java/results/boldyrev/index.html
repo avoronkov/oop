@@ -123,6 +123,10 @@
 </li>
             
 <li >
+    <a href="../vorobyeva/">Vorobyeva</a>
+</li>
+            
+<li >
     <a href="../zhuk/">Zhuk</a>
 </li>
     </ul>
@@ -305,22 +309,35 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>public class file</code> - в java общепринято именовать классы с большой буквы (<code>File</code>). (пакеты - с маленькой).</p>
+<p>[ОК] <code>public class file</code> - в java общепринято именовать классы с большой буквы (<code>File</code>). (пакеты - с маленькой).</p>
 </li>
 <li>
-<p><code>fileBuffer</code> не закрывается - утечка ресурсов.</p>
+<p>[хорошо] <code>fileBuffer</code> не закрывается - утечка ресурсов. Тем не менее, лучше остановиться на try-with-resource,
+чем на варианте с тремя try-catch.</p>
 </li>
 <li>
-<p>Импортировать <code>java.lang.String</code> не обязательно - <code>java.lang.*</code> доступно в программе по-умолчанию.</p>
+<p>[ОК] Импортировать <code>java.lang.String</code> не обязательно - <code>java.lang.*</code> доступно в программе по-умолчанию.</p>
 </li>
 <li>
-<p>Сообщения об ошибках следует писать в <code>System.err</code>, а не в <code>System.out</code>.</p>
+<p>[ОК] Сообщения об ошибках следует писать в <code>System.err</code>, а не в <code>System.out</code>.</p>
 </li>
 <li>
-<p>В классе <code>Data</code> поля следует объявлять приватными, и определять getter'ы и setter'ы для каждого поля.</p>
+<p>[ОК] В классе <code>Data</code> поля следует объявлять приватными, и определять getter'ы и setter'ы для каждого поля.</p>
+</li>
+<li>
+<p>В методе <code>File.readText()</code> два независимых блока для работы с консолью и с файлами
+(<code>if (mode == 'c') ...</code> и <code>else if (mode == 'f') ...</code>), которые делают фактически одно и то же,
+но неодинаковыми способами.
+При этом юнит-тесты проверяют только блок чтения из файла.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<p><strong>Тесты</strong> - в целом, ОК.</p>
+<p><strong>Пожелания</strong></p>
+<ul>
+<li>Желательно, чтобы имена java-файлов совпадали с именами сождержащихся в них классах с точностью до регистра,
+т.е. <code>class Main</code> определен в <code>Main.java</code>.
+Иначе возможны проблемы с компиляцией кода на платформах с регистро-зависимыми файловыми системами (например, Linux).</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">

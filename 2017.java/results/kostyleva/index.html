@@ -123,6 +123,10 @@
 </li>
             
 <li >
+    <a href="../vorobyeva/">Vorobyeva</a>
+</li>
+            
+<li >
     <a href="../zhuk/">Zhuk</a>
 </li>
     </ul>
@@ -305,13 +309,20 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>Scanner scn</code> не закрывается - утечка ресурсов.</p>
+<p><code>Scanner</code> лучше закрывать в том же блоке кода, в котором он создается.
+А самый безопасный вариант - использовать try-with-resource.</p>
+</li>
+<li>
+<p>Вместо <code>new File("test2.txt")</code> в случае пустого списка файлов должен использоваться <code>System.in</code>.</p>
+</li>
+<li>
+<p>В случае, если передан аргумент <code>-</code>, нет чтения с консоли (будет читаться файл с именем <code>-</code>).</p>
 </li>
 <li>
 <p>[Пожелание] <code>void CountAll(...)</code> - в java принято именовать методы в camelCase с маленькой буквы (классы - в CamelCase с большой).</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - пока нет.</p></div>
+<p><strong>Тесты</strong> - ОК.</p></div>
         </div>
 
         <footer class="col-md-12">
