@@ -4,9 +4,9 @@
 
 **Код** - в процессе.
 
-- Публичные поля в классах `Information` и `Options` - следует использовать геттеры и сеттеры.
+- [ОК] Публичные поля в классах `Information` и `Options` - следует использовать геттеры и сеттеры.
 
-- Для закрытия `Scanner in = = new Scanner(System.in);` лучше использовать try-with-resources.
+- [ОК] Для закрытия `Scanner in = = new Scanner(System.in);` лучше использовать try-with-resources.
 
 - [ОК] В случае `try(Scanner in = new Scanner(new File(args[i]))){ ... }` `in.close();` внутри блока не нужен.
 
@@ -15,4 +15,4 @@
 - [ОК] Метод `Comparator.compare` должен возвращать 0 в случае, если 2 элемента равны.
 В случае `return o1.getValue()>o2.getValue() ? -1:1;` нарушается свойство `a < b => !(b < a)`
 
-**Тесты** - пока нет.
+**Тесты** - ОК.
