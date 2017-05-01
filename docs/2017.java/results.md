@@ -44,6 +44,8 @@
 
 [Фабрика - ОК](/2017.java/results/turchinovich/#2)
 
+[Сапёр - ОК](/2017.java/results/turchinovich/#3)
+
 ## Харисов Дамир
 
 Доклад: *Массивы +*
