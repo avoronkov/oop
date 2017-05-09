@@ -38,4 +38,15 @@
 
 - Классы `BodyStock`, `CarStock`, `EngineStock` можно заменить одним обобщенным классом `Stock<T>`.
 
+- Лишние импорты:
+```Java
+import jdk.nashorn.internal.ir.RuntimeNode;
+import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
+import org.junit.runner.Request;
+```
+
+- При разборе конфигурационного файла следует полагаться на ключи, стоящие слева от `=`, а не на порядковый номер строки.
+
+- Метод `stop()` - deprecated. Следует использовать `interrupt()`.
+
 **ClassLoader** - пока нет.
