@@ -486,6 +486,22 @@
 <li>
 <p>Классы <code>BodyStock</code>, <code>CarStock</code>, <code>EngineStock</code> можно заменить одним обобщенным классом <code>Stock&lt;T&gt;</code>.</p>
 </li>
+<li>
+<p>Лишние импорты:</p>
+</li>
+</ul>
+<pre><code class="Java">import jdk.nashorn.internal.ir.RuntimeNode;
+import jdk.nashorn.internal.runtime.regexp.JoniRegExp;
+import org.junit.runner.Request;
+</code></pre>
+
+<ul>
+<li>
+<p>При разборе конфигурационного файла следует полагаться на ключи, стоящие слева от <code>=</code>, а не на порядковый номер строки.</p>
+</li>
+<li>
+<p>Метод <code>stop()</code> - deprecated. Следует использовать <code>interrupt()</code>.</p>
+</li>
 </ul>
 <p><strong>ClassLoader</strong> - пока нет.</p></div>
             
