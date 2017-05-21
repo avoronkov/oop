@@ -40,3 +40,12 @@ public resultData() {
 **Classloader** - ОК
 
 **GUI** - ОК
+
+## Тетрис (Задача 3). В процессе.
+
+**MVC** - в процессе.
+
+- `BoardView` должен реализовывать интерфейс `View`, в котором должны быть объявлены методы, необходимые для работы с View
+(repaintAfterMove, repaintAfterDestruction, repaintAfterInsertion ...)
+
+- `Controller` должен работать с интерфейсом `View`.
