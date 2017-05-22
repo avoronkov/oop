@@ -8,7 +8,9 @@
 
 [Подсчёт слов - ОК](/2017.java/results/baranov/)
 
-[Фабрика - в процессе](/2017.java/results/baranov/#2)
+[Фабрика - ОК](/2017.java/results/baranov/#2)
+
+[Сапёр - в процессе](/2017.java/results/baranov/#2)
 
 ## Болдырев Егор
 
@@ -64,7 +66,7 @@
 
 [Подсчёт слов - ОК](/2017.java/results/milyaev/)
 
-[Фабрика - в процессе](/2017.java/results/milyaev/#2)
+[Фабрика - ОК](/2017.java/results/milyaev/#2)
 
 ## Турчинович Михаил
 
