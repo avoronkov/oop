@@ -2,7 +2,7 @@
 
 ## Подсчёт слов (Задача 1). В процессе.
 
-**Код** - в процессе.
+**Код** - ОК.
 
 - [ОК] `br.close()` в методе `analyseStream()` сделает также close на `InputStreamReader stream`.
 То есть, `stream.close()` в методе main - лишний.

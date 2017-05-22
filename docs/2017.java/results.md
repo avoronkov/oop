@@ -24,7 +24,7 @@
 
 Тест: *15.5*
 
-[Подсчёт слов - в процессе](/2017.java/results/vorobyeva/)
+[Подсчёт слов - ОК](/2017.java/results/vorobyeva/)
 
 [Тетрис - в процессе](/2017.java/results/vorobyeva/#2)
 
