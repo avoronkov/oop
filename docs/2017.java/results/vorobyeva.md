@@ -20,4 +20,4 @@ try(BufferedReader br = new BufferedReader(new FileReader(fileNames.get(i)))) {
 
 ## Тетрис (Задача 3). В процессе.
 
-Код не в репозитории.
+**GUI** - ОК

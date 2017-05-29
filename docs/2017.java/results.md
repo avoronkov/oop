@@ -10,7 +10,7 @@
 
 [Фабрика - ОК](/2017.java/results/baranov/#2)
 
-[Сапёр - в процессе](/2017.java/results/baranov/#2)
+[Сапёр - ОК](/2017.java/results/baranov/#2)
 
 ## Болдырев Егор
 
@@ -28,7 +28,7 @@
 
 [Подсчёт слов - ОК](/2017.java/results/vorobyeva/)
 
-[Тетрис - в процессе](/2017.java/results/vorobyeva/#2)
+[Тетрис - ОК](/2017.java/results/vorobyeva/#2)
 
 ## Гусев Александр
 
@@ -93,4 +93,4 @@
 
 [Фабрика - ОК](/2017.java/results/kharisov/#2)
 
-[Тетрис - в процессе](/2017.java/results/kharisov/#3)
+[Тетрис - ОК](/2017.java/results/kharisov/#3)
