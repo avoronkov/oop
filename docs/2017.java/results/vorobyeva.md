@@ -18,6 +18,12 @@ try(BufferedReader br = new BufferedReader(new FileReader(fileNames.get(i)))) {
 
 **Тесты** - ОК.
 
-## Тетрис (Задача 3). В процессе.
+## Тетрис (Задача 3). ОК.
 
 **GUI** - ОК
+
+## Чат (Задача 4). В процессе.
+
+**Object serialization chat** - ОК.
+
+**XML chat** - пока нет.
