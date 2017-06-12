@@ -50,3 +50,10 @@ import org.junit.runner.Request;
 - [ОК] Метод `stop()` - deprecated. Следует использовать `interrupt()`.
 
 **ClassLoader** - ОК.
+
+## Сапёр (Задача 3). ОК.
+
+*GUI* - ОК.
+
+*Text UI* - ОК.
+

@@ -49,3 +49,9 @@ public resultData() {
 (repaintAfterMove, repaintAfterDestruction, repaintAfterInsertion ...)
 
 - [ОК] `Controller` должен работать с интерфейсом `View`.
+
+## Чат (Задача 4). ОК.
+
+**Object serialization chat** - ОК.
+
+**XML chat** - ОК.
