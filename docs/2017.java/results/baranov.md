@@ -30,3 +30,9 @@
 **MVC** - ОК:
 
 - [Fixed] Модель зависит от View - грубое нарушение MVC.
+
+## Чат (Задача 4). ОК.
+
+**Object serialization chat** - ОК.
+
+**XML chat** - ОК.
