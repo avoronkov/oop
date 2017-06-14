@@ -34,8 +34,8 @@
 
 *Text UI* - Ок
 
-## Чат (Задача 4). В процессе.
+## Чат (Задача 4). ОК.
 
 **Object serialization chat** - ОК.
 
-**XML chat** - Нет.
+**XML chat** - ОК.
