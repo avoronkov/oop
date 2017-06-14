@@ -26,4 +26,4 @@ try(BufferedReader br = new BufferedReader(new FileReader(fileNames.get(i)))) {
 
 **Object serialization chat** - ОК.
 
-**XML chat** - пока нет.
+**XML chat** - ОК.
