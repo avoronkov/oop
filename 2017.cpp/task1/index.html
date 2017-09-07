@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Task 3 - OOP Practice Docs</title>
+	<title>Task 1 - OOP Practice Docs</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -59,7 +59,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">C++ <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -69,8 +69,8 @@
     <ul class="dropdown-menu">
         
             
-<li >
-    <a href="../../2017.cpp/task1/">Task 1</a>
+<li class="active">
+    <a href="./">Task 1</a>
 </li>
 
         
@@ -116,7 +116,7 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -132,25 +132,25 @@
         
             
 <li >
-    <a href="../task1/">Task 1</a>
+    <a href="../../2017.java/task1/">Task 1</a>
 </li>
 
         
             
 <li >
-    <a href="../task2/">Task 2</a>
-</li>
-
-        
-            
-<li class="active">
-    <a href="./">Task 3</a>
+    <a href="../../2017.java/task2/">Task 2</a>
 </li>
 
         
             
 <li >
-    <a href="../task4/">Task 4</a>
+    <a href="../../2017.java/task3/">Task 3</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../2017.java/task4/">Task 4</a>
 </li>
 
         
@@ -165,13 +165,13 @@
         
             
 <li >
-    <a href="../seminar2/">Seminar 2</a>
+    <a href="../../2017.java/seminar2/">Seminar 2</a>
 </li>
 
         
             
 <li >
-    <a href="../seminar3/">Seminar 3</a>
+    <a href="../../2017.java/seminar3/">Seminar 3</a>
 </li>
 
         
@@ -312,12 +312,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../task2/">
+                        <a rel="next" href="../..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../task4/">
+                        <a rel="prev" href="../../bitbucket/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -333,15 +333,77 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#3">Задача 3. Игра.</a></li>
+        <li class="main active"><a href="#1">Задача 1. Подсчёт фраз</a></li>
+        
+            <li><a href="#_1">Пример</a></li>
+        
+            <li><a href="#_2">Технические требования</a></li>
+        
+            <li><a href="#_3">Тестирование</a></li>
+        
+            <li><a href="#_4">Сборка проекта</a></li>
+        
+            <li><a href="#_5">Использование репозитория</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="3">Задача 3. Игра.</h1>
-<p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6NjEzMjc5Y2FkNzNiMzIyNA">Описание задачи</a></p></div>
+<h1 id="1">Задача 1. Подсчёт фраз</h1>
+<p>Задача разбить заданный текст на фразы подсчитать количество раз, которое встречается каждая фраза, вывести фразы, которые встречаются более одного раза (или указанного количества раз) в порядке убывания частоты встречаемости.</p>
+<h2 id="_1">Пример</h2>
+<p>Текст <code>the quick brown fox jumps over the lazy dog</code> разбивается на следующие фразы длины 2:
+<code>the quick</code>, <code>quick brown</code>, <code>brown fox</code>, <code>fox jumps</code>, <code>jumps over</code>, <code>over the</code>, <code>the lazy</code>, <code>lazy dog</code>.
+(никакая из этих не повторяется больше одного раза, хотя слово <code>the</code> встречается дважды).</p>
+<h2 id="_2">Технические требования</h2>
+<p>В качестве решения должно быть ркализовано консольное приложение (например, с именем <code>phrases</code>).
+Формат вывода программы: каждая строка содержит фразу и количество раз, которое она встречается в скобках, например:</p>
+<pre><code>hello world (23)
+one two (11)
+</code></pre>
+
+<p>Программа умеет работать с текстом из указанного файла, или со стандартным потоком ввода, если в качестве имени файла указан <code>-</code>.</p>
+<pre><code>$&gt; phrases words.txt
+hello world (23)
+one two (11)
+$&gt; phrases -
+n the town where I was born
+Lived a man who sailed to sea
+And he told us of his life
+In the land of submarines
+In the (2)
+</code></pre>
+
+<p>Программа должна поддерживать опциональные (необязательные) аргументы:
+- <code>-n</code> - длина фразы (в словах) (по-умолчанию 2).
+- <code>-m</code> - минимальное количество повторов, при котором фразу нужно выводить на экран (по-умолчанию 2).
+Пример:</p>
+<pre><code>$&gt; phrases -n 3 -m 4 -
+we all live in a yellow submarine
+yellow submarine yellow submarine
+we all live in a yellow submarine
+yellow submarine yellow submarine
+submarine yellow submarine (4)
+yellow submarine yellow (4)
+</code></pre>
+
+<h2 id="_3">Тестирование</h2>
+<p>Для ключевого функционала программы необходимо написать юнит-тесты.
+Рекомендуется использовать одну из библиотек для юнит-тестирования под C++,
+например <a href="https://github.com/philsquared/Catch/blob/master/docs/tutorial.md">Catch</a> (проще в плане использования),
+или <a href="../using-googletest/">GoogleTest</a> (сложнее в настройке, но чаще встречается в реальных проектах).</p>
+<h2 id="_4">Сборка проекта</h2>
+<p>Для сборки проекта рекомендуется использовать системы сборки <code>gnu make</code> (на OS Linux),
+или <a href="../cmake/">cmake</a> (кросс-платформенный).</p>
+<h2 id="_5">Использование репозитория</h2>
+<p>Для того, чтобы задача была засчитана как выполненная, код программы должен быть загружен в <a href="../bitbucket/">репозиторий</a>.
+Репозиторий должен содержать следующее:
+- Исходный код программы (<code>h</code> и <code>cpp</code> файлы).
+- Юнит-тесты.
+- Конфигурационные файлы для сборки проекта (<code>Makefile</code>, <code>CMakeLists</code> ...).
+- [опционально] краткое описание программы в файле <code>README.md</code></p>
+<p>Крайне не рекомендуется загружать в репозиторий результаты сборки (исполняемые файлы, объектные файлы, временные файлы, созданные в процессе компиляции и т.д.).</p></div>
             
         </div>
 

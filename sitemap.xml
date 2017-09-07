@@ -4,66 +4,44 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2017-06-15</lastmod>
+     <lastmod>2017-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
-        
-    <url>
-     <loc>None/2017.java/task1/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/2017.java/task2/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/2017.java/task3/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/2017.java/task4/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/2017.java/seminar2/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>None/2017.java/seminar3/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>None/2017.java/results/</loc>
-     <lastmod>2017-06-15</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
         
     <url>
      <loc>None</loc>
      <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>None/bitbucket/</loc>
+     <lastmod>2017-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/using-namespaces/</loc>
+     <lastmod>2017-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/cmake/</loc>
+     <lastmod>2017-09-07</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/using-googletest/</loc>
+     <lastmod>2017-09-07</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
