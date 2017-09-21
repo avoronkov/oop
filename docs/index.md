@@ -10,6 +10,8 @@
 
 [Результаты](/2017.cpp/results/)
 
+[Пример helloworld с тестами](https://github.com/avoronkov/helloworld)
+
 ## Задачи.
 
 [Задача 1. Подсчёт фраз](2017.cpp/task1/)
