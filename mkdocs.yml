@@ -1,56 +1,45 @@
 site_name: OOP Practice Docs
 pages:
     - Home: index.md
-    - Tasks Java:
-        - 'Task 1': 2017.java/task1.md
-        - 'Task 2': 2017.java/task2.md
-        - 'Task 3': 2017.java/task3.md
-        - 'Task 4': 2017.java/task4.md
-    - Seminars Java:
-        - 'Seminar 2': 2017.java/seminar2.md
-        - 'Seminar 3': 2017.java/seminar3.md
-    - Results Java:
-        - 'Overall': 2017.java/results.md
-        - 'Results':
-            - 'Baranov': 2017.java/results/baranov.md
-            - 'Boldyrev': 2017.java/results/boldyrev.md
-            - 'Gusev': 2017.java/results/gusev.md
-            - 'Kharisov': 2017.java/results/kharisov.md
-            - 'Kostyleva': 2017.java/results/kostyleva.md
-            - 'Milyaev': 2017.java/results/milyaev.md
-            - 'Turchinovich': 2017.java/results/turchinovich.md
-            - 'Vorobyeva': 2017.java/results/vorobyeva.md
-            - 'Zhuk': 2017.java/results/zhuk.md
     - C++:
-        - 'Seminars C++':
-            - 'Seminar 1': 2016.cpp/seminar1.md
-            - 'Seminar 3': 2016.cpp/seminar3.md
-            - 'Seminar 4': 2016.cpp/seminar4.md
-            - 'Seminar 14': 2016.cpp/seminar14.md
-            - 'Archive 2015':
-                - 'Seminar 1': cpp/seminar1.2015.md
-                - 'Seminar 2': cpp/seminar2.2015.md
-                - 'Seminar 3': cpp/seminar3.2015.md
-                - 'Seminar 5': cpp/seminar5.2015.md
-                - 'Seminar 6': cpp/seminar6.2015.md
-                - 'Seminar 11': cpp/seminar11.2015.md
-                - 'Seminar 14': cpp/seminar14.2015.md
-        - 'Results C++':
-            - 'Results': 2016.cpp/results.md
-            - 'Task 0':
-                - 'Baranov': 2016.cpp/task0/baranov.md
-                - 'Boldyrev': 2016.cpp/task0/boldyrev.md
-                - 'Gusev': 2016.cpp/task0/gusev.md
-                - 'Kharisov': 2016.cpp/task0/kharisov.md
-                - 'Kostyleva': 2016.cpp/task0/kostyleva.md
-                - 'Milyaev': 2016.cpp/task0/milyaev.md
-                - 'Turchinovich': 2016.cpp/task0/turchinovich.md
-                - 'Zhuk': 2016.cpp/task0/zhuk.md
-        - 'Extras':
-            - 'Acceptance': bitbucket.md
-            - 'Using namespaces': using-namespaces.md
-            - 'CMake': cmake.md
-            - 'Svn': using-subversion.md
-            - 'GoogleTest': using-googletest.md
-            - 'AcceptanceTasks': final-tasks.md
+        - Tasks:
+            - 'Task 1': 2017.cpp/task1.md
+        - 'Results':
+            - 'Overall': 2017.cpp/results.md
+            - 'Details':
+                - 'Grigorovich': 2017.cpp/results/grigorovich.md
+                - 'Petin': 2017.cpp/results/petin.md
+                - 'Razumov': 2017.cpp/results/razumov.md
+                - 'Yashin': 2017.cpp/results/yashin.md
+    - Extras:
+        - 'Acceptance': bitbucket.md
+        - 'Using namespaces': using-namespaces.md
+        - 'CMake': cmake.md
+        - 'Svn': using-subversion.md
+        - 'GoogleTest': using-googletest.md
+        - 'AcceptanceTasks': final-tasks.md
+    - Archive:
+        - '2017 Java':
+            - 'Tasks':
+                - 'Task 1': 2017.java/task1.md
+                - 'Task 2': 2017.java/task2.md
+                - 'Task 3': 2017.java/task3.md
+                - 'Task 4': 2017.java/task4.md
+            - 'Seminars Java':
+                - 'Seminar 2': 2017.java/seminar2.md
+                - 'Seminar 3': 2017.java/seminar3.md
+        - '2016 C++':
+            - 'Seminars C++':
+                - 'Seminar 1': 2016.cpp/seminar1.md
+                - 'Seminar 3': 2016.cpp/seminar3.md
+                - 'Seminar 4': 2016.cpp/seminar4.md
+                - 'Seminar 14': 2016.cpp/seminar14.md
+        - '2015 C++':
+            - 'Seminar 1': cpp/seminar1.2015.md
+            - 'Seminar 2': cpp/seminar2.2015.md
+            - 'Seminar 3': cpp/seminar3.2015.md
+            - 'Seminar 5': cpp/seminar5.2015.md
+            - 'Seminar 6': cpp/seminar6.2015.md
+            - 'Seminar 11': cpp/seminar11.2015.md
+            - 'Seminar 14': cpp/seminar14.2015.md
 
