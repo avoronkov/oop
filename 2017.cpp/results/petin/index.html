@@ -12,7 +12,7 @@
 	<title>Petin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -385,9 +385,20 @@
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Отсутствует <code>#pragma once</code> в заголовочном файле.</li>
+<li>
+<p>[OK] Отсутствует <code>#pragma once</code> в заголовочном файле.</p>
+</li>
+<li>
+<p>При запуске с 1 аргументом программа ничего не печатает.</p>
+</li>
+<li>
+<p>Методы <code>read()</code>, <code>read(std::string filename)</code>, <code>read(std::istringstream &amp; ss)</code> стоит заменить одним методом <code>read(std::istream &amp;)</code>. </p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет</p>
+<p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Класс <code>Redactor</code> скопирован в tests, его реализация отличается от исходного.</li>
+</ul>
 <p><a href="https://bitbucket.org/petin_oop/task1.git">repo</a></p></div>
             
         </div>

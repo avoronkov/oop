@@ -12,7 +12,7 @@
 	<title>Yashin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -385,7 +385,7 @@
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Не следует использовать windows style разделитель в путях:</li>
+<li>[Ok] Не следует использовать windows style разделитель в путях:</li>
 </ul>
 <pre><code>main.h:7:25: fatal error: gtest\gtest.h: Нет такого файла или каталога
  #include &quot;gtest\gtest.h&quot;
@@ -398,7 +398,29 @@
   for each (auto s in sorted) {
 </code></pre>
 
-<p><strong>Тесты</strong> - нет</p>
+<ul>
+<li>Кажется, правильная команда для компиляции проекта должна содержать <code>tests.cpp</code>, например так:</li>
+</ul>
+<pre><code>g++ -std=c++14 -Wall main.cpp tests.cpp -lgtest -o phrases.exe
+</code></pre>
+
+<p><strong>Тесты</strong> - В процессе.</p>
+<ul>
+<li>Ошибка в tests.cpp</li>
+</ul>
+<pre><code>tests.cpp:41:2: error: #endif without #if
+ #endif
+</code></pre>
+
+<ul>
+<li><code>text2phrases</code> принимает первым аргументом неконстантную ссылку, поэтому в нее нельзя передать временный объект:</li>
+</ul>
+<pre><code>tests.cpp: In member function ‘virtual void text2phrases_text2phrases_test_Test::TestBody()’:
+tests.cpp:13:30: error: invalid initialization of non-const reference of type ‘std::istream&amp; {aka std::basic_istream&lt;char&gt;&amp;}’ from an rvalue of type ‘std::basic_istream&lt;char&gt;’
+  EXPECT_EQ(text2phrases(std::stringstream(in), 1), out1);
+                                ^~~~~~~~~~~~~~~~
+</code></pre>
+
 <p><a href="https://bitbucket.org/yashin_oop/nsu_oop">repo</a></p></div>
             
         </div>
