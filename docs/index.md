@@ -8,7 +8,7 @@
 
 [Процесс сдачи задач](bitbucket/)
 
-[Результаты](/2017.cpp/results/)
+[Результаты](/2017.cpp/results/) (обновлено 28/09/2017)
 
 [Пример helloworld с тестами](https://github.com/avoronkov/helloworld)
 
