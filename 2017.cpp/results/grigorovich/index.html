@@ -397,22 +397,32 @@
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Нельзя указать один опциональный параметр -n:</li>
+<li>[X] Нельзя указать один опциональный параметр -n:</li>
 </ul>
 <pre><code>$ ./phrases -n 3 ./phrases.cpp
 Can't open input file -n
 </code></pre>
 
 <ul>
-<li>Заголовочные файлы не нужно передавать компилятору (Makefile)</li>
+<li>Параметр <code>-n</code> не влияет на длину фразы:</li>
+</ul>
+<pre><code>$ ./prog -n 4 main.cpp
+cout &lt;&lt; (10)
+== 0) (7)
+0) &amp;&amp; (6)
+buf = (6)
+</code></pre>
+
+<ul>
+<li>[X] Заголовочные файлы не нужно передавать компилятору (Makefile)</li>
 </ul>
 <p><strong>Тесты</strong> - в процессе:</p>
 <ul>
 <li>
-<p>Реализация функций скопирована в <code>test.cpp</code></p>
+<p>[Ok] Реализация функций скопирована в <code>test.cpp</code></p>
 </li>
 <li>
-<p>map не определен:</p>
+<p>[Ok] map не определен:</p>
 </li>
 </ul>
 <pre><code>test.cpp:98:1: error: ‘map’ does not name a type
@@ -420,8 +430,18 @@ Can't open input file -n
 </code></pre>
 
 <ul>
-<li><code>Can't open input file c:\temp\in_t.txt</code></li>
+<li>
+<p>[Ok] <code>Can't open input file c:\temp\in_t.txt</code></p>
+</li>
+<li>
+<p>Передача временного объекта в функцию, принимающую неконстантную ссылку:</p>
+</li>
 </ul>
+<pre><code>tests-text2pharses.cpp:15:32: error: cannot bind non-const lvalue reference of type ‘std::istream&amp; {aka std::basic_istream&lt;char&gt;&amp;}’ to an rvalue of type ‘std::basic_istream&lt;char&gt;’
+  REQUIRE(v1 == text2phrases(1, stringstream(in)));
+                                ^~~~~~~~~~~~~~~~
+</code></pre>
+
 <p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p></div>
             
         </div>
