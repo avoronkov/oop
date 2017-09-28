@@ -4,12 +4,14 @@ pages:
     - C++:
         - Tasks:
             - 'Task 1': 2017.cpp/task1.md
+            - 'Task 2': 2017.cpp/task2.md
         - 'Results':
             - 'Overall': 2017.cpp/results.md
             - 'Details':
                 - 'Grigorovich': 2017.cpp/results/grigorovich.md
                 - 'Petin': 2017.cpp/results/petin.md
                 - 'Razumov': 2017.cpp/results/razumov.md
+                - 'Shustova': 2017.cpp/results/shustova.md
                 - 'Yashin': 2017.cpp/results/yashin.md
     - Extras:
         - 'Acceptance': bitbucket.md
