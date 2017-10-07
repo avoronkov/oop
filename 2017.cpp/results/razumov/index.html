@@ -410,19 +410,40 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>В <code>set(SOURCE_FILES main.cpp phrases.cpp phrases.h head.h)</code> не нужно указывать заголовочные файлы.</p>
+<p>[Ok] В <code>set(SOURCE_FILES main.cpp phrases.cpp phrases.h head.h)</code> не нужно указывать заголовочные файлы.</p>
 </li>
 <li>
 <p>Фразы не упорядочены по убыванию частоты.</p>
+</li>
+<li>
+<p>Вместо <code>if ((argv[1][0] == '-') &amp;&amp; (argv[1][1] == 'n')) {</code> следует использовать сравнение строк (std::string)</p>
+</li>
+<li>
+<p>Вместо <code>ar *buff = new char[length];</code> следует использовать std::string.</p>
+</li>
+<li>
+<p>Лишние чтение файлового потока в std::string (в функции main) и преобразование std::string в строковый поток (в функции text2words).</p>
+</li>
+<li>
+<p>Функции <code>countphrases</code>, <code>printres</code> должны принимать коллекции по константной ссылке.</p>
+</li>
+<li>
+<p><code>using namespace std;</code> в заголовочном файле.</p>
+</li>
+<li>
+<p>Некорректное чтение стандартного потока ввода (считываются аргументы командной строки, а не <code>std::cin</code>).</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Дублирование кода в репозитории (одни и те же файлы в корне проекта и в unit/)</p>
+<p>[Ok] Дублирование кода в репозитории (одни и те же файлы в корне проекта и в unit/)</p>
 </li>
 <li>
-<p>Нужны отдельные функции <code>main()</code> для тестов и для основной программы.</p>
+<p>[Ok] Нужны отдельные функции <code>main()</code> для тестов и для основной программы.</p>
+</li>
+<li>
+<p>Следует удалить из репозитория лишние папки (<code>unit/</code>, ...)</p>
 </li>
 </ul>
 <p><a href="https://bitbucket.org/a_razumov_oop/lab1">repo</a></p></div>
