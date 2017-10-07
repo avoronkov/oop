@@ -12,7 +12,7 @@
 	<title>Yashin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -99,6 +99,12 @@
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Details</a>
     <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../bastrykina/">Bastrykina</a>
+</li>
+
         
             
 <li >
@@ -410,28 +416,36 @@
 </code></pre>
 
 <ul>
-<li>Некорректный синтаксис:</li>
+<li>[Ok] Некорректный синтаксис:</li>
 </ul>
 <pre><code>main.cpp:52:6: error: expected ‘(’ before ‘each’
   for each (auto s in sorted) {
 </code></pre>
 
 <ul>
-<li>Кажется, правильная команда для компиляции проекта должна содержать <code>tests.cpp</code>, например так:</li>
+<li>[Ok] Кажется, правильная команда для компиляции проекта должна содержать <code>tests.cpp</code>, например так:</li>
 </ul>
 <pre><code>g++ -std=c++14 -Wall main.cpp tests.cpp -lgtest -o phrases.exe
 </code></pre>
 
-<p><strong>Тесты</strong> - В процессе.</p>
 <ul>
-<li>Ошибка в tests.cpp</li>
+<li>
+<p><code>using namespace std;</code> в заголовочном файле - грубое нарушение общепринятых codestyles.</p>
+</li>
+<li>
+<p>[Пожелание] Функции <code>vect2map</code> и <code>sortmap</code> должны принимать константные ссылки на коллекции.</p>
+</li>
+</ul>
+<p><strong>Тесты</strong> - Ok.</p>
+<ul>
+<li>[Ок] Ошибка в tests.cpp</li>
 </ul>
 <pre><code>tests.cpp:41:2: error: #endif without #if
  #endif
 </code></pre>
 
 <ul>
-<li><code>text2phrases</code> принимает первым аргументом неконстантную ссылку, поэтому в нее нельзя передать временный объект:</li>
+<li>[Ok] <code>text2phrases</code> принимает первым аргументом неконстантную ссылку, поэтому в нее нельзя передать временный объект:</li>
 </ul>
 <pre><code>tests.cpp: In member function ‘virtual void text2phrases_text2phrases_test_Test::TestBody()’:
 tests.cpp:13:30: error: invalid initialization of non-const reference of type ‘std::istream&amp; {aka std::basic_istream&lt;char&gt;&amp;}’ from an rvalue of type ‘std::basic_istream&lt;char&gt;’

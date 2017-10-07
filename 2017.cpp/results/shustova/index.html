@@ -12,7 +12,7 @@
 	<title>Shustova - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -99,6 +99,12 @@
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Details</a>
     <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../bastrykina/">Bastrykina</a>
+</li>
+
         
             
 <li >
@@ -392,7 +398,7 @@
     
         <li class="main active"><a href="#_1">Шустова Марина</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
     
     </ul>
@@ -400,17 +406,17 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Шустова Марина</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
+<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>using namespace std;</code> в заголовочном файле.</p>
+<p>[Ok] <code>using namespace std;</code> в заголовочном файле.</p>
 </li>
 <li>
-<p>В CMakeLists.txt в <code>set(SOURCE_FILES ...)</code> не нужны заголовочные файлы (<code>Header.h</code>).</p>
+<p>[Ok] В CMakeLists.txt в <code>set(SOURCE_FILES ...)</code> не нужны заголовочные файлы (<code>Header.h</code>).</p>
 </li>
 <li>
-<p>Разная сигнатура функции <code>work_with_arg</code>:</p>
+<p>[Ok] Разная сигнатура функции <code>work_with_arg</code>:</p>
 </li>
 </ul>
 <pre><code>Header.h
@@ -419,7 +425,10 @@ help_funkt.cpp
 3:int work_with_arg(const int&amp; cgra, char** vgra, int &amp;amount, int &amp;freq, int &amp;place, int &amp;stream)
 </code></pre>
 
-<p><strong>Тесты</strong> - нет.</p>
+<ul>
+<li>[Пожелание] Передавать коллекции в функции <code>vect_to_map</code>, <code>map_to_vect</code> по константным ссылкам.</li>
+</ul>
+<p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/shustova_oop/room_with_project">repo</a></p></div>
             
         </div>
