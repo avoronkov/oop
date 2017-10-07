@@ -41,4 +41,3 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type â€
 ```
 
 [repo](https://bitbucket.org/yashin_oop/nsu_oop)
-

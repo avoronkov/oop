@@ -9,6 +9,7 @@ pages:
             - 'Overall': 2017.cpp/results.md
             - 'Details':
                 - 'Bastrykina': 2017.cpp/results/bastrykina.md
+                - 'Chmil': 2017.cpp/results/chmil.md
                 - 'Grigorovich': 2017.cpp/results/grigorovich.md
                 - 'Petin': 2017.cpp/results/petin.md
                 - 'Razumov': 2017.cpp/results/razumov.md
