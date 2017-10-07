@@ -14,6 +14,7 @@ pages:
                 - 'Razumov': 2017.cpp/results/razumov.md
                 - 'Snegireva': 2017.cpp/results/snegireva.md
                 - 'Shustova': 2017.cpp/results/shustova.md
+                - 'Voloshina': 2017.cpp/results/voloshina.md
                 - 'Yashin': 2017.cpp/results/yashin.md
     - Extras:
         - 'Acceptance': bitbucket.md
