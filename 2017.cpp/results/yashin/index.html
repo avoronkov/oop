@@ -12,7 +12,7 @@
 	<title>Yashin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -412,6 +412,8 @@
         
             <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
+            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -465,7 +467,40 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
                                 ^~~~~~~~~~~~~~~~
 </code></pre>
 
-<p><a href="https://bitbucket.org/yashin_oop/nsu_oop">repo</a></p></div>
+<p><a href="https://bitbucket.org/yashin_oop/nsu_oop">repo</a></p>
+<h2 id="2">Календарь (Задача 2). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
+<ul>
+<li>
+<p>Конструктор по умолчанию должен создавать дату соответствующую текущему времени UTC.</p>
+</li>
+<li>
+<p>Тип <code>Month</code> лучше реализовать через <a href="http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/">enum class</a>.</p>
+</li>
+<li>
+<p>Методы <code>add_second</code>, <code>add_minute</code> ... должны быть <code>const</code>.</p>
+</li>
+<li>
+<p>Вместо метода <code>to_string()</code> лучше реализовать оператор вывода в поток (<code>operator&lt;&lt;(ostream &amp;, const Calendar&amp;)</code>.</p>
+</li>
+<li>
+<p>[Пожелание] Внутри методов лучше использовать прямой доступ к полям того же класса, вместо использования селекторов:</p>
+</li>
+</ul>
+<pre><code class="C++">Calendar::Calendar(const Calendar&amp; copy) {
+// вместо:
+    second = copy.get_second();
+    minute = copy.get_minute();
+    hour = copy.get_hour();
+// лучше написать:
+    day = copy.day;
+    month = copy.month;
+    year = copy.year;
+}
+</code></pre>
+
+<p><strong>Тесты</strong> - нет.</p>
+<p><a href="https://bitbucket.org/yashin_oop/lab2">repo</a></p></div>
             
         </div>
 

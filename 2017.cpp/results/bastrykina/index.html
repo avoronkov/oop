@@ -12,7 +12,7 @@
 	<title>Bastrykina - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -412,6 +412,8 @@
         
             <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
+            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -424,7 +426,26 @@
 <li>Коллекции в функции <code>words_to_counted_phrases</code>, <code>map_to_phrase_data</code> следует передавать по константным ссылкам во избежание лишнего копирования.</li>
 </ul>
 <p><strong>Тесты</strong> - Ok.</p>
-<p><a href="https://bitbucket.org/bastrykina_oop/phrases">repo</a></p></div>
+<p><a href="https://bitbucket.org/bastrykina_oop/phrases">repo</a></p>
+<h2 id="2">Календарь (Задача 2). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
+<ul>
+<li>
+<p>Тип <code>Month</code> лучше реализовать при помощи <a href="http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/">enum class</a></p>
+</li>
+<li>
+<p>Методы <code>get_year</code>, <code>get_month</code> ... должны быть <code>const</code>.</p>
+</li>
+<li>
+<p>[Пожелание] После определения методов/функций <code>;</code> не нужна:</p>
+</li>
+</ul>
+<pre><code>unsigned int Date::get_year() {
+    return year;
+} // &lt;- 
+</code></pre>
+
+<p><strong>Тесты</strong> - нет.</p></div>
             
         </div>
 
