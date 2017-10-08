@@ -41,3 +41,34 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
 ```
 
 [repo](https://bitbucket.org/yashin_oop/nsu_oop)
+
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Конструктор по умолчанию должен создавать дату соответствующую текущему времени UTC.
+
+- Тип `Month` лучше реализовать через [enum class](http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/).
+
+- Методы `add_second`, `add_minute` ... должны быть `const`.
+
+- Вместо метода `to_string()` лучше реализовать оператор вывода в поток (`operator<<(ostream &, const Calendar&)`.
+
+- [Пожелание] Внутри методов лучше использовать прямой доступ к полям того же класса, вместо использования селекторов:
+```C++
+Calendar::Calendar(const Calendar& copy) {
+// вместо:
+    second = copy.get_second();
+    minute = copy.get_minute();
+    hour = copy.get_hour();
+// лучше написать:
+    day = copy.day;
+    month = copy.month;
+    year = copy.year;
+}
+```
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/yashin_oop/lab2)
