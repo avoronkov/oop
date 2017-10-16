@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Task 2 - OOP Practice Docs</title>
+	<title>Task 3 - OOP Practice Docs</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -75,14 +75,14 @@
 
         
             
-<li class="active">
-    <a href="./">Task 2</a>
+<li >
+    <a href="../task2/">Task 2</a>
 </li>
 
         
             
-<li >
-    <a href="../task3/">Task 3</a>
+<li class="active">
+    <a href="./">Task 3</a>
 </li>
 
         
@@ -393,12 +393,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../task1/">
+                        <a rel="next" href="../task2/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../task3/">
+                        <a rel="prev" href="../results/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -414,51 +414,94 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#2">Задача 2. Григорианский календарь</a></li>
+        <li class="main active"><a href="#3">Задача 3. Морской бой.</a></li>
         
-            <li><a href="#_1">Основные требования.</a></li>
+            <li><a href="#_1">Общие сведения.</a></li>
         
-            <li><a href="#_2">Дополнительные (обязательные) требования.</a></li>
+            <li><a href="#_2">Процесс игры.</a></li>
+        
+            <li><a href="#_6">Нефункциональные требования.</a></li>
+        
+            <li><a href="#_7">Дополнительная (сверх)задача.</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="2">Задача 2. Григорианский календарь</h1>
-<h2 id="_1">Основные требования.</h2>
-<p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6NTBiODNlMTQxZDk3NTExMw">Условие.</a></p>
-<h2 id="_2">Дополнительные (обязательные) требования.</h2>
-<ul>
-<li>
-<p>Реализация класса <code>DateInterval</code> - обязательна (часть 2б).</p>
-</li>
-<li>
-<p>В классе <code>Calendar</code> перегрузить операторы:</p>
-</li>
-</ul>
-<pre><code class="C++">class Calendar {
-    // ...
-    Calendar  operator+ (const DateInterval &amp;) const;
-    Calendar&amp; operator+=(const DateInterval &amp;);
-    Calendar  operator- (const DateInterval &amp;) const;
-    Calendar&amp; operator-=(const DateInterval &amp;);
-    // ...
-};
+<h1 id="3">Задача 3. Морской бой.</h1>
+<h2 id="_1">Общие сведения.</h2>
+<p>Задача - реализовать стратегию игры в Морской бой.</p>
+<p>В результате написания лаюораторной должен получиться "искусственный интеллект" для игры в морской бой,
+который умеет соревноваться с другим искусственным интеллектом через промежуточный сервер.
+Схема взаимодействия игроков следующая:</p>
+<pre><code>[Player1]  &lt;---&gt;  [Server]  &lt;---&gt;  [Player2]
 </code></pre>
 
-<ul>
-<li>Реализовать префиксный и постфиксный инкремент/декремент для класса <code>Calendar</code>^</li>
-</ul>
-<pre><code class="C++">class Calendar {
-    // ...
-    Calendar&amp; operator++(); // prefix increment
-    Calendar  operator++(int); // postfix increment
-    Calendar&amp; operator--(); // prefix decrement
-    Calendar  operator--(int); // postfix decrement
-    // ...
-};
-</code></pre></div>
+<p>Взаимодействие игрока с сервером осуществляется через стандартные потоки ввода и вывода.</p>
+<h2 id="_2">Процесс игры.</h2>
+<h3 id="_3">Расстановка кораблей.</h3>
+<p>На первом шаге сервер посылает каждому из игроков сообщение</p>
+<pre><code>Arrange!
+</code></pre>
+
+<p>В ответ игрок должен отправить серверу свою расстановку кораблей в виде матрицы (таблицы) 10х10:</p>
+<pre><code>1101001111
+0001000000
+0001000001
+0000000001
+0100000000
+0100001000
+0100000000
+0000000000
+0001010010
+1000000010
+</code></pre>
+
+<p>На карте должно быть расставлено 4 однопалубных, 3 двухпалубных, 2 трехпалубных и 1 четырехпалубный корабль.
+Сервер сохраняет полученную расстановку игроков.</p>
+<h3 id="_4">Игровой процесс</h3>
+<p>Далее сервер посылает первому игроку команду:</p>
+<pre><code>Shoot!
+</code></pre>
+
+<p>Игрок в ответ отправляет координаты, в которые осуществляется выстрел в формате:</p>
+<pre><code>A 5
+</code></pre>
+
+<p>где первая буква - значение координаты X (A ... J), второе число - значение координаты Y (0 ... 9).</p>
+<p>В ответ на ход игрока сервер посылает одно из трех сообщений:</p>
+<pre><code>Miss
+</code></pre>
+
+<p>в случае промаха,</p>
+<pre><code>Hit
+</code></pre>
+
+<p>когда корабль был ранен, и</p>
+<pre><code>Kill
+</code></pre>
+
+<p>если корабль был убит.</p>
+<p>В случае <code>Hit</code> или <code>Kill</code> игрок должен отправить координаты следующего выстрела.</p>
+<p>Пока игрок ожидает своего хода, сервер посылает ему информацию о действиях противника в формате:</p>
+<pre><code>Enemy shooted into G 4
+</code></pre>
+
+<h3 id="_5">Конец игры.</h3>
+<p>Когда один из игроков уничтожает все корабли противника, сервер посылает ему сообщение:</p>
+<pre><code>Win!
+</code></pre>
+
+<p>Другому игроку отправляется сообщение</p>
+<pre><code>Lose
+</code></pre>
+
+<p>После получения одного из этих сообщений программа должна корректно завершиться с кодом возврата 0.</p>
+<h2 id="_6">Нефункциональные требования.</h2>
+<p>После получения сообщения от сервера, требующего от игрока какого-либо действия (расстановки кораблей, выстрела или завершения), игрок должен ответить (или завершиться) в течение одной секунды.</p>
+<h2 id="_7">Дополнительная (сверх)задача.</h2>
+<p>Реализовать сервер с проверкой корректности игрового процесса.</p></div>
             
         </div>
 
