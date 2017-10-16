@@ -16,7 +16,7 @@
 
 [Задача 1. Подсчёт фраз](2017.cpp/task1/)
 
-[Задача 2. Григорианский календарь](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6NTBiODNlMTQxZDk3NTExMw)
+[Задача 2. Григорианский календарь](2017.cpp/task2/)
 
 ## Доп. материалы
 
