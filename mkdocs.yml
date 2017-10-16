@@ -5,6 +5,7 @@ pages:
         - Tasks:
             - 'Task 1': 2017.cpp/task1.md
             - 'Task 2': 2017.cpp/task2.md
+            - 'Task 3': 2017.cpp/task3.md
         - 'Results':
             - 'Overall': 2017.cpp/results.md
             - 'Details':
