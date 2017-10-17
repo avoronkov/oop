@@ -10,7 +10,7 @@ $ ./phrases -n 3 ./phrases.cpp
 Can't open input file -n
 ```
 
-- Параметр `-n` не влияет на длину фразы:
+- [X] Параметр `-n` не влияет на длину фразы:
 ```
 $ ./prog -n 4 main.cpp
 cout << (10)
@@ -20,6 +20,8 @@ buf = (6)
 ```
 
 - [X] Заголовочные файлы не нужно передавать компилятору (Makefile)
+
+- Нельзя использовать функции из библиотеки C (`strcmp`).
 
 **Тесты** - в процессе:
 
@@ -33,11 +35,17 @@ test.cpp:98:1: error: ‘map’ does not name a type
 
 - [Ok] `Can't open input file c:\temp\in_t.txt`
 
-- Передача временного объекта в функцию, принимающую неконстантную ссылку:
+- [Ok] Передача временного объекта в функцию, принимающую неконстантную ссылку:
 ```
 tests-text2pharses.cpp:15:32: error: cannot bind non-const lvalue reference of type ‘std::istream& {aka std::basic_istream<char>&}’ to an rvalue of type ‘std::basic_istream<char>’
   REQUIRE(v1 == text2phrases(1, stringstream(in)));
                                 ^~~~~~~~~~~~~~~~
+```
+
+- Использование классов стандартной библиотеки без указания пространства имен:
+```
+tests-text2phrases.cpp:7:2: error: ‘stringstream’ was not declared in this scope
+tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 ```
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
