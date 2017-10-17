@@ -434,7 +434,7 @@ Can't open input file -n
 </code></pre>
 
 <ul>
-<li>Параметр <code>-n</code> не влияет на длину фразы:</li>
+<li>[X] Параметр <code>-n</code> не влияет на длину фразы:</li>
 </ul>
 <pre><code>$ ./prog -n 4 main.cpp
 cout &lt;&lt; (10)
@@ -444,7 +444,12 @@ buf = (6)
 </code></pre>
 
 <ul>
-<li>[X] Заголовочные файлы не нужно передавать компилятору (Makefile)</li>
+<li>
+<p>[X] Заголовочные файлы не нужно передавать компилятору (Makefile)</p>
+</li>
+<li>
+<p>Нельзя использовать функции из библиотеки C (<code>strcmp</code>).</p>
+</li>
 </ul>
 <p><strong>Тесты</strong> - в процессе:</p>
 <ul>
@@ -464,12 +469,19 @@ buf = (6)
 <p>[Ok] <code>Can't open input file c:\temp\in_t.txt</code></p>
 </li>
 <li>
-<p>Передача временного объекта в функцию, принимающую неконстантную ссылку:</p>
+<p>[Ok] Передача временного объекта в функцию, принимающую неконстантную ссылку:</p>
 </li>
 </ul>
 <pre><code>tests-text2pharses.cpp:15:32: error: cannot bind non-const lvalue reference of type ‘std::istream&amp; {aka std::basic_istream&lt;char&gt;&amp;}’ to an rvalue of type ‘std::basic_istream&lt;char&gt;’
   REQUIRE(v1 == text2phrases(1, stringstream(in)));
                                 ^~~~~~~~~~~~~~~~
+</code></pre>
+
+<ul>
+<li>Использование классов стандартной библиотеки без указания пространства имен:</li>
+</ul>
+<pre><code>tests-text2phrases.cpp:7:2: error: ‘stringstream’ was not declared in this scope
+tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 </code></pre>
 
 <p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p></div>
