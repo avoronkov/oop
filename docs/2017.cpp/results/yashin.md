@@ -47,13 +47,13 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
 
 **Код** - в процессе.
 
-- Конструктор по умолчанию должен создавать дату соответствующую текущему времени UTC.
+- [Ok] Конструктор по умолчанию должен создавать дату соответствующую текущему времени UTC.
 
 - Тип `Month` лучше реализовать через [enum class](http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/).
 
-- Методы `add_second`, `add_minute` ... должны быть `const`.
+- [Ok] Методы `add_second`, `add_minute` ... должны быть `const`.
 
-- Вместо метода `to_string()` лучше реализовать оператор вывода в поток (`operator<<(ostream &, const Calendar&)`.
+- [X] Вместо метода `to_string()` лучше реализовать оператор вывода в поток (`operator<<(ostream &, const Calendar&)`.
 
 - [Пожелание] Внутри методов лучше использовать прямой доступ к полям того же класса, вместо использования селекторов:
 ```C++
@@ -69,6 +69,45 @@ Calendar::Calendar(const Calendar& copy) {
 }
 ```
 
-**Тесты** - нет.
+- Не реализован класс `DateInterval`
+
+- Множественные предупреждения компилятора:
+```
+g++ -Wall -std=c++14 tests.cpp calendar.cpp -o gtest
+calendar.cpp: In constructor ‘calendar::Calendar::Calendar(long int, long int, long int, long int, calendar::Month, long int)’:
+calendar.cpp:67:51: warning: unused variable ‘add_y’ [-Wunused-variable]
+  unsigned int add_s, add_m, add_h, add_d, add_mn, add_y;
+                                                   ^
+calendar.cpp: In member function ‘calendar::Calendar calendar::Calendar::add_day(long int) const’:
+calendar.cpp:206:10: warning: variable ‘days_cap’ set but not used [-Wunused-but-set-variable]
+     long days_cap = 0;
+          ^
+calendar.cpp: In member function ‘calendar::Calendar calendar::Calendar::add_month(long int) const’:
+calendar.cpp:233:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (new_cap < tmp.day) {
+               ^
+calendar.cpp:247:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   if (new_cap < tmp.day) {
+               ^
+calendar.cpp:226:7: warning: unused variable ‘is_bissextile’ [-Wunused-variable]
+  bool is_bissextile = is_biss(this->year);
+       ^
+calendar.cpp:227:16: warning: variable ‘days_cap’ set but not used [-Wunused-but-set-variable]
+  unsigned long days_cap, new_cap;
+                ^
+calendar.cpp: In member function ‘calendar::Calendar calendar::Calendar::add_year(long int) const’:
+calendar.cpp:266:42: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  if (tmp.year > 9999 || tmp.year == 9999 && year > 0) {
+                                          ^
+calendar.cpp:273:43: warning: suggest parentheses around ‘&&’ within ‘||’ [-Wparentheses]
+  } else if (tmp.year < 0 || tmp.year == 0 && year < 0) {
+                                           ^
+calendar.cpp: In function ‘char sign(long int)’:
+calendar.cpp:25:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+```
+
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/yashin_oop/lab2)
