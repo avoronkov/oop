@@ -433,9 +433,25 @@
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>При чтении из файла создается <code>ifstream fin (filename);</code> на каждый вызов <code>input</code>, из-за чего программа не завершается.</li>
+<li>
+<p>[X] При чтении из файла создается <code>ifstream fin (filename);</code> на каждый вызов <code>input</code>, из-за чего программа не завершается.</p>
+</li>
+<li>
+<p>При копировании объекта типа <code>arguments</code> копируется указатель <code>ifstream *fin</code>,
+поэтому когда зовутся деструкторы объектов, то <code>delete fin;</code> зовется 2 раза для одного и того же объекта (что приводит к crash'у программы).</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<p>Поэтому для объектов, содержажих поля-указатели нуобходимо явно определять конструктор копии и оператор присваивания,
+в которых создавать копию объекта.
+В случае, если поле некопируемое (напр. <code>ifstream</code>), то класс тоже должен быть некопируемым, т.е.:</p>
+<pre><code class="C++">arguments(const &amp; arguments) = delete;
+arguments&amp; operator=(const arguments&amp;) = delete;
+</code></pre>
+
+<ul>
+<li>Копирование происходит при вызове функции <code>string2phrases (arguments arg)</code>, эта функция должна принимать ссылку на <code>arguments</code>.</li>
+</ul>
+<p><strong>Тесты</strong> - в процессе.</p>
 <p><a href="https://bitbucket.org/chmil_oop/chmil_oop">repo</a></p></div>
             
         </div>
