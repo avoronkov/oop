@@ -437,15 +437,22 @@
 <p>[OK] Отсутствует <code>#pragma once</code> в заголовочном файле.</p>
 </li>
 <li>
-<p>При запуске с 1 аргументом программа ничего не печатает.</p>
+<p>[Ok] При запуске с 1 аргументом программа ничего не печатает.</p>
 </li>
 <li>
-<p>Методы <code>read()</code>, <code>read(std::string filename)</code>, <code>read(std::istringstream &amp; ss)</code> стоит заменить одним методом <code>read(std::istream &amp;)</code>. </p>
+<p>[Ok] Методы <code>read()</code>, <code>read(std::string filename)</code>, <code>read(std::istringstream &amp; ss)</code> стоит заменить одним методом <code>read(std::istream &amp;)</code>. </p>
+</li>
+<li>
+<p>При запуске с аргументом <code>-</code>, программа пишет:</p>
 </li>
 </ul>
+<pre><code>No correct input file
+Enter text:
+</code></pre>
+
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
-<li>Класс <code>Redactor</code> скопирован в tests, его реализация отличается от исходного.</li>
+<li>Класс <code>Redactor</code> скопирован в tests.</li>
 </ul>
 <p><a href="https://bitbucket.org/petin_oop/task1.git">repo</a></p></div>
             
