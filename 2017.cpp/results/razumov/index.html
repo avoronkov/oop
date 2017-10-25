@@ -442,24 +442,35 @@
 <p>Фразы не упорядочены по убыванию частоты.</p>
 </li>
 <li>
-<p>Вместо <code>if ((argv[1][0] == '-') &amp;&amp; (argv[1][1] == 'n')) {</code> следует использовать сравнение строк (std::string)</p>
+<p>[Ok] Вместо <code>if ((argv[1][0] == '-') &amp;&amp; (argv[1][1] == 'n')) {</code> следует использовать сравнение строк (std::string)</p>
 </li>
 <li>
-<p>Вместо <code>ar *buff = new char[length];</code> следует использовать std::string.</p>
+<p>[Ok] Вместо <code>ar *buff = new char[length];</code> следует использовать std::string.</p>
 </li>
 <li>
-<p>Лишние чтение файлового потока в std::string (в функции main) и преобразование std::string в строковый поток (в функции text2words).</p>
+<p>[Ok] Лишние чтение файлового потока в std::string (в функции main) и преобразование std::string в строковый поток (в функции text2words).</p>
 </li>
 <li>
-<p>Функции <code>countphrases</code>, <code>printres</code> должны принимать коллекции по константной ссылке.</p>
+<p>[Ok] Функции <code>countphrases</code>, <code>printres</code> должны принимать коллекции по константной ссылке.</p>
 </li>
 <li>
-<p><code>using namespace std;</code> в заголовочном файле.</p>
+<p>Функция <code>printres</code> должна принимать коллекцию по константной ссылке.</p>
 </li>
 <li>
-<p>Некорректное чтение стандартного потока ввода (считываются аргументы командной строки, а не <code>std::cin</code>).</p>
+<p>[Ok] <code>using namespace std;</code> в заголовочном файле.</p>
+</li>
+<li>
+<p>[Ok] Некорректное чтение стандартного потока ввода (считываются аргументы командной строки, а не <code>std::cin</code>).</p>
+</li>
+<li>
+<p>Неправильный разбор аргументов:</p>
 </li>
 </ul>
+<pre><code>$ ./lab1 -m 3 Makefile
+There's no such file -m
+Wrong input
+</code></pre>
+
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
 <li>
@@ -469,7 +480,7 @@
 <p>[Ok] Нужны отдельные функции <code>main()</code> для тестов и для основной программы.</p>
 </li>
 <li>
-<p>Следует удалить из репозитория лишние папки (<code>unit/</code>, ...)</p>
+<p>[Ok] Следует удалить из репозитория лишние папки (<code>unit/</code>, ...)</p>
 </li>
 </ul>
 <p><a href="https://bitbucket.org/a_razumov_oop/lab1">repo</a></p>
