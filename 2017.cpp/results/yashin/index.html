@@ -496,7 +496,7 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
 <p>[X] Вместо метода <code>to_string()</code> лучше реализовать оператор вывода в поток (<code>operator&lt;&lt;(ostream &amp;, const Calendar&amp;)</code>.</p>
 </li>
 <li>
-<p>[Пожелание] Внутри методов лучше использовать прямой доступ к полям того же класса, вместо использования селекторов:</p>
+<p>[Ok] Внутри методов лучше использовать прямой доступ к полям того же класса, вместо использования селекторов:</p>
 </li>
 </ul>
 <pre><code class="C++">Calendar::Calendar(const Calendar&amp; copy) {
@@ -513,10 +513,10 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
 
 <ul>
 <li>
-<p>Не реализован класс <code>DateInterval</code></p>
+<p>[Ok] Не реализован класс <code>DateInterval</code></p>
 </li>
 <li>
-<p>Множественные предупреждения компилятора:</p>
+<p>[Ok] Множественные предупреждения компилятора:</p>
 </li>
 </ul>
 <pre><code>g++ -Wall -std=c++14 tests.cpp calendar.cpp -o gtest
@@ -554,7 +554,23 @@ calendar.cpp:25:1: warning: control reaches end of non-void function [-Wreturn-t
  ^
 </code></pre>
 
-<p><strong>Тесты</strong> - Ok.</p>
+<ul>
+<li>Возврат ссылки на локальную переменную из функции (некорректная сигнатура <code>operator+</code>):</li>
+</ul>
+<pre><code>calendar.h: In function ‘calendar::DataInterval&amp; calendar::operator+(const calendar::Calendar&amp;, const calendar::Calendar&amp;)’:
+calendar.h:97:16: warning: reference to local variable ‘tmp’ returned [-Wreturn-local-addr]
+   DataInterval tmp(a.get_second() + b.get_second(), a.get_minute() + b.get_minute(), a.get_hour() + b.get_hour(), a.get_day() + b.get_day(), static_cast&lt;long
+</code></pre>
+
+<p><strong>Тесты</strong> - В процессе.</p>
+<ul>
+<li>Ошибка работы с памятью:</li>
+</ul>
+<pre><code>tests.cpp:143: FAILED:
+due to a fatal error condition:
+  SIGSEGV - Segmentation violation signal
+</code></pre>
+
 <p><a href="https://bitbucket.org/yashin_oop/lab2">repo</a></p></div>
             
         </div>
