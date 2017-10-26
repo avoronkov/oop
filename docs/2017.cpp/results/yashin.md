@@ -108,6 +108,21 @@ calendar.cpp:25:1: warning: control reaches end of non-void function [-Wreturn-t
  ^
 ```
 
-**Тесты** - Ok.
+- Возврат ссылки на локальную переменную из функции (некорректная сигнатура `operator+`):
+```
+calendar.h: In function ‘calendar::DataInterval& calendar::operator+(const calendar::Calendar&, const calendar::Calendar&)’:
+calendar.h:97:16: warning: reference to local variable ‘tmp’ returned [-Wreturn-local-addr]
+   DataInterval tmp(a.get_second() + b.get_second(), a.get_minute() + b.get_minute(), a.get_hour() + b.get_hour(), a.get_day() + b.get_day(), static_cast<long
+```
+
+
+**Тесты** - В процессе.
+
+- Ошибка работы с памятью:
+```
+tests.cpp:143: FAILED:
+due to a fatal error condition:
+  SIGSEGV - Segmentation violation signal
+```
 
 [repo](https://bitbucket.org/yashin_oop/lab2)

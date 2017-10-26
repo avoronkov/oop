@@ -10,7 +10,7 @@
 
 - [Ok] Методы `read()`, `read(std::string filename)`, `read(std::istringstream & ss)` стоит заменить одним методом `read(std::istream &)`. 
 
-- При запуске с аргументом `-`, программа пишет:
+- [Ok] При запуске с аргументом `-`, программа пишет:
 ```
 No correct input file
 Enter text:
@@ -21,3 +21,13 @@ Enter text:
 - Класс `Redactor` скопирован в tests.
 
 [repo](https://bitbucket.org/petin_oop/task1.git)
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Непонятно, какую роль играет вложенный `struct Data`.
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/petin_oop/task2)
