@@ -12,7 +12,7 @@
 	<title>Pushkov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -437,19 +437,31 @@
 <p>Использование <code>using namespace std;</code> - грубое нарушение общепринятого стиля кодирования.</p>
 </li>
 <li>
-<p>Фукнции должны принимать аргументы непримитивных типов используя константные ссылки вместо значений.</p>
+<p>[Ok] Фукнции должны принимать аргументы непримитивных типов используя константные ссылки вместо значений.</p>
 </li>
 <li>
-<p>Использование функций библиотеки C (<code>malloc</code>, <code>strtok</code>).</p>
+<p>[Ok] Использование функций библиотеки C (<code>malloc</code>, <code>strtok</code>).</p>
 </li>
 <li>
-<p>При работе с std::cin считывается только первая строка.</p>
+<p>[Ok] При работе с std::cin считывается только первая строка.</p>
 </li>
 <li>
-<p>Программа работает только с файлами с расширением <code>.txt</code>.</p>
+<p>[Ok] Программа работает только с файлами с расширением <code>.txt</code>.</p>
+</li>
+<li>
+<p>Сделать, чтобы <code>get_words</code> принимала на вход <code>std::istream &amp;</code></p>
+</li>
+<li>
+<p>Вместо <code>cout &lt;&lt; "Wrong n number" &lt;&lt; endl;</code> можно использовать исключения.</p>
+</li>
+<li>
+<p><code>cout &lt;&lt; "Empty input" &lt;&lt; endl;</code> не является ошибкой, сообщение можно не показывать.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p></div>
+<p><strong>Тесты</strong> - В процессе.</p>
+<ul>
+<li>В <code>main.cpp</code> включать заголовочный файл <code>#include "../lab1/main.h</code></li>
+</ul></div>
             
         </div>
 

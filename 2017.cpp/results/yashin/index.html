@@ -12,7 +12,7 @@
 	<title>Yashin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -424,7 +424,7 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). OK.</a></li>
         
-            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+            <li><a href="#2-ok">Календарь (Задача 2). Ok.</a></li>
         
     
     </ul>
@@ -480,7 +480,7 @@ tests.cpp:13:30: error: invalid initialization of non-const reference of type �
 </code></pre>
 
 <p><a href="https://bitbucket.org/yashin_oop/nsu_oop">repo</a></p>
-<h2 id="2">Календарь (Задача 2). В процессе.</h2>
+<h2 id="2-ok">Календарь (Задача 2). Ok.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
@@ -555,16 +555,19 @@ calendar.cpp:25:1: warning: control reaches end of non-void function [-Wreturn-t
 </code></pre>
 
 <ul>
-<li>Возврат ссылки на локальную переменную из функции (некорректная сигнатура <code>operator+</code>):</li>
+<li>[Ok] Возврат ссылки на локальную переменную из функции (некорректная сигнатура <code>operator+</code>):</li>
 </ul>
 <pre><code>calendar.h: In function ‘calendar::DataInterval&amp; calendar::operator+(const calendar::Calendar&amp;, const calendar::Calendar&amp;)’:
 calendar.h:97:16: warning: reference to local variable ‘tmp’ returned [-Wreturn-local-addr]
    DataInterval tmp(a.get_second() + b.get_second(), a.get_minute() + b.get_minute(), a.get_hour() + b.get_hour(), a.get_day() + b.get_day(), static_cast&lt;long
 </code></pre>
 
+<ul>
+<li>[Пожелание] <code>size_t</code> вместо <code>int</code> для <code>string::find</code></li>
+</ul>
 <p><strong>Тесты</strong> - В процессе.</p>
 <ul>
-<li>Ошибка работы с памятью:</li>
+<li>[Ok] Ошибка работы с памятью:</li>
 </ul>
 <pre><code>tests.cpp:143: FAILED:
 due to a fatal error condition:
