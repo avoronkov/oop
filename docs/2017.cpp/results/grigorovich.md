@@ -49,3 +49,21 @@ tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 ```
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе:
+-
+```
+T2_head.h:25:2: error: extra qualification ‘Calendar::’ on member ‘Calendar’ [-fpermissive]
+```
+-
+```
+calend.cpp:70:2: error: ‘gmtime_s’ was not declared in this scope
+
+calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
+```
+
+**Тесты** - в процессе.
+
+[repo](https://bitbucket.org/grigorovich_oop/phrases.git)
