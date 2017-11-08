@@ -12,7 +12,7 @@
 	<title>Bastrykina - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -443,13 +443,13 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Тип <code>Month</code> лучше реализовать при помощи <a href="http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/">enum class</a></p>
+<p>[Ok] Тип <code>Month</code> лучше реализовать при помощи <a href="http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/">enum class</a></p>
 </li>
 <li>
-<p>Методы <code>get_year</code>, <code>get_month</code> ... должны быть <code>const</code>.</p>
+<p>[Ok] Методы <code>get_year</code>, <code>get_month</code> ... должны быть <code>const</code>.</p>
 </li>
 <li>
-<p>[Пожелание] После определения методов/функций <code>;</code> не нужна:</p>
+<p>[Ok] Пожелание После определения методов/функций <code>;</code> не нужна:</p>
 </li>
 </ul>
 <pre><code>unsigned int Date::get_year() {
@@ -457,6 +457,9 @@
 } // &lt;- 
 </code></pre>
 
+<ul>
+<li>[Пожелание] Один из операторов <code>operator+</code>, <code>operator+=</code> можно реализовать через другой.</li>
+</ul>
 <p><strong>Тесты</strong> - нет.</p>
 <p><a href="https://bitbucket.org/bastrykina_oop/calendar/overview">repo</a></p></div>
             
