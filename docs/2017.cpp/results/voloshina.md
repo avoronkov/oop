@@ -24,3 +24,11 @@ map<string, int> frequency_table = text2phrases (input_stream, length_of_phrase)
 **Тесты** - Ok.
 
 [repo](https://bitbucket.org/voloshina_oop/c-labs/overview)
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Похоже, в репозитории lab2 код первой лабораторной.
+
+[repo](https://bitbucket.org/voloshina_oop/lab-2/overview)

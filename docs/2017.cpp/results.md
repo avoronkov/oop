@@ -10,6 +10,8 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/voloshina/)
 
+[Календарь - в процессе](/2017.cpp/results/voloshina/#2)
+
 ## Григорович Артём
 
 [Подсчёт фраз - Ok](/2017.cpp/results/grigorovich/)
@@ -33,6 +35,8 @@
 ## Снегирева Екатерина
 
 [Подсчёт фраз - Ok](/2017.cpp/results/snegireva/)
+
+[Календарь - Ok](/2017.cpp/results/snegireva/#2)
 
 ## Чмиль Александр
 

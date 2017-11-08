@@ -15,16 +15,18 @@
 
 **Код** - в процессе.
 
-- Тип `Month` лучше реализовать при помощи [enum class](http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/)
+- [Ok] Тип `Month` лучше реализовать при помощи [enum class](http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/)
 
-- Методы `get_year`, `get_month` ... должны быть `const`.
+- [Ok] Методы `get_year`, `get_month` ... должны быть `const`.
 
-- [Пожелание] После определения методов/функций `;` не нужна:
+- [Ok] Пожелание После определения методов/функций `;` не нужна:
 ```
 unsigned int Date::get_year() {
     return year;
 } // <- 
 ```
+
+- [Пожелание] Один из операторов `operator+`, `operator+=` можно реализовать через другой.
 
 **Тесты** - нет.
 

@@ -21,3 +21,17 @@
 - [Ok] Добавить тесты на `func`.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Методы-селекторы (`get_year`, `get_month` ...) должны быть `const`.
+
+- Методы `add_years`, `add_months` ... должны быть `const`.
+
+- Оператор присваивания `operator=` должен принимать аргумент по константной ссылке.
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_kek)
