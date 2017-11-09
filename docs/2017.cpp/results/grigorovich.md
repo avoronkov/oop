@@ -64,6 +64,12 @@ calend.cpp:70:2: error: ‘gmtime_s’ was not declared in this scope
 calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 ```
 
+- Вместо реализации `itos` следует использовать `std::to_string`.
+
+- `operator==`, `operator!=` лучше реализовать как методы класса `Calendar`, а не как свободные функции.
+
+- В определении `const bool operator> (const Calendar& v1, const Calendar& v2);` const не имеет смысла.
+
 **Тесты** - в процессе.
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
