@@ -494,13 +494,26 @@ Wrong input
 <p>[Ok] Не определен оператор присваивания (<code>operator=</code>)</p>
 </li>
 <li>
-<p>Конструкторы должны использовать <code>init_date</code> (кроме дефолтного и копирования)</p>
+<p>[Ok] Конструкторы должны использовать <code>init_date</code> (кроме дефолтного и копирования)</p>
 </li>
 <li>
-<p>Использовать исключения вместо </p>
+<p>[X] Использовать исключения вместо </p>
 </li>
 </ul>
 <pre><code class="C++">std::cerr &lt;&lt; &quot;Invalid year: year must be &gt;=1 and &lt;=9999&quot; &lt;&lt; std::endl;
+</code></pre>
+
+<ul>
+<li>Вместо <code>int</code> следует выбрасывать класс-наследник <code>std::exception</code>, исключение не нужно перехватывать в том же методе.</li>
+</ul>
+<pre><code class="C++">    try{
+        if (y &lt; 1 || y &gt; 9999)
+            throw y;
+    }   
+    catch (int e) {
+        std::cout &lt;&lt; &quot;Caught exception: the year is &lt;1 or &gt;9999&quot; &lt;&lt; std::endl;
+        return *this;
+    }
 </code></pre>
 
 <ul>
@@ -513,7 +526,7 @@ Wrong input
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
-<li>Добавить тест на <code>operator+=</code></li>
+<li>[Ok] Добавить тест на <code>operator+=</code></li>
 </ul></div>
             
         </div>

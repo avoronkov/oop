@@ -460,7 +460,7 @@ help_funkt.cpp
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Нормализация работает только для полного конструктора.</p>
+<p>[Ok] Нормализация работает только для полного конструктора.</p>
 </li>
 <li>
 <p>[Ok] Инициализацию вектора лучше написать через список инициализации:</p>
@@ -470,7 +470,26 @@ help_funkt.cpp
 </code></pre>
 
 <ul>
-<li>[Ok] Класс <code>DateInterval</code> не реализован.</li>
+<li>
+<p>[Ok] Класс <code>DateInterval</code> не реализован.</p>
+</li>
+<li>
+<p>Лишний токен после <code>#endif</code>:</p>
+</li>
+</ul>
+<pre><code class="C++">Header.h:93:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
+#endif CALENDAR_HEADER_H
+       ^
+</code></pre>
+
+<ul>
+<li>Оператор сравнения лучше реализовать как метод, а не как свободную функцию, <code>const</code> не имеет смысла:</li>
+</ul>
+<pre><code>const bool operator ==(const Date &amp;a1, const Date &amp;a2);
+</code></pre>
+
+<ul>
+<li>Метод <code>formatDate</code> не реализован.</li>
 </ul>
 <p><strong>Тесты</strong> - В процессе.</p>
 <p><a href="https://bitbucket.org/shustova_oop/calendar">repo</a></p></div>

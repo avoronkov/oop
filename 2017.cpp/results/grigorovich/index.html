@@ -506,6 +506,17 @@ tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 </code></pre>
 
+<ul>
+<li>
+<p>Вместо реализации <code>itos</code> следует использовать <code>std::to_string</code>.</p>
+</li>
+<li>
+<p><code>operator==</code>, <code>operator!=</code> лучше реализовать как методы класса <code>Calendar</code>, а не как свободные функции.</p>
+</li>
+<li>
+<p>В определении <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2);</code> const не имеет смысла.</p>
+</li>
+</ul>
 <p><strong>Тесты</strong> - в процессе.</p>
 <p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p></div>
             
