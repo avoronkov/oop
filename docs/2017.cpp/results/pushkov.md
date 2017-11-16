@@ -23,3 +23,15 @@
 **Тесты** - В процессе.
 
 - В `main.cpp` включать заголовочный файл `#include "../lab1/main.h`
+
+[repo](https://bitbucket.org/pushkov_oop/lab1)
+
+## Календарь (Задача 2). В процессе.
+
+**Код** - в процессе
+
+- Функцию `normalise` следует сделать приватным методом класса `Date`
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/pushkov_oop/lab2)

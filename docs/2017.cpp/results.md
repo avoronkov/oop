@@ -12,31 +12,39 @@
 
 [Календарь - в процессе](/2017.cpp/results/voloshina/#2)
 
+## Галиос Максим
+
+[Подсчёт фраз - в процессе](/2017.cpp/results/galios/)
+
+[Календарь - в процессе](/2017.cpp/results/galios/)
+
 ## Григорович Артём
 
 [Подсчёт фраз - Ok](/2017.cpp/results/grigorovich/)
 
 ## Петин Кирилл
 
-[Подсчёт фраз - в процессе](/2017.cpp/results/petin/)
+[Подсчёт фраз - Ok](/2017.cpp/results/petin/)
 
-[Календарь - в процессе](/2017.cpp/results/petin/#2)
+[Календарь - Ok](/2017.cpp/results/petin/#2)
 
 ## Пушков Федор
 
 [Подсчёт фраз - в процессе](/2017.cpp/results/pushkov/)
 
+[Календарь - в процессе](/2017.cpp/results/pushkov/#2)
+
 ## Разумов Антон
 
 [Подсчёт фраз - Ok](/2017.cpp/results/razumov/)
 
-[Календарь - в процессе](/2017.cpp/results/razumov/#2)
+[Календарь - Ok](/2017.cpp/results/razumov/#2)
 
 ## Снегирева Екатерина
 
 [Подсчёт фраз - Ok](/2017.cpp/results/snegireva/)
 
-[Календарь - Ok](/2017.cpp/results/snegireva/#2)
+[Календарь - в процессе](/2017.cpp/results/snegireva/#2)
 
 ## Чмиль Александр
 
