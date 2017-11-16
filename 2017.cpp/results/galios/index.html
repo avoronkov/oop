@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Shustova - OOP Practice Docs</title>
+	<title>Galios - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -119,8 +119,8 @@
 
         
             
-<li >
-    <a href="../galios/">Galios</a>
+<li class="active">
+    <a href="./">Galios</a>
 </li>
 
         
@@ -155,8 +155,8 @@
 
         
             
-<li class="active">
-    <a href="./">Shustova</a>
+<li >
+    <a href="../shustova/">Shustova</a>
 </li>
 
         
@@ -405,12 +405,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../snegireva/">
+                        <a rel="next" href="../chmil/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../voloshina/">
+                        <a rel="prev" href="../grigorovich/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -426,9 +426,9 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Шустова Марина</a></li>
+        <li class="main active"><a href="#_1">Галиос Максим</a></li>
         
-            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
+            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
             <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
         
@@ -437,68 +437,29 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Шустова Марина</h1>
-<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
+<h1 id="_1">Галиос Максим</h1>
+<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>[Ok] <code>using namespace std;</code> в заголовочном файле.</p>
+<p>Не смешивать код первой и второй лабораторных. Как минимум: держать в разных папках.</p>
 </li>
 <li>
-<p>[Ok] В CMakeLists.txt в <code>set(SOURCE_FILES ...)</code> не нужны заголовочные файлы (<code>Header.h</code>).</p>
+<p>Функция <code>sort_phrases</code> не должна модифицировать аргумент <code>phrases</code>,
+т.е. должна принимать его по константной ссылке.</p>
 </li>
 <li>
-<p>[Ok] Разная сигнатура функции <code>work_with_arg</code>:</p>
+<p>Для сортировки фраз следует использовать <code>std::sort</code></p>
 </li>
 </ul>
-<pre><code>Header.h
-37:void work_with_arg(const int&amp; cgra, char** vgra, int &amp;amount, int &amp;freq, int &amp;stream, int &amp;place);
-help_funkt.cpp
-3:int work_with_arg(const int&amp; cgra, char** vgra, int &amp;amount, int &amp;freq, int &amp;place, int &amp;stream)
+<p><strong>Тесты</strong> - в процессе.</p>
+<pre><code>Tests.cpp:3:20: fatal error: catch.h: Нет такого файла или каталога
 </code></pre>
 
-<ul>
-<li>[Пожелание] Передавать коллекции в функции <code>vect_to_map</code>, <code>map_to_vect</code> по константным ссылкам.</li>
-</ul>
-<p><strong>Тесты</strong> - Ok.</p>
-<p><a href="https://bitbucket.org/shustova_oop/room_with_project">repo</a></p>
+<p><a href="https://bitbucket.org/galios_16203/repository1">repo</a></p>
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
-<ul>
-<li>
-<p>[Ok] Нормализация работает только для полного конструктора.</p>
-</li>
-<li>
-<p>[Ok] Инициализацию вектора лучше написать через список инициализации:</p>
-</li>
-</ul>
-<pre><code class="C++">std::vector&lt;int&gt; dim2{31, 30, 28, 31, ...};
-</code></pre>
-
-<ul>
-<li>
-<p>[Ok] Класс <code>DateInterval</code> не реализован.</p>
-</li>
-<li>
-<p>Лишний токен после <code>#endif</code>:</p>
-</li>
-</ul>
-<pre><code class="C++">Header.h:93:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
-#endif CALENDAR_HEADER_H
-       ^
-</code></pre>
-
-<ul>
-<li>Оператор сравнения лучше реализовать как метод, а не как свободную функцию, <code>const</code> не имеет смысла:</li>
-</ul>
-<pre><code>const bool operator ==(const Date &amp;a1, const Date &amp;a2);
-</code></pre>
-
-<ul>
-<li>Метод <code>formatDate</code> не реализован.</li>
-</ul>
-<p><strong>Тесты</strong> - В процессе.</p>
-<p><a href="https://bitbucket.org/shustova_oop/calendar">repo</a></p></div>
+<p><strong>Тесты</strong> - в процессе.</p></div>
             
         </div>
 

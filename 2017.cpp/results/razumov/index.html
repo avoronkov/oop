@@ -120,6 +120,12 @@
         
             
 <li >
+    <a href="../galios/">Galios</a>
+</li>
+
+        
+            
+<li >
     <a href="../grigorovich/">Grigorovich</a>
 </li>
 
@@ -424,7 +430,7 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
-            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+            <li><a href="#2-ok">Календарь (Задача 2). Ok.</a></li>
         
     
     </ul>
@@ -484,8 +490,8 @@ Wrong input
 </li>
 </ul>
 <p><a href="https://bitbucket.org/a_razumov_oop/lab1">repo</a></p>
-<h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="2-ok">Календарь (Задача 2). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Методы <code>getMonth</code>, <code>getDay</code> ... должны иметь модификатор <code>const</code></p>
@@ -504,7 +510,7 @@ Wrong input
 </code></pre>
 
 <ul>
-<li>Вместо <code>int</code> следует выбрасывать класс-наследник <code>std::exception</code>, исключение не нужно перехватывать в том же методе.</li>
+<li>[Ok] Вместо <code>int</code> следует выбрасывать класс-наследник <code>std::exception</code>, исключение не нужно перехватывать в том же методе.</li>
 </ul>
 <pre><code class="C++">    try{
         if (y &lt; 1 || y &gt; 9999)
@@ -517,11 +523,17 @@ Wrong input
 </code></pre>
 
 <ul>
+<li>[Пожелание] Выбпасывать исключения с текстом сообщения об ошибке, например:</li>
+</ul>
+<pre><code class="C++">throw std::runtime_error(&quot;Only years from 1 to 9999 are supported&quot;);
+</code></pre>
+
+<ul>
 <li>
-<p><code>operator++(int)</code> должен создавать копию текцщего значения (которую он потм вернет), а затем увеличить текущее значение на 1.</p>
+<p>[Ok] <code>operator++(int)</code> должен создавать копию текцщего значения (которую он потм вернет), а затем увеличить текущее значение на 1.</p>
 </li>
 <li>
-<p><code>operator+=</code> должен использовать <code>init_date</code></p>
+<p>[Ok] <code>operator+=</code> должен использовать <code>init_date</code></p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
