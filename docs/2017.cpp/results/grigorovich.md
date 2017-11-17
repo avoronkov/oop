@@ -53,20 +53,20 @@ tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 ## Календарь (Задача 2). В процессе.
 
 **Код** - в процессе:
--
+- [Ok]
 ```
 T2_head.h:25:2: error: extra qualification ‘Calendar::’ on member ‘Calendar’ [-fpermissive]
 ```
--
+- [Ok]
 ```
 calend.cpp:70:2: error: ‘gmtime_s’ was not declared in this scope
 
 calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 ```
 
-- Вместо реализации `itos` следует использовать `std::to_string`.
+- [Ok] Вместо реализации `itos` следует использовать `std::to_string`.
 
-- `operator==`, `operator!=` лучше реализовать как методы класса `Calendar`, а не как свободные функции.
+- [Ok] `operator==`, `operator!=` лучше реализовать как методы класса `Calendar`, а не как свободные функции.
 
 - В определении `const bool operator> (const Calendar& v1, const Calendar& v2);` const не имеет смысла.
 

@@ -23,9 +23,9 @@ help_funkt.cpp
 
 [repo](https://bitbucket.org/shustova_oop/room_with_project)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Нормализация работает только для полного конструктора.
 
@@ -36,20 +36,20 @@ std::vector<int> dim2{31, 30, 28, 31, ...};
 
 - [Ok] Класс `DateInterval` не реализован.
 
-- Лишний токен после `#endif`:
+- [Ok] Лишний токен после `#endif`:
 ```C++
 Header.h:93:8: warning: extra tokens at end of #endif directive [-Wendif-labels]
 #endif CALENDAR_HEADER_H
        ^
 ```
 
-- Оператор сравнения лучше реализовать как метод, а не как свободную функцию, `const` не имеет смысла:
+- [Ok] Оператор сравнения лучше реализовать как метод, а не как свободную функцию, `const` не имеет смысла:
 ```
 const bool operator ==(const Date &a1, const Date &a2);
 ```
 
-- Метод `formatDate` не реализован.
+- [Ok] Метод `formatDate` не реализован.
 
-**Тесты** - В процессе.
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/shustova_oop/calendar)

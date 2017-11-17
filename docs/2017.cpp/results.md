@@ -54,7 +54,7 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/shustova/)
 
-[Календарь - в процессе](/2017.cpp/results/shustova/#2)
+[Календарь - Ok](/2017.cpp/results/shustova/#2)
 
 ## Яшин Артём
 
