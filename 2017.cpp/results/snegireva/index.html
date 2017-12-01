@@ -478,7 +478,14 @@
 <p>[Ok] Оператор присваивания <code>operator=</code> должен принимать аргумент по константной ссылке.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<p><strong>Тесты</strong> - в процессе.</p>
+<p>-</p>
+<pre><code class="C++">testmain.cpp:15:5:   required from here
+/usr/include/gtest/gtest.h:1448:16: error: no match for ‘operator==’ (operand types are ‘const month’ and ‘const int’)
+   if (expected == actual) {
+       ~~~~~~~~~^~~~~~~~~
+</code></pre>
+
 <p><a href="https://bitbucket.org/snegireva_oop/spyair_kek">repo</a></p></div>
             
         </div>
