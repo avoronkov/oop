@@ -50,6 +50,8 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/chmil/)
 
+[Календарь - в процессе](/2017.cpp/results/chmil/#2)
+
 ## Шустова Марина
 
 [Подсчёт фраз - Ok](/2017.cpp/results/shustova/)
@@ -61,3 +63,7 @@
 [Подсчёт фраз - Ok](/2017.cpp/results/yashin/)
 
 [Календарь - Ok](/2017.cpp/results/yashin/#2)
+
+[Морской бой, клиент - в процессе](/2017.cpp/results/yashin/#3)
+
+[Жизнь - в процессе](/2017.cpp/results/yashin/#4)

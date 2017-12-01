@@ -32,6 +32,14 @@
 
 - [Ok] Оператор присваивания `operator=` должен принимать аргумент по константной ссылке.
 
-**Тесты** - нет.
+**Тесты** - в процессе.
+
+-
+```C++
+testmain.cpp:15:5:   required from here
+/usr/include/gtest/gtest.h:1448:16: error: no match for ‘operator==’ (operand types are ‘const month’ and ‘const int’)
+   if (expected == actual) {
+       ~~~~~~~~~^~~~~~~~~
+```
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
