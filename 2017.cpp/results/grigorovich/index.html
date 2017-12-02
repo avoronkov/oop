@@ -12,7 +12,7 @@
 	<title>Grigorovich - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -523,9 +523,20 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 <li>
 <p>В определении <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2);</code> const не имеет смысла.</p>
 </li>
+<li>
+<p>В <code>T2_head.h</code> объявлена функция <code>bool operator&gt; (Calendar&amp; v1, Calendar&amp; v2);</code>,
+но в <code>calend.cpp</code> и <code>tests-functions.cpp</code> дважды(!) определена функция с другой сигнатурой: <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2)</code>.</p>
+</li>
+<li>
+<p>Также возвращаемое значение помечено <code>const</code> для <code>const Calendar operator+</code>, <code>const DateInterval get_interval</code>, <code>const Calendar add_interval</code>.</p>
+</li>
+<li>
+<p>Оператор <code>operator+=</code>, <code>operator-=</code> должны возвращать ссылку на первый аргумент (<code>Calendar&amp;</code>), а не его копию.</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - в процессе.</p>
-<p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p></div>
+<p><strong>Тесты</strong> - Ok.</p>
+<p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p>
+<p>(проверено 2 дек)</p></div>
             
         </div>
 

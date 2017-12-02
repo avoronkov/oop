@@ -12,7 +12,7 @@
 	<title>Voloshina - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -471,9 +471,17 @@ map&lt;string, int&gt; frequency_table = text2phrases (input_stream, length_of_p
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Похоже, в репозитории lab2 код первой лабораторной.</li>
+<li>
+<p>Определение функции <code>string my_to_string (int val)</code> конфликтует со стандартной функцией <code>std::to_string</code>, т.к. используется <code>using namespace std;</code></p>
+</li>
+<li>
+<p>Оператор <code>++</code> не может применяться к временной переменной. Лучше использовать <code>+ 1</code>.
+<code>Date.cpp:501:55: error: lvalue required as increment operand
+     month = static_cast&lt;Month&gt;(static_cast&lt;int&gt;(month)++);</code></p>
+</li>
 </ul>
-<p><a href="https://bitbucket.org/voloshina_oop/lab-2/overview">repo</a></p></div>
+<p><a href="https://bitbucket.org/voloshina_oop/lab-2/overview">repo</a></p>
+<p>(Проверено 2 дек)</p></div>
             
         </div>
 
