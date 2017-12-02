@@ -31,3 +31,5 @@ unsigned int Date::get_year() {
 **Тесты** - нет.
 
 [repo](https://bitbucket.org/bastrykina_oop/calendar/overview)
+
+(проверено 2 дек)

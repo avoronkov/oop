@@ -70,6 +70,15 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 
 - В определении `const bool operator> (const Calendar& v1, const Calendar& v2);` const не имеет смысла.
 
-**Тесты** - в процессе.
+- В `T2_head.h` объявлена функция `bool operator> (Calendar& v1, Calendar& v2);`,
+но в `calend.cpp` и `tests-functions.cpp` дважды(!) определена функция с другой сигнатурой: `const bool operator> (const Calendar& v1, const Calendar& v2)`.
+
+- Также возвращаемое значение помечено `const` для `const Calendar operator+`, `const DateInterval get_interval`, `const Calendar add_interval`.
+
+- Оператор `operator+=`, `operator-=` должны возвращать ссылку на первый аргумент (`Calendar&`), а не его копию.
+
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
+
+(проверено 2 дек)

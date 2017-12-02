@@ -29,6 +29,12 @@ map<string, int> frequency_table = text2phrases (input_stream, length_of_phrase)
 
 **Код** - в процессе.
 
-- Похоже, в репозитории lab2 код первой лабораторной.
+- Определение функции `string my_to_string (int val)` конфликтует со стандартной функцией `std::to_string`, т.к. используется `using namespace std;`
+
+- Оператор `++` не может применяться к временной переменной. Лучше использовать `+ 1`.
+`Date.cpp:501:55: error: lvalue required as increment operand
+     month = static_cast<Month>(static_cast<int>(month)++);`
 
 [repo](https://bitbucket.org/voloshina_oop/lab-2/overview)
+
+(Проверено 2 дек)
