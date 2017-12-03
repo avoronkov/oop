@@ -43,3 +43,5 @@ testmain.cpp:15:5:   required from here
 ```
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
+
+(проверено 3 дек)

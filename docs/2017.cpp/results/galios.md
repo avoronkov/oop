@@ -27,6 +27,17 @@ Tests.cpp:3:20: fatal error: catch.h: Нет такого файла или ка
 
 **Код** - в процессе.
 
-**Тесты** - в процессе.
+- Возвращаемым значением оператора присваивания должна быть ссылка, а не объект; аргумент должен быть константной ссылкой:
+```C++
+DateInterval operator = (const DateInterval interval);
+```
+
+- Аналогично `Date  operator = (const Date date);`
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/galios_16203/repository1)
+
+(проверено 3 дек)
 
 

@@ -33,3 +33,5 @@ Enter text:
 **Тесты** - Ok.
 
 [repo](https://bitbucket.org/petin_oop/task2)
+
+(проверено 3 дек)

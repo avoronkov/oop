@@ -40,6 +40,10 @@
 
 [Календарь - Ok](/2017.cpp/results/razumov/#2)
 
+[Морской бой - в процессе](/2017.cpp/results/razumov/#3)
+
+[Жизнь - в процессе](/2017.cpp/results/razumov/#4)
+
 ## Снегирева Екатерина
 
 [Подсчёт фраз - Ok](/2017.cpp/results/snegireva/)
@@ -57,6 +61,8 @@
 [Подсчёт фраз - Ok](/2017.cpp/results/shustova/)
 
 [Календарь - Ok](/2017.cpp/results/shustova/#2)
+
+[Морской бой - в процессе](/2017.cpp/results/shustova/#3)
 
 ## Яшин Артём
 

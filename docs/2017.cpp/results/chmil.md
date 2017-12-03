@@ -34,3 +34,7 @@ arguments& operator=(const arguments&) = delete;
 - Использовать `enum class` вместо `enum`
 
 **Тесты** - Ok.
+
+[repo](ssh://hg@bitbucket.org/chmil_oop/lab2)
+
+(проверено 3 дек)

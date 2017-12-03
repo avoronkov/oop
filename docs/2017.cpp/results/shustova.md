@@ -53,3 +53,11 @@ const bool operator ==(const Date &a1, const Date &a2);
 **Тесты** - Ok.
 
 [repo](https://bitbucket.org/shustova_oop/calendar)
+
+## Морской бой (Задача 3). В процессе.
+
+**Код** - в процессе.
+
+[repo](https://bitbucket.org/shustova_oop/battleship)
+
+(проверено 3 дек)

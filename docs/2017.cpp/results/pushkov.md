@@ -26,6 +26,8 @@
 
 [repo](https://bitbucket.org/pushkov_oop/lab1)
 
+(проверено 3 дек)
+
 ## Календарь (Задача 2). В процессе.
 
 **Код** - в процессе
@@ -35,3 +37,5 @@
 **Тесты** - нет.
 
 [repo](https://bitbucket.org/pushkov_oop/lab2)
+
+(проверено 3 дек)
