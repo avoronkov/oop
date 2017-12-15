@@ -82,3 +82,11 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
 
 (проверено 2 дек)
+
+## Морской бой (Задача 3). В процессе.
+
+**Код** - в процессе.
+
+[repo](https://bitbucket.org/grigorovich_oop/phrases.git)
+
+(проверено 15 дек)

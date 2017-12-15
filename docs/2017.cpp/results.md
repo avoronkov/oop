@@ -22,6 +22,10 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/grigorovich/)
 
+[Календарь - в процессе](/2017.cpp/results/grigorovich/#2)
+
+[Морской бой - в процессе](/2017.cpp/results/grigorovich/#3)
+
 ## Петин Кирилл
 
 [Подсчёт фраз - Ok](/2017.cpp/results/petin/)
@@ -54,7 +58,7 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/chmil/)
 
-[Календарь - в процессе](/2017.cpp/results/chmil/#2)
+[Календарь - Ok](/2017.cpp/results/chmil/#2)
 
 ## Шустова Марина
 
@@ -72,4 +76,4 @@
 
 [Морской бой, клиент - в процессе](/2017.cpp/results/yashin/#3)
 
-[Жизнь - в процессе](/2017.cpp/results/yashin/#4)
+[Жизнь - Ok](/2017.cpp/results/yashin/#4)

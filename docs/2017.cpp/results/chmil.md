@@ -27,11 +27,11 @@ arguments& operator=(const arguments&) = delete;
 
 [repo](https://bitbucket.org/chmil_oop/chmil_oop)
 
-## Календарь. В процессе.
+## Календарь. Ok.
 
-**Код** - в процессе.
+**Код** - Ok
 
-- Использовать `enum class` вместо `enum`
+- [Ok] Использовать `enum class` вместо `enum`
 
 **Тесты** - Ok.
 
