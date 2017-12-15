@@ -137,6 +137,16 @@ due to a fatal error condition:
 
 - Не использовать static переменные.
 
+- Ошибки компиляции:
+```C++
+ai.cpp: In member function ‘void warships::ai::arrange()’:
+ai.cpp:211:13: error: ‘rand’ was not declared in this scope
+    x = rand() % 5 + 2;
+ai.cpp: In member function ‘void warships::ai::burry()’:
+ai.cpp:540:10: error: ‘exit’ was not declared in this scope
+    exit(1);
+```
+
 ## Жизнь (Задача 4). В процессе.
 
 **Код** - в процессе.
