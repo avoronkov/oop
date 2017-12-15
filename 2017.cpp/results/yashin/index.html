@@ -12,7 +12,7 @@
 	<title>Yashin - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -594,7 +594,18 @@ due to a fatal error condition:
 <li>
 <p>Не использовать static переменные.</p>
 </li>
+<li>
+<p>Ошибки компиляции:</p>
+</li>
 </ul>
+<pre><code class="C++">ai.cpp: In member function ‘void warships::ai::arrange()’:
+ai.cpp:211:13: error: ‘rand’ was not declared in this scope
+    x = rand() % 5 + 2;
+ai.cpp: In member function ‘void warships::ai::burry()’:
+ai.cpp:540:10: error: ‘exit’ was not declared in this scope
+    exit(1);
+</code></pre>
+
 <h2 id="4">Жизнь (Задача 4). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <p>(проверено 3 дек)</p></div>
