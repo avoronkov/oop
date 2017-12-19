@@ -61,3 +61,11 @@ const bool operator ==(const Date &a1, const Date &a2);
 [repo](https://bitbucket.org/shustova_oop/battleship)
 
 (проверено 3 дек)
+
+## Жизнь (Задача 4). В процессе.
+
+**Код** - в процессе.
+
+[repo](https://bitbucket.org/shustova_oop/life)
+
+(проверено 19 дек)

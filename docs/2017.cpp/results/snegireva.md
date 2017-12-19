@@ -22,9 +22,9 @@
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Методы-селекторы (`get_year`, `get_month` ...) должны быть `const`.
 
@@ -32,9 +32,9 @@
 
 - [Ok] Оператор присваивания `operator=` должен принимать аргумент по константной ссылке.
 
-**Тесты** - в процессе.
+**Тесты** - Ok.
 
--
+- [Ok]
 ```C++
 testmain.cpp:15:5:   required from here
 /usr/include/gtest/gtest.h:1448:16: error: no match for ‘operator==’ (operand types are ‘const month’ and ‘const int’)
@@ -45,3 +45,11 @@ testmain.cpp:15:5:   required from here
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 
 (проверено 3 дек)
+
+## Морской бой (Задача 3). В процессе.
+
+**Код** - в процессе.
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_kek)
+
+(проверено 19 дек)

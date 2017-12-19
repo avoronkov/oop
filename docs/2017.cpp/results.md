@@ -52,7 +52,9 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/snegireva/)
 
-[Календарь - в процессе](/2017.cpp/results/snegireva/#2)
+[Календарь - Ok](/2017.cpp/results/snegireva/#2)
+
+[Морской бой - в процессе](/2017.cpp/results/snegireva/#3)
 
 ## Чмиль Александр
 
@@ -67,6 +69,8 @@
 [Календарь - Ok](/2017.cpp/results/shustova/#2)
 
 [Морской бой - в процессе](/2017.cpp/results/shustova/#3)
+
+[Жизнь - в процессе](/2017.cpp/results/shustova/#4)
 
 ## Яшин Артём
 
