@@ -22,7 +22,7 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/grigorovich/)
 
-[Календарь - в процессе](/2017.cpp/results/grigorovich/#2)
+[Календарь - Ok](/2017.cpp/results/grigorovich/#2)
 
 [Морской бой - в процессе](/2017.cpp/results/grigorovich/#3)
 
@@ -32,11 +32,15 @@
 
 [Календарь - Ok](/2017.cpp/results/petin/#2)
 
+[Морской бой - Ok](/2017.cpp/results/petin/#3)
+
 ## Пушков Федор
 
 [Подсчёт фраз - в процессе](/2017.cpp/results/pushkov/)
 
 [Календарь - в процессе](/2017.cpp/results/pushkov/#2)
+
+[Морской бой - ?](/2017.cpp/results/pushkov/#3)
 
 ## Разумов Антон
 

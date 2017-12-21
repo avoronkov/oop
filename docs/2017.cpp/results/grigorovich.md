@@ -50,9 +50,10 @@ tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - в процессе:
+**Код** - Ok:
+
 - [Ok]
 ```
 T2_head.h:25:2: error: extra qualification ‘Calendar::’ on member ‘Calendar’ [-fpermissive]
@@ -68,14 +69,17 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 
 - [Ok] `operator==`, `operator!=` лучше реализовать как методы класса `Calendar`, а не как свободные функции.
 
-- В определении `const bool operator> (const Calendar& v1, const Calendar& v2);` const не имеет смысла.
+- [Ok] В определении `const bool operator> (const Calendar& v1, const Calendar& v2);` const не имеет смысла.
 
-- В `T2_head.h` объявлена функция `bool operator> (Calendar& v1, Calendar& v2);`,
+- [Ok] В `T2_head.h` объявлена функция `bool operator> (Calendar& v1, Calendar& v2);`,
 но в `calend.cpp` и `tests-functions.cpp` дважды(!) определена функция с другой сигнатурой: `const bool operator> (const Calendar& v1, const Calendar& v2)`.
 
-- Также возвращаемое значение помечено `const` для `const Calendar operator+`, `const DateInterval get_interval`, `const Calendar add_interval`.
+- [Ok] Также возвращаемое значение помечено `const` для `const Calendar operator+`, `const DateInterval get_interval`, `const Calendar add_interval`.
 
-- Оператор `operator+=`, `operator-=` должны возвращать ссылку на первый аргумент (`Calendar&`), а не его копию.
+- [Ok] Оператор `operator+=`, `operator-=` должны возвращать ссылку на первый аргумент (`Calendar&`), а не его копию.
+
+- [Пожелание] Файлы `calend.cpp` и `tests-functions.cpp` имеют практически одинаковое содержимое.
+Кажется, один из них лишний.
 
 **Тесты** - Ok.
 
