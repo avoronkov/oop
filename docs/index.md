@@ -10,6 +10,8 @@
 
 [Результаты](/2017.cpp/results/) (обновлено 21/12/2017)
 
+[Результаты игры Морской бой](/2017.cpp/battleship_stats/)
+
 [Пример helloworld с тестами](https://github.com/avoronkov/helloworld)
 
 ## Задачи.

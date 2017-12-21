@@ -8,6 +8,7 @@ pages:
             - 'Task 3': 2017.cpp/task3.md
         - 'Results':
             - 'Overall': 2017.cpp/results.md
+            - 'Battleship': 2017.cpp/battleship_stats.md
             - 'Details':
                 - 'Bastrykina': 2017.cpp/results/bastrykina.md
                 - 'Chmil': 2017.cpp/results/chmil.md
