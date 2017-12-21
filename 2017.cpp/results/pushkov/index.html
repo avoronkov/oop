@@ -457,29 +457,69 @@
 <p>[Ok] Программа работает только с файлами с расширением <code>.txt</code>.</p>
 </li>
 <li>
-<p>Сделать, чтобы <code>get_words</code> принимала на вход <code>std::istream &amp;</code></p>
+<p>[Ok] Сделать, чтобы <code>get_words</code> принимала на вход <code>std::istream &amp;</code></p>
 </li>
 <li>
-<p>Вместо <code>cout &lt;&lt; "Wrong n number" &lt;&lt; endl;</code> можно использовать исключения.</p>
+<p>[Ok] Вместо <code>cout &lt;&lt; "Wrong n number" &lt;&lt; endl;</code> можно использовать исключения.</p>
 </li>
 <li>
-<p><code>cout &lt;&lt; "Empty input" &lt;&lt; endl;</code> не является ошибкой, сообщение можно не показывать.</p>
+<p>[Ok] <code>cout &lt;&lt; "Empty input" &lt;&lt; endl;</code> не является ошибкой, сообщение можно не показывать.</p>
 </li>
+<li>
+<p>2 цикла чтения из потока вместо одного:</p>
+</li>
+</ul>
+<pre><code class="C++">    do {
+        getline(is, str);
+        phrase = phrase + &quot; &quot; + str;
+    } while (is.get() != '\n');
+
+
+    string word;
+    istringstream iss(phrase, istringstream::in);
+    while (iss &gt;&gt; word) {
+        words.push_back(word);
+    }
+</code></pre>
+
+<ul>
+<li>
+<p>Некорректное условие выхода из первого цикла
+(должна быть проверка на <code>EOF</code> вместо <code>\n</code>).</p>
+</li>
+<li>
+<p>Программа не работает со стандартным потоком ввода, если в качестве имени файла указан <code>-</code>:</p>
+</li>
+</ul>
+<pre><code class="C++">./lab1 - &lt; funct.cpp
+Too much arguments
+</code></pre>
+
+<ul>
+<li>Yellow-submarine test не пройден.</li>
 </ul>
 <p><strong>Тесты</strong> - В процессе.</p>
 <ul>
-<li>В <code>main.cpp</code> включать заголовочный файл <code>#include "../lab1/main.h</code></li>
+<li>[Ok] В <code>main.cpp</code> включать заголовочный файл <code>#include "../lab1/main.h</code></li>
 </ul>
 <p><a href="https://bitbucket.org/pushkov_oop/lab1">repo</a></p>
-<p>(проверено 3 дек)</p>
+<p>(проверено 21 дек)</p>
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе</p>
 <ul>
 <li>Функцию <code>normalise</code> следует сделать приватным методом класса <code>Date</code></li>
 </ul>
 <p><strong>Тесты</strong> - нет.</p>
+<ul>
+<li><code>enum Month</code> используется раньше, чем объявлен:</li>
+</ul>
+<pre><code class="C++">main.h:26:57: error: use of enum ‘Month’ without previous declaration
+  Date(int c_sec, int c_min, int c_hour, int c_day, enum Month c_month, int c_year);
+                                                         ^
+</code></pre>
+
 <p><a href="https://bitbucket.org/pushkov_oop/lab2">repo</a></p>
-<p>(проверено 3 дек)</p></div>
+<p>(проверено 21 дек)</p></div>
             
         </div>
 
