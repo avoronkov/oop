@@ -428,7 +428,7 @@
     
         <li class="main active"><a href="#_1">Галиос Максим</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
             <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
         
@@ -438,8 +438,8 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Галиос Максим</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Не смешивать код первой и второй лабораторных. Как минимум: держать в разных папках.</p>
@@ -452,7 +452,7 @@
 <p>[Ok] Для сортировки фраз следует использовать <code>std::sort</code></p>
 </li>
 <li>
-<p>Если запустить программу со следующими аргументами: <code>Lab_One.exe  -m 3 -n 3 file.txt</code>, то длина фразы по прежнему 2, а не 3.</p>
+<p>[Ok] Если запустить программу со следующими аргументами: <code>Lab_One.exe  -m 3 -n 3 file.txt</code>, то длина фразы по прежнему 2, а не 3.</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - Ok.</p>
@@ -464,17 +464,49 @@
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Возвращаемым значением оператора присваивания должна быть ссылка, а не объект; аргумент должен быть константной ссылкой:</li>
+<li>[Ok] Возвращаемым значением оператора присваивания должна быть ссылка, а не объект; аргумент должен быть константной ссылкой:</li>
 </ul>
 <pre><code class="C++">DateInterval operator = (const DateInterval interval);
 </code></pre>
 
 <ul>
-<li>Аналогично <code>Date  operator = (const Date date);</code></li>
+<li>
+<p>[Ok] Аналогично <code>Date  operator = (const Date date);</code></p>
+</li>
+<li>
+<p>Аргументы должны передаваться как константные ссылки, а не константные значения:</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<pre><code class="C++">DateInterval &amp;operator = (const DateInterval interval);
+bool operator==(const DateInterval interval) const;
+Date&amp;  operator = (const Date date);
+bool operator==(const Date date) const;
+std::string formDate(std::string format);
+</code></pre>
+
+<ul>
+<li>Функция <code>localtime_s</code> не определена:</li>
+</ul>
+<pre><code class="C++">Date.cpp: In constructor ‘Date::Date()’:
+Date.cpp:9:24: error: ‘localtime_s’ was not declared in this scope
+  localtime_s(&amp;now, &amp;raw);
+                        ^
+// http://en.cppreference.com/w/c/chrono/localtime :
+As with all bounds-checked functions, localtime_s is only guaranteed to be available if __STDC_LIB_EXT1__ is defined by the implementation and if the user defines __STDC_WANT_LIB_EXT1__ to the integer constant 1 before including time.h.
+</code></pre>
+
+<ul>
+<li>Логика этого сравнения непонятна и, скорее всего, неверна:</li>
+</ul>
+<pre><code class="C++">Date.cpp: In member function ‘std::__cxx11::string Date::formDate(std::__cxx11::string)’:
+Date.cpp:215:15: warning: suggest parentheses around comparison in operand of ‘==’ [-Wparentheses]
+  if (found[0] == found[1] == found[2] == found[3] == found[4] == found[5] == found[6]) str = &quot;Invalid date format&quot;;
+               ^
+</code></pre>
+
+<p><strong>Тесты</strong> - в процессе.</p>
 <p><a href="https://bitbucket.org/galios_16203/repository1">repo</a></p>
-<p>(проверено 3 дек)</p></div>
+<p>(проверено 21 дек)</p></div>
             
         </div>
 
