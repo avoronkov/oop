@@ -129,7 +129,7 @@ due to a fatal error condition:
 
 [repo](https://bitbucket.org/yashin_oop/lab2)
 
-## Морской бой. Клиент (Задача 3а). В процессе.
+## Морской бой. Клиент (Задача 3а). Ok.
 
 **Код** - в процессе.
 

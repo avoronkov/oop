@@ -74,7 +74,7 @@
 
 [Календарь - Ok](/2017.cpp/results/shustova/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/shustova/#3)
+[Морской бой - Ok](/2017.cpp/results/shustova/#3)
 
 [Жизнь - в процессе](/2017.cpp/results/shustova/#4)
 
@@ -84,6 +84,6 @@
 
 [Календарь - Ok](/2017.cpp/results/yashin/#2)
 
-[Морской бой, клиент - в процессе](/2017.cpp/results/yashin/#3)
+[Морской бой, клиент - Ok](/2017.cpp/results/yashin/#3)
 
 [Жизнь - Ok](/2017.cpp/results/yashin/#4)
