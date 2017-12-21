@@ -430,7 +430,7 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
-            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+            <li><a href="#2-ok">Календарь (Задача 2). Ok.</a></li>
         
             <li><a href="#3">Морской бой (Задача 3). В процессе.</a></li>
         
@@ -501,9 +501,11 @@ tests-text2phrases.cpp:16:2: error: ‘vector’ was not declared in this scope
 </code></pre>
 
 <p><a href="https://bitbucket.org/grigorovich_oop/phrases.git">repo</a></p>
-<h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе:
-- [Ok]</p>
+<h2 id="2-ok">Календарь (Задача 2). Ok.</h2>
+<p><strong>Код</strong> - Ok:</p>
+<ul>
+<li>[Ok]</li>
+</ul>
 <pre><code>T2_head.h:25:2: error: extra qualification ‘Calendar::’ on member ‘Calendar’ [-fpermissive]
 </code></pre>
 
@@ -523,17 +525,21 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 <p>[Ok] <code>operator==</code>, <code>operator!=</code> лучше реализовать как методы класса <code>Calendar</code>, а не как свободные функции.</p>
 </li>
 <li>
-<p>В определении <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2);</code> const не имеет смысла.</p>
+<p>[Ok] В определении <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2);</code> const не имеет смысла.</p>
 </li>
 <li>
-<p>В <code>T2_head.h</code> объявлена функция <code>bool operator&gt; (Calendar&amp; v1, Calendar&amp; v2);</code>,
+<p>[Ok] В <code>T2_head.h</code> объявлена функция <code>bool operator&gt; (Calendar&amp; v1, Calendar&amp; v2);</code>,
 но в <code>calend.cpp</code> и <code>tests-functions.cpp</code> дважды(!) определена функция с другой сигнатурой: <code>const bool operator&gt; (const Calendar&amp; v1, const Calendar&amp; v2)</code>.</p>
 </li>
 <li>
-<p>Также возвращаемое значение помечено <code>const</code> для <code>const Calendar operator+</code>, <code>const DateInterval get_interval</code>, <code>const Calendar add_interval</code>.</p>
+<p>[Ok] Также возвращаемое значение помечено <code>const</code> для <code>const Calendar operator+</code>, <code>const DateInterval get_interval</code>, <code>const Calendar add_interval</code>.</p>
 </li>
 <li>
-<p>Оператор <code>operator+=</code>, <code>operator-=</code> должны возвращать ссылку на первый аргумент (<code>Calendar&amp;</code>), а не его копию.</p>
+<p>[Ok] Оператор <code>operator+=</code>, <code>operator-=</code> должны возвращать ссылку на первый аргумент (<code>Calendar&amp;</code>), а не его копию.</p>
+</li>
+<li>
+<p>[Пожелание] Файлы <code>calend.cpp</code> и <code>tests-functions.cpp</code> имеют практически одинаковое содержимое.
+Кажется, один из них лишний.</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - Ok.</p>
