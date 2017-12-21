@@ -4,7 +4,9 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/bastrykina/)
 
-[Календарь - в процессе](/2017.cpp/results/bastrykina/#2)
+[Календарь - Ok](/2017.cpp/results/bastrykina/#2)
+
+[Морской бой - в процессе](/2017.cpp/results/bastrykina/#3)
 
 ## Волошина Анастасия
 
@@ -14,9 +16,9 @@
 
 ## Галиос Максим
 
-[Подсчёт фраз - в процессе](/2017.cpp/results/galios/)
+[Подсчёт фраз - Ok](/2017.cpp/results/galios/)
 
-[Календарь - в процессе](/2017.cpp/results/galios/)
+[Календарь - в процессе](/2017.cpp/results/galios/#2)
 
 ## Григорович Артём
 
@@ -40,7 +42,7 @@
 
 [Календарь - в процессе](/2017.cpp/results/pushkov/#2)
 
-[Морской бой - ?](/2017.cpp/results/pushkov/#3)
+[Морской бой - в процессе](/2017.cpp/results/pushkov/#3)
 
 ## Разумов Антон
 

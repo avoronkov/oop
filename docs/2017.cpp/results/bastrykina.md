@@ -11,9 +11,9 @@
 [repo](https://bitbucket.org/bastrykina_oop/phrases)
 
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Тип `Month` лучше реализовать при помощи [enum class](http://www.learncpp.com/cpp-tutorial/4-5a-enum-classes/)
 
@@ -28,8 +28,18 @@ unsigned int Date::get_year() {
 
 - [Ok] Пожелание: Один из операторов `operator+`, `operator+=` можно реализовать через другой.
 
-**Тесты** - нет.
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/bastrykina_oop/calendar/overview)
 
-(проверено 2 дек)
+(проверено 21 дек)
+
+## Морской бой (Задача 4). В процессе.
+
+**Код** - в процессе.
+
+- Функция `main` не найдена.
+
+[repo](https://bitbucket.org/bastrykina_oop/battleships)
+
+(проверено 21 дек)

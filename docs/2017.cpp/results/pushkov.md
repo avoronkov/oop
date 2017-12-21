@@ -72,3 +72,11 @@ main.h:26:57: error: use of enum ‘Month’ without previous declaration
 [repo](https://bitbucket.org/pushkov_oop/lab2)
 
 (проверено 21 дек)
+
+## Морской бой (задача 3). В процессе.
+
+**Код** - в процессе.
+
+[repo](https://bitbucket.org/pushkov_oop/lab3)
+
+(проверено 21 дек)

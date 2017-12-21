@@ -37,4 +37,4 @@ map<string, int> frequency_table = text2phrases (input_stream, length_of_phrase)
 
 [repo](https://bitbucket.org/voloshina_oop/lab-2/overview)
 
-(Проверено 2 дек)
+(Проверено 21 дек)
