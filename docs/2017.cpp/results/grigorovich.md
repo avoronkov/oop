@@ -87,10 +87,10 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 
 (проверено 2 дек)
 
-## Морской бой (Задача 3). В процессе.
+## Морской бой (Задача 3). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
 
-(проверено 15 дек)
+(проверено 29 дек)

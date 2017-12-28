@@ -80,9 +80,9 @@ throw std::runtime_error("Only years from 1 to 9999 are supported");
 
 - [Ok] Добавить тест на `operator+=`
 
-## Морской бой (Задача 3). В процессе.
+## Морской бой (Задача 3). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 

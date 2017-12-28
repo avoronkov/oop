@@ -131,13 +131,13 @@ due to a fatal error condition:
 
 ## Морской бой. Клиент (Задача 3а). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-- Разбить большие функции (> 100строк).
+- [Ok] Разбить большие функции (> 100строк).
 
-- Не использовать static переменные.
+- [Ok] Не использовать static переменные.
 
-- Ошибки компиляции:
+- [Ok] Ошибки компиляции:
 ```C++
 ai.cpp: In member function ‘void warships::ai::arrange()’:
 ai.cpp:211:13: error: ‘rand’ was not declared in this scope
@@ -146,6 +146,10 @@ ai.cpp: In member function ‘void warships::ai::burry()’:
 ai.cpp:540:10: error: ‘exit’ was not declared in this scope
     exit(1);
 ```
+
+## Морской бой. Сервер (Задача 3б). Ok.
+
+**Код** - Ok.
 
 ## Жизнь (Задача 4). Ok.
 

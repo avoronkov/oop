@@ -20,13 +20,16 @@
 
 [Календарь - в процессе](/2017.cpp/results/galios/#2)
 
+[Морской бой - Ok](/2017.cpp/results/galios/#3)
+
+
 ## Григорович Артём
 
 [Подсчёт фраз - Ok](/2017.cpp/results/grigorovich/)
 
 [Календарь - Ok](/2017.cpp/results/grigorovich/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/grigorovich/#3)
+[Морской бой - Ok](/2017.cpp/results/grigorovich/#3)
 
 ## Петин Кирилл
 
@@ -50,7 +53,7 @@
 
 [Календарь - Ok](/2017.cpp/results/razumov/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/razumov/#3)
+[Морской бой - Ok](/2017.cpp/results/razumov/#3)
 
 [Жизнь - в процессе](/2017.cpp/results/razumov/#4)
 
@@ -85,5 +88,7 @@
 [Календарь - Ok](/2017.cpp/results/yashin/#2)
 
 [Морской бой, клиент - Ok](/2017.cpp/results/yashin/#3)
+
+[Морской бой, сервер - Ok](/2017.cpp/results/yashin/#3)
 
 [Жизнь - Ok](/2017.cpp/results/yashin/#4)
