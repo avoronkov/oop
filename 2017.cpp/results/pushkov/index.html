@@ -12,7 +12,7 @@
 	<title>Pushkov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -450,7 +450,7 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Использование <code>using namespace std;</code> - грубое нарушение общепринятого стиля кодирования.</p>
+<p>[Ok] Использование <code>using namespace std;</code> - грубое нарушение общепринятого стиля кодирования.</p>
 </li>
 <li>
 <p>[Ok] Фукнции должны принимать аргументы непримитивных типов используя константные ссылки вместо значений.</p>
@@ -492,11 +492,11 @@
 
 <ul>
 <li>
-<p>Некорректное условие выхода из первого цикла
+<p>[Ok] Некорректное условие выхода из первого цикла
 (должна быть проверка на <code>EOF</code> вместо <code>\n</code>).</p>
 </li>
 <li>
-<p>Программа не работает со стандартным потоком ввода, если в качестве имени файла указан <code>-</code>:</p>
+<p>[Ok] Программа не работает со стандартным потоком ввода, если в качестве имени файла указан <code>-</code>:</p>
 </li>
 </ul>
 <pre><code class="C++">./lab1 - &lt; funct.cpp
@@ -504,7 +504,7 @@ Too much arguments
 </code></pre>
 
 <ul>
-<li>Yellow-submarine test не пройден.</li>
+<li>[Ok] Yellow-submarine test не пройден.</li>
 </ul>
 <p><strong>Тесты</strong> - В процессе.</p>
 <ul>
@@ -513,11 +513,22 @@ Too much arguments
 <p><a href="https://bitbucket.org/pushkov_oop/lab1">repo</a></p>
 <p>(проверено 21 дек)</p>
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе</p>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
-<li>Функцию <code>normalise</code> следует сделать приватным методом класса <code>Date</code></li>
+<li>
+<p>[Ok] Функцию <code>normalise</code> следует сделать приватным методом класса <code>Date</code></p>
+</li>
+<li>
+<p>Лишний префикс:</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<pre><code class="C++">return DateInterval::DateInterval(*this, date);
+</code></pre>
+
+<ul>
+<li>Тип <code>_int64</code> не определен.</li>
+</ul>
+<p><strong>Тесты</strong> - в процессе.</p>
 <ul>
 <li><code>enum Month</code> используется раньше, чем объявлен:</li>
 </ul>
