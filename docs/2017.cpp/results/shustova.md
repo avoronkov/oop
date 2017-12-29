@@ -62,9 +62,9 @@ const bool operator ==(const Date &a1, const Date &a2);
 
 (проверено 3 дек)
 
-## Жизнь (Задача 4). В процессе.
+## Жизнь (Задача 4). Ok.
 
-**Код** - в процессе.
+**Код** - ok.
 
 [repo](https://bitbucket.org/shustova_oop/life)
 

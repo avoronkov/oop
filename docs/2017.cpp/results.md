@@ -31,6 +31,8 @@
 
 [Морской бой - Ok](/2017.cpp/results/grigorovich/#3)
 
+[Жизнь - Ok](/2017.cpp/results/grigorovich/#4)
+
 ## Петин Кирилл
 
 [Подсчёт фраз - Ok](/2017.cpp/results/petin/)
@@ -79,7 +81,7 @@
 
 [Морской бой - Ok](/2017.cpp/results/shustova/#3)
 
-[Жизнь - в процессе](/2017.cpp/results/shustova/#4)
+[Жизнь - Ok](/2017.cpp/results/shustova/#4)
 
 ## Яшин Артём
 

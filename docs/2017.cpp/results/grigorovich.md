@@ -94,3 +94,9 @@ calend.cpp:79:2: note: suggested alternative: ‘gmtime_r’
 [repo](https://bitbucket.org/grigorovich_oop/phrases.git)
 
 (проверено 29 дек)
+
+## Жизнь (Задача 4). Ok.
+
+**Код** - ok.
+
+[repo](https://bitbucket.org/grigorovich_oop/phrases.git)
