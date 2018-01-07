@@ -1,8 +1,8 @@
 # Пушков Федор
 
-## Подсчёт фраз (Задача 1). В процессе.
+## Подсчёт фраз (Задача 1). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Использование `using namespace std;` - грубое нарушение общепринятого стиля кодирования.
 
@@ -20,7 +20,7 @@
 
 - [Ok] `cout << "Empty input" << endl;` не является ошибкой, сообщение можно не показывать.
 
-- 2 цикла чтения из потока вместо одного:
+- [Ok] 2 цикла чтения из потока вместо одного:
 ```C++
     do {
         getline(is, str);
@@ -52,25 +52,25 @@ Too much arguments
 
 [repo](https://bitbucket.org/pushkov_oop/lab1)
 
-(проверено 21 дек)
+(проверено 7 янв)
 
 ## Календарь (Задача 2). В процессе.
 
-**Код** - Ok.
+**Код** - В процессе.
 
 - [Ok] Функцию `normalise` следует сделать приватным методом класса `Date`
 
-- Лишний префикс:
+- [Ok] Лишний префикс:
 
 ```C++
 return DateInterval::DateInterval(*this, date);
 ```
 
-- Тип `_int64` не определен.
+- Тип `_int64` не определен, вместо него следует использовать `int64_t` ([ссылка](http://en.cppreference.com/w/cpp/types/integer))
 
-**Тесты** - в процессе.
+**Тесты** - Ok.
 
-- `enum Month` используется раньше, чем объявлен:
+- [Ok] `enum Month` используется раньше, чем объявлен:
 ```C++
 main.h:26:57: error: use of enum ‘Month’ without previous declaration
   Date(int c_sec, int c_min, int c_hour, int c_day, enum Month c_month, int c_year);
@@ -79,7 +79,7 @@ main.h:26:57: error: use of enum ‘Month’ without previous declaration
 
 [repo](https://bitbucket.org/pushkov_oop/lab2)
 
-(проверено 21 дек)
+(проверено 7 янв)
 
 ## Морской бой (задача 3). В процессе.
 
@@ -88,3 +88,23 @@ main.h:26:57: error: use of enum ‘Month’ without previous declaration
 [repo](https://bitbucket.org/pushkov_oop/lab3)
 
 (проверено 21 дек)
+
+## Жизнь (Задача 4). В процессе.
+
+**Код** - в процессе.
+
+- Ошибки компиляции:
+```C++
+study/2017.cpp/pushkov/lab4/lab4/Interface.h:19:2: error: stray ‘\321’ in program
+  void get�ommand();
+  ^
+
+study/2017.cpp/pushkov/lab4/lab4/Interface.cpp:11:15:   required from here
+/usr/include/c++/5/bits/stl_algobase.h:340:18: error: binding ‘const World’ to reference of type ‘World&’ discards qualifiers
+        *__result = *__first;   
+                  ^
+```
+
+[repo](https://bitbucket.org/pushkov_oop/lab4)
+
+(проверено 7 янв)
