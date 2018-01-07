@@ -434,11 +434,13 @@
     
         <li class="main active"><a href="#_1">Пушков Федор</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
             <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
         
             <li><a href="#3">Морской бой (задача 3). В процессе.</a></li>
+        
+            <li><a href="#4">Жизнь (Задача 4). В процессе.</a></li>
         
     
     </ul>
@@ -446,8 +448,8 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Пушков Федор</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Использование <code>using namespace std;</code> - грубое нарушение общепринятого стиля кодирования.</p>
@@ -474,7 +476,7 @@
 <p>[Ok] <code>cout &lt;&lt; "Empty input" &lt;&lt; endl;</code> не является ошибкой, сообщение можно не показывать.</p>
 </li>
 <li>
-<p>2 цикла чтения из потока вместо одного:</p>
+<p>[Ok] 2 цикла чтения из потока вместо одного:</p>
 </li>
 </ul>
 <pre><code class="C++">    do {
@@ -511,26 +513,26 @@ Too much arguments
 <li>[Ok] В <code>main.cpp</code> включать заголовочный файл <code>#include "../lab1/main.h</code></li>
 </ul>
 <p><a href="https://bitbucket.org/pushkov_oop/lab1">repo</a></p>
-<p>(проверено 21 дек)</p>
+<p>(проверено 7 янв)</p>
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - Ok.</p>
+<p><strong>Код</strong> - В процессе.</p>
 <ul>
 <li>
 <p>[Ok] Функцию <code>normalise</code> следует сделать приватным методом класса <code>Date</code></p>
 </li>
 <li>
-<p>Лишний префикс:</p>
+<p>[Ok] Лишний префикс:</p>
 </li>
 </ul>
 <pre><code class="C++">return DateInterval::DateInterval(*this, date);
 </code></pre>
 
 <ul>
-<li>Тип <code>_int64</code> не определен.</li>
+<li>Тип <code>_int64</code> не определен, вместо него следует использовать <code>int64_t</code> (<a href="http://en.cppreference.com/w/cpp/types/integer">ссылка</a>)</li>
 </ul>
-<p><strong>Тесты</strong> - в процессе.</p>
+<p><strong>Тесты</strong> - Ok.</p>
 <ul>
-<li><code>enum Month</code> используется раньше, чем объявлен:</li>
+<li>[Ok] <code>enum Month</code> используется раньше, чем объявлен:</li>
 </ul>
 <pre><code class="C++">main.h:26:57: error: use of enum ‘Month’ without previous declaration
   Date(int c_sec, int c_min, int c_hour, int c_day, enum Month c_month, int c_year);
@@ -538,11 +540,28 @@ Too much arguments
 </code></pre>
 
 <p><a href="https://bitbucket.org/pushkov_oop/lab2">repo</a></p>
-<p>(проверено 21 дек)</p>
+<p>(проверено 7 янв)</p>
 <h2 id="3">Морской бой (задача 3). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <p><a href="https://bitbucket.org/pushkov_oop/lab3">repo</a></p>
-<p>(проверено 21 дек)</p></div>
+<p>(проверено 21 дек)</p>
+<h2 id="4">Жизнь (Задача 4). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
+<ul>
+<li>Ошибки компиляции:</li>
+</ul>
+<pre><code class="C++">study/2017.cpp/pushkov/lab4/lab4/Interface.h:19:2: error: stray ‘\321’ in program
+  void get�ommand();
+  ^
+
+study/2017.cpp/pushkov/lab4/lab4/Interface.cpp:11:15:   required from here
+/usr/include/c++/5/bits/stl_algobase.h:340:18: error: binding ‘const World’ to reference of type ‘World&amp;’ discards qualifiers
+        *__result = *__first;   
+                  ^
+</code></pre>
+
+<p><a href="https://bitbucket.org/pushkov_oop/lab4">repo</a></p>
+<p>(проверено 7 янв)</p></div>
             
         </div>
 
