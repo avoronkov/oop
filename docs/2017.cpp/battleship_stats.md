@@ -125,3 +125,72 @@ yashin vs pushkov : winner is yashin (error: Already shoot at G 0)
 yashin vs razumov : winner is yashin
 yashin vs shustova : winner is yashin
 ```
+
+# (8 jan 2017)
+```
+galios: wins 11 (clean: 9) times, looses 3 (tech: 0) times.
+grigorovich: wins 10 (clean: 9) times, looses 4 (tech: 0) times.
+petin: wins 4 (clean: 4) times, looses 10 (tech: 0) times.
+razumov: wins 2 (clean: 0) times, looses 12 (tech: 0) times.
+shustova: wins 6 (clean: 6) times, looses 8 (tech: 0) times.
+yashin: wins 11 (clean: 10) times, looses 3 (tech: 0) times.
+chmil: wins 7 (clean: 7) times, looses 7 (tech: 3) times.
+bastrykina: wins 5 (clean: 4) times, looses 9 (tech: 4) times.
+
+bastrykina vs chmil : winner is chmil
+bastrykina vs galios : winner is bastrykina
+bastrykina vs grigorovich : winner is grigorovich
+bastrykina vs petin : winner is petin
+bastrykina vs razumov : winner is bastrykina
+bastrykina vs shustova : winner is bastrykina
+bastrykina vs yashin : winner is yashin
+chmil vs bastrykina : winner is bastrykina (error: chmil (1) timeout)
+chmil vs galios : winner is galios (error: Already shoot at C 3)
+chmil vs grigorovich : winner is chmil
+chmil vs petin : winner is chmil
+chmil vs razumov : winner is razumov (error: Already shoot at F 9)
+chmil vs shustova : winner is chmil
+chmil vs yashin : winner is yashin
+galios vs bastrykina : winner is galios (error: invalid x coordinate: @)
+galios vs chmil : winner is galios
+galios vs grigorovich : winner is grigorovich
+galios vs petin : winner is galios
+galios vs razumov : winner is galios
+galios vs shustova : winner is galios
+galios vs yashin : winner is galios
+grigorovich vs bastrykina : winner is grigorovich (error: invalid x coordinate: @)
+grigorovich vs chmil : winner is chmil
+grigorovich vs galios : winner is galios
+grigorovich vs petin : winner is grigorovich
+grigorovich vs razumov : winner is grigorovich
+grigorovich vs shustova : winner is grigorovich
+grigorovich vs yashin : winner is grigorovich
+petin vs bastrykina : winner is petin
+petin vs chmil : winner is chmil
+petin vs galios : winner is galios
+petin vs grigorovich : winner is grigorovich
+petin vs razumov : winner is petin
+petin vs shustova : winner is shustova
+petin vs yashin : winner is yashin
+razumov vs bastrykina : winner is razumov (error: Already shoot at F 9)
+razumov vs chmil : winner is chmil
+razumov vs galios : winner is galios
+razumov vs grigorovich : winner is grigorovich
+razumov vs petin : winner is petin
+razumov vs shustova : winner is shustova
+razumov vs yashin : winner is yashin
+shustova vs bastrykina : winner is bastrykina
+shustova vs chmil : winner is shustova
+shustova vs galios : winner is shustova
+shustova vs grigorovich : winner is grigorovich
+shustova vs petin : winner is shustova
+shustova vs razumov : winner is shustova
+shustova vs yashin : winner is yashin
+yashin vs bastrykina : winner is yashin (error: invalid y coordinate: 11)
+yashin vs chmil : winner is yashin
+yashin vs galios : winner is galios
+yashin vs grigorovich : winner is yashin
+yashin vs petin : winner is yashin
+yashin vs razumov : winner is yashin
+yashin vs shustova : winner is yashin
+```

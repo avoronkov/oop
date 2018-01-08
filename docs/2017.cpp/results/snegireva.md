@@ -50,6 +50,43 @@ testmain.cpp:15:5:   required from here
 
 **Код** - в процессе.
 
+- Техническое поражение:
+```C++
+player:       snegireva:
+####.###.#    ...###.###
+.........#    ..........
+#......#..    ....#.#..#
+X.........    #........#
+X.........    #.....#...
+..........    ..........
+#.........    ....#....#
+#.#....#..    .........#
+....#.....    ..........
+##........    .####....O
+        18    20
+2018/01/08 21:21:49 [snegireva (2)] Lose!
+(Already shoot at A 3)
+```
+
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 
-(проверено 19 дек)
+(проверено 8 янв)
+
+## Схема (Задача 4). В процессе.
+
+**Код** в процессе.
+
+- Кажется, вместо `template<> void get<void>()` должно быть просто `void get()`:
+```C++
+In file included from /home/alxr/study/2017.cpp/snegireva_oop/lab4/main.cpp:1:0:
+/home/alxr/study/2017.cpp/snegireva_oop/lab4/header.h:24:15: error: explicit specialization in non-namespace scope ‘class Any’
+     template <>
+               ^
+/home/alxr/study/2017.cpp/snegireva_oop/lab4/header.h:25:23: error: template-id ‘get<void>’ in declaration of primary template
+      void get<void>() const{
+                       ^
+```
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_kek)
+
+(проверено 8 янв)

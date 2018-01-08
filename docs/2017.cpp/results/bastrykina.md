@@ -38,8 +38,20 @@ unsigned int Date::get_year() {
 
 **Код** - в процессе.
 
-- Функция `main` не найдена.
+- [Ok] Функция `main` не найдена.
+
+- [Пожелание] Лучше не вызывать внешние программы, а использовать например фнкцию `sleep`:
+```C++
+sh: 1: pause: not found
+```
+
+- Техническое поражение:
+```
+galios vs bastrykina : winner is galios (error: invalid x coordinate: @)
+razumov vs bastrykina : winner is razumov (error: Already shoot at F 9)
+yashin vs bastrykina : winner is yashin (error: invalid y coordinate: 11)
+```
 
 [repo](https://bitbucket.org/bastrykina_oop/battleships)
 
-(проверено 21 дек)
+(проверено 8 янв)

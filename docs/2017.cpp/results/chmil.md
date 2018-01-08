@@ -27,7 +27,7 @@ arguments& operator=(const arguments&) = delete;
 
 [repo](https://bitbucket.org/chmil_oop/chmil_oop)
 
-## Календарь. Ok.
+## Календарь (Задача 2). Ok.
 
 **Код** - Ok
 
@@ -38,3 +38,17 @@ arguments& operator=(const arguments&) = delete;
 [repo](ssh://hg@bitbucket.org/chmil_oop/lab2)
 
 (проверено 3 дек)
+
+## Морской бой (Задача 3). В процессе.
+
+**Код** - в процессе.
+
+- Техническое поражение:
+```C++
+chmil vs bastrykina : winner is bastrykina (error: chmil (1) timeout)
+chmil vs galios : winner is galios (error: Already shoot at C 3)
+```
+
+[repo](https://bitbucket.org/chmil_oop/lab3)
+
+(Проверено 8 янв)

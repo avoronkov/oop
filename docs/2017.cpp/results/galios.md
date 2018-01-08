@@ -65,7 +65,7 @@ Date.cpp:215:15: warning: suggest parentheses around comparison in operand of �
 
 [repo](https://bitbucket.org/galios_16203/repository1)
 
-(проверено 21 дек)
+(проверено 8 янв)
 
 ## Морской бой (Задача 3). Ok.
 

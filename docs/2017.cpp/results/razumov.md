@@ -86,8 +86,12 @@ throw std::runtime_error("Only years from 1 to 9999 are supported");
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 
-## Жизнь (Задача 4). В процессе.
+## Жизнь (Задача 4). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-(проверено 3 дек)
+- [Пожелание] Нет команды выхода из программы :)
+
+**Демонстрация** - Ok
+
+(проверено 8 янв)
