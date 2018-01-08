@@ -86,6 +86,18 @@
 </li>
 
         
+            
+<li >
+    <a href="../../task4/">Task 4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../task5/">Task 5</a>
+</li>
+
+        
     </ul>
   </li>
 
@@ -438,6 +450,8 @@
         
             <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
         
+            <li><a href="#3">Морской бой (Задача 3). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -475,19 +489,67 @@ map&lt;string, int&gt; frequency_table = text2phrases (input_stream, length_of_p
 <p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/voloshina_oop/c-labs/overview">repo</a></p>
 <h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
-<p>Определение функции <code>string my_to_string (int val)</code> конфликтует со стандартной функцией <code>std::to_string</code>, т.к. используется <code>using namespace std;</code></p>
+<p>[Ok] Определение функции <code>string my_to_string (int val)</code> конфликтует со стандартной функцией <code>std::to_string</code>, т.к. используется <code>using namespace std;</code></p>
 </li>
 <li>
-<p>Оператор <code>++</code> не может применяться к временной переменной. Лучше использовать <code>+ 1</code>.
+<p>[Ok] Оператор <code>++</code> не может применяться к временной переменной. Лучше использовать <code>+ 1</code>.
 <code>Date.cpp:501:55: error: lvalue required as increment operand
      month = static_cast&lt;Month&gt;(static_cast&lt;int&gt;(month)++);</code></p>
 </li>
 </ul>
+<p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Некоторые тесты упали:</li>
+</ul>
+<pre><code class="C++">[ RUN      ] AddersTests.Test2
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:116: Failure
+Expected equality of these values:
+  22
+  test_date.getHrs()
+    Which is: 21
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:118: Failure
+Expected equality of these values:
+  20
+  test_date.getDay()
+    Which is: 21
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:121: Failure
+Expected equality of these values:
+  month
+    Which is: Feb
+  test_date.getMonth()
+    Which is: Nov
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:123: Failure
+Expected equality of these values:
+  988
+  test_date.getYear()
+    Which is: 898
+[  FAILED  ] AddersTests.Test2 (0 ms)
+[ RUN      ] TestDate_3.FormatDateTest_4
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:198: Failure
+Expected equality of these values:
+  Date_3.formatDate(input)
+    Which is: &quot;7YYY-M-17 22h:33m:44s&quot;  
+  output
+    Which is: &quot;7-M-17 22h:33m:44s&quot;
+[  FAILED  ] TestDate_3.FormatDateTest_4 (1 ms)
+/home/alxr/study/2017.cpp/voloshina/lab-2/Tests.cpp:180: Failure
+Expected equality of these values:
+  Date_1.formatDate(input)
+    Which is: &quot;1YYY-Feb-3 04:05:06&quot;
+  output
+    Which is: &quot;1-Feb-3 04:05:06&quot;
+[  FAILED  ] TestDate_1.FormatDateTest_1 (0 ms)
+</code></pre>
+
 <p><a href="https://bitbucket.org/voloshina_oop/lab-2/overview">repo</a></p>
-<p>(Проверено 21 дек)</p></div>
+<p>(Проверено 8 янв)</p>
+<h2 id="3">Морской бой (Задача 3). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
+<p><a href="https://bitbucket.org/voloshina_oop/lab-3/overview">repo</a></p>
+<p>(Проверено 8 янв)</p></div>
             
         </div>
 

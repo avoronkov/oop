@@ -86,6 +86,18 @@
 </li>
 
         
+            
+<li >
+    <a href="../../task4/">Task 4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../task5/">Task 5</a>
+</li>
+
+        
     </ul>
   </li>
 
@@ -440,6 +452,8 @@
         
             <li><a href="#3">Морской бой (Задача 3). В процессе.</a></li>
         
+            <li><a href="#4">Схема (Задача 4). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -500,8 +514,43 @@
 <p>(проверено 3 дек)</p>
 <h2 id="3">Морской бой (Задача 3). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
+<ul>
+<li>Техническое поражение:</li>
+</ul>
+<pre><code class="C++">player:       snegireva:
+####.###.#    ...###.###
+.........#    ..........
+#......#..    ....#.#..#
+X.........    #........#
+X.........    #.....#...
+..........    ..........
+#.........    ....#....#
+#.#....#..    .........#
+....#.....    ..........
+##........    .####....O
+        18    20
+2018/01/08 21:21:49 [snegireva (2)] Lose!
+(Already shoot at A 3)
+</code></pre>
+
 <p><a href="https://bitbucket.org/snegireva_oop/spyair_kek">repo</a></p>
-<p>(проверено 19 дек)</p></div>
+<p>(проверено 8 янв)</p>
+<h2 id="4">Схема (Задача 4). В процессе.</h2>
+<p><strong>Код</strong> в процессе.</p>
+<ul>
+<li>Кажется, вместо <code>template&lt;&gt; void get&lt;void&gt;()</code> должно быть просто <code>void get()</code>:</li>
+</ul>
+<pre><code class="C++">In file included from /home/alxr/study/2017.cpp/snegireva_oop/lab4/main.cpp:1:0:
+/home/alxr/study/2017.cpp/snegireva_oop/lab4/header.h:24:15: error: explicit specialization in non-namespace scope ‘class Any’
+     template &lt;&gt;
+               ^
+/home/alxr/study/2017.cpp/snegireva_oop/lab4/header.h:25:23: error: template-id ‘get&lt;void&gt;’ in declaration of primary template
+      void get&lt;void&gt;() const{
+                       ^
+</code></pre>
+
+<p><a href="https://bitbucket.org/snegireva_oop/spyair_kek">repo</a></p>
+<p>(проверено 8 янв)</p></div>
             
         </div>
 
