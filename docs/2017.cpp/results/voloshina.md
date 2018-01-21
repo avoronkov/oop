@@ -82,7 +82,7 @@ Expected equality of these values:
 
 [repo](https://bitbucket.org/voloshina_oop/lab-2/overview)
 
-(Проверено 8 янв)
+(Проверено 21 янв)
 
 ## Морской бой (Задача 3). В процессе.
 
@@ -90,4 +90,4 @@ Expected equality of these values:
 
 [repo](https://bitbucket.org/voloshina_oop/lab-3/overview)
 
-(Проверено 8 янв)
+(Проверено 21 янв)

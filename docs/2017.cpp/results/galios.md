@@ -23,9 +23,9 @@ Tests.cpp:3:20: fatal error: catch.h: Нет такого файла или ка
 
 (проверено 2 дек)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Возвращаемым значением оператора присваивания должна быть ссылка, а не объект; аргумент должен быть константной ссылкой:
 ```C++
@@ -34,7 +34,7 @@ DateInterval operator = (const DateInterval interval);
 
 - [Ok] Аналогично `Date  operator = (const Date date);`
 
-- Аргументы должны передаваться как константные ссылки, а не константные значения:
+- [Ok] Аргументы должны передаваться как константные ссылки, а не константные значения:
 ```C++
 DateInterval &operator = (const DateInterval interval);
 bool operator==(const DateInterval interval) const;
@@ -43,7 +43,7 @@ bool operator==(const Date date) const;
 std::string formDate(std::string format);
 ```
 
-- Функция `localtime_s` не определена:
+- [Ok] Функция `localtime_s` не определена:
 ```C++
 Date.cpp: In constructor ‘Date::Date()’:
 Date.cpp:9:24: error: ‘localtime_s’ was not declared in this scope
@@ -53,7 +53,7 @@ Date.cpp:9:24: error: ‘localtime_s’ was not declared in this scope
 As with all bounds-checked functions, localtime_s is only guaranteed to be available if __STDC_LIB_EXT1__ is defined by the implementation and if the user defines __STDC_WANT_LIB_EXT1__ to the integer constant 1 before including time.h.
 ```
 
-- Логика этого сравнения непонятна и, скорее всего, неверна:
+- [Ok] Логика этого сравнения непонятна и, скорее всего, неверна:
 ```C++
 Date.cpp: In member function ‘std::__cxx11::string Date::formDate(std::__cxx11::string)’:
 Date.cpp:215:15: warning: suggest parentheses around comparison in operand of ‘==’ [-Wparentheses]
@@ -61,11 +61,11 @@ Date.cpp:215:15: warning: suggest parentheses around comparison in operand of �
                ^
 ```
 
-**Тесты** - в процессе.
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/galios_16203/repository1)
 
-(проверено 8 янв)
+(проверено 21 янв)
 
 ## Морской бой (Задача 3). Ok.
 

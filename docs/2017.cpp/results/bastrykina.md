@@ -34,9 +34,9 @@ unsigned int Date::get_year() {
 
 (проверено 21 дек)
 
-## Морской бой (Задача 4). В процессе.
+## Морской бой (Задача 3). В процессе.
 
-**Код** - в процессе.
+**Код** - В процессе.
 
 - [Ok] Функция `main` не найдена.
 
@@ -45,13 +45,33 @@ unsigned int Date::get_year() {
 sh: 1: pause: not found
 ```
 
-- Техническое поражение:
+- [Ok] Техническое поражение:
 ```
 galios vs bastrykina : winner is galios (error: invalid x coordinate: @)
 razumov vs bastrykina : winner is razumov (error: Already shoot at F 9)
 yashin vs bastrykina : winner is yashin (error: invalid y coordinate: 11)
 ```
 
+- Техническое поражение:
+```
+bastrykina: player:
+..#O..O#..    .......#..
+..#....#..    ..##.#....
+..#.......    ..........
+#....#..#.    O.OO.O.OOX
+...O....#.    ..##......
+..#..O..O.    .....##...
+#O#.#.....    ..........
+#.#..O..O#    OOOO#O.X.X
+#.#O...O..    .......X.X
+...O..##..    ####...X.#
+        20    14
+
+2018/01/21 13:25:16 Status = 1
+2018/01/21 13:25:16 [bastrykina (1)] GetShot
+2018/01/21 13:25:16 [bastrykina (1)] GetShot: <nil> (invalid y coordinate: 10)
+```
+
 [repo](https://bitbucket.org/bastrykina_oop/battleships)
 
-(проверено 8 янв)
+(проверено 21 янв)
