@@ -67,9 +67,9 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/pushkov/)
 
-[Календарь - в процессе](/2017.cpp/results/pushkov/#2)
+[Календарь - Ok](/2017.cpp/results/pushkov/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/pushkov/#3)
+[Морской бой - Ok](/2017.cpp/results/pushkov/#3)
 
 [Жизнь - в процессе](/2017.cpp/results/pushkov/#4)
 
@@ -107,7 +107,9 @@
 
 [Календарь - Ok](/2017.cpp/results/chmil/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/chmil/#3)
+[Морской бой - Ok](/2017.cpp/results/chmil/#3)
+
+[Workflow - в процессе](/2017.cpp/results/chmil/#4)
 
 **Коллоквиум** - `14.0 (max 22.0)`
 

@@ -39,11 +39,11 @@ arguments& operator=(const arguments&) = delete;
 
 (проверено 3 дек)
 
-## Морской бой (Задача 3). В процессе.
+## Морской бой (Задача 3). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-- Техническое поражение:
+- [Ok] Техническое поражение:
 ```C++
 chmil vs bastrykina : winner is bastrykina (error: chmil (1) timeout)
 chmil vs galios : winner is galios (error: Already shoot at C 3)
@@ -51,4 +51,20 @@ chmil vs galios : winner is galios (error: Already shoot at C 3)
 
 [repo](https://bitbucket.org/chmil_oop/lab3)
 
-(Проверено 8 янв)
+(Проверено 21 янв)
+
+## Workflow (Задача 4). В процессе.
+
+**Код** - в процессе.
+
+- Ошибка компиляции:
+```
+lab4/Factory.cpp:1:20: fatal error: factory.h: Нет такого файла или каталога
+compilation terminated.
+```
+
+**Демонстрация** - Ok.
+
+[repo](https://bitbucket.org/chmil_oop/lab4)
+
+(Проверено 21 янв)

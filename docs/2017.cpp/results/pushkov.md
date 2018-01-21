@@ -54,9 +54,9 @@ Too much arguments
 
 (проверено 7 янв)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
-**Код** - В процессе.
+**Код** - Ok.
 
 - [Ok] Функцию `normalise` следует сделать приватным методом класса `Date`
 
@@ -66,7 +66,7 @@ Too much arguments
 return DateInterval::DateInterval(*this, date);
 ```
 
-- Тип `_int64` не определен, вместо него следует использовать `int64_t` ([ссылка](http://en.cppreference.com/w/cpp/types/integer))
+- [Ok] Тип `_int64` не определен, вместо него следует использовать `int64_t` ([ссылка](http://en.cppreference.com/w/cpp/types/integer))
 
 **Тесты** - Ok.
 
@@ -79,15 +79,15 @@ main.h:26:57: error: use of enum ‘Month’ without previous declaration
 
 [repo](https://bitbucket.org/pushkov_oop/lab2)
 
-(проверено 7 янв)
+(проверено 21 янв)
 
-## Морской бой (задача 3). В процессе.
+## Морской бой (задача 3). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 [repo](https://bitbucket.org/pushkov_oop/lab3)
 
-(проверено 21 дек)
+(проверено 21 янв)
 
 ## Жизнь (Задача 4). В процессе.
 

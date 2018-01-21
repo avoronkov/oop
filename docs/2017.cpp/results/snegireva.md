@@ -68,9 +68,33 @@ X.........    #.....#...
 (Already shoot at A 3)
 ```
 
+- Техническое поражение:
+```
+snegireva: player:
+..####....    ####.###.#
+..........    .........#
+#....#....    #....#....
+#.........    X.#.......
+...#......    X.........
+...O......    O.........
+.......#.#    #....#....
+....#....#    #.........
+#.........    ....#.....
+#..###.###    ##........
+        20    18
+
+2018/01/21 14:30:02 [snegireva (1)] ShootCmd
+2018/01/21 14:30:02 [snegireva (1)] GetShot
+2018/01/21 14:30:02 Status = 1
+2018/01/21 14:30:05 [snegireva (1)] Close
+2018/01/21 14:30:05 [player (2)] Close
+player (2) is winner!
+(snegireva (1) timeout)
+```
+
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 
-(проверено 8 янв)
+(проверено 21 янв)
 
 ## Схема (Задача 4). В процессе.
 
@@ -89,4 +113,4 @@ In file included from /home/alxr/study/2017.cpp/snegireva_oop/lab4/main.cpp:1:0:
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 
-(проверено 8 янв)
+(проверено 21 янв)
