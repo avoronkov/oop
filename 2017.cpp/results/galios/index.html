@@ -448,7 +448,7 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
-            <li><a href="#2">Календарь (Задача 2). В процессе.</a></li>
+            <li><a href="#2-ok">Календарь (Задача 2). Ok.</a></li>
         
             <li><a href="#3-ok">Морской бой (Задача 3). Ok.</a></li>
         
@@ -481,8 +481,8 @@
 
 <p><a href="https://bitbucket.org/galios_16203/repository1">repo</a></p>
 <p>(проверено 2 дек)</p>
-<h2 id="2">Календарь (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="2-ok">Календарь (Задача 2). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>[Ok] Возвращаемым значением оператора присваивания должна быть ссылка, а не объект; аргумент должен быть константной ссылкой:</li>
 </ul>
@@ -494,7 +494,7 @@
 <p>[Ok] Аналогично <code>Date  operator = (const Date date);</code></p>
 </li>
 <li>
-<p>Аргументы должны передаваться как константные ссылки, а не константные значения:</p>
+<p>[Ok] Аргументы должны передаваться как константные ссылки, а не константные значения:</p>
 </li>
 </ul>
 <pre><code class="C++">DateInterval &amp;operator = (const DateInterval interval);
@@ -505,7 +505,7 @@ std::string formDate(std::string format);
 </code></pre>
 
 <ul>
-<li>Функция <code>localtime_s</code> не определена:</li>
+<li>[Ok] Функция <code>localtime_s</code> не определена:</li>
 </ul>
 <pre><code class="C++">Date.cpp: In constructor ‘Date::Date()’:
 Date.cpp:9:24: error: ‘localtime_s’ was not declared in this scope
@@ -516,7 +516,7 @@ As with all bounds-checked functions, localtime_s is only guaranteed to be avail
 </code></pre>
 
 <ul>
-<li>Логика этого сравнения непонятна и, скорее всего, неверна:</li>
+<li>[Ok] Логика этого сравнения непонятна и, скорее всего, неверна:</li>
 </ul>
 <pre><code class="C++">Date.cpp: In member function ‘std::__cxx11::string Date::formDate(std::__cxx11::string)’:
 Date.cpp:215:15: warning: suggest parentheses around comparison in operand of ‘==’ [-Wparentheses]
@@ -524,9 +524,9 @@ Date.cpp:215:15: warning: suggest parentheses around comparison in operand of �
                ^
 </code></pre>
 
-<p><strong>Тесты</strong> - в процессе.</p>
+<p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/galios_16203/repository1">repo</a></p>
-<p>(проверено 8 янв)</p>
+<p>(проверено 21 янв)</p>
 <h2 id="3-ok">Морской бой (Задача 3). Ok.</h2>
 <p><strong>Код</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/galios_16203/repository1">repo</a></p>
