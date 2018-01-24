@@ -53,11 +53,11 @@ chmil vs galios : winner is galios (error: Already shoot at C 3)
 
 (Проверено 21 янв)
 
-## Workflow (Задача 4). В процессе.
+## Workflow (Задача 4). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-- Ошибка компиляции:
+- [Ok] Ошибка компиляции:
 ```
 lab4/Factory.cpp:1:20: fatal error: factory.h: Нет такого файла или каталога
 compilation terminated.
@@ -67,4 +67,4 @@ compilation terminated.
 
 [repo](https://bitbucket.org/chmil_oop/lab4)
 
-(Проверено 21 янв)
+(Проверено 24 янв)
