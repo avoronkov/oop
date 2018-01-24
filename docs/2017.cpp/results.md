@@ -8,6 +8,8 @@
 
 [Морской бой - в процессе](/2017.cpp/results/bastrykina/#3)
 
+[Жизнь - в процессе](/2017.cpp/results/bastrykina/#4)
+
 **Коллоквиум** - `11.5 (max 22.0)`
 
 
@@ -15,9 +17,11 @@
 
 [Подсчёт фраз - Ok](/2017.cpp/results/voloshina/)
 
-[Календарь - в процессе](/2017.cpp/results/voloshina/#2)
+[Календарь - Ok](/2017.cpp/results/voloshina/#2)
 
 [Морской бой - в процессе](/2017.cpp/results/voloshina/#3)
+
+[Workflow - в процессе](/2017.cpp/results/voloshina/#4)
 
 **Коллоквиум** - `13.5 (max 22.0)`
 

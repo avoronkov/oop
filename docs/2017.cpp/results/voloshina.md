@@ -25,7 +25,7 @@ map<string, int> frequency_table = text2phrases (input_stream, length_of_phrase)
 
 [repo](https://bitbucket.org/voloshina_oop/c-labs/overview)
 
-## Календарь (Задача 2). В процессе.
+## Календарь (Задача 2). Ok.
 
 **Код** - Ok.
 
@@ -35,9 +35,9 @@ map<string, int> frequency_table = text2phrases (input_stream, length_of_phrase)
 `Date.cpp:501:55: error: lvalue required as increment operand
      month = static_cast<Month>(static_cast<int>(month)++);`
 
-**Тесты** - в процессе.
+**Тесты** - Ok.
 
-- Некоторые тесты упали:
+- [Ok] Некоторые тесты упали:
 
 ```C++
 [ RUN      ] AddersTests.Test2
@@ -82,7 +82,7 @@ Expected equality of these values:
 
 [repo](https://bitbucket.org/voloshina_oop/lab-2/overview)
 
-(Проверено 21 янв)
+(Проверено 23 янв)
 
 ## Морской бой (Задача 3). В процессе.
 
@@ -91,3 +91,13 @@ Expected equality of these values:
 [repo](https://bitbucket.org/voloshina_oop/lab-3/overview)
 
 (Проверено 21 янв)
+
+## Workflow (Задача 4). В процессе.
+
+**Код** - ок.
+
+**Демонстрация** - в процессе.
+
+[repo](https://bitbucket.org/chmil_oop/lab4)
+
+(проверено 24 янв)
