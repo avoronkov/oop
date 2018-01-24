@@ -98,7 +98,7 @@ player (2) is winner!
 
 ## Схема (Задача 4). В процессе.
 
-**Код** в процессе.
+**Код** Ok.
 
 - Кажется, вместо `template<> void get<void>()` должно быть просто `void get()`:
 ```C++
@@ -110,6 +110,8 @@ In file included from /home/alxr/study/2017.cpp/snegireva_oop/lab4/main.cpp:1:0:
       void get<void>() const{
                        ^
 ```
+
+**Демонстрация** - в процессе.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 

@@ -93,7 +93,7 @@ main.h:26:57: error: use of enum ‘Month’ without previous declaration
 
 **Код** - в процессе.
 
-- Ошибки компиляции:
+- [Ok] Ошибки компиляции:
 ```C++
 study/2017.cpp/pushkov/lab4/lab4/Interface.h:19:2: error: stray ‘\321’ in program
   void get�ommand();
@@ -107,4 +107,4 @@ study/2017.cpp/pushkov/lab4/lab4/Interface.cpp:11:15:   required from here
 
 [repo](https://bitbucket.org/pushkov_oop/lab4)
 
-(проверено 7 янв)
+(проверено 24 янв)

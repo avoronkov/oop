@@ -74,3 +74,13 @@ Date.cpp:215:15: warning: suggest parentheses around comparison in operand of �
 [repo](https://bitbucket.org/galios_16203/repository1)
 
 (проверено 29 дек)
+
+## Жизнь (Задача 4). В процессе.
+
+**Код** - Ok.
+
+**Демонстрация** - в процессе.
+
+[repo](https://bitbucket.org/galios_16203/repository1)
+
+(проверено 24 янв)
