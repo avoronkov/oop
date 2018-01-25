@@ -84,9 +84,9 @@ Expected equality of these values:
 
 (Проверено 23 янв)
 
-## Морской бой (Задача 3). В процессе.
+## Морской бой (Задача 3). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 [repo](https://bitbucket.org/voloshina_oop/lab-3/overview)
 

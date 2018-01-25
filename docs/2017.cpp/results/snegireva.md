@@ -96,7 +96,7 @@ player (2) is winner!
 
 (проверено 21 янв)
 
-## Схема (Задача 4). В процессе.
+## Схема (Задача 4). Ok.
 
 **Код** Ok.
 
@@ -111,7 +111,7 @@ In file included from /home/alxr/study/2017.cpp/snegireva_oop/lab4/main.cpp:1:0:
                        ^
 ```
 
-**Демонстрация** - в процессе.
+**Демонстрация** - Ok.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_kek)
 

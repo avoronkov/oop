@@ -34,7 +34,7 @@ unsigned int Date::get_year() {
 
 (проверено 21 дек)
 
-## Морской бой (Задача 3). В процессе.
+## Морской бой (Задача 3). Ok.
 
 **Код** - В процессе.
 
@@ -52,7 +52,7 @@ razumov vs bastrykina : winner is razumov (error: Already shoot at F 9)
 yashin vs bastrykina : winner is yashin (error: invalid y coordinate: 11)
 ```
 
-- Техническое поражение:
+- [Ok] Техническое поражение:
 ```
 bastrykina: player:
 ..#O..O#..    .......#..
@@ -76,9 +76,9 @@ bastrykina: player:
 
 (проверено 21 янв)
 
-## Жизнь (Задача 4). В процессе.
+## Жизнь (Задача 4). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - Ошибка компиляции. (Вместо `std::exception` можно использовать `std::runtime_error`)
 ```
@@ -86,6 +86,7 @@ bastrykina/game_of_life/Game.cpp:85:65: error: no matching function for call to 
    if (!in.is_open()) throw std::exception("Cannot open the file");
                                                                  ^
 ```
+**Демонстрация** - Ok
 
 [repo](https://bitbucket.org/bastrykina_oop/game_of_life)
 

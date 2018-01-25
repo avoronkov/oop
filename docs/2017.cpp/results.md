@@ -6,11 +6,13 @@
 
 [Календарь - Ok](/2017.cpp/results/bastrykina/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/bastrykina/#3)
+[Морской бой - Ok](/2017.cpp/results/bastrykina/#3)
 
-[Жизнь - в процессе](/2017.cpp/results/bastrykina/#4)
+[Жизнь - Ok](/2017.cpp/results/bastrykina/#4)
 
 **Коллоквиум** - `11.5 (max 22.0)`
+
+**Предварительная оценка** - `4`
 
 
 ## Волошина Анастасия
@@ -19,11 +21,13 @@
 
 [Календарь - Ok](/2017.cpp/results/voloshina/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/voloshina/#3)
+[Морской бой - Ok](/2017.cpp/results/voloshina/#3)
 
 [Workflow - в процессе](/2017.cpp/results/voloshina/#4)
 
 **Коллоквиум** - `13.5 (max 22.0)`
+
+**Предварительная оценка** - `4-`
 
 
 ## Галиос Максим
@@ -34,9 +38,11 @@
 
 [Морской бой - Ok](/2017.cpp/results/galios/#3)
 
-[Жизнь - в процессе](/2017.cpp/results/galios/#4)
+[Жизнь - Ok](/2017.cpp/results/galios/#4)
 
 **Коллоквиум** - `8.5 (max 22.0)`
+
+**Предварительная оценка** - `4`
 
 
 ## Григорович Артём
@@ -105,12 +111,13 @@
 
 [Календарь - Ok](/2017.cpp/results/snegireva/#2)
 
-[Морской бой - в процессе](/2017.cpp/results/snegireva/#3)
+[Морской бой - Ok](/2017.cpp/results/snegireva/#3)
 
-[Workflow - в процессе](/2017.cpp/results/snegireva/#4)
+[Workflow - Ok](/2017.cpp/results/snegireva/#4)
 
 **Коллоквиум** - `16.0 (max 22.0)`
 
+**Предварительная оценка** - `4`
 
 ## Чмиль Александр
 
