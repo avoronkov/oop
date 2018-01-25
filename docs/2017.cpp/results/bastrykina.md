@@ -80,7 +80,7 @@ bastrykina: player:
 
 **Код** - Ok.
 
-- Ошибка компиляции. (Вместо `std::exception` можно использовать `std::runtime_error`)
+- [Ok] Ошибка компиляции. (Вместо `std::exception` можно использовать `std::runtime_error`)
 ```
 bastrykina/game_of_life/Game.cpp:85:65: error: no matching function for call to ‘std::exception::exception(const char [21])’
    if (!in.is_open()) throw std::exception("Cannot open the file");
