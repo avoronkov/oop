@@ -4,18 +4,12 @@
     
     <url>
      <loc>None/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
-        
-    <url>
-     <loc>None</loc>
-     <lastmod></lastmod>
-     <changefreq>daily</changefreq>
-    </url>
         
     <url>
      <loc>None</loc>
@@ -29,43 +23,49 @@
         
     <url>
      <loc>None/bitbucket/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/using-namespaces/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/cmake/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/using-subversion/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/using-googletest/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/final-tasks/</loc>
-     <lastmod>2018-01-26</lastmod>
+     <lastmod>2018-02-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     
 
     
+        
+    <url>
+     <loc>None</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
         
     <url>
      <loc>None</loc>
