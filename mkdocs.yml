@@ -1,28 +1,9 @@
 site_name: OOP Practice Docs
 pages:
     - Home: index.md
-    - C++:
-        - Tasks:
-            - 'Task 1': 2017.cpp/task1.md
-            - 'Task 2': 2017.cpp/task2.md
-            - 'Task 3': 2017.cpp/task3.md
-            - 'Task 4': 2017.cpp/task4.md
-            - 'Task 5': 2017.cpp/task5.md
-        - 'Results':
-            - 'Overall': 2017.cpp/results.md
-            - 'Battleship': 2017.cpp/battleship_stats.md
-            - 'Details':
-                - 'Bastrykina': 2017.cpp/results/bastrykina.md
-                - 'Chmil': 2017.cpp/results/chmil.md
-                - 'Galios': 2017.cpp/results/galios.md
-                - 'Grigorovich': 2017.cpp/results/grigorovich.md
-                - 'Petin': 2017.cpp/results/petin.md
-                - 'Pushkov': 2017.cpp/results/pushkov.md
-                - 'Razumov': 2017.cpp/results/razumov.md
-                - 'Snegireva': 2017.cpp/results/snegireva.md
-                - 'Shustova': 2017.cpp/results/shustova.md
-                - 'Voloshina': 2017.cpp/results/voloshina.md
-                - 'Yashin': 2017.cpp/results/yashin.md
+    - Java:
+        - Seminars:
+            - 'Seminar 2': 2018.java/seminar2.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
@@ -31,6 +12,28 @@ pages:
         - 'GoogleTest': using-googletest.md
         - 'AcceptanceTasks': final-tasks.md
     - Archive:
+        - '2017 C++':
+            - Tasks:
+                - 'Task 1': 2017.cpp/task1.md
+                - 'Task 2': 2017.cpp/task2.md
+                - 'Task 3': 2017.cpp/task3.md
+                - 'Task 4': 2017.cpp/task4.md
+                - 'Task 5': 2017.cpp/task5.md
+            - 'Results':
+                - 'Overall': 2017.cpp/results.md
+                - 'Battleship': 2017.cpp/battleship_stats.md
+                - 'Details':
+                    - 'Bastrykina': 2017.cpp/results/bastrykina.md
+                    - 'Chmil': 2017.cpp/results/chmil.md
+                    - 'Galios': 2017.cpp/results/galios.md
+                    - 'Grigorovich': 2017.cpp/results/grigorovich.md
+                    - 'Petin': 2017.cpp/results/petin.md
+                    - 'Pushkov': 2017.cpp/results/pushkov.md
+                    - 'Razumov': 2017.cpp/results/razumov.md
+                    - 'Snegireva': 2017.cpp/results/snegireva.md
+                    - 'Shustova': 2017.cpp/results/shustova.md
+                    - 'Voloshina': 2017.cpp/results/voloshina.md
+                    - 'Yashin': 2017.cpp/results/yashin.md
         - '2017 Java':
             - 'Tasks':
                 - 'Task 1': 2017.java/task1.md
