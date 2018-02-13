@@ -10,17 +10,17 @@
 
 [Задача 2 (Стековый калькулятор)](/2018.java/task2/)
 
+[Задача 3 (Игра)](/2018.java/task3/)
+
 ## Семинары.
 
-[Семинар 2](/2018.java/seminar2/)
+[Семинар 2 (список тем докладов)](/2018.java/seminar2/)
 
 ## Доп. материалы
 
 [Материалы лекций](https://sites.google.com/site/nguoop/)
 
 [Список дополнительной литературы](https://sites.google.com/site/nguoop/spisok-dopolnitelnoj-literatury-1)
-
-[www.cplusplus.com](http://www.cplusplus.com/)
 
 ["Воспитай в себе обезьяну!" (М. Дорофеев)](https://2016.codefest.ru/lecture/1116)
 
