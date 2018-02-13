@@ -6,6 +6,7 @@ pages:
             - 'Seminar 2': 2018.java/seminar2.md
         - Tasks:
             - 'Task 1': 2018.java/task1.md
+            - 'Task 2': 2018.java/task2.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
