@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Seminar 14 - OOP Practice Docs</title>
+	<title>Task 2 - OOP Practice Docs</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -59,7 +59,7 @@
                 
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Java <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -70,7 +70,7 @@
         
             
 <li >
-    <a href="../../2018.java/seminar2/">Seminar 2</a>
+    <a href="../seminar2/">Seminar 2</a>
 </li>
 
         
@@ -85,13 +85,13 @@
         
             
 <li >
-    <a href="../../2018.java/task1/">Task 1</a>
+    <a href="../task1/">Task 1</a>
 </li>
 
         
             
-<li >
-    <a href="../../2018.java/task2/">Task 2</a>
+<li class="active">
+    <a href="./">Task 2</a>
 </li>
 
         
@@ -149,7 +149,7 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -372,25 +372,25 @@
         
             
 <li >
-    <a href="../seminar1/">Seminar 1</a>
+    <a href="../../2016.cpp/seminar1/">Seminar 1</a>
 </li>
 
         
             
 <li >
-    <a href="../seminar3/">Seminar 3</a>
+    <a href="../../2016.cpp/seminar3/">Seminar 3</a>
 </li>
 
         
             
 <li >
-    <a href="../seminar4/">Seminar 4</a>
+    <a href="../../2016.cpp/seminar4/">Seminar 4</a>
 </li>
 
         
             
-<li class="active">
-    <a href="./">Seminar 14</a>
+<li >
+    <a href="../../2016.cpp/seminar14/">Seminar 14</a>
 </li>
 
         
@@ -468,12 +468,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../seminar4/">
+                        <a rel="next" href="../task1/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../../cpp/seminar1.2015/">
+                        <a rel="prev" href="../../bitbucket/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -489,102 +489,52 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#14-02122016">Семинар 14 (02.12.2016)</a></li>
+        <li class="main active"><a href="#2">Задача 2. Стековый калькулятор / интерпретатор.</a></li>
         
-            <li><a href="#_1">Ссылки, константные ссылки и объекты в сигнатурах методов</a></li>
+            <li><a href="#_1">Стековый язык программирования (Дополнительная задача)</a></li>
         
-            <li><a href="#_2">Полезные опции компилятора</a></li>
+            <li><a href="#_2">(Вложенные циклы)</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="14-02122016">Семинар 14 (02.12.2016)</h1>
-<h2 id="_1">Ссылки, константные ссылки и объекты в сигнатурах методов</h2>
-<p><em>Некоторые принципы использования ссылок, константных ссылок, объектов и указателей в сигнатурах методов.</em></p>
-<ul>
-<li>Если объект не должен изменяться при вызове некоторого метода этого объекта, этот метод должен быть задекларирован как константный (<code>const</code> после аргументов метода).</li>
-</ul>
-<pre><code class="C++">// Пример
-class Container {
-    // ...
-    int size() const; // получить размер контейнера, содержимое контейнера при этом не меняется.
-    // ...
-};
-</code></pre>
-
-<ul>
-<li>Если при передаче объекта в метод или функцию этот объект не должен быть изменен - аргумент должен передаваться как константная ссылка (чтобы избежать копирования объекта).</li>
-</ul>
-<pre><code class="C++">int calculateSizeOf(const Container &amp; c);
-
-// std::ostream нельзя копировать, поэтому он передается в operator&lt;&lt; и возвращается по ссылке.
-// Ссылка неконстантная, потому что в процессе работы меняется состояние потока вывода.
-// Объект Container в процессе вывода не изменяется.
-std::ostream &amp; operator&lt;&lt;(std::ostream &amp; out, const Container &amp; c);
-</code></pre>
-
-<ul>
-<li>Операторы вида <code>x=</code> (например, <code>+=</code>, <code>-=</code>, <code>&amp;=</code>, <code>|=</code> и даже <code>=</code>) модифицируют первый аргумент и не модифицируют второй.
-Возвращаемое значение - ссылка на первый аргумент (на "самого себя").
-Запись <code>a += b;</code> можно понимать как <code>a.operator+=(b)</code>. Общий вид сигнатуры этих операторов следующий:</li>
-</ul>
-<pre><code class="C++">class Container {
-    // ...
-    Container &amp; operator=(const Containter &amp; another) {
-        // ...
-        return * this;
-    }
-    Contaiter &amp; operator+=(const Containter &amp; another);
-    // ...
-};
-</code></pre>
-
-<ul>
-<li>Операторы вида <code>+</code>, <code>-</code>, <code>&amp;</code>, <code>|</code>, <code>==</code> создают новый объект из двух существующих, поэтому тип возвращаемого значения - объект, а не ссылка.
-Ни один из аргументов при этом не должен модифицироваться, поэтому - <code>const</code> два раза.</li>
-</ul>
-<pre><code class="C++">class Container {
-    // ...
-    Container operator+(const Containter &amp; another) const;
-    bool operator==(const Containter &amp; another) const;
-    // ...
-};
-</code></pre>
-
+<h1 id="2">Задача 2. Стековый калькулятор / интерпретатор.</h1>
+<p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6N2EyMTQ3NDgyYjY4NmU1NQ">Оригинальное условие задачи для Java</a></p>
+<h2 id="_1">Стековый язык программирования (Дополнительная задача)</h2>
+<p>Из стекового калькулятора можно сделать полноценный (полный по Тьюрингу)
+язык программирования, если добавить в него циклы и условные переходы,
+а также несколько специальных команд (функций):</p>
 <ul>
 <li>
-<p>Вернуть ссылку из метода можно (в нормальной ситуации): на сам объект (<code>return * this;</code>), или на поле объекта (<code>return this-&gt;data[i];</code>).
-Возврат ссылки или указателя на локальный объект является грубой ошибкой (для многих компиляторов это warning).
-(Про возврат ссылки на глобальный объект лучше не думать, т.к. в большинстве случаев глобальные объекты - признак плохого дизайна программы).</p>
+<p><strong>DUP</strong> - копировать верхний элемент на стеке (т.е. <code>a -&gt; a a</code>)</p>
 </li>
 <li>
-<p>Оператор индексирования чаще всего реализуется сразу в двух вариантых: константном и неконстантном.</p>
+<p><strong>SWAP</strong> - поменять местами 2 верхних элемента (<code>a b -&gt; b a</code>)</p>
+</li>
+<li>
+<p><strong>ROT</strong> - взять третий элемент стека и поместить его наверх (<code>a b c -&gt; b c a</code>)</p>
+</li>
+<li>
+<p><strong>DROP</strong> - удалить верхний элемент со стека (<code>a -&gt;</code>). Аналог команды POP.</p>
 </li>
 </ul>
-<pre><code class="C++">class ContainerOfItems {
-    // ...
-    // Константный оператор будет использоваться, когда модификация объекта не требуется:
-    // cout &lt;&lt; c[1] &lt;&lt; endl;
-    const Item &amp; operator[](int i) const;
-
-    // Неконстантный - когда происходит изменение объекта:
-    // c[1] = 2;
-    Item &amp; operator[](int i);
-    // ...
-};
+<p>Цикл можно обозначить следующей конструкцией: <code>[ &lt;тело цикла&gt; ]</code>.</p>
+<p>Семантика цикла следующая: если на вершине стека находится true-значение (то есть не равное <code>0</code>), то верхний элемент удаляется со стека, выполняется тело цикла, затем снова проверяется условие цикла.</p>
+<p>(Вместо <code>PUSH N</code> можно для простоты писать просто <code>N</code>).</p>
+<p>Например, следующая программа распечатает числа от 5 до 1:</p>
+<pre><code>5 dup [ print 1 - dup ]
 </code></pre>
 
-<ul>
-<li>Переменные примитивных типов (например <code>int</code>, <code>double</code>, <code>char</code>), которые не должны модифицироваться при передаче в функцию/метод, должны передаваться как значения, а не как ссылки:</li>
-</ul>
-<pre><code class="C++">void setSize(int size);
+<p>Программа для вычисления факториала числа 5:</p>
+<pre><code>5
+1 swap dup [ dup rot * swap 1 - dup ] drop print
 </code></pre>
 
-<h2 id="_2">Полезные опции компилятора</h2>
-<p>Компиляторы <code>g++</code> и <code>clang</code> поддерживают опцию <code>-Wall</code>,
-которая позволяет выводить все warning'и в процессе компиляции.</p></div>
+<h2 id="_2">(Вложенные циклы)</h2>
+<p>Для вычисления факториала можно обойтись без интерпретации вложенных циклов,
+но правильная их реализация является дополнительным плюсом :)</p></div>
             
         </div>
 
