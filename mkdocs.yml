@@ -8,6 +8,12 @@ pages:
             - 'Task 1': 2018.java/task1.md
             - 'Task 2': 2018.java/task2.md
             - 'Task 3': 2018.java/task3.md
+        - Results:
+            - Overall: 2018.java/results.md
+            - Details:
+                - 'Bastrykina': 2018.java/results/bastrykina.md
+                - 'Chmil': 2018.java/results/chmil.md
+                - 'Yashin': 2018.java/results/yashin.md
     - Extras:
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
