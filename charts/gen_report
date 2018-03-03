@@ -4,11 +4,10 @@ use feature qw/say/;
 use Cwd qw/getcwd/;
 use File::Basename;
 
-sub inspect_repo {
+sub inspect_git_repo {
 	my ($dir, $pdata) = @_;
 	my $oldpath = getcwd;
 	chdir $dir or die "chdir $dir failed: $!";
-	print "pwd = ", getcwd;
 	my @log = qx{git log --pretty=format:"%H %ai"};
 	for my $entry(@log) {
 		my ($hash, $date) = split(/\s+/, $entry);
@@ -18,6 +17,29 @@ sub inspect_repo {
 	chdir $oldpath;
 }
 
+sub inspect_hg_repo {
+	my ($dir, $pdata) = @_;
+	my $oldpath = getcwd;
+	chdir $dir or die "chdir $dir failed: $!";
+	my @log = qx[hg log --template '{date|isodate} :: {diffstat}\n'];
+	for my $entry(@log) {
+		# 2018-02-23 23:26 +0700 :: 8: +335/-92
+		my ($date, $files) = $entry =~ /^(\S+) \S+ \S+ :: (\d+):/;
+		$pdata->{$date} += $files;
+	}
+	chdir $oldpath;
+}
+
+sub inspect_repo {
+	my ($dir, $pdata) = @_;
+	if ( -d "$dir/.git" ) {
+		inspect_git_repo($dir, $pdata);
+	} elsif ( -d "$dir/.hg" ) {
+		inspect_hg_repo($dir, $pdata);
+	} else {
+		die "Unknown repo type in $dir";
+	}
+}
 my $basedir = $ARGV[0] or die "usage: <basedir>";
 
 my @subdirs = `ls $basedir`;
