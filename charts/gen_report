@@ -1,0 +1,40 @@
+#!/usr/bin/perl -w
+use strict;
+use feature qw/say/;
+use Cwd qw/getcwd/;
+use File::Basename;
+
+sub inspect_repo {
+	my ($dir, $pdata) = @_;
+	my $oldpath = getcwd;
+	chdir $dir or die "chdir $dir failed: $!";
+	print "pwd = ", getcwd;
+	my @log = qx{git log --pretty=format:"%H %ai"};
+	for my $entry(@log) {
+		my ($hash, $date) = split(/\s+/, $entry);
+		my ($files) = qx{git show $hash | diffstat -l | wc -l};
+		$pdata->{$date} += $files;
+	}
+	chdir $oldpath;
+}
+
+my $basedir = $ARGV[0] or die "usage: <basedir>";
+
+my @subdirs = `ls $basedir`;
+
+my %data;
+for my $d(@subdirs) {
+	chomp $d;
+	inspect_repo("$basedir/$d", \%data);
+}
+
+my $name = basename($basedir);
+mkdir "out/$name";
+`cat pre.tpl | sed -e 's/%NAME%/$name/' > out/$name/index.html`;
+open my $out, ">>", "out/$name/index.html";
+say $out "var raw = [";
+for my $key(sort keys %data) {
+	say $out "    ['$key', $data{$key}],";
+}
+say $out "];";
+`cat post.tpl >> out/$name/index.html`;
