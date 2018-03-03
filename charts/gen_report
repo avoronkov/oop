@@ -5,58 +5,87 @@ use Cwd qw/getcwd/;
 use File::Basename;
 
 sub inspect_git_repo {
-	my ($dir, $pdata) = @_;
+	my ($dir, $cb) = @_;
 	my $oldpath = getcwd;
 	chdir $dir or die "chdir $dir failed: $!";
 	my @log = qx{git log --pretty=format:"%H %ai"};
 	for my $entry(@log) {
 		my ($hash, $date) = split(/\s+/, $entry);
 		my ($files) = qx{git show $hash | diffstat -l | wc -l};
-		$pdata->{$date} += $files;
+		$cb->($date, $files);
 	}
 	chdir $oldpath;
 }
 
 sub inspect_hg_repo {
-	my ($dir, $pdata) = @_;
+	my ($dir, $cb) = @_;
 	my $oldpath = getcwd;
 	chdir $dir or die "chdir $dir failed: $!";
 	my @log = qx[hg log --template '{date|isodate} :: {diffstat}\n'];
 	for my $entry(@log) {
 		# 2018-02-23 23:26 +0700 :: 8: +335/-92
 		my ($date, $files) = $entry =~ /^(\S+) \S+ \S+ :: (\d+):/;
-		$pdata->{$date} += $files;
+		$cb->($date, $files);
 	}
 	chdir $oldpath;
 }
 
 sub inspect_repo {
-	my ($dir, $pdata) = @_;
+	my ($dir, $cb) = @_;
+	say STDERR "> $dir";
 	if ( -d "$dir/.git" ) {
-		inspect_git_repo($dir, $pdata);
+		inspect_git_repo($dir, $cb);
 	} elsif ( -d "$dir/.hg" ) {
-		inspect_hg_repo($dir, $pdata);
+		inspect_hg_repo($dir, $cb);
 	} else {
 		die "Unknown repo type in $dir";
 	}
 }
-my $basedir = $ARGV[0] or die "usage: <basedir>";
 
-my @subdirs = `ls $basedir`;
+sub print_stats {
+	my ($name, $pdata) = @_;
 
-my %data;
-for my $d(@subdirs) {
-	chomp $d;
-	inspect_repo("$basedir/$d", \%data);
+	mkdir "out/$name";
+	`cat pre.tpl | sed -e 's/%NAME%/$name/' > out/$name/index.html`;
+	open my $out, ">>", "out/$name/index.html";
+	say $out "var raw = [";
+	for my $key(sort keys %{$pdata}) {
+		say $out "    ['$key', $pdata->{$key}],";
+	}
+	say $out "];";
+	`cat post.tpl >> out/$name/index.html`;
 }
 
-my $name = basename($basedir);
-mkdir "out/$name";
-`cat pre.tpl | sed -e 's/%NAME%/$name/' > out/$name/index.html`;
-open my $out, ">>", "out/$name/index.html";
-say $out "var raw = [";
-for my $key(sort keys %data) {
-	say $out "    ['$key', $data{$key}],";
+sub process_one {
+	my ($basedir, $global_cb) = @_;
+	my $name = basename($basedir);
+	say STDERR "$name";
+	my @subdirs = `ls $basedir`;
+
+	my %data;
+	for my $d(@subdirs) {
+		chomp $d;
+		inspect_repo("$basedir/$d", sub {
+			my ($date, $files) = @_;
+			$data{$date} += $files;
+			if ($global_cb) {
+				$global_cb->($date, $files);
+			}
+		});
+	}
+
+	print_stats($name, \%data);
 }
-say $out "];";
-`cat post.tpl >> out/$name/index.html`;
+
+my %global_data;
+
+for my $dir(@ARGV) {
+	process_one($dir, sub {
+		my ($date, $files) = @_;
+		$global_data{$date} += $files;
+	});
+}
+
+if (scalar(@ARGV) > 1) {
+	print_stats("_all", \%global_data);
+}
