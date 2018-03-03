@@ -43,14 +43,14 @@ sub inspect_repo {
 }
 
 sub print_stats {
-	my ($name, $pdata) = @_;
+	my ($name, $pdata_files, $pdata_commits) = @_;
 
 	mkdir "out/$name";
 	`cat pre.tpl | sed -e 's/%NAME%/$name/' > out/$name/index.html`;
 	open my $out, ">>", "out/$name/index.html";
 	say $out "var raw = [";
-	for my $key(sort keys %{$pdata}) {
-		say $out "    ['$key', $pdata->{$key}],";
+	for my $key(sort keys %{$pdata_files}) {
+		say $out "    ['$key', $pdata_files->{$key}, $pdata_commits->{$key}],";
 	}
 	say $out "];";
 	`cat post.tpl >> out/$name/index.html`;
@@ -63,29 +63,33 @@ sub process_one {
 	my @subdirs = `ls $basedir`;
 
 	my %data;
+	my %commits;
 	for my $d(@subdirs) {
 		chomp $d;
 		inspect_repo("$basedir/$d", sub {
 			my ($date, $files) = @_;
 			$data{$date} += $files;
+			$commits{$date} += 1;
 			if ($global_cb) {
 				$global_cb->($date, $files);
 			}
 		});
 	}
 
-	print_stats($name, \%data);
+	print_stats($name, \%data, \%commits);
 }
 
 my %global_data;
+my %global_commits;
 
 for my $dir(@ARGV) {
 	process_one($dir, sub {
 		my ($date, $files) = @_;
 		$global_data{$date} += $files;
+		$global_commits{$date} += 1;
 	});
 }
 
 if (scalar(@ARGV) > 1) {
-	print_stats("_all", \%global_data);
+	print_stats("_all", \%global_data, \%global_commits);
 }

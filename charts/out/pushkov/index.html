@@ -1,3 +1,36 @@
+<html>
+<head>
+	<title>pushkov activity</title>
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/utils.js"></script>
+</head>
+
+<body>
+	<h1>pushkov</h1>
+	<div style="margin: 3em;">
+		<canvas id="canvas1" width="800" height="400"></canvas>
+		<canvas id="canvas2" width="800" height="400"></canvas>
+	</div>
+	<script>
+var dateFormat = 'YYYY-MM-DD';
+
+var raw = [
+    ['2017-09-18', 5, 2],
+    ['2017-10-12', 5, 1],
+    ['2017-10-19', 10, 3],
+    ['2017-11-14', 5, 1],
+    ['2017-12-01', 6, 1],
+    ['2017-12-04', 4, 1],
+    ['2017-12-07', 28, 4],
+    ['2017-12-24', 2, 1],
+    ['2017-12-27', 2, 1],
+    ['2017-12-29', 15, 1],
+    ['2018-01-04', 15, 3],
+    ['2018-01-15', 7, 2],
+    ['2018-01-21', 3, 2],
+    ['2018-01-23', 2, 1],
+];
 var data_files = [];
 var data_commits = [];
 var labels = [];

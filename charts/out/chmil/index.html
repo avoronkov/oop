@@ -1,3 +1,24 @@
+<html>
+<head>
+	<title>chmil activity</title>
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/utils.js"></script>
+</head>
+
+<body>
+	<h1>chmil</h1>
+	<div style="margin: 3em;">
+		<canvas id="canvas1" width="800" height="400"></canvas>
+		<canvas id="canvas2" width="800" height="400"></canvas>
+	</div>
+	<script>
+var dateFormat = 'YYYY-MM-DD';
+
+var raw = [
+    ['2018-02-17', 1, 1],
+    ['2018-02-18', 4, 1],
+];
 var data_files = [];
 var data_commits = [];
 var labels = [];
