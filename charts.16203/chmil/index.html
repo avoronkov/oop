@@ -1,0 +1,98 @@
+<html>
+<head>
+	<title>chmil activity</title>
+	<script src="../js/Chart.bundle.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/utils.js"></script>
+</head>
+
+<body>
+	<h1>chmil</h1>
+	<div style="margin: 3em;">
+		<canvas id="canvas1" width="800" height="400"></canvas>
+		<canvas id="canvas2" width="800" height="400"></canvas>
+	</div>
+	<script>
+var dateFormat = 'YYYY-MM-DD';
+
+var raw = [
+    ['2018-02-17', 1, 1],
+    ['2018-02-18', 4, 1],
+];
+var data_files = [];
+var data_commits = [];
+var labels = [];
+for (var i = 0; i < raw.length; i++) {
+	var cur_date = moment(raw[i][0], dateFormat);
+	data_files.push({t: cur_date, y: raw[i][1]});
+	data_commits.push({t: cur_date, y: raw[i][2]});
+	labels.push(raw[i][0]);
+}
+
+var ctx = document.getElementById("canvas1").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+		labels: labels,
+        datasets: [{
+			label: 'Commits',
+            data: data_commits,
+			type: 'bar',
+			backgroundColor: window.chartColors.red,
+		}]
+    },
+	options: {
+			scales: {
+				xAxes: [{
+					type: 'time',
+					stacked: true,
+					// distribution: 'series',
+					ticks: {
+						source: 'labels',
+					},
+				}],
+				yAxes: [{
+					stacked: true,
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+});
+
+var ctx2 = document.getElementById("canvas2").getContext('2d');
+var myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+		labels: labels,
+        datasets: [{
+			label: 'Changed files',
+            data: data_files,
+			type: 'bar',
+			backgroundColor: window.chartColors.blue,
+		}]
+    },
+	options: {
+			scales: {
+				xAxes: [{
+					type: 'time',
+					stacked: true,
+					// distribution: 'series',
+					ticks: {
+						source: 'labels',
+					},
+				}],
+				yAxes: [{
+					stacked: true,
+					ticks: {
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+});
+	</script>
+</body>
+</html>
+
