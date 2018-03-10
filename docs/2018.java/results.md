@@ -10,6 +10,8 @@
 
 ## Волошина Анастасия
 
+[Подсчёт фраз - в процессе](/2018.java/results/voloshina/)
+
 Доклад "Объекты, ссылки" +
 
 [charts](/charts.16203/voloshina/index.html)
