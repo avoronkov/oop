@@ -12,7 +12,7 @@
 	<title>Razumov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -569,10 +569,10 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Имена классов в java должны начинаться с большой буквы (<code>lab1</code>)</p>
+<p>[Ok] Имена классов в java должны начинаться с большой буквы (<code>lab1</code>)</p>
 </li>
 <li>
-<p>Ошибка регистра файла:</p>
+<p>[Ok] Ошибка регистра файла:</p>
 </li>
 </ul>
 <pre><code>    [javac] /home/alxr/study/2018.java/razumov/j_lab1/src/main/lab1.java:9: error: class Lab1 is public, should be declared in a file named Lab1.java
@@ -586,15 +586,19 @@
 <p><code>bf</code> и <code>reader</code> не закроются в случае исключения в <code>text2word</code></p>
 </li>
 <li>
-<p>Не работает для случая</p>
+<p>[Ok] Не работает для случая</p>
 </li>
 </ul>
 <pre><code>Если имя файла не указано, то программа также работает со стандартным потоком ввода.
 </code></pre>
 
 <p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Неправильные импорты. Вместо <code>org.junit.jupiter.api.Test</code> должен использоваться <code>org.junit.Test</code>,
+а вместо <code>org.junit.jupiter.api.Assertions.*</code> - <code>org.junit.Assert.*</code> (+ соответствующие классы и методы должны быть публичными).</li>
+</ul>
 <p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
-<p>(проверено 4 марта)</p></div>
+<p>(проверено 11 марта)</p></div>
             
         </div>
 
