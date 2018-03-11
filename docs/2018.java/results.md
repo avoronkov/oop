@@ -50,7 +50,7 @@
 
 ## Чмиль Александр
 
-[Подсчёт фраз - в процессе](/2018.java/results/chmil/)
+[Подсчёт фраз - Ok](/2018.java/results/chmil/)
 
 [charts](/charts.16203/chmil/index.html)
 
@@ -60,7 +60,7 @@
 
 ## Яшин Артём
 
-[Подсчёт фраз - в процессе](/2018.java/results/yashin/)
+[Подсчёт слов - Ok](/2018.java/results/yashin/)
 
 [charts](/charts.16203/yashin/index.html)
 
