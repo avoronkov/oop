@@ -18,6 +18,8 @@
 
 [Семинар 2 (список тем докладов)](/2018.java/seminar2/)
 
+[Семинар 6 (ant build.xml)](/2018.java/seminar6/)
+
 ## Доп. материалы
 
 [Материалы лекций](https://sites.google.com/site/nguoop/)
