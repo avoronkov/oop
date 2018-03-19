@@ -13,9 +13,9 @@
 
 ## Волошина Анастасия
 
-[Подсчёт фраз - в процессе](/2018.java/results/voloshina/)
-
 Доклад "Объекты, ссылки" +
+
+[Подсчёт фраз - в процессе](/2018.java/results/voloshina/)
 
 [charts](/charts.16203/voloshina/index.html)
 
@@ -41,7 +41,10 @@
 
 [charts](/charts.16203/pushkov/index.html)
 
+
 ## Разумов Антон
+
+Доклад "Интерфейсы" +
 
 [Подсчёт фраз - в процессе](/2018.java/results/razumov/)
 
@@ -59,11 +62,15 @@
 
 ## Шустова Марина
 
+Доклад "Jenerics" +
+
 [Подсчёт фраз - в процессе](/2018.java/results/shustova/)
 
 [charts](/charts.16203/shustova/index.html)
 
 ## Яшин Артём
+
+Доклад "Stream API" +
 
 [Подсчёт слов - Ok](/2018.java/results/yashin/)
 

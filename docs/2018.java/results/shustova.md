@@ -12,6 +12,8 @@ static Map<String, Integer> mkMap(Vector<String> input){ ... }
 
 - `Scanner` нужно закрывать (например через try-with-resource).
 
+- Добавить `build.xml`
+
 **Тесты** - нет
 
 [repo](https://bitbucket.org/shustova_oop/java_phrases)
