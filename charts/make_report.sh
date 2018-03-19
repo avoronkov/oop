@@ -94,7 +94,8 @@ prep shustova \
 	git@bitbucket.org:shustova_oop/room_with_project.git \
 	git@bitbucket.org:shustova_oop/life.git \
 	git@bitbucket.org:shustova_oop/calendar.git \
-	git@bitbucket.org:shustova_oop/battleship.git
+	git@bitbucket.org:shustova_oop/battleship.git \
+	git@bitbucket.org:shustova_oop/java_phrases.git
 
 prep snegireva \
 	git@bitbucket.org:snegireva_oop/spyair_kek.git

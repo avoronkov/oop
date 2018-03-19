@@ -14,17 +14,24 @@
     [javac] 1 error
 ```
 
-- `bf` и `reader` не закроются в случае исключения в `text2word`
+- [Ok] `bf` и `reader` не закроются в случае исключения в `text2word`
+
+- Если `bf` и `reader` закрываются в finally, то их не надо закрывать в `try{}`
 
 - [Ok] Не работает для случая
 ```
 Если имя файла не указано, то программа также работает со стандартным потоком ввода.
 ```
 
+- добавить build.xml
+
+
 **Тесты** - в процессе.
 
-- Неправильные импорты. Вместо `org.junit.jupiter.api.Test` должен использоваться `org.junit.Test`,
+- [X] Неправильные импорты. Вместо `org.junit.jupiter.api.Test` должен использоваться `org.junit.Test`,
 а вместо `org.junit.jupiter.api.Assertions.*` - `org.junit.Assert.*` (+ соответствующие классы и методы должны быть публичными).
+
+- `import static org.junit.Assert.*;` вместо `import static org.junit.jupiter.api.Assertions.assertEquals;`
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 

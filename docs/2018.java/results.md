@@ -6,7 +6,10 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/bastrykina/)
 
+[stack pl - в процессе](/charts.16203/bastrykina/index.html#2)
+
 [charts](/charts.16203/bastrykina/index.html)
+
 
 ## Волошина Анастасия
 
@@ -55,6 +58,8 @@
 [charts](/charts.16203/chmil/index.html)
 
 ## Шустова Марина
+
+[Подсчёт фраз - в процессе](/2018.java/results/shustova/)
 
 [charts](/charts.16203/shustova/index.html)
 
