@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Razumov - OOP Practice Docs</title>
+	<title>Shustova - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -146,14 +146,14 @@
 
         
             
-<li class="active">
-    <a href="./">Razumov</a>
+<li >
+    <a href="../razumov/">Razumov</a>
 </li>
 
         
             
-<li >
-    <a href="../shustova/">Shustova</a>
+<li class="active">
+    <a href="./">Shustova</a>
 </li>
 
         
@@ -546,12 +546,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../grigorovich/">
+                        <a rel="next" href="../razumov/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../shustova/">
+                        <a rel="prev" href="../voloshina/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -567,7 +567,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Разумов Антон</a></li>
+        <li class="main active"><a href="#_1">Шустова Марина</a></li>
         
             <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
@@ -576,52 +576,22 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Разумов Антон</h1>
+<h1 id="_1">Шустова Марина</h1>
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>
-<p>[Ok] Имена классов в java должны начинаться с большой буквы (<code>lab1</code>)</p>
-</li>
-<li>
-<p>[Ok] Ошибка регистра файла:</p>
-</li>
+<li>Вместо использования статических переменных лучше передавать данные
+как аргументы и возвращаемые значения методов. Например:</li>
 </ul>
-<pre><code>    [javac] /home/alxr/study/2018.java/razumov/j_lab1/src/main/lab1.java:9: error: class Lab1 is public, should be declared in a file named Lab1.java
-    [javac] public class Lab1 {
-    [javac]        ^
-    [javac] 1 error
+<pre><code>static Map&lt;String, Integer&gt; mkMap(Vector&lt;String&gt; input){ ... }
 </code></pre>
 
 <ul>
-<li>
-<p>[Ok] <code>bf</code> и <code>reader</code> не закроются в случае исключения в <code>text2word</code></p>
-</li>
-<li>
-<p>Если <code>bf</code> и <code>reader</code> закрываются в finally, то их не надо закрывать в <code>try{}</code></p>
-</li>
-<li>
-<p>[Ok] Не работает для случая</p>
-</li>
+<li><code>Scanner</code> нужно закрывать (например через try-with-resource).</li>
 </ul>
-<pre><code>Если имя файла не указано, то программа также работает со стандартным потоком ввода.
-</code></pre>
-
-<ul>
-<li>добавить build.xml</li>
-</ul>
-<p><strong>Тесты</strong> - в процессе.</p>
-<ul>
-<li>
-<p>[X] Неправильные импорты. Вместо <code>org.junit.jupiter.api.Test</code> должен использоваться <code>org.junit.Test</code>,
-а вместо <code>org.junit.jupiter.api.Assertions.*</code> - <code>org.junit.Assert.*</code> (+ соответствующие классы и методы должны быть публичными).</p>
-</li>
-<li>
-<p><code>import static org.junit.Assert.*;</code> вместо <code>import static org.junit.jupiter.api.Assertions.assertEquals;</code></p>
-</li>
-</ul>
-<p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
-<p>(проверено 11 марта)</p></div>
+<p><strong>Тесты</strong> - нет</p>
+<p><a href="https://bitbucket.org/shustova_oop/java_phrases">repo</a></p>
+<p>(проверено 19 марта)</p></div>
             
         </div>
 
