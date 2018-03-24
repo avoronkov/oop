@@ -74,7 +74,8 @@ prep petin \
 	git@bitbucket.org:petin_oop/task1.git \
 	git@bitbucket.org:petin_oop/task2.git \
 	git@bitbucket.org:petin_oop/task3.git \
-	git@bitbucket.org:petin_oop/task4.git
+	git@bitbucket.org:petin_oop/task4.git \
+	git@bitbucket.org:petin_oop/jtask1.git
 
 prep pushkov \
 	git@bitbucket.org:pushkov_oop/lab4.git \
@@ -88,7 +89,8 @@ prep razumov \
 	ssh://hg@bitbucket.org/a_razumov_oop/lab3 \
 	ssh://hg@bitbucket.org/a_razumov_oop/lab2 \
 	ssh://hg@bitbucket.org/a_razumov_oop/lab1 \
-	ssh://hg@bitbucket.org/a_razumov_oop/j_lab1
+	ssh://hg@bitbucket.org/a_razumov_oop/j_lab1 \
+	ssh://hg@bitbucket.org/a_razumov_oop/j_lab2
 
 prep shustova \
 	git@bitbucket.org:shustova_oop/room_with_project.git \
