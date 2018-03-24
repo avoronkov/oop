@@ -12,7 +12,7 @@
 	<title>Razumov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -142,6 +142,12 @@
             
 <li >
     <a href="../grigorovich/">Grigorovich</a>
+</li>
+
+        
+            
+<li >
+    <a href="../petin/">Petin</a>
 </li>
 
         
@@ -546,7 +552,7 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../grigorovich/">
+                        <a rel="next" href="../petin/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
@@ -598,7 +604,7 @@
 <p>[Ok] <code>bf</code> и <code>reader</code> не закроются в случае исключения в <code>text2word</code></p>
 </li>
 <li>
-<p>Если <code>bf</code> и <code>reader</code> закрываются в finally, то их не надо закрывать в <code>try{}</code></p>
+<p>[Ok] Если <code>bf</code> и <code>reader</code> закрываются в finally, то их не надо закрывать в <code>try{}</code></p>
 </li>
 <li>
 <p>[Ok] Не работает для случая</p>
@@ -608,20 +614,28 @@
 </code></pre>
 
 <ul>
-<li>добавить build.xml</li>
+<li>
+<p>[Ok] добавить build.xml</p>
+</li>
+<li>
+<p>Не работают команды <code>ant jar</code> и <code>ant test</code></p>
+</li>
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
 <li>
-<p>[X] Неправильные импорты. Вместо <code>org.junit.jupiter.api.Test</code> должен использоваться <code>org.junit.Test</code>,
+<p>[Ok] Неправильные импорты. Вместо <code>org.junit.jupiter.api.Test</code> должен использоваться <code>org.junit.Test</code>,
 а вместо <code>org.junit.jupiter.api.Assertions.*</code> - <code>org.junit.Assert.*</code> (+ соответствующие классы и методы должны быть публичными).</p>
 </li>
 <li>
-<p><code>import static org.junit.Assert.*;</code> вместо <code>import static org.junit.jupiter.api.Assertions.assertEquals;</code></p>
+<p>[Ok] <code>import static org.junit.Assert.*;</code> вместо <code>import static org.junit.jupiter.api.Assertions.assertEquals;</code></p>
+</li>
+<li>
+<p>Для автоматического запуска тестов класс <code>TestForText</code> нужно переименовать в <code>TextTest</code>. (В остальном тесты работают)</p>
 </li>
 </ul>
 <p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
-<p>(проверено 11 марта)</p></div>
+<p>(проверено 24 марта)</p></div>
             
         </div>
 
