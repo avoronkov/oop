@@ -15,3 +15,17 @@
 [repo](https://bitbucket.org/chmil_oop/lab1)
 
 (проверено 11 марта)
+
+## Stack PL (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Добавить build.xml
+
+- Сделать чтение из stdin ([условие](/2018.java/task2/) обновлено).
+
+**Тесты** - Ok
+
+[repo](https://bitbucket.org/chmil_oop/lab2)
+
+(проверено 24 марта)

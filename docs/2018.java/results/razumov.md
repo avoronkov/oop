@@ -39,3 +39,17 @@
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 
 (проверено 24 марта)
+
+## Stack PL (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Для загрузки операции нужно использовать `Class.forName`
+
+- build.xml не поддерживает команды `ant jar` и `ant test`
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/a_razumov_oop/j_lab2)
+
+(проверено 24 марта)

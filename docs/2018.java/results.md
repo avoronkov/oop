@@ -6,7 +6,7 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/bastrykina/)
 
-[stack pl - в процессе](/2018.java/results/bastrykina/#2)
+[Stack PL - в процессе](/2018.java/results/bastrykina/#2)
 
 [charts](/charts.16203/bastrykina/index.html)
 
@@ -54,6 +54,8 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/razumov/)
 
+[Stack PL - в процессе](/2018.java/results/razumov/#2)
+
 [charts](/charts.16203/razumov/index.html)
 
 
@@ -65,6 +67,8 @@
 ## Чмиль Александр
 
 [Подсчёт фраз - Ok](/2018.java/results/chmil/)
+
+[Stack PL - Ok](/2018.java/results/chmil/#2)
 
 [charts](/charts.16203/chmil/index.html)
 
@@ -83,6 +87,8 @@
 Доклад "Stream API" +
 
 [Подсчёт слов - Ok](/2018.java/results/yashin/)
+
+[Stack PL - Ok](/2018.java/results/yashin/#2)
 
 [charts](/charts.16203/yashin/index.html)
 

@@ -19,8 +19,26 @@
 
 **Код** - в процессе.
 
+- NPE:
+```
+/jlab2$ java -jar build/jar/Lab.jar
+5 2 + print
+
+Exception in thread "main" java.lang.ExceptionInInitializerError
+        at nsu.g16203.yashin.lab2.Main.lines2Chain(Unknown Source)
+        at nsu.g16203.yashin.lab2.Main.main(Unknown Source)
+Caused by: java.lang.NullPointerException
+        at java.io.Reader.<init>(java.base@9-internal/Reader.java:78)
+        at java.io.InputStreamReader.<init>(java.base@9-internal/InputStreamReader.java:72)
+        at nsu.g16203.yashin.lab2.Factory.<init>(Unknown Source)
+        at nsu.g16203.yashin.lab2.Factory.<clinit>(Unknown Source)
+        ... 2 more
+```
+
+- Отсутствует build.xml
+
 **Тесты** - нет.
 
 [repo](https://bitbucket.org/yashin_oop/jlab2)
 
-(проверено 19 фев)
+(проверено 24 марта)
