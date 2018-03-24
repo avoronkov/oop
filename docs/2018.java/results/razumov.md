@@ -16,23 +16,26 @@
 
 - [Ok] `bf` и `reader` не закроются в случае исключения в `text2word`
 
-- Если `bf` и `reader` закрываются в finally, то их не надо закрывать в `try{}`
+- [Ok] Если `bf` и `reader` закрываются в finally, то их не надо закрывать в `try{}`
 
 - [Ok] Не работает для случая
 ```
 Если имя файла не указано, то программа также работает со стандартным потоком ввода.
 ```
 
-- добавить build.xml
+- [Ok] добавить build.xml
 
+- Не работают команды `ant jar` и `ant test`
 
 **Тесты** - в процессе.
 
-- [X] Неправильные импорты. Вместо `org.junit.jupiter.api.Test` должен использоваться `org.junit.Test`,
+- [Ok] Неправильные импорты. Вместо `org.junit.jupiter.api.Test` должен использоваться `org.junit.Test`,
 а вместо `org.junit.jupiter.api.Assertions.*` - `org.junit.Assert.*` (+ соответствующие классы и методы должны быть публичными).
 
-- `import static org.junit.Assert.*;` вместо `import static org.junit.jupiter.api.Assertions.assertEquals;`
+- [Ok] `import static org.junit.Assert.*;` вместо `import static org.junit.jupiter.api.Assertions.assertEquals;`
+
+- Для автоматического запуска тестов класс `TestForText` нужно переименовать в `TextTest`. (В остальном тесты работают)
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 
-(проверено 11 марта)
+(проверено 24 марта)

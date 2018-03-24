@@ -24,7 +24,11 @@ java.util.NoSuchElementException: No line found
 Format error!
 ```
 
-**Тесты** - нет.
+- `FileInputStream fstr` не закрывается.
+
+- Команды `ant jar` и `ant test` не работают.
+
+**Тесты** - в процессе.
 
 [repo](https://bitbucket.org/grigorovich_oop/tasks)
 

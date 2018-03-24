@@ -6,7 +6,7 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/bastrykina/)
 
-[stack pl - в процессе](/charts.16203/bastrykina/index.html#2)
+[stack pl - в процессе](/2018.java/results/bastrykina/#2)
 
 [charts](/charts.16203/bastrykina/index.html)
 
@@ -19,9 +19,11 @@
 
 [charts](/charts.16203/voloshina/index.html)
 
+
 ## Галиос Максим
 
 [charts](/charts.16203/galios/index.html)
+
 
 ## Григорович Артём
 
@@ -31,11 +33,15 @@
 
 [charts](/charts.16203/grigorovich/index.html)
 
+
 ## Петин Кирилл
 
 Доклад "Наследование" +
 
+[Подсчёт фраз - в процессе](/2018.java/results/petin/)
+
 [charts](/charts.16203/petin/index.html)
+
 
 ## Пушков Федор
 
@@ -50,15 +56,18 @@
 
 [charts](/charts.16203/razumov/index.html)
 
+
 ## Снегирева Екатерина
 
 [charts](/charts.16203/snegireva/index.html)
+
 
 ## Чмиль Александр
 
 [Подсчёт фраз - Ok](/2018.java/results/chmil/)
 
 [charts](/charts.16203/chmil/index.html)
+
 
 ## Шустова Марина
 
@@ -68,6 +77,7 @@
 
 [charts](/charts.16203/shustova/index.html)
 
+
 ## Яшин Артём
 
 Доклад "Stream API" +
@@ -76,6 +86,7 @@
 
 [charts](/charts.16203/yashin/index.html)
 
-# Суммарная активность
+
+## Суммарная активность
 
 [charts](/charts.16203/_all/index.html)
