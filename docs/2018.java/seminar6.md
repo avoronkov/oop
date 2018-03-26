@@ -11,16 +11,17 @@ build.xml for ant
 	<property name="classes.dir" value="${build.dir}/classes"/>
 	<property name="jar.dir"     value="${build.dir}/jar"/>
 
-	<property name="test.src.dir"     value="src"/>
+	<property name="test.src.dir"   value="src"/>
 	<property name="test.build.dir" value="${build.dir}/test"/>
 
+	<property name="lib.dir" value="lib/"/>
 
-	<property name="jar.path"     value="${jar.dir}/Lab.jar"/>
+	<property name="jar.path"    value="${jar.dir}/Lab.jar"/>
 	<property name="main.class"  value="Main" />
 
 	<path id="classpath.test">
-		<pathelement location="${user.home}/dev/java/junit/junit-4.12.jar"/>
-		<pathelement location="${user.home}/dev/java/junit/hamcrest-core-1.3.jar"/>
+		<pathelement location="${lib.dir}/junit-4.12.jar"/>
+		<pathelement location="${lib.dir}/hamcrest-core-1.3.jar"/>
 		<pathelement location="${classes.dir}"/>
 	</path>
 
@@ -81,3 +82,5 @@ build.xml for ant
 - `ant jar` дожен собирать jar-файл
 
 - `ant test` должен собирать и запускать тесты.
+
+

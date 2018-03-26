@@ -9,6 +9,8 @@ pages:
             - 'Task 1': 2018.java/task1.md
             - 'Task 2': 2018.java/task2.md
             - 'Task 3': 2018.java/task3.md
+            - 'Task 4': 2018.java/task4.md
+            - 'Task 5': 2018.java/task5.md
         - Results:
             - Overall: 2018.java/results.md
             - Details:
@@ -21,6 +23,7 @@ pages:
                 - 'Voloshina': 2018.java/results/voloshina.md
                 - 'Yashin': 2018.java/results/yashin.md
     - Extras:
+        - 'Requirements': 2018.java/requirements.md
         - 'Acceptance': bitbucket.md
         - 'Using namespaces': using-namespaces.md
         - 'CMake': cmake.md
