@@ -12,3 +12,5 @@ lib/
 tests/...
 ```
 (тесты могут находиться как в отдельной директории, так и в директории `src/`)
+
+Скачать junit.jar и hamcrest.jar можно скачать [здесь](https://github.com/junit-team/junit4/wiki/Download-and-Install).

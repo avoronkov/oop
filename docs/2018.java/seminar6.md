@@ -76,6 +76,8 @@ build.xml for ant
 
 Значение property `main.class` должно указывать на запускаемый класс, содержащий метод `main`.
 
+Скачать junit.jar и hamcrest.jar можно скачать [здесь](https://github.com/junit-team/junit4/wiki/Download-and-Install).
+
 Что должно работать?
 --------------------
 
