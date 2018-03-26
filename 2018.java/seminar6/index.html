@@ -107,6 +107,18 @@
 </li>
 
         
+            
+<li >
+    <a href="../task4/">Task 4</a>
+</li>
+
+        
+            
+<li >
+    <a href="../task5/">Task 5</a>
+</li>
+
+        
     </ul>
   </li>
 
@@ -191,6 +203,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../requirements/">Requirements</a>
+</li>
+
                         
                             
 <li >
@@ -594,16 +612,17 @@
     &lt;property name=&quot;classes.dir&quot; value=&quot;${build.dir}/classes&quot;/&gt;
     &lt;property name=&quot;jar.dir&quot;     value=&quot;${build.dir}/jar&quot;/&gt;
 
-    &lt;property name=&quot;test.src.dir&quot;     value=&quot;src&quot;/&gt;
+    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
     &lt;property name=&quot;test.build.dir&quot; value=&quot;${build.dir}/test&quot;/&gt;
 
+    &lt;property name=&quot;lib.dir&quot; value=&quot;lib/&quot;/&gt;
 
-    &lt;property name=&quot;jar.path&quot;     value=&quot;${jar.dir}/Lab.jar&quot;/&gt;
+    &lt;property name=&quot;jar.path&quot;    value=&quot;${jar.dir}/Lab.jar&quot;/&gt;
     &lt;property name=&quot;main.class&quot;  value=&quot;Main&quot; /&gt;
 
     &lt;path id=&quot;classpath.test&quot;&gt;
-        &lt;pathelement location=&quot;${user.home}/dev/java/junit/junit-4.12.jar&quot;/&gt;
-        &lt;pathelement location=&quot;${user.home}/dev/java/junit/hamcrest-core-1.3.jar&quot;/&gt;
+        &lt;pathelement location=&quot;${lib.dir}/junit-4.12.jar&quot;/&gt;
+        &lt;pathelement location=&quot;${lib.dir}/hamcrest-core-1.3.jar&quot;/&gt;
         &lt;pathelement location=&quot;${classes.dir}&quot;/&gt;
     &lt;/path&gt;
 
