@@ -4,9 +4,31 @@
 
 **Код** - в процессе.
 
-- Не работают дефолтные значения для `-n` и `-m` (то есть, когда они явно не указаны).
+- [Ok] Не работают дефолтные значения для `-n` и `-m` (то есть, когда они явно не указаны).
 
-**Тесты** - нет.
+- Когда аргументы не указаны, программа должна работать со стандартным потоком ввода.
+
+- Ошибки в build.xml. `src.dir` и `test.src.dir` должны указывать на `src`, так как там корень дерева исходных файлов.
+Неправильно указан `Main-Class` для jar.
+Неправильный pathelement location для тестов.
+```
+-    <property name="src.dir"     value="src/classes"/>
++    <property name="src.dir"     value="src/"/>
+
+-    <property name="test.src.dir"   value="src/tests"/>
++    <property name="test.src.dir"   value="src/"/>
+
+-    <property name="main.class"  value="PhrasesCounter" />
++    <property name="main.class"  value="classes.PhrasesCounter" />
+
+-                <attribute name="PhrasesCounter" value="${main.class}"/>
++                <attribute name="Main-Class" value="${main.class}"/>
+
+-                <pathelement location="${test.build.dir}/tests"/>
++                <pathelement location="${test.build.dir}"/>
+```
+
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/voloshina_oop/java)
 

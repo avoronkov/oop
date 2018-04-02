@@ -25,7 +25,7 @@
 
 - [Ok] добавить build.xml
 
-- Не работают команды `ant jar` и `ant test`
+- [Ok] Не работают команды `ant jar` и `ant test`
 
 **Тесты** - в процессе.
 
@@ -34,7 +34,13 @@
 
 - [Ok] `import static org.junit.Assert.*;` вместо `import static org.junit.jupiter.api.Assertions.assertEquals;`
 
-- Для автоматического запуска тестов класс `TestForText` нужно переименовать в `TextTest`. (В остальном тесты работают)
+- [Ok] Для автоматического запуска тестов класс `TestForText` нужно переименовать в `TextTest`. (В остальном тесты работают)
+
+- Нужно поменять в build.xml:
+```
+-                <fileset dir="${test.src.dir}" includes="**/*Test.java" />
++                <fileset dir="${test.build.dir}" includes="**/*Test.class" />
+```
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 
