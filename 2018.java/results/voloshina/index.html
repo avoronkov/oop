@@ -12,7 +12,7 @@
 	<title>Voloshina - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -604,9 +604,35 @@
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Не работают дефолтные значения для <code>-n</code> и <code>-m</code> (то есть, когда они явно не указаны).</li>
+<li>
+<p>[Ok] Не работают дефолтные значения для <code>-n</code> и <code>-m</code> (то есть, когда они явно не указаны).</p>
+</li>
+<li>
+<p>Когда аргументы не указаны, программа должна работать со стандартным потоком ввода.</p>
+</li>
+<li>
+<p>Ошибки в build.xml. <code>src.dir</code> и <code>test.src.dir</code> должны указывать на <code>src</code>, так как там корень дерева исходных файлов.
+Неправильно указан <code>Main-Class</code> для jar.
+Неправильный pathelement location для тестов.</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<pre><code>-    &lt;property name=&quot;src.dir&quot;     value=&quot;src/classes&quot;/&gt;
++    &lt;property name=&quot;src.dir&quot;     value=&quot;src/&quot;/&gt;
+
+-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src/tests&quot;/&gt;
++    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src/&quot;/&gt;
+
+-    &lt;property name=&quot;main.class&quot;  value=&quot;PhrasesCounter&quot; /&gt;
++    &lt;property name=&quot;main.class&quot;  value=&quot;classes.PhrasesCounter&quot; /&gt;
+
+-                &lt;attribute name=&quot;PhrasesCounter&quot; value=&quot;${main.class}&quot;/&gt;
++                &lt;attribute name=&quot;Main-Class&quot; value=&quot;${main.class}&quot;/&gt;
+
+-                &lt;pathelement location=&quot;${test.build.dir}/tests&quot;/&gt;
++                &lt;pathelement location=&quot;${test.build.dir}&quot;/&gt;
+</code></pre>
+
+<p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/voloshina_oop/java">repo</a></p>
 <p>(проверено 10 марта)</p></div>
             

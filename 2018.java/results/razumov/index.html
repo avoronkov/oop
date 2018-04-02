@@ -12,7 +12,7 @@
 	<title>Razumov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -638,7 +638,7 @@
 <p>[Ok] добавить build.xml</p>
 </li>
 <li>
-<p>Не работают команды <code>ant jar</code> и <code>ant test</code></p>
+<p>[Ok] Не работают команды <code>ant jar</code> и <code>ant test</code></p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
@@ -651,9 +651,16 @@
 <p>[Ok] <code>import static org.junit.Assert.*;</code> вместо <code>import static org.junit.jupiter.api.Assertions.assertEquals;</code></p>
 </li>
 <li>
-<p>Для автоматического запуска тестов класс <code>TestForText</code> нужно переименовать в <code>TextTest</code>. (В остальном тесты работают)</p>
+<p>[Ok] Для автоматического запуска тестов класс <code>TestForText</code> нужно переименовать в <code>TextTest</code>. (В остальном тесты работают)</p>
+</li>
+<li>
+<p>Нужно поменять в build.xml:</p>
 </li>
 </ul>
+<pre><code>-                &lt;fileset dir=&quot;${test.src.dir}&quot; includes=&quot;**/*Test.java&quot; /&gt;
++                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Test.class&quot; /&gt;
+</code></pre>
+
 <p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
 <p>(проверено 24 марта)</p>
 <h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
