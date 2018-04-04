@@ -45,6 +45,10 @@
 
 ## Пушков Федор
 
+Доклад "Коллекции" +
+
+[Подсчёт фраз - в процессе](/2018.java/results/pushkov/)
+
 [charts](/charts.16203/pushkov/index.html)
 
 
@@ -65,6 +69,8 @@
 
 
 ## Чмиль Александр
+
+Доклад "Try-with-resource" +
 
 [Подсчёт фраз - Ok](/2018.java/results/chmil/)
 
