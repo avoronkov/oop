@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
 
-	<title>Petin - OOP Practice Docs</title>
+	<title>Pushkov - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -158,14 +158,14 @@
 
         
             
-<li class="active">
-    <a href="./">Petin</a>
+<li >
+    <a href="../petin/">Petin</a>
 </li>
 
         
             
-<li >
-    <a href="../pushkov/">Pushkov</a>
+<li class="active">
+    <a href="./">Pushkov</a>
 </li>
 
         
@@ -576,12 +576,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../grigorovich/">
+                        <a rel="next" href="../petin/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../pushkov/">
+                        <a rel="prev" href="../razumov/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -597,7 +597,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#_1">Петин Кирилл</a></li>
+        <li class="main active"><a href="#_1">Пушков Федор</a></li>
         
             <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
@@ -606,24 +606,23 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="_1">Петин Кирилл</h1>
+<h1 id="_1">Пушков Федор</h1>
 <h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - В процессе.</p>
+<p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Если в <code>r.printPhrases(in,out,length.value,repeats.value);</code> вылетит исключение, то <code>in</code> и <code>out</code> не закроются.</p>
+<p><code>BufferedReader bf</code> не закрывается (должен использоваться try-with-resource)</p>
 </li>
 <li>
-<p>[Ok] интеграционный тест пройден</p>
+<p><code>build.xml</code> отсутствует.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - Ok.</p>
-<pre><code>   [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.047 sec
-   [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.047 sec
-</code></pre>
-
-<p><a href="https://bitbucket.org/petin_oop/jtask1">repo</a></p>
-<p>(проверено 24 марта)</p></div>
+<p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Тесты написаны на JUnit5. Это допустимо, если в build.xml будут прописаны соответствующие зависимости, и <code>ant test</code> исполняет соответствующие тесты.</li>
+</ul>
+<p><a href="https://bitbucket.org/pushkov_oop/lab1_java">repo</a></p>
+<p>(обновлено 4 апр)</p></div>
             
         </div>
 
