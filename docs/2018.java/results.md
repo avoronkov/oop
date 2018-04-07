@@ -40,7 +40,7 @@
 
 Доклад "Наследование" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/petin/)
+[Подсчёт фраз - Ok](/2018.java/results/petin/)
 
 [charts](/charts.16203/petin/index.html)
 
@@ -51,8 +51,7 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/pushkov/)
 
-[charts](/charts.16203/pushkov/index.html)
-
+[charts](/charts.16203/pushkov/index.html) 
 
 ## Разумов Антон
 
