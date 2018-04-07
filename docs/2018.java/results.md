@@ -31,6 +31,8 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/grigorovich/)
 
+[Stack PL - в процессе](/2018.java/results/grigorovich/#2)
+
 [charts](/charts.16203/grigorovich/index.html)
 
 
