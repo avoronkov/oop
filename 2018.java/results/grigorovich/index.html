@@ -12,7 +12,7 @@
 	<title>Grigorovich - OOP Practice Docs</title>
 
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="../../../css/highlight.css">
 
@@ -601,6 +601,8 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
+            <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
+        
     
     </ul>
 </div></div>
@@ -637,15 +639,39 @@
 
 <ul>
 <li>
-<p><code>FileInputStream fstr</code> не закрывается.</p>
+<p>[X] <code>FileInputStream fstr</code> не закрывается.</p>
 </li>
 <li>
-<p>Команды <code>ant jar</code> и <code>ant test</code> не работают.</p>
+<p><code>fstr</code> создается и тут же закрывается:</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - в процессе.</p>
+<pre><code>                    try {
+                        fstr = new FileInputStream(new File(ar[0]));
+                    } catch (Exception ex) {
+                        ex.printStackTrace();
+                    }   
+                    finally {
+                        if (fstr != null) {
+                            try {
+                                fstr.close();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }   
+                        }   
+                    }   
+</code></pre>
+
+<ul>
+<li>[Ok] Команды <code>ant jar</code> и <code>ant test</code> не работают.</li>
+</ul>
+<p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/grigorovich_oop/tasks">repo</a></p>
-<p>(проверено 4 марта)</p></div>
+<p>(проверено 7 апр)</p>
+<h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
+<p><strong>Код</strong> - в процессе.</p>
+<p><strong>Тесты</strong> - нет.</p>
+<p><a href="https://bitbucket.org/grigorovich_oop/tasks">repo</a></p>
+<p>(проверено 7 апр)</p></div>
             
         </div>
 
