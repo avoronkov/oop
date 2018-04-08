@@ -1,8 +1,8 @@
 # Разумов Антон
 
-## Подсчёт фраз (Задача 1). В процессе.
+## Подсчёт фраз (Задача 1). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Имена классов в java должны начинаться с большой буквы (`lab1`)
 
@@ -27,7 +27,7 @@
 
 - [Ok] Не работают команды `ant jar` и `ant test`
 
-**Тесты** - в процессе.
+**Тесты** - Ok.
 
 - [Ok] Неправильные импорты. Вместо `org.junit.jupiter.api.Test` должен использоваться `org.junit.Test`,
 а вместо `org.junit.jupiter.api.Assertions.*` - `org.junit.Assert.*` (+ соответствующие классы и методы должны быть публичными).
@@ -36,7 +36,7 @@
 
 - [Ok] Для автоматического запуска тестов класс `TestForText` нужно переименовать в `TextTest`. (В остальном тесты работают)
 
-- Нужно поменять в build.xml:
+- [Ok] Нужно поменять в build.xml:
 ```
 -                <fileset dir="${test.src.dir}" includes="**/*Test.java" />
 +                <fileset dir="${test.build.dir}" includes="**/*Test.class" />
@@ -44,7 +44,7 @@
 
 [repo](https://bitbucket.org/a_razumov_oop/lab3/overview)
 
-(проверено 24 марта)
+(проверено 8 апреля)
 
 ## Stack PL (Задача 2). В процессе.
 
@@ -52,10 +52,24 @@
 
 - Для загрузки операции нужно использовать `Class.forName`
 
-- build.xml не поддерживает команды `ant jar` и `ant test`
+- [Ok] build.xml не поддерживает команды `ant jar` и `ant test`
+
+- Не работает программа `5 dup [ print 1 - dup ]`:
+```
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: not enough values in stack
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+```
 
 **Тесты** - нет.
 
 [repo](https://bitbucket.org/a_razumov_oop/j_lab2)
 
-(проверено 24 марта)
+(проверено 8 арпеля)

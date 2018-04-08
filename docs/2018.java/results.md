@@ -57,7 +57,7 @@
 
 Доклад "Интерфейсы" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/razumov/)
+[Подсчёт фраз - Ok](/2018.java/results/razumov/)
 
 [Stack PL - в процессе](/2018.java/results/razumov/#2)
 
