@@ -599,7 +599,7 @@
     
         <li class="main active"><a href="#_1">Разумов Антон</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
             <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
         
@@ -609,8 +609,8 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Разумов Антон</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Имена классов в java должны начинаться с большой буквы (<code>lab1</code>)</p>
@@ -647,7 +647,7 @@
 <p>[Ok] Не работают команды <code>ant jar</code> и <code>ant test</code></p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - в процессе.</p>
+<p><strong>Тесты</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Неправильные импорты. Вместо <code>org.junit.jupiter.api.Test</code> должен использоваться <code>org.junit.Test</code>,
@@ -660,7 +660,7 @@
 <p>[Ok] Для автоматического запуска тестов класс <code>TestForText</code> нужно переименовать в <code>TextTest</code>. (В остальном тесты работают)</p>
 </li>
 <li>
-<p>Нужно поменять в build.xml:</p>
+<p>[Ok] Нужно поменять в build.xml:</p>
 </li>
 </ul>
 <pre><code>-                &lt;fileset dir=&quot;${test.src.dir}&quot; includes=&quot;**/*Test.java&quot; /&gt;
@@ -668,7 +668,7 @@
 </code></pre>
 
 <p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
-<p>(проверено 24 марта)</p>
+<p>(проверено 8 апреля)</p>
 <h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
@@ -676,12 +676,27 @@
 <p>Для загрузки операции нужно использовать <code>Class.forName</code></p>
 </li>
 <li>
-<p>build.xml не поддерживает команды <code>ant jar</code> и <code>ant test</code></p>
+<p>[Ok] build.xml не поддерживает команды <code>ant jar</code> и <code>ant test</code></p>
+</li>
+<li>
+<p>Не работает программа <code>5 dup [ print 1 - dup ]</code>:</p>
 </li>
 </ul>
+<pre><code>Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: not enough values in stack
+Error: unknown command
+Error: unknown command
+Error: unknown command
+Error: unknown command
+</code></pre>
+
 <p><strong>Тесты</strong> - нет.</p>
 <p><a href="https://bitbucket.org/a_razumov_oop/j_lab2">repo</a></p>
-<p>(проверено 24 марта)</p></div>
+<p>(проверено 8 арпеля)</p></div>
             
         </div>
 
