@@ -32,7 +32,11 @@ run_test()
 	echo "[OK] test $n"
 }
 
-run_test 'factorial 5' '< ./testdata/input01.txt' './testdata/output01.txt'
+run_test 'cycle print' '< ./testdata/input01.txt' './testdata/output01.txt'
+
+run_test 'factorial 5' '< ./testdata/input02.txt' './testdata/output02.txt'
+
+run_test '2 + 3' '< ./testdata/input03.txt' './testdata/output03.txt'
 
 
 if [ "$err" != 0 ]; then
