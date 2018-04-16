@@ -42,3 +42,13 @@ Caused by: java.lang.NullPointerException
 [repo](https://bitbucket.org/yashin_oop/jlab2)
 
 (проверено 24 марта)
+
+## Сапер (Задача 3). В процессе.
+
+**Text UI** - ок.
+
+**GUI** - в процессе.
+
+[repo](https://bitbucket.org/yashin_oop/jlab3)
+
+(проверено 16 апр)

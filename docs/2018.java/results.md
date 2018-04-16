@@ -97,6 +97,8 @@
 
 [Stack PL - Ok](/2018.java/results/yashin/#2)
 
+[Mineswapper - в процессе](/2018.java/results/yashin/#3)
+
 [charts](/charts.16203/yashin/index.html)
 
 
