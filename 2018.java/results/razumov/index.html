@@ -694,9 +694,42 @@ Error: unknown command
 Error: unknown command
 </code></pre>
 
-<p><strong>Тесты</strong> - нет.</p>
+<ul>
+<li>Нужно включить properties в jar, compile (примерно так):</li>
+</ul>
+<pre><code>    &lt;target name=&quot;compile&quot;&gt;
+        &lt;mkdir dir=&quot;${classes.dir}&quot;/&gt;
+        &lt;fileset dir=&quot;${src.dir}&quot;&gt;
+            &lt;include name=&quot;**/*.txt&quot;/&gt;
+        &lt;/fileset&gt;
+        &lt;javac srcdir=&quot;${src.dir}&quot; destdir=&quot;${classes.dir}&quot;&gt;
+            &lt;classpath refid=&quot;classpath.test&quot;/&gt;
+        &lt;/javac&gt;
+    &lt;/target&gt;
+
+    &lt;target name=&quot;jar&quot; depends=&quot;compile&quot;&gt;
+        &lt;mkdir dir=&quot;${jar.dir}&quot;/&gt;
+        &lt;jar destfile=&quot;${jar.path}&quot; basedir=&quot;${classes.dir}&quot;&gt;
+            &lt;manifest&gt;
+                &lt;attribute name=&quot;Main-Class&quot; value=&quot;${main.class}&quot;/&gt;
+            &lt;/manifest&gt;
+            &lt;fileset dir=&quot;${src.dir}&quot;&gt;
+                &lt;include name=&quot;**/*.txt&quot;/&gt;
+            &lt;/fileset&gt;
+        &lt;/jar&gt;
+    &lt;/target&gt;
+</code></pre>
+
+<p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Исправить в build.xml</li>
+</ul>
+<pre><code>-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
++    &lt;property name=&quot;test.src.dir&quot;   value=&quot;tests&quot;/&gt;
+</code></pre>
+
 <p><a href="https://bitbucket.org/a_razumov_oop/j_lab2">repo</a></p>
-<p>(проверено 8 арпеля)</p></div>
+<p>(проверено 16 апр)</p></div>
             
         </div>
 
