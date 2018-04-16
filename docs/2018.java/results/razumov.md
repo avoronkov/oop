@@ -68,8 +68,39 @@ Error: unknown command
 Error: unknown command
 ```
 
-**Тесты** - нет.
+- Нужно включить properties в jar, compile (примерно так):
+```
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <fileset dir="${src.dir}">
+            <include name="**/*.txt"/>
+        </fileset>
+        <javac srcdir="${src.dir}" destdir="${classes.dir}">
+            <classpath refid="classpath.test"/>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="${jar.dir}"/>
+        <jar destfile="${jar.path}" basedir="${classes.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}"/>
+            </manifest>
+            <fileset dir="${src.dir}">
+                <include name="**/*.txt"/>
+            </fileset>
+        </jar>
+    </target>
+```
+
+**Тесты** - в процессе.
+
+- Исправить в build.xml
+```
+-    <property name="test.src.dir"   value="src"/>
++    <property name="test.src.dir"   value="tests"/>
+```
 
 [repo](https://bitbucket.org/a_razumov_oop/j_lab2)
 
-(проверено 8 арпеля)
+(проверено 16 апр)
