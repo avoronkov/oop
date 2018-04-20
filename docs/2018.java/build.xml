@@ -1,11 +1,3 @@
-Семинар 6 (12.03.2018)
-======================
-
-build.xml for ant
------------------
-(можно скачать [здесь](build.xml))
-
-```
 <project>
 	<property name="src.dir"     value="src"/>
 	<property name="build.dir"   value="build/"/>
@@ -70,20 +62,3 @@ build.xml for ant
 		</junit>
 	</target>
 </project>
-```
-
-Что необходимо поменять?
-------------------------
-
-Значение property `main.class` должно указывать на запускаемый класс, содержащий метод `main`.
-
-Скачать junit.jar и hamcrest.jar можно скачать [здесь](https://github.com/junit-team/junit4/wiki/Download-and-Install).
-
-Что должно работать?
---------------------
-
-- `ant jar` дожен собирать jar-файл
-
-- `ant test` должен собирать и запускать тесты.
-
-
