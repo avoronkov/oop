@@ -14,3 +14,7 @@ tests/...
 (тесты могут находиться как в отдельной директории, так и в директории `src/`)
 
 Скачать junit.jar и hamcrest.jar можно скачать [здесь](https://github.com/junit-team/junit4/wiki/Download-and-Install).
+
+## Hello project with tests.
+
+Пример helloworld проекта с тестами можно посмотреть [здесь](https://github.com/avoronkov/java-examples/tree/master/hello)
