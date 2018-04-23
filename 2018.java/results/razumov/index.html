@@ -601,7 +601,7 @@
         
             <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
-            <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
+            <li><a href="#stack-pl-2-ok">Stack PL (Задача 2). Ok.</a></li>
         
     
     </ul>
@@ -669,8 +669,8 @@
 
 <p><a href="https://bitbucket.org/a_razumov_oop/lab3/overview">repo</a></p>
 <p>(проверено 8 апреля)</p>
-<h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="stack-pl-2-ok">Stack PL (Задача 2). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Для загрузки операции нужно использовать <code>Class.forName</code></p>
@@ -679,7 +679,7 @@
 <p>[Ok] build.xml не поддерживает команды <code>ant jar</code> и <code>ant test</code></p>
 </li>
 <li>
-<p>Не работает программа <code>5 dup [ print 1 - dup ]</code>:</p>
+<p>[Ok] Не работает программа <code>5 dup [ print 1 - dup ]</code>:</p>
 </li>
 </ul>
 <pre><code>Error: unknown command
@@ -695,7 +695,7 @@ Error: unknown command
 </code></pre>
 
 <ul>
-<li>Нужно включить properties в jar, compile (примерно так):</li>
+<li>[Ok] Нужно включить properties в jar, compile (примерно так):</li>
 </ul>
 <pre><code>    &lt;target name=&quot;compile&quot;&gt;
         &lt;mkdir dir=&quot;${classes.dir}&quot;/&gt;
@@ -720,9 +720,16 @@ Error: unknown command
     &lt;/target&gt;
 </code></pre>
 
-<p><strong>Тесты</strong> - в процессе.</p>
 <ul>
-<li>Исправить в build.xml</li>
+<li>[Ok] Ошибка в build.xml</li>
+</ul>
+<pre><code>-    &lt;property name=&quot;JLab2.class&quot;  value=&quot;main.Jlab2&quot; /&gt;
++    &lt;property name=&quot;JLab2.class&quot;  value=&quot;main.JLab2&quot; /&gt;
+</code></pre>
+
+<p><strong>Тесты</strong> - Ok.</p>
+<ul>
+<li>[Ok] Исправить в build.xml</li>
 </ul>
 <pre><code>-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
 +    &lt;property name=&quot;test.src.dir&quot;   value=&quot;tests&quot;/&gt;
