@@ -605,6 +605,8 @@
         
             <li><a href="#_2">Что должно работать?</a></li>
         
+            <li><a href="#_3">Исправлена ошибка</a></li>
+        
     
     </ul>
 </div></div>
@@ -672,7 +674,7 @@
             &lt;/classpath&gt;
             &lt;formatter type=&quot;brief&quot; usefile=&quot;false&quot; /&gt;
             &lt;batchtest&gt;
-                &lt;fileset dir=&quot;${test.src.dir}&quot; includes=&quot;**/*Test.java&quot; /&gt;
+                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Test.class&quot; /&gt;
             &lt;/batchtest&gt;
         &lt;/junit&gt;
     &lt;/target&gt;
@@ -690,7 +692,14 @@
 <li>
 <p><code>ant test</code> должен собирать и запускать тесты.</p>
 </li>
-</ul></div>
+</ul>
+<h2 id="_3">Исправлена ошибка</h2>
+<p>в build.xml:</p>
+<pre><code>            &lt;batchtest&gt;
+-               &lt;fileset dir=&quot;${test.src.dir}&quot; includes=&quot;**/*Test.java&quot; /&gt;
++               &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Test.class&quot; /&gt;
+            &lt;/batchtest&gt;
+</code></pre></div>
             
         </div>
 
