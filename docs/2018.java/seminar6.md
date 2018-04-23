@@ -65,7 +65,7 @@ build.xml for ant
 			</classpath>
 			<formatter type="brief" usefile="false" />
 			<batchtest>
-				<fileset dir="${test.src.dir}" includes="**/*Test.java" />
+				<fileset dir="${test.build.dir}" includes="**/*Test.class" />
 			</batchtest>
 		</junit>
 	</target>
@@ -86,4 +86,12 @@ build.xml for ant
 
 - `ant test` должен собирать и запускать тесты.
 
-
+Исправлена ошибка
+-----------------
+в build.xml:
+```
+ 			<batchtest>
+-				<fileset dir="${test.src.dir}" includes="**/*Test.java" />
++				<fileset dir="${test.build.dir}" includes="**/*Test.class" />
+ 			</batchtest>
+```
