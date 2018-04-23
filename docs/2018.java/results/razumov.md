@@ -46,15 +46,15 @@
 
 (проверено 8 апреля)
 
-## Stack PL (Задача 2). В процессе.
+## Stack PL (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
 - [Ok] Для загрузки операции нужно использовать `Class.forName`
 
 - [Ok] build.xml не поддерживает команды `ant jar` и `ant test`
 
-- Не работает программа `5 dup [ print 1 - dup ]`:
+- [Ok] Не работает программа `5 dup [ print 1 - dup ]`:
 ```
 Error: unknown command
 Error: unknown command
@@ -68,7 +68,7 @@ Error: unknown command
 Error: unknown command
 ```
 
-- Нужно включить properties в jar, compile (примерно так):
+- [Ok] Нужно включить properties в jar, compile (примерно так):
 ```
     <target name="compile">
         <mkdir dir="${classes.dir}"/>
@@ -93,9 +93,15 @@ Error: unknown command
     </target>
 ```
 
-**Тесты** - в процессе.
+- [Ok] Ошибка в build.xml
+```
+-    <property name="JLab2.class"  value="main.Jlab2" />
++    <property name="JLab2.class"  value="main.JLab2" />
+```
 
-- Исправить в build.xml
+**Тесты** - Ok.
+
+- [Ok] Исправить в build.xml
 ```
 -    <property name="test.src.dir"   value="src"/>
 +    <property name="test.src.dir"   value="tests"/>

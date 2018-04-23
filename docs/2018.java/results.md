@@ -61,7 +61,7 @@
 
 [Подсчёт фраз - Ok](/2018.java/results/razumov/)
 
-[Stack PL - в процессе](/2018.java/results/razumov/#2)
+[Stack PL - Ok](/2018.java/results/razumov/#2)
 
 [charts](/charts.16203/razumov/index.html)
 
