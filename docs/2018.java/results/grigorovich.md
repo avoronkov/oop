@@ -56,8 +56,31 @@ Format error!
 
 **Код** - в процессе.
 
-**Тесты** - нет.
+- Неправильное чтение из Scanner'а:
+```
+         String temp;
+-         while ((temp = sc.nextLine()).length() > 0){
++         while (sc.hasNext()) {
++                 temp = sc.nextLine();
+             text.append(temp).append(" ");
+```
 
+**Тесты** - в процессе.
+
+- Ошибка в build.xml
+```
+	<batchtest>
+-       <fileset dir="${test.src.dir}" includes="**/*Test.java" />
++       <fileset dir="${test.build.dir}" includes="**/*Test.class" />
+	</batchtest>
+```
+
+- ошибка в тестах
+```
+[junit] java.lang.NullPointerException
+[junit]     at nsu.g16203.grigorovich.OperationMaker.init(Unknown Source)
+[junit]     at nsu.g16203.grigorovich.MainTest.interpret(Unknown Source)
+```
 [repo](https://bitbucket.org/grigorovich_oop/tasks)
 
 (проверено 7 апр)
