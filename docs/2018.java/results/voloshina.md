@@ -33,3 +33,15 @@
 [repo](https://bitbucket.org/voloshina_oop/java)
 
 (проверено 10 марта)
+
+## Stack PL (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Вместо `javafx.util.Pair` лучше использовать что-то другое (например, написать свой класс Pair).
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/voloshina_oop/java)
+
+(проверено 23 апреля)

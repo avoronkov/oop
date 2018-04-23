@@ -17,6 +17,8 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/voloshina/)
 
+[Stack PL - в процессе](/2018.java/results/voloshina/#2)
+
 [charts](/charts.16203/voloshina/index.html)
 
 
