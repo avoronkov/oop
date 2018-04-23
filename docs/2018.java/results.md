@@ -79,6 +79,8 @@
 
 [Stack PL - Ok](/2018.java/results/chmil/#2)
 
+[Сапер - Ok](/2018.java/results/chmil/#3)
+
 [charts](/charts.16203/chmil/index.html)
 
 
