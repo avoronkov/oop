@@ -35,3 +35,5 @@
 ["Воспитай в себе обезьяну!" (М. Дорофеев)](https://2016.codefest.ru/lecture/1116)
 
 [Что такое красивый код, и как его писать?](https://habrahabr.ru/post/266969/)
+
+[Презентация "Linux for programmers"](/2018.java/linux-for-programmers.pdf)
