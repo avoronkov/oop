@@ -38,9 +38,17 @@
 
 **Код** - в процессе.
 
-- Вместо `javafx.util.Pair` лучше использовать что-то другое (например, написать свой класс Pair).
+- [Ok] Вместо `javafx.util.Pair` лучше использовать что-то другое (например, написать свой класс Pair).
 
-**Тесты** - нет.
+- Компиляция упала.
+```
+task2/Operations/Loop.java:3: error:
+ package javafx.util does not exist
+     [javac] import javafx.util.Pair;
+	     [javac]                   ^
+```
+
+**Тесты** - в процессе.
 
 [repo](https://bitbucket.org/voloshina_oop/java)
 
