@@ -90,6 +90,8 @@
 
 [Подсчёт фраз - в процессе](/2018.java/results/shustova/)
 
+[Stack PL - в процессе](/2018.java/results/shustova/#2)
+
 [charts](/charts.16203/shustova/index.html)
 
 

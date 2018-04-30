@@ -20,3 +20,14 @@ static Map<String, Integer> mkMap(Vector<String> input){ ... }
 
 (проверено 19 марта)
 
+## Stack PL (Задача 2). В процессе.
+
+**Код** - в процессе.
+
+- Отсутствует `build.xml`
+
+**Тесты** - нет.
+
+[repo](https://bitbucket.org/shustova_oop/calc)
+
+(проверено 30 апреля)
