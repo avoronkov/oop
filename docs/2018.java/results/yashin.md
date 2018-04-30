@@ -35,13 +35,17 @@ Caused by: java.lang.NullPointerException
         ... 2 more
 ```
 
-- Отсутствует build.xml
+- [Ok] Отсутствует build.xml
 
-**Тесты** - нет.
+- Поправить build.xml, подробности [здесь](/2018.java/task2/#ant-buildxml)
+
+- `import jdk.jshell.spi.ExecutionControlProvider;` не нужен и мешает компиляции.
+
+**Тесты** - Ok.
 
 [repo](https://bitbucket.org/yashin_oop/jlab2)
 
-(проверено 24 марта)
+(проверено 30 апреля)
 
 ## Сапер (Задача 3). В процессе.
 

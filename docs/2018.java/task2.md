@@ -130,3 +130,8 @@ dup [ dup dup [ print 1 - dup ] drop 1 - dup ]
 1
 1
 ```
+
+## ant build.xml
+
+Пример [build.xml](/2018.java/task2/build.xml) для второй задачи,
+который копирует файлы ресурсов в Lab.jar и в тесты.
