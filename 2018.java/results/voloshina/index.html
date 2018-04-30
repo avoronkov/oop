@@ -646,9 +646,20 @@
 <h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
-<li>Вместо <code>javafx.util.Pair</code> лучше использовать что-то другое (например, написать свой класс Pair).</li>
+<li>
+<p>[Ok] Вместо <code>javafx.util.Pair</code> лучше использовать что-то другое (например, написать свой класс Pair).</p>
+</li>
+<li>
+<p>Компиляция упала.</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<pre><code>task2/Operations/Loop.java:3: error:
+ package javafx.util does not exist
+     [javac] import javafx.util.Pair;
+         [javac]                   ^
+</code></pre>
+
+<p><strong>Тесты</strong> - в процессе.</p>
 <p><a href="https://bitbucket.org/voloshina_oop/java">repo</a></p>
 <p>(проверено 23 апреля)</p></div>
             
