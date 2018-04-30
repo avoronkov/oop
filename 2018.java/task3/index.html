@@ -599,13 +599,46 @@
     
         <li class="main active"><a href="#3">Задача 3. Игра.</a></li>
         
+            <li><a href="#java">Дополнительные материалы по графическим приложениям java</a></li>
+        
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="3">Задача 3. Игра.</h1>
-<p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6NjEzMjc5Y2FkNzNiMzIyNA">Оригинальное условие задачи для Java</a></p></div>
+<p><a href="https://docs.google.com/viewer?a=v&amp;pid=sites&amp;srcid=ZGVmYXVsdGRvbWFpbnxuZ3Vvb3B8Z3g6NjEzMjc5Y2FkNzNiMzIyNA">Оригинальное условие задачи для Java</a></p>
+<h3 id="java">Дополнительные материалы по графическим приложениям java</h3>
+<ul>
+<li>Как сделать свой "canvas" с отрисовкой чего-либо.</li>
+</ul>
+<p><a href="https://stackoverflow.com/questions/776180/how-to-make-canvas-with-swing">stackoverflow</a>:</p>
+<pre><code>In order to make a custom 'Canvas' in swing you usually write a subclass of a JPanel. Then, you must overwrite the protected paintComponent(Graphics g) method of JPanel.
+
+In the paint method, you can call methods on the Graphics object to actually draw on the JPanel.
+</code></pre>
+
+<p>As always, the Java Tutorials have a <a href="http://docs.oracle.com/javase/tutorial/uiswing/painting/">great reference</a>
+on this to get you started.
+Example from there:</p>
+<pre><code>class MyPanel extends JPanel {
+
+    public MyPanel() {
+        setBorder(BorderFactory.createLineBorder(Color.black));
+    }
+
+    public Dimension getPreferredSize() {
+        return new Dimension(250,200);
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);       
+
+        // Draw Text
+        g.drawString(&quot;This is my custom Panel!&quot;,10,20);
+    }  
+}
+</code></pre></div>
             
         </div>
 
