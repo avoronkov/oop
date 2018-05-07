@@ -19,7 +19,7 @@
 
 **Код** - в процессе.
 
-- NPE:
+- [Ok] NPE:
 ```
 /jlab2$ java -jar build/jar/Lab.jar
 5 2 + print
@@ -37,9 +37,9 @@ Caused by: java.lang.NullPointerException
 
 - [Ok] Отсутствует build.xml
 
-- Поправить build.xml, подробности [здесь](/2018.java/task2/#ant-buildxml)
+- [Ok] Поправить build.xml, подробности [здесь](/2018.java/task2/#ant-buildxml)
 
-- `import jdk.jshell.spi.ExecutionControlProvider;` не нужен и мешает компиляции.
+- [Ok] `import jdk.jshell.spi.ExecutionControlProvider;` не нужен и мешает компиляции.
 
 **Тесты** - Ok.
 
@@ -53,6 +53,8 @@ Caused by: java.lang.NullPointerException
 
 **GUI** - в процессе.
 
+- Вынести `ClassicController.java` и `ModelClassic.java` в отдельные пакеты `controller` и `model`.
+
 [repo](https://bitbucket.org/yashin_oop/jlab3)
 
-(проверено 16 апр)
+(проверено 7 мая)

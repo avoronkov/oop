@@ -101,7 +101,7 @@
 
 [Подсчёт слов - Ok](/2018.java/results/yashin/)
 
-[Stack PL - в процессе](/2018.java/results/yashin/#2)
+[Stack PL - Ok](/2018.java/results/yashin/#2)
 
 [Mineswapper - в процессе](/2018.java/results/yashin/#3)
 
