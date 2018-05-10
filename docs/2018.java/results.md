@@ -68,6 +68,10 @@
 
 ## Снегирева Екатерина
 
+[Подсчёт фраз - в процессе](/2018.java/results/snegireva/)
+
+[Stack PL - в процессе](/2018.java/results/snegireva/#2)
+
 [charts](/charts.16203/snegireva/index.html)
 
 
