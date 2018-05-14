@@ -64,7 +64,7 @@
 
 [Stack PL - Ok](/2018.java/results/razumov/#2)
 
-[Minesweeper - в процессе](/2018.java/results/razumov/#3)
+[Minesweeper - Ok](/2018.java/results/razumov/#3)
 
 [charts](/charts.16203/razumov/index.html)
 
@@ -112,6 +112,8 @@
 [Stack PL - Ok](/2018.java/results/yashin/#2)
 
 [Minesweeper - Ok](/2018.java/results/yashin/#3)
+
+[Фабрика - Ok](/2018.java/results/yashin/#4)
 
 [charts](/charts.16203/yashin/index.html)
 

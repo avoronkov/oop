@@ -115,9 +115,9 @@ Error: unknown command
 
 *Text* - Ok.
 
-*GUI* - в процессе.
+*GUI* - Ok.
 
-- Программа падает при попытке запустить GUI:
+- [Ok] Программа падает при попытке запустить GUI:
 ```
 Welcome to mvc.Minesweeper game!
 v1.0
@@ -158,4 +158,4 @@ Please, enter size of field and number of mines:
 
 [repo](https://bitbucket.org/a_razumov_oop/minesweeper)
 
-(проверено 13 мая)
+(проверено 14 мая)
