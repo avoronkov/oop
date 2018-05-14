@@ -110,3 +110,52 @@ Error: unknown command
 [repo](https://bitbucket.org/a_razumov_oop/j_lab2)
 
 (проверено 16 апр)
+
+## Сапёр (Задача 3). В процессе.
+
+*Text* - Ok.
+
+*GUI* - в процессе.
+
+- Программа падает при попытке запустить GUI:
+```
+Welcome to mvc.Minesweeper game!
+v1.0
+
+Here're the commands to use:
+ - New Game
+ - About
+ - Records
+ - Exit
+Please, write one of them:
+New Game
+Please, choose - Text or GUI:
+GUI
+Please, enter size of field and number of mines:
+10 10 10
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f7fccfd1009, pid=8128, tid=8129
+#
+# JRE version: OpenJDK Runtime Environment (9.0) (build 9-internal+0-2016-04-14-195246.buildd.src)
+# Java VM: OpenJDK 64-Bit Server VM (9-internal+0-2016-04-14-195246.buildd.src, mixed mode, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjava.so+0x1d009]  JNU_GetEnv+0x19
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /home/alxr/study/2018.java/razumov/minesweeper/hs_err_pid8128.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+[1]    8128 abort      java -jar build/jar/Lab.jar
+```
+
+[repo](https://bitbucket.org/a_razumov_oop/minesweeper)
+
+(проверено 13 мая)

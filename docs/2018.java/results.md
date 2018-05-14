@@ -55,6 +55,7 @@
 
 [charts](/charts.16203/pushkov/index.html) 
 
+
 ## Разумов Антон
 
 Доклад "Интерфейсы" +
@@ -63,10 +64,17 @@
 
 [Stack PL - Ok](/2018.java/results/razumov/#2)
 
+[Minesweeper - в процессе](/2018.java/results/razumov/#3)
+
 [charts](/charts.16203/razumov/index.html)
 
 
+
 ## Снегирева Екатерина
+
+[Подсчёт фраз - в процессе](/2018.java/results/snegireva/)
+
+[Stack PL - в процессе](/2018.java/results/snegireva/#2)
 
 [charts](/charts.16203/snegireva/index.html)
 
@@ -103,7 +111,7 @@
 
 [Stack PL - Ok](/2018.java/results/yashin/#2)
 
-[Mineswapper - в процессе](/2018.java/results/yashin/#3)
+[Minesweeper - в процессе](/2018.java/results/yashin/#3)
 
 [charts](/charts.16203/yashin/index.html)
 
