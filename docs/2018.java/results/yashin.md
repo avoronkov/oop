@@ -47,13 +47,13 @@ Caused by: java.lang.NullPointerException
 
 (проверено 30 апреля)
 
-## Сапер (Задача 3). В процессе.
+## Сапер (Задача 3). Ok.
 
 **Text UI** - ок.
 
-**GUI** - в процессе.
+**GUI** - ok.
 
-- Вынести `ClassicController.java` и `ModelClassic.java` в отдельные пакеты `controller` и `model`.
+- [Ok] Вынести `ClassicController.java` и `ModelClassic.java` в отдельные пакеты `controller` и `model`.
 
 [repo](https://bitbucket.org/yashin_oop/jlab3)
 

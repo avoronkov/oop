@@ -111,7 +111,7 @@
 
 [Stack PL - Ok](/2018.java/results/yashin/#2)
 
-[Minesweeper - в процессе](/2018.java/results/yashin/#3)
+[Minesweeper - Ok](/2018.java/results/yashin/#3)
 
 [charts](/charts.16203/yashin/index.html)
 
