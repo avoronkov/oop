@@ -4,7 +4,7 @@
 
 Доклад "Массивы" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/bastrykina/)
+[Подсчёт фраз - Ok](/2018.java/results/bastrykina/)
 
 [Stack PL - в процессе](/2018.java/results/bastrykina/#2)
 
@@ -75,6 +75,8 @@
 [Подсчёт фраз - в процессе](/2018.java/results/snegireva/)
 
 [Stack PL - в процессе](/2018.java/results/snegireva/#2)
+
+[Сапёр - в процессе](/2018.java/results/snegireva/#3)
 
 [charts](/charts.16203/snegireva/index.html)
 

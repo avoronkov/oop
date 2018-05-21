@@ -36,3 +36,15 @@ Exception in thread "main" java.lang.NullPointerException
 [repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
 
 (проверено 10 мая)
+
+## Сапёр (Задача 3). В процессе.
+
+*Text UI* - В процессе.
+
+- Падает на `HARD` с `java.lang.IndexOutOfBoundsException: Index 480 out-of-bounds for length 480`
+
+*GUI* - нет.
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
+
+(проверено 21 мая)

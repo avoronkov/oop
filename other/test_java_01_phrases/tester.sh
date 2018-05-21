@@ -24,7 +24,7 @@ run_test()
 		return 1
 	fi
 
-	if ! diff -u temp.txt "$output"; then
+	if ! diff -u -w temp.txt "$output"; then
 		let err=$(( err + 1 ))
 		echo "[!] test $n failed: incorrect output" >&2
 		return 1
