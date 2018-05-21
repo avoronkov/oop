@@ -605,7 +605,7 @@
     
         <li class="main active"><a href="#_1">Бастрыкина Алена</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
         
             <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
         
@@ -615,39 +615,81 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Бастрыкина Алена</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
+<p><strong>Код</strong> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Следует разбить <code>main()</code> на отдельные методы.</p>
 </li>
 <li>
-<p>Добавить работу со стандартными потоками ввода и вывода.</p>
+<p>[Ok] Добавить работу со стандартными потоками ввода и вывода.</p>
 </li>
 <li>
-<p>В выводе количество раз, которое встречается фраза должно быть в скобках, т.е.:</p>
+<p>[Ok] В выводе количество раз, которое встречается фраза должно быть в скобках, т.е.:</p>
 </li>
 </ul>
 <pre><code>three one (3) 
 one two (2)
 </code></pre>
 
-<p><strong>Тесты</strong> - нет.</p>
+<p><strong>Тесты</strong> - Ok.</p>
+<ul>
+<li>[Ok] Поправить build.xml</li>
+</ul>
+<pre><code>-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
++    &lt;property name=&quot;test.src.dir&quot;   value=&quot;tests&quot;/&gt;
+
+-                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Test.class&quot; /&gt;
++                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Tests.class&quot; /&gt;
+</code></pre>
+
+<ul>
+<li>[Ok] Добавить аннотацию <code>@Test</code> к <code>getCountedPhrasesTest()</code></li>
+</ul>
 <p><a href="https://bitbucket.org/bastrykina_oop/words">repo</a></p>
-<p>(проверено 4 марта)</p>
+<p>(проверено 21 мая)</p>
 <h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Добавить <code>build.xml</code> в проект (<a href="../../../2018.java/task2/#ant-buildxml">подробности</a>. </p>
+<p>[Ok] Добавить <code>build.xml</code> в проект (<a href="../../../2018.java/task2/#ant-buildxml">подробности</a>.</p>
 </li>
 <li>
 <p>При запуске без аргументов нужно работать со стандартным потоком ввода.</p>
 </li>
+<li>
+<p>Добавить <code>config.csv</code> как ресурс.</p>
+</li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<pre><code>Файл конфигурации должен
+храниться рядом с файлом класса-фабрики, и загружаться в фабрику с помощью
+Class.getResourceAsStream()
+</code></pre>
+
+<p><strong>Тесты</strong> - в процессе.</p>
+<ul>
+<li>Поправить build.xml для тестов:</li>
+</ul>
+<pre><code>-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
++    &lt;property name=&quot;test.src.dir&quot;   value=&quot;tests&quot;/&gt;
+
+-                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Test.class&quot; /&gt;
++                &lt;fileset dir=&quot;${test.build.dir}&quot; includes=&quot;**/*Tests.class&quot; /&gt;
+</code></pre>
+
+<ul>
+<li>Ошибка в тесте:</li>
+</ul>
+<pre><code>    [junit] Testcase: ExecutorTest1(Tests):     FAILED
+    [junit] expected:&lt;[]&gt; but was:&lt;[5
+    [junit] ]&gt;
+    [junit] junit.framework.AssertionFailedError: expected:&lt;[]&gt; but was:&lt;[5
+    [junit] ]&gt;
+    [junit]     at Tests.ExecutorTest1(Unknown Source)
+</code></pre>
+
 <p><a href="https://bitbucket.org/bastrykina_oop/stackpl">repo</a></p>
-<p>(проверено 19 марта)</p></div>
+<p>(проверено 21 мая)</p></div>
             
         </div>
 
