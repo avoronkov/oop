@@ -6,7 +6,7 @@
 
 [Подсчёт фраз - Ok](/2018.java/results/bastrykina/)
 
-[Stack PL - в процессе](/2018.java/results/bastrykina/#2)
+[Stack PL - Ok](/2018.java/results/bastrykina/#2)
 
 [charts](/charts.16203/bastrykina/index.html)
 
