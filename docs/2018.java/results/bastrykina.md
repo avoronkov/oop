@@ -14,22 +14,52 @@ three one (3)
 one two (2)
 ```
 
-**Тесты** - нет.
+**Тесты** - в процессе.
+
+- Поправить build.xml
+```
+-    <property name="test.src.dir"   value="src"/>
++    <property name="test.src.dir"   value="tests"/>
+
+-                <fileset dir="${test.build.dir}" includes="**/*Test.class" />
++                <fileset dir="${test.build.dir}" includes="**/*Tests.class" />
+```
+
+- Добавить аннотацию `@Test` к `getCountedPhrasesTest()`
 
 [repo](https://bitbucket.org/bastrykina_oop/words)
 
-(проверено 4 марта)
+(проверено 21 мая)
 
 ## Stack PL (Задача 2). В процессе.
 
 **Код** - в процессе.
 
-- Добавить `build.xml` в проект ([подробности](/2018.java/task2/#ant-buildxml). 
+- [Ok] Добавить `build.xml` в проект ([подробности](/2018.java/task2/#ant-buildxml).
 
 - При запуске без аргументов нужно работать со стандартным потоком ввода.
 
-**Тесты** - нет.
+**Тесты** - в процессе.
+
+- Поправить build.xml для тестов:
+```
+-    <property name="test.src.dir"   value="src"/>
++    <property name="test.src.dir"   value="tests"/>
+
+-                <fileset dir="${test.build.dir}" includes="**/*Test.class" />
++                <fileset dir="${test.build.dir}" includes="**/*Tests.class" />
+```
+
+- Ошибка в тесте:
+```
+    [junit] Testcase: ExecutorTest1(Tests):     FAILED
+    [junit] expected:<[]> but was:<[5
+    [junit] ]>
+    [junit] junit.framework.AssertionFailedError: expected:<[]> but was:<[5
+    [junit] ]>
+    [junit]     at Tests.ExecutorTest1(Unknown Source)
+```
 
 [repo](https://bitbucket.org/bastrykina_oop/stackpl)
 
-(проверено 19 марта)
+(проверено 21 мая)
