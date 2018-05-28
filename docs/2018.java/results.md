@@ -24,6 +24,10 @@
 
 ## Галиос Максим
 
+Доклад "Исключения" +
+
+[Подсчёт фраз - в процессе](/2018.java/results/galios/)
+
 [charts](/charts.16203/galios/index.html)
 
 
@@ -66,7 +70,7 @@
 
 [Minesweeper - Ok](/2018.java/results/razumov/#3)
 
-[Factory - в процессе](/2018.java/results/razumov/#4)
+[Factory - Ok](/2018.java/results/razumov/#4)
 
 [charts](/charts.16203/razumov/index.html)
 
@@ -118,6 +122,8 @@
 [Minesweeper - Ok](/2018.java/results/yashin/#3)
 
 [Фабрика - Ok](/2018.java/results/yashin/#4)
+
+[Сетевая игра - Ok](/2018.java/results/yashin/#5)
 
 [charts](/charts.16203/yashin/index.html)
 

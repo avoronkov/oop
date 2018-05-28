@@ -160,11 +160,11 @@ Please, enter size of field and number of mines:
 
 (проверено 14 мая)
 
-## Factory (Задача 4). В процессе.
+## Factory (Задача 4). Ok.
 
-**Код** - В процессе.
+**Код** - Ok.
 
-- В коде `addDetail` после `notifyAll()` должен быть выход из цикла.
+- [Ok] В коде `addDetail` после `notifyAll()` должен быть выход из цикла.
 
 [repo](https://bitbucket.org/a_razumov_oop/jlab4/src/default/)
 
