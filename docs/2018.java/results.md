@@ -66,6 +66,8 @@
 
 [Minesweeper - Ok](/2018.java/results/razumov/#3)
 
+[Factory - в процессе](/2018.java/results/razumov/#4)
+
 [charts](/charts.16203/razumov/index.html)
 
 
