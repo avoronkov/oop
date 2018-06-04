@@ -75,8 +75,9 @@
 [charts](/charts.16203/razumov/index.html)
 
 
-
 ## Снегирева Екатерина
+
+Доклад "Сборка мусора" +
 
 [Подсчёт фраз - в процессе](/2018.java/results/snegireva/)
 
