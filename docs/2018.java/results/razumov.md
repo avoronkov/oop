@@ -169,3 +169,11 @@ Please, enter size of field and number of mines:
 [repo](https://bitbucket.org/a_razumov_oop/jlab4/src/default/)
 
 (проверено 28 мая)
+
+## Чат (Задача 5). Ok.
+
+**Код** - Ok
+
+[repo](https://bitbucket.org/a_razumov_oop/j_lab5/src/default/)
+
+(проверено 12 июня)

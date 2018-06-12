@@ -62,6 +62,8 @@
 
 ## Разумов Антон
 
+Предварительная оценка - 5.
+
 Доклад "Интерфейсы" +
 
 [Подсчёт фраз - Ok](/2018.java/results/razumov/)
@@ -71,6 +73,8 @@
 [Minesweeper - Ok](/2018.java/results/razumov/#3)
 
 [Factory - Ok](/2018.java/results/razumov/#4)
+
+[Чат - Ok](/2018.java/results/razumov/#5)
 
 [charts](/charts.16203/razumov/index.html)
 
@@ -113,6 +117,8 @@
 
 
 ## Яшин Артём
+
+Предварительная оценка - 5.
 
 Доклад "Stream API" +
 
