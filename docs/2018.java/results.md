@@ -79,9 +79,9 @@
 
 Доклад "Сборка мусора" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/snegireva/)
+[Подсчёт фраз - ok](/2018.java/results/snegireva/)
 
-[Stack PL - в процессе](/2018.java/results/snegireva/#2)
+[Stack PL - ok](/2018.java/results/snegireva/#2)
 
 [Сапёр - в процессе](/2018.java/results/snegireva/#3)
 

@@ -1,10 +1,10 @@
 # Снегирева Екатерина
 
-## Подсчёт фраз (Задача 1). В процессе.
+## Подсчёт фраз (Задача 1). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-- Сортировка должна быть в обратном порядке (от самых частых, к менее частым)
+- [ok] Сортировка должна быть в обратном порядке (от самых частых, к менее частым)
 
 **Тесты** - нет.
 
@@ -12,11 +12,11 @@
 
 (проверено 10 мая)
 
-## Stack PL (Задача 2). В процессе.
+## Stack PL (Задача 2). Ok.
 
-**Код** - в процессе.
+**Код** - Ok.
 
-- Падение при запуске без аргументов:
+- [ok] Падение при запуске без аргументов:
 ```
 1. cycle print
 java -jar Lab.jar < ./testdata/input01.txt
@@ -41,10 +41,14 @@ Exception in thread "main" java.lang.NullPointerException
 
 *Text UI* - В процессе.
 
-- Падает на `HARD` с `java.lang.IndexOutOfBoundsException: Index 480 out-of-bounds for length 480`
+- [Ok] Падает на `HARD` с `java.lang.IndexOutOfBoundsException: Index 480 out-of-bounds for length 480`
 
-*GUI* - нет.
+- Отсутствует файл `src/minesweeper/View.java`
+
+- Отсутсвуют картинки в репозитории.
+
+*GUI* - Ok.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
 
-(проверено 21 мая)
+(проверено 12 июня)
