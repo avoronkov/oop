@@ -615,7 +615,7 @@
         
             <li><a href="#stack-pl-2-ok">Stack PL (Задача 2). Ok.</a></li>
         
-            <li><a href="#3">Сапёр (Задача 3). В процессе.</a></li>
+            <li><a href="#3-ok">Сапёр (Задача 3). Ok.</a></li>
         
     
     </ul>
@@ -652,20 +652,37 @@ Exception in thread &quot;main&quot; java.lang.NullPointerException
 <p><strong>Тесты</strong> - нет</p>
 <p><a href="https://bitbucket.org/snegireva_oop/spyair_lol/src/master/">repo</a></p>
 <p>(проверено 10 мая)</p>
-<h2 id="3">Сапёр (Задача 3). В процессе.</h2>
-<p><em>Text UI</em> - В процессе.</p>
+<h2 id="3-ok">Сапёр (Задача 3). Ok.</h2>
+<p><em>Text UI</em> - Ok.</p>
 <ul>
 <li>
 <p>[Ok] Падает на <code>HARD</code> с <code>java.lang.IndexOutOfBoundsException: Index 480 out-of-bounds for length 480</code></p>
 </li>
 <li>
-<p>Отсутствует файл <code>src/minesweeper/View.java</code></p>
+<p>[ok] Отсутствует файл <code>src/minesweeper/View.java</code></p>
 </li>
 <li>
-<p>Отсутсвуют картинки в репозитории.</p>
+<p>[ok] Отсутсвуют картинки в репозитории.</p>
+</li>
+<li>
+<p>[Пожелание] Имена классов должны начинаться с большой буквы :)</p>
 </li>
 </ul>
 <p><em>GUI</em> - Ok.</p>
+<ul>
+<li>[Пожелание] Копировать картинки в build.xml:</li>
+</ul>
+<pre><code>         &lt;javac srcdir=&quot;${test.src.dir}&quot; destdir=&quot;${test.build.dir}&quot; includeantruntime=&quot;false&quot;&gt;
+             &lt;classpath refid=&quot;classpath.test&quot;/&gt;
+         &lt;/javac&gt;
++       &lt;copy todir=&quot;${test.build.dir}&quot;&gt;
++           &lt;fileset dir=&quot;${test.src.dir}&quot;&gt;
++               &lt;exclude name=&quot;**/*.java&quot;/&gt;
++           &lt;/fileset&gt;
++       &lt;/copy&gt;
+     &lt;/target&gt;
+</code></pre>
+
 <p><a href="https://bitbucket.org/snegireva_oop/spyair_lol/src/master/">repo</a></p>
 <p>(проверено 12 июня)</p></div>
             
