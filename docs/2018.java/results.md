@@ -15,7 +15,7 @@
 
 Доклад "Объекты, ссылки" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/voloshina/)
+[Подсчёт фраз - Ok](/2018.java/results/voloshina/)
 
 [Stack PL - в процессе](/2018.java/results/voloshina/#2)
 
@@ -87,7 +87,11 @@
 
 [Stack PL - ok](/2018.java/results/snegireva/#2)
 
-[Сапёр - в процессе](/2018.java/results/snegireva/#3)
+[Сапёр - ok](/2018.java/results/snegireva/#3)
+
+[Фабрика - ok](/2018.java/results/snegireva/#4)
+
+[Чат - ok](/2018.java/results/snegireva/#5)
 
 [charts](/charts.16203/snegireva/index.html)
 

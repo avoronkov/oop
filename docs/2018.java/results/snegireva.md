@@ -37,18 +37,53 @@ Exception in thread "main" java.lang.NullPointerException
 
 (проверено 10 мая)
 
-## Сапёр (Задача 3). В процессе.
+## Сапёр (Задача 3). Ok.
 
-*Text UI* - В процессе.
+*Text UI* - Ok.
 
 - [Ok] Падает на `HARD` с `java.lang.IndexOutOfBoundsException: Index 480 out-of-bounds for length 480`
 
-- Отсутствует файл `src/minesweeper/View.java`
+- [ok] Отсутствует файл `src/minesweeper/View.java`
 
-- Отсутсвуют картинки в репозитории.
+- [ok] Отсутсвуют картинки в репозитории.
+
+- [Пожелание] Имена классов должны начинаться с большой буквы :)
 
 *GUI* - Ok.
+
+- [Пожелание] Копировать картинки в build.xml:
+```
+         <javac srcdir="${test.src.dir}" destdir="${test.build.dir}" includeantruntime="false">
+             <classpath refid="classpath.test"/>
+         </javac>
++       <copy todir="${test.build.dir}">
++           <fileset dir="${test.src.dir}">
++               <exclude name="**/*.java"/>
++           </fileset>
++       </copy>
+     </target>
+```
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
 
 (проверено 12 июня)
+
+## Задача 4 (Фабрика). В процессе.
+
+**Код** - В процессе.
+
+- В `Storage.java` следует использовать паттерн `wait/notify` для синхронизации.
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
+
+(проверено 16 июня)
+
+## Задача 5 (Чат). В процессе.
+
+**Код** - в процессе.
+
+- Отсутсвует `Message.java` в репозитории.
+
+[repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
+
+(проверено 16 июня)
