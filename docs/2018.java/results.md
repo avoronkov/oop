@@ -113,6 +113,8 @@
 
 [Stack PL - Ok](/2018.java/results/shustova/#2)
 
+[Сапёр - Ok](/2018.java/results/shustova/#3)
+
 [charts](/charts.16203/shustova/index.html)
 
 
