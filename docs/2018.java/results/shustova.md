@@ -41,3 +41,11 @@ static Map<String, Integer> mkMap(Vector<String> input){ ... }
 [repo](https://bitbucket.org/account/user/shustova_oop/projects/MIN)
 
 (проверено 16 июня)
+
+## Фабрика (Задача 4). Ок.
+
+**Код** - Ok.
+
+[repo](https://bitbucket.org/shustova_oop/factory)
+
+(проверено 16 июня)

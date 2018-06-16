@@ -115,6 +115,8 @@
 
 [Сапёр - Ok](/2018.java/results/shustova/#3)
 
+[Фабрика - Ok](/2018.java/results/shustova/#4)
+
 [charts](/charts.16203/shustova/index.html)
 
 
