@@ -109,9 +109,9 @@
 
 Доклад "Jenerics" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/shustova/)
+[Подсчёт фраз - Ok](/2018.java/results/shustova/)
 
-[Stack PL - в процессе](/2018.java/results/shustova/#2)
+[Stack PL - Ok](/2018.java/results/shustova/#2)
 
 [charts](/charts.16203/shustova/index.html)
 
