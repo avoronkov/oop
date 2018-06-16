@@ -623,18 +623,75 @@
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p><code>BufferedReader bf</code> не закрывается (должен использоваться try-with-resource)</p>
+<p>[Ok] <code>BufferedReader bf</code> не закрывается (должен использоваться try-with-resource)</p>
 </li>
 <li>
-<p><code>build.xml</code> отсутствует.</p>
+<p>[Ok] <code>build.xml</code> отсутствует.</p>
 </li>
 </ul>
 <p><strong>Тесты</strong> - в процессе.</p>
 <ul>
-<li>Тесты написаны на JUnit5. Это допустимо, если в build.xml будут прописаны соответствующие зависимости, и <code>ant test</code> исполняет соответствующие тесты.</li>
+<li>Исправить build.xml и MainTest.java для корректного запуска тестов:</li>
+</ul>
+<pre><code>--- a/build.xml
++++ b/build.xml
+@@ -4,7 +4,7 @@
+     &lt;property name=&quot;classes.dir&quot; value=&quot;${build.dir}/classes&quot;/&gt;
+     &lt;property name=&quot;jar.dir&quot;     value=&quot;${build.dir}/jar&quot;/&gt;
+
+-    &lt;property name=&quot;test.src.dir&quot;   value=&quot;src&quot;/&gt;
++    &lt;property name=&quot;test.src.dir&quot;   value=&quot;tests&quot;/&gt;
+     &lt;property name=&quot;test.build.dir&quot; value=&quot;${build.dir}/test&quot;/&gt;
+
+     &lt;property name=&quot;lib.dir&quot; value=&quot;lib/&quot;/&gt;
+diff --git a/tests/MainTest.java b/tests/MainTest.java
+index 28e9fbe..f2e7f87 100644
+--- a/tests/MainTest.java
++++ b/tests/MainTest.java
+@@ -1,14 +1,14 @@
+-import org.junit.jupiter.api.Test;
++import org.junit.Test;
+
+ import java.util.ArrayList;
+ import java.util.HashMap;
+
+-import static org.junit.jupiter.api.Assertions.*;
++import static org.junit.Assert.*;
+
+-class MainTest {
++public class MainTest {
+
+     @Test
+-    void getSortedPhrases() {
++    public void getSortedPhrases() {
+         HashMap&lt;String, Integer&gt; sortedPhrasesExp = new HashMap&lt;&gt;();
+         sortedPhrasesExp.put(&quot;lala&quot;, 3);
+         sortedPhrasesExp.put(&quot;ololo&quot;,2);
+@@ -27,7 +27,7 @@ class MainTest {
+
+
+     @Test
+-    void getPhrases() {
++    public void getPhrases() {
+         ArrayList&lt;String&gt; words = new ArrayList&lt;&gt;();
+         words.add(&quot;we&quot;);
+         words.add(&quot;all&quot;);
+@@ -52,9 +52,9 @@ class MainTest {
+     }
+
+     @Test
+-    void isNum() {
++    public void isNum() {
+         Main main = new Main();
+         assertTrue(main.isNum(&quot;123&quot;));
+         assertFalse(main.isNum(&quot;123abc&quot;));
+</code></pre>
+
+<ul>
+<li>[X] Тесты написаны на JUnit5. Это допустимо, если в build.xml будут прописаны соответствующие зависимости, и <code>ant test</code> исполняет соответствующие тесты.</li>
 </ul>
 <p><a href="https://bitbucket.org/pushkov_oop/lab1_java">repo</a></p>
-<p>(обновлено 4 апр)</p></div>
+<p>(обновлено 16 июня)</p></div>
             
         </div>
 
