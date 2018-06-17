@@ -19,7 +19,7 @@
 
 ## Волошина Анастасия
 
-Предварительная оценка - 4.
+Предварительная оценка - `4`.
 
 Доклад "Объекты, ссылки" +
 
@@ -45,11 +45,19 @@
 
 ## Григорович Артём
 
+Предварительная оценка - `4-`.
+
 Доклад "Ввод/вывод" +
 
 [Подсчёт фраз - в процессе](/2018.java/results/grigorovich/)
 
 [Stack PL - в процессе](/2018.java/results/grigorovich/#2)
+
+[Сапер - в процессе](/2018.java/results/grigorovich/#3)
+
+[Фабрика - Ok](/2018.java/results/grigorovich/#4)
+
+[Чат - Ok](/2018.java/results/grigorovich/#5)
 
 [charts](/charts.16203/grigorovich/index.html)
 
@@ -93,6 +101,8 @@
 
 ## Снегирева Екатерина
 
+Предварительная оценка - 4.
+
 Доклад "Сборка мусора" +
 
 [Подсчёт фраз - ok](/2018.java/results/snegireva/)
@@ -103,12 +113,14 @@
 
 [Фабрика - в процессе](/2018.java/results/snegireva/#4)
 
-[Чат - в процессе](/2018.java/results/snegireva/#5)
+[Чат - Ok](/2018.java/results/snegireva/#5)
 
 [charts](/charts.16203/snegireva/index.html)
 
 
 ## Чмиль Александр
+
+Предварительная оценка - 5.
 
 Доклад "Try-with-resource" +
 
@@ -118,7 +130,9 @@
 
 [Сапер - Ok](/2018.java/results/chmil/#3)
 
-[Чат - Ok](/2018.java/results/chmil/#4)
+[Фабрика - Ok](/2018.java/results/chmil/#4)
+
+[Чат - Ok](/2018.java/results/chmil/#5)
 
 [charts](/charts.16203/chmil/index.html)
 

@@ -78,11 +78,11 @@ Exception in thread "main" java.lang.NullPointerException
 
 (проверено 16 июня)
 
-## Задача 5 (Чат). В процессе.
+## Задача 5 (Чат). Ok.
 
-**Код** - в процессе.
+**Код** - OK.
 
-- Отсутсвует `Message.java` в репозитории.
+- [Ok] Отсутсвует `Message.java` в репозитории.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
 

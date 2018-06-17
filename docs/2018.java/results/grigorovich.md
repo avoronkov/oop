@@ -1,8 +1,8 @@
 # Григорович Артём
 
-## Подсчёт фраз (Задача 1). Ok.
+## Подсчёт фраз (Задача 1). Хорошо.
 
-**Код** - в процессе.
+**Код** - Хорошо.
 
 - Переусложненная логика по разбору аргументов, много дублирования кода.
 
@@ -46,6 +46,13 @@ Format error!
 
 - [Ok] Команды `ant jar` и `ant test` не работают.
 
+- В `streamToString` чтение должно осуществляться до конца файла:
+```
+while (sc.hasNext()) {
+	text.append(sc.nextLine()).append(" ");
+}
+```
+
 **Тесты** - Ok.
 
 [repo](https://bitbucket.org/grigorovich_oop/tasks)
@@ -84,3 +91,29 @@ Format error!
 [repo](https://bitbucket.org/grigorovich_oop/tasks)
 
 (проверено 7 апр)
+
+## Сапер (Задача 3). В процессе.
+
+**GUI** - в процессе.
+
+- Ошибка при запуске GUI:
+```
+$ java -jar build/jar/Lab.jar                                                                                 (06-17 14:26)
+Enter the game mode(gui/text):
+gui
+Enter the field size and mines amount in format: x y amount
+10 10 10
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin -1, end 56, length 56
+        at java.lang.String.checkBoundsBeginEnd(java.base@9-internal/String.java:3119)
+        at java.lang.String.substring(java.base@9-internal/String.java:1907)
+        at nsu.g16203.grigorovich.View.buildGUI(Unknown Source)
+        at nsu.g16203.grigorovich.Main.main(Unknown Source)
+```
+
+[repo](https://bitbucket.org/grigorovich_oop/tasks)
+
+(проверено 17 июня)
+
+## Фабрика (Задача 4). Ok.
+
+## Чат (Задача 5). Ok.
