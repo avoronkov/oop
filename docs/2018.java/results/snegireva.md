@@ -68,11 +68,11 @@ Exception in thread "main" java.lang.NullPointerException
 
 (проверено 12 июня)
 
-## Задача 4 (Фабрика). В процессе.
+## Задача 4 (Фабрика). Ok.
 
 **Код** - В процессе.
 
-- В `Storage.java` следует использовать паттерн `wait/notify` для синхронизации.
+- [Ok] В `Storage.java` следует использовать паттерн `wait/notify` для синхронизации.
 
 [repo](https://bitbucket.org/snegireva_oop/spyair_lol/src/master/)
 
