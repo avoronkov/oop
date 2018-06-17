@@ -72,3 +72,29 @@ index 28e9fbe..f2e7f87 100644
 [repo](https://bitbucket.org/pushkov_oop/lab1_java)
 
 (обновлено 16 июня)
+
+## Stack PL (Задача 2). В процессе.
+
+**Код**
+
+- ant compile (отсутствует Exceptions/?):
+```
+ant compile                                                      (06-17 15:03)
+Buildfile: /home/alxr/study/2018.java/pushkov/lab2_java/build.xml
+
+compile:
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/build.xml:27: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 15 source files to /home/alxr/study/2018.java/pushkov/lab2_java/build/classes
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/src/Calc.java:1: error: package Exceptions does not exist
+    [javac] import Exceptions.CycleException;
+    [javac]                  ^
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/src/Calc.java:2: error: package Exceptions does not exist
+    [javac] import Exceptions.NullStackException;
+    [javac]                  ^
+```
+
+[repo](https://bitbucket.org/pushkov_oop/lab2_java)
+
+## Сапёр (Задача 3). Хорошо.
+
+[repo](https://bitbucket.org/pushkov_oop/lab3_java)
