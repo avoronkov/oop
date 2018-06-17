@@ -70,3 +70,7 @@ Class.getResourceAsStream()
 [repo](https://bitbucket.org/bastrykina_oop/stackpl)
 
 (проверено 21 мая)
+
+## Змейка (Задача 3). Ок.
+
+## Фабрика (Задача 4). Ок.

@@ -2,22 +2,34 @@
 
 ## Бастрыкина Алена
 
+Предварительная оценка - 4.
+
 Доклад "Массивы" +
 
 [Подсчёт фраз - Ok](/2018.java/results/bastrykina/)
 
 [Stack PL - Ok](/2018.java/results/bastrykina/#2)
 
+[Змейка - Ok](/2018.java/results/bastrykina/#3)
+
+[Фабрика - Ok](/2018.java/results/bastrykina/#4)
+
 [charts](/charts.16203/bastrykina/index.html)
 
 
 ## Волошина Анастасия
 
+Предварительная оценка - 4.
+
 Доклад "Объекты, ссылки" +
 
 [Подсчёт фраз - Ok](/2018.java/results/voloshina/)
 
-[Stack PL - в процессе](/2018.java/results/voloshina/#2)
+[Stack PL - ok](/2018.java/results/voloshina/#2)
+
+[Тетрис - ok](/2018.java/results/voloshina/#3)
+
+[Фабрика - ok](/2018.java/results/voloshina/#4)
 
 [charts](/charts.16203/voloshina/index.html)
 
@@ -89,9 +101,9 @@
 
 [Сапёр - ok](/2018.java/results/snegireva/#3)
 
-[Фабрика - ok](/2018.java/results/snegireva/#4)
+[Фабрика - в процессе](/2018.java/results/snegireva/#4)
 
-[Чат - ok](/2018.java/results/snegireva/#5)
+[Чат - в процессе](/2018.java/results/snegireva/#5)
 
 [charts](/charts.16203/snegireva/index.html)
 
@@ -106,10 +118,14 @@
 
 [Сапер - Ok](/2018.java/results/chmil/#3)
 
+[Чат - Ok](/2018.java/results/chmil/#4)
+
 [charts](/charts.16203/chmil/index.html)
 
 
 ## Шустова Марина
+
+Предварительная оценка - 4.
 
 Доклад "Jenerics" +
 
