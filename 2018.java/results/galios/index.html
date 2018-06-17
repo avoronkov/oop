@@ -611,7 +611,12 @@
     
         <li class="main active"><a href="#_1">Галиос Максим</a></li>
         
-            <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
+            <li><a href="#1">Подсчёт фраз (Задача 1). Хорошо.</a></li>
+        
+            <li><a href="#stackpl-2">StackPL (Задача 2). Хорошо.</a></li>
+        
+    
+        <li class="main "><a href="#3">Сапер. (Задача 3). Хорошо.</a></li>
         
     
     </ul>
@@ -619,19 +624,66 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Галиос Максим</h1>
-<h2 id="1">Подсчёт фраз (Задача 1). В процессе.</h2>
+<h2 id="1">Подсчёт фраз (Задача 1). Хорошо.</h2>
 <p><strong>Код</strong> - в процессе.</p>
 <ul>
 <li>
-<p>Добавить build.xml в проекте.</p>
+<p>[Ok] Добавить build.xml в проекте.</p>
 </li>
 <li>
-<p>Вместо javafx.util.Pair следует использовать java.util.Map.Entry</p>
+<p>[Ok] Вместо javafx.util.Pair следует использовать java.util.Map.Entry</p>
+</li>
+<li>
+<p>Не работает чтение со стандартного потока ввода при запуске без аргументов.</p>
 </li>
 </ul>
-<p><strong>Тесты</strong> - нет.</p>
+<p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/galios_oop/javarep/src/master/">repo</a></p>
-<p>(проверено 28 мая)</p></div>
+<p>(проверено 28 мая)</p>
+<h2 id="stackpl-2">StackPL (Задача 2). Хорошо.</h2>
+<p><strong>Код</strong> - хорошо.</p>
+<p><strong>Тесты</strong> - почти прошли:</p>
+<pre><code>test:
+    [junit] Running CalcMainTest
+    [junit] Testsuite: CalcMainTest
+    [junit] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.18 sec
+    [junit] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.18 sec
+    [junit]
+    [junit] Testcase: main(CalcMainTest):       FAILED
+    [junit] expected:&lt;5.0[
+    [junit] 4.0
+    [junit] 3.0
+    [junit] 2.0
+    [junit] 1.0
+    [junit] ]&gt; but was:&lt;5.0[
+    [junit] 4.0
+    [junit] 3.0
+    [junit] 2.0
+    [junit] 1.0]
+    [junit] &gt;
+    [junit] junit.framework.AssertionFailedError: expected:&lt;5.0[
+    [junit] 4.0
+    [junit] 3.0
+    [junit] 2.0
+    [junit] 1.0
+    [junit] ]
+    [junit] &gt; but was:&lt;5.0[
+    [junit] 4.0
+    [junit] 3.0
+    [junit] 2.0
+    [junit] 1.0]
+    [junit] &gt;
+    [junit]     at CalcMainTest.main(Unknown Source)
+    [junit]     at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+    [junit]     at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+    [junit]     at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+</code></pre>
+
+<p><a href="https://bitbucket.org/galios_oop/javarep/src/master/">repo</a></p>
+<h1 id="3">Сапер. (Задача 3). Хорошо.</h1>
+<p><strong>GUI</strong> - Ok.</p>
+<p><strong>Код</strong> - отсутствует build.xml.</p>
+<p><a href="https://bitbucket.org/galios_oop/javarep/src/master/">repo</a></p></div>
             
         </div>
 

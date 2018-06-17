@@ -611,9 +611,15 @@
     
         <li class="main active"><a href="#_1">Григорович Артём</a></li>
         
-            <li><a href="#1-ok">Подсчёт фраз (Задача 1). Ok.</a></li>
+            <li><a href="#1">Подсчёт фраз (Задача 1). Хорошо.</a></li>
         
             <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
+        
+            <li><a href="#3">Сапер (Задача 3). В процессе.</a></li>
+        
+            <li><a href="#4-ok">Фабрика (Задача 4). Ok.</a></li>
+        
+            <li><a href="#5-ok">Чат (Задача 5). Ok.</a></li>
         
     
     </ul>
@@ -621,8 +627,8 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="_1">Григорович Артём</h1>
-<h2 id="1-ok">Подсчёт фраз (Задача 1). Ok.</h2>
-<p><strong>Код</strong> - в процессе.</p>
+<h2 id="1">Подсчёт фраз (Задача 1). Хорошо.</h2>
+<p><strong>Код</strong> - Хорошо.</p>
 <ul>
 <li>
 <p>Переусложненная логика по разбору аргументов, много дублирования кода.</p>
@@ -674,8 +680,18 @@
 </code></pre>
 
 <ul>
-<li>[Ok] Команды <code>ant jar</code> и <code>ant test</code> не работают.</li>
+<li>
+<p>[Ok] Команды <code>ant jar</code> и <code>ant test</code> не работают.</p>
+</li>
+<li>
+<p>В <code>streamToString</code> чтение должно осуществляться до конца файла:</p>
+</li>
 </ul>
+<pre><code>while (sc.hasNext()) {
+    text.append(sc.nextLine()).append(&quot; &quot;);
+}
+</code></pre>
+
 <p><strong>Тесты</strong> - Ok.</p>
 <p><a href="https://bitbucket.org/grigorovich_oop/tasks">repo</a></p>
 <p>(проверено 7 апр)</p>
@@ -710,7 +726,28 @@
 </code></pre>
 
 <p><a href="https://bitbucket.org/grigorovich_oop/tasks">repo</a></p>
-<p>(проверено 7 апр)</p></div>
+<p>(проверено 7 апр)</p>
+<h2 id="3">Сапер (Задача 3). В процессе.</h2>
+<p><strong>GUI</strong> - в процессе.</p>
+<ul>
+<li>Ошибка при запуске GUI:</li>
+</ul>
+<pre><code>$ java -jar build/jar/Lab.jar                                                                                 (06-17 14:26)
+Enter the game mode(gui/text):
+gui
+Enter the field size and mines amount in format: x y amount
+10 10 10
+Exception in thread &quot;main&quot; java.lang.StringIndexOutOfBoundsException: begin -1, end 56, length 56
+        at java.lang.String.checkBoundsBeginEnd(java.base@9-internal/String.java:3119)
+        at java.lang.String.substring(java.base@9-internal/String.java:1907)
+        at nsu.g16203.grigorovich.View.buildGUI(Unknown Source)
+        at nsu.g16203.grigorovich.Main.main(Unknown Source)
+</code></pre>
+
+<p><a href="https://bitbucket.org/grigorovich_oop/tasks">repo</a></p>
+<p>(проверено 17 июня)</p>
+<h2 id="4-ok">Фабрика (Задача 4). Ok.</h2>
+<h2 id="5-ok">Чат (Задача 5). Ok.</h2></div>
             
         </div>
 

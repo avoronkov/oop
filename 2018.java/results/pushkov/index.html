@@ -613,6 +613,10 @@
         
             <li><a href="#1">Подсчёт фраз (Задача 1). В процессе.</a></li>
         
+            <li><a href="#stack-pl-2">Stack PL (Задача 2). В процессе.</a></li>
+        
+            <li><a href="#3">Сапёр (Задача 3). Хорошо.</a></li>
+        
     
     </ul>
 </div></div>
@@ -691,7 +695,29 @@ index 28e9fbe..f2e7f87 100644
 <li>[X] Тесты написаны на JUnit5. Это допустимо, если в build.xml будут прописаны соответствующие зависимости, и <code>ant test</code> исполняет соответствующие тесты.</li>
 </ul>
 <p><a href="https://bitbucket.org/pushkov_oop/lab1_java">repo</a></p>
-<p>(обновлено 16 июня)</p></div>
+<p>(обновлено 16 июня)</p>
+<h2 id="stack-pl-2">Stack PL (Задача 2). В процессе.</h2>
+<p><strong>Код</strong></p>
+<ul>
+<li>ant compile (отсутствует Exceptions/?):</li>
+</ul>
+<pre><code>ant compile                                                      (06-17 15:03)
+Buildfile: /home/alxr/study/2018.java/pushkov/lab2_java/build.xml
+
+compile:
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/build.xml:27: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+    [javac] Compiling 15 source files to /home/alxr/study/2018.java/pushkov/lab2_java/build/classes
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/src/Calc.java:1: error: package Exceptions does not exist
+    [javac] import Exceptions.CycleException;
+    [javac]                  ^
+    [javac] /home/alxr/study/2018.java/pushkov/lab2_java/src/Calc.java:2: error: package Exceptions does not exist
+    [javac] import Exceptions.NullStackException;
+    [javac]                  ^
+</code></pre>
+
+<p><a href="https://bitbucket.org/pushkov_oop/lab2_java">repo</a></p>
+<h2 id="3">Сапёр (Задача 3). Хорошо.</h2>
+<p><a href="https://bitbucket.org/pushkov_oop/lab3_java">repo</a></p></div>
             
         </div>
 
