@@ -17,3 +17,7 @@
 [repo](https://bitbucket.org/petin_oop/jtask1)
 
 (проверено 24 марта)
+
+## StackPL (Задача 2). Ok.
+
+## Сапер (Задача 3). Ok.

@@ -70,9 +70,15 @@
 
 ## Петин Кирилл
 
+Предварительная оценка - `3`.
+
 Доклад "Наследование" +
 
 [Подсчёт фраз - Ok](/2018.java/results/petin/)
+
+[StackPL - Ok](/2018.java/results/petin/#2)
+
+[Сапер - Ok](/2018.java/results/petin/#3)
 
 [charts](/charts.16203/petin/index.html)
 
