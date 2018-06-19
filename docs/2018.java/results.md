@@ -51,15 +51,15 @@
 
 ## Григорович Артём
 
-Предварительная оценка - `4-`.
+Предварительная оценка - `4`.
 
 Доклад "Ввод/вывод" +
 
-[Подсчёт фраз - в процессе](/2018.java/results/grigorovich/)
+[Подсчёт фраз - хорошо](/2018.java/results/grigorovich/)
 
-[Stack PL - в процессе](/2018.java/results/grigorovich/#2)
+[Stack PL - хорошо](/2018.java/results/grigorovich/#2)
 
-[Сапер - в процессе](/2018.java/results/grigorovich/#3)
+[Сапер - хорошо](/2018.java/results/grigorovich/#3)
 
 [Фабрика - Ok](/2018.java/results/grigorovich/#4)
 
